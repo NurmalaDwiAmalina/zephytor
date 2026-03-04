@@ -15,6 +15,20 @@ try {
     $_ENV['VERCEL_STORAGE'] = $storage;
     $_SERVER['VERCEL_STORAGE'] = $storage;
 
+    // Ignore Vercel's read-only bootstrap/cache directory
+    $cachePath = '/tmp/bootstrap/cache';
+    if (!is_dir($cachePath))
+        @mkdir($cachePath, 0777, true);
+
+    $_ENV['APP_SERVICES_CACHE'] = $cachePath . '/services.php';
+    $_SERVER['APP_SERVICES_CACHE'] = $cachePath . '/services.php';
+    $_ENV['APP_PACKAGES_CACHE'] = $cachePath . '/packages.php';
+    $_SERVER['APP_PACKAGES_CACHE'] = $cachePath . '/packages.php';
+
+    // Disable compiling views because Vercel doesn't like that directory creation either
+    $_ENV['VIEW_COMPILED_PATH'] = $storage . '/framework/views';
+    $_SERVER['VIEW_COMPILED_PATH'] = $storage . '/framework/views';
+
     require __DIR__ . '/../public/index.php';
 } catch (\Throwable $e) {
     http_response_code(500);
