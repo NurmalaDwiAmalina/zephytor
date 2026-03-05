@@ -14,18 +14,18 @@ $app = Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (\Throwable $e, $request) {
-            echo "<h1>LARAVEL ROOT ERROR:</h1>";
-            echo "<pre>URI: " . $request->getRequestUri() . "</pre>";
-            echo "<pre>" . $e->getMessage() . "</pre>";
-            echo "<pre>" . $e->getFile() . ":" . $e->getLine() . "</pre>";
-            echo "<pre>" . $e->getTraceAsString() . "</pre>";
-            exit;
-        });
+        //
     })->create();
 
 if (isset($_ENV['VERCEL_STORAGE']) || isset($_SERVER['VERCEL_STORAGE'])) {
-    $app->useStoragePath('/tmp/storage');
+    $storage = $_ENV['VERCEL_STORAGE'] ?? $_SERVER['VERCEL_STORAGE'];
+    $app->useStoragePath($storage);
+
+    // Fix: Target class [view] does not exist. 
+    // This happens because package discovery fails on Vercel's read-only filesystem.
+    $app->register(\Illuminate\View\ViewServiceProvider::class);
+    $app->register(\Illuminate\Translation\TranslationServiceProvider::class);
+    $app->register(\Illuminate\Filesystem\FilesystemServiceProvider::class);
 }
 
 return $app;
