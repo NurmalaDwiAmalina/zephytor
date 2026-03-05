@@ -21,6 +21,10 @@ try {
     if (!is_dir($cachePath))
         @mkdir($cachePath, 0777, true);
 
+    @unlink(__DIR__ . '/../bootstrap/cache/services.php');
+    @unlink(__DIR__ . '/../bootstrap/cache/packages.php');
+    @unlink(__DIR__ . '/../bootstrap/cache/config.php');
+
     $_ENV['APP_SERVICES_CACHE'] = $cachePath . '/services.php';
     $_SERVER['APP_SERVICES_CACHE'] = $cachePath . '/services.php';
     putenv("APP_SERVICES_CACHE={$cachePath}/services.php");
