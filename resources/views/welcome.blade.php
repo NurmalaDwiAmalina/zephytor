@@ -316,7 +316,7 @@
                     </div>
                 </a>
                 <!-- Cuci Sepatu -->
-                <div class="portfolio-card reveal">
+                <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=2574&auto=format&fit=crop"
                             alt="Cuci Sepatu">
@@ -326,9 +326,9 @@
                             <h4>Cuci Sepatu Pro</h4>
                             <p data-i18n="portCat2">Cleaning Services</p>
                         </div>
-                        <span class="text-cyan">Web App</span>
+                        <span class="text-cyan" data-i18n="portVisit">Kunjungi Situs →</span>
                     </div>
-                </div>
+                </a>
                 <!-- InDepth -->
                 <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
