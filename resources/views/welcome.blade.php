@@ -12,7 +12,9 @@
 
 <body>
 
-    <!-- TOP NAVBAR -->
+    <div class="floating-promo" data-i18n="floatingBubble">
+        0% DOWN PAYMENT
+    </div>
     <div class="navbar-top">
         <div class="container">
             <a href="#" class="nav-logo">
@@ -113,7 +115,7 @@
                 </div>
                 <div class="card-stat">
                     <h2>0%</h2>
-                    <p>Uang Muka</p>
+                    <p data-i18n="heroStat">Down Payment</p>
                 </div>
             </div>
         </div>
@@ -123,9 +125,9 @@
     <section id="layanan">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title">Solusi Bisnis Digital</h2>
-                <p class="mx-auto" style="max-width: 600px;">Kami bukan sekadar membuat website, kami membangun
-                    identitas brand Anda di internet.</p>
+                <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis Digital</h2>
+                <p class="mx-auto" style="max-width: 600px;" data-i18n="layananDesc">Kami bukan sekadar membuat website,
+                    kami membangun identitas brand Anda di internet.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
@@ -134,16 +136,18 @@
                             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
                             <polyline points="9 22 9 12 15 12 15 22" />
                         </svg></div>
-                    <h3>Company Profile</h3>
-                    <p>Website profesional untuk membangun kepercayaan klien dan investor dalam waktu singkat.</p>
+                    <h3 data-i18n="srv1Title">Company Profile</h3>
+                    <p data-i18n="srv1Desc">Website profesional untuk membangun kepercayaan klien dan investor dalam
+                        waktu singkat.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                         </svg></div>
-                    <h3>Landing Page</h3>
-                    <p>Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google & Meta Ads.</p>
+                    <h3 data-i18n="srv2Title">Landing Page</h3>
+                    <p data-i18n="srv2Desc">Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google &
+                        Meta Ads.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
@@ -152,9 +156,9 @@
                             <path d="M7 21h10" />
                             <path d="M12 18v3" />
                         </svg></div>
-                    <h3>Custom Web App</h3>
-                    <p>Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan spesifik bisnis Anda.
-                    </p>
+                    <h3 data-i18n="srv3Title">Custom Web App</h3>
+                    <p data-i18n="srv3Desc">Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan
+                        spesifik bisnis Anda.</p>
                 </div>
             </div>
         </div>
@@ -164,131 +168,132 @@
     <section id="harga" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title">Pilihan Paket Investasi</h2>
-                <p>Sesuai dengan skala dan target gol bisnis Anda.</p>
+                <h2 class="section-title" data-i18n="hargaTitle">Pilihan Paket Investasi</h2>
+                <p data-i18n="hargaDesc">Sesuai dengan skala dan target gol bisnis Anda.</p>
             </div>
             <div class="pricing-grid">
                 <!-- Paket 1 -->
                 <div class="price-card reveal">
-                    <div class="plan-name">Landing Page</div>
-                    <div class="price-val">Rp 500rb</div>
-                    <div class="price-desc">1 Halaman • Cocok untuk promosi singkat</div>
+                    <div class="plan-name" data-i18n="pkg1Name">Landing Page</div>
+                    <div class="price-val" data-i18n="pkg1Price">Rp 500rb</div>
+                    <div class="price-desc" data-i18n="pkg1Desc">1 Halaman • Cocok untuk promosi singkat</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> 1 Halaman Responsif (Mobile Friendly)</li>
+                            </svg> <span data-i18n="pkg1Feat1">1 Halaman Responsif (Mobile Friendly)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Copywriting Persuasif Basic</li>
+                            </svg> <span data-i18n="pkg1Feat2">Copywriting Persuasif Basic</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Akses Dashboard Pengelolaan</li>
+                            </svg> <span data-i18n="pkg1Feat3">Akses Dashboard Pengelolaan</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Integrasi Link Sosmed & Galeri</li>
+                            </svg> <span data-i18n="pkg1Feat4">Integrasi Link Sosmed & Galeri</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Gratis Hosting & SSL 1 Tahun</li>
+                            </svg> <span data-i18n="pkg1Feat5">Gratis Hosting & SSL 1 Tahun</span></li>
                         <li class="disabled"><svg width="18" height="18" fill="none" stroke="currentColor"
                                 stroke-width="2" viewBox="0 0 24 24">
                                 <line x1="18" y1="6" x2="6" y2="18" />
                                 <line x1="6" y1="6" x2="18" y2="18" />
-                            </svg> Custom Email Domain (.com)</li>
+                            </svg> <span data-i18n="pkg1Feat6">Custom Email Domain (.com)</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+500K" class="btn btn-outline">Pesan
-                        Sekarang</a>
+                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+500K" class="btn btn-outline"
+                        data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
                 <div class="price-card reveal">
-                    <div class="plan-name">Paket Murah</div>
-                    <div class="price-val">Rp 750rb <small>- 1Jt</small></div>
-                    <div class="price-desc">3 Halaman • Untuk bisnis yang baru mulai</div>
+                    <div class="plan-name" data-i18n="pkg2Name">Paket Murah</div>
+                    <div class="price-val"><span data-i18n="pkg2Price">Rp 750rb</span> <small data-i18n="pkg2Range">-
+                            1Jt</small></div>
+                    <div class="price-desc" data-i18n="pkg2Desc">3 Halaman • Untuk bisnis yang baru mulai</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> 3 Halaman Struktur Lengkap</li>
+                            </svg> <span data-i18n="pkg2Feat1">3 Halaman Struktur Lengkap</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Copywriting Profesional</li>
+                            </svg> <span data-i18n="pkg2Feat2">Copywriting Profesional</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> 1 Email Bisnis (admin@domain)</li>
+                            </svg> <span data-i18n="pkg2Feat3">1 Email Bisnis (admin@domain)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Optimasi SEO On-Page Basic</li>
+                            </svg> <span data-i18n="pkg2Feat4">Optimasi SEO On-Page Basic</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Integrasi Google Maps Bisnis</li>
+                            </svg> <span data-i18n="pkg2Feat5">Integrasi Google Maps Bisnis</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Murah+Zephytor" class="btn btn-outline">Pesan
-                        Sekarang</a>
+                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Murah+Zephytor" class="btn btn-outline"
+                        data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 3 -->
                 <div class="price-card popular reveal">
-                    <div class="popular-badge">TERLARIS</div>
-                    <div class="plan-name">Paket Untung</div>
-                    <div class="price-val">Rp 1.5jt</div>
-                    <div class="price-desc">5 Halaman • Best value untuk scale-up</div>
+                    <div class="popular-badge" data-i18n="pkgBest">TERLARIS</div>
+                    <div class="plan-name" data-i18n="pkg3Name">Paket Untung</div>
+                    <div class="price-val" data-i18n="pkg3Price">Rp 1.5jt</div>
+                    <div class="price-desc" data-i18n="pkg3Desc">5 Halaman • Best value for scale-up</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> 5 Halaman Premium (Home, About, etc)</li>
+                            </svg> <span data-i18n="pkg3Feat1">5 Halaman Premium (Home, About, etc)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Premium Sales Driven Copywriting</li>
+                            </svg> <span data-i18n="pkg3Feat2">Premium Sales Driven Copywriting</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> 3 Email Bisnis Terintegrasi</li>
+                            </svg> <span data-i18n="pkg3Feat3">3 Email Bisnis Terintegrasi</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Full SEO Optimized (Ready to Rank)</li>
+                            </svg> <span data-i18n="pkg3Feat4">Full SEO Optimized (Ready to Rank)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Video Tutorial Panduan Admin</li>
+                            </svg> <span data-i18n="pkg3Feat5">Video Tutorial Panduan Admin</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Untung+1.5Jt" class="btn btn-primary">Pesan
-                        Sekarang</a>
+                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Untung+1.5Jt" class="btn btn-primary"
+                        data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 4 -->
                 <div class="price-card reveal">
-                    <div class="plan-name">Paket Pro Custom</div>
-                    <div class="price-val">Rp 3jt+</div>
-                    <div class="price-desc">Unlimited Halaman • Full custom solution</div>
+                    <div class="plan-name" data-i18n="pkg4Name">Paket Pro Custom</div>
+                    <div class="price-val" data-i18n="pkg4Price">Rp 3jt+</div>
+                    <div class="price-desc" data-i18n="pkg4Desc">Unlimited Halaman • Full custom solution</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Desain Eksklusif UI/UX Mandiri</li>
+                            </svg> <span data-i18n="pkg4Feat1">Desain Eksklusif UI/UX Mandiri</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Fitur Custom (CMS / Filter / Database)</li>
+                            </svg> <span data-i18n="pkg4Feat2">Fitur Custom (CMS / Filter / Database)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Integrasi API / Payment Gateway</li>
+                            </svg> <span data-i18n="pkg4Feat3">Integrasi API / Payment Gateway</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> Jaminan PageSpeed 90+ Score</li>
+                            </svg> <span data-i18n="pkg4Feat4">Jaminan PageSpeed 90+ Score</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Pro+Custom" class="btn btn-outline">Hubungi
-                        Kami</a>
+                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
+                        data-i18n="btnHubungi">Hubungi Kami</a>
                 </div>
             </div>
         </div>
@@ -365,71 +370,85 @@
     <section id="testimoni" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title">Apa Kata Klien Kami</h2>
+                <h2 class="section-title" data-i18n="testTitle">Apa Kata Klien Kami</h2>
             </div>
             <div class="testimonials-wrapper reveal">
                 <div class="testimonials-track">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote>"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin
-                            percaya dengan bisnis kami. Terima kasih Zephytor!"</blockquote>
+                        <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat
+                            profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"
+                        </blockquote>
                         <div class="author">
                             <div class="avatar">A</div>
                             <div class="author-info">
                                 <div class="name">Ahmad Ridwan</div>
-                                <div class="role">CEO, PT Maju Bersama</div>
+                                <div class="role" data-i18n="test1Role">CEO, PT Maju Bersama</div>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote>"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI
-                            yang luar biasa!"</blockquote>
+                        <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami
+                            hingga 3x lipat. ROI yang luar biasa!"</blockquote>
                         <div class="author">
                             <div class="avatar">S</div>
                             <div class="author-info">
                                 <div class="name">Sari Dewi</div>
-                                <div class="role">Marketing Manager</div>
+                                <div class="role" data-i18n="test2Role">Marketing Manager</div>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote>"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern.
-                            Highly recommended!"</blockquote>
+                        <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya
+                            clean dan modern. Highly recommended!"</blockquote>
                         <div class="author">
                             <div class="avatar">B</div>
                             <div class="author-info">
                                 <div class="name">Budi Santoso</div>
-                                <div class="role">Owner, Photography</div>
+                                <div class="role" data-i18n="test3Role">Owner, Photography</div>
                             </div>
                         </div>
                     </div>
                     <!-- Repetition for infinite scroll -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote>"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin
-                            percaya dengan bisnis kami. Terima kasih Zephytor!"</blockquote>
+                        <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat
+                            profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"
+                        </blockquote>
                         <div class="author">
                             <div class="avatar">A</div>
                             <div class="author-info">
                                 <div class="name">Ahmad Ridwan</div>
-                                <div class="role">CEO, PT Maju Bersama</div>
+                                <div class="role" data-i18n="test1Role">CEO, PT Maju Bersama</div>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote>"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI
-                            yang luar biasa!"</blockquote>
+                        <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami
+                            hingga 3x lipat. ROI yang luar biasa!"</blockquote>
                         <div class="author">
                             <div class="avatar">S</div>
                             <div class="author-info">
                                 <div class="name">Sari Dewi</div>
-                                <div class="role">Marketing Manager</div>
+                                <div class="role" data-i18n="test2Role">Marketing Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya
+                            clean dan modern. Highly recommended!"</blockquote>
+                        <div class="author">
+                            <div class="avatar">B</div>
+                            <div class="author-info">
+                                <div class="name">Budi Santoso</div>
+                                <div class="role" data-i18n="test3Role">Owner, Photography</div>
                             </div>
                         </div>
                     </div>
@@ -442,9 +461,11 @@
     <div class="container">
         <div class="cta-box reveal">
             <div class="cta-content">
-                <h2>Siap Membangun Aset Digital?</h2>
-                <p>Hubungi kami sekarang untuk mendapatkan website premium dengan penawaran terbaik.</p>
-                <a href="https://wa.me/6285892778882" class="btn btn-white btn-lg">Chat WhatsApp Sekarang</a>
+                <h2 data-i18n="ctaTitle">Siap Membangun Aset Digital?</h2>
+                <p data-i18n="ctaDesc">Hubungi kami sekarang untuk mendapatkan website premium dengan penawaran terbaik.
+                </p>
+                <a href="https://wa.me/6285892778882" class="btn btn-white btn-lg" data-i18n="ctaBtn">Chat WhatsApp
+                    Sekarang</a>
             </div>
         </div>
     </div>
@@ -464,26 +485,26 @@
                                 font-weight="800" fill="currentColor">Ephytor</text>
                         </svg>
                     </a>
-                    <p style="margin-top: 24px;">Transformasi digital bisnis Indonesia dengan desain modern & performa
-                        tinggi.</p>
+                    <p style="margin-top: 24px;" data-i18n="footDesc">Transformasi digital bisnis Indonesia dengan
+                        desain modern & performa tinggi.</p>
                 </div>
                 <div>
-                    <h4>Layanan</h4>
+                    <h4 data-i18n="foot1Title">Layanan</h4>
                     <ul>
-                        <li><a href="#layanan">Company Profile</a></li>
-                        <li><a href="#layanan">Landing Page</a></li>
-                        <li><a href="#layanan">Custom App</a></li>
+                        <li><a href="#layanan" data-i18n="srv1Title">Company Profile</a></li>
+                        <li><a href="#layanan" data-i18n="srv2Title">Landing Page</a></li>
+                        <li><a href="#layanan" data-i18n="srv3Title">Custom App</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Dukungan</h4>
+                    <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
-                        <li><a href="https://wa.me/6285892778882">Konsultasi Gratis</a></li>
+                        <li><a href="https://wa.me/6285892778882" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
                         <li><a href="mailto:hello@zephytor.com">hello@zephytor.com</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Sosial Media</h4>
+                    <h4 data-i18n="foot3Title">Sosial Media</h4>
                     <ul>
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">LinkedIn</a></li>
@@ -507,12 +528,74 @@
                 heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span>",
                 heroDesc: "Kami membangun infrastruktur digital profesional untuk merampingkan operasional Anda. Tanpa modal awal yang besar, dapatkan website premium yang meyakinkan klien.",
                 heroBtn: "Pesan Website Sekarang",
+                layananTitle: "Solusi Bisnis Digital",
+                layananDesc: "Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.",
+                srv1Title: "Company Profile",
+                srv1Desc: "Website profesional untuk membangun kepercayaan klien dan investor dalam waktu singkat.",
+                srv2Title: "Landing Page",
+                srv2Desc: "Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google & Meta Ads.",
+                srv3Title: "Custom Web App",
+                srv3Desc: "Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan spesifik bisnis Anda.",
+                hargaTitle: "Pilihan Paket Investasi",
+                hargaDesc: "Sesuai dengan skala dan target gol bisnis Anda.",
+                pkg1Name: "Landing Page",
+                pkg1Price: "Rp 500rb",
+                pkg1Desc: "1 Halaman • Cocok untuk promosi singkat",
+                pkg1Feat1: "1 Halaman Responsif (Mobile Friendly)",
+                pkg1Feat2: "Copywriting Persuasif Basic",
+                pkg1Feat3: "Akses Dashboard Pengelolaan",
+                pkg1Feat4: "Integrasi Link Sosmed & Galeri",
+                pkg1Feat5: "Gratis Hosting & SSL 1 Tahun",
+                pkg1Feat6: "Custom Email Domain (.com)",
+                pkg2Name: "Paket Murah",
+                pkg2Price: "Rp 750rb",
+                pkg2Range: "- 1Jt",
+                pkg2Desc: "3 Halaman • Untuk bisnis yang baru mulai",
+                pkg2Feat1: "3 Halaman Struktur Lengkap",
+                pkg2Feat2: "Copywriting Profesional",
+                pkg2Feat3: "1 Email Bisnis (admin@domain)",
+                pkg2Feat4: "Optimasi SEO On-Page Basic",
+                pkg2Feat5: "Integrasi Google Maps Bisnis",
+                pkgBest: "TERLARIS",
+                pkg3Name: "Paket Untung",
+                pkg3Price: "Rp 1.5jt",
+                pkg3Desc: "5 Halaman • Best value untuk scale-up",
+                pkg3Feat1: "5 Halaman Premium (Home, About, etc)",
+                pkg3Feat2: "Premium Sales Driven Copywriting",
+                pkg3Feat3: "3 Email Bisnis Terintegrasi",
+                pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
+                pkg3Feat5: "Video Tutorial Panduan Admin",
+                pkg4Name: "Paket Pro Custom",
+                pkg4Price: "Rp 3jt+",
+                pkg4Desc: "Unlimited Halaman • Full custom solution",
+                pkg4Feat1: "Desain Eksklusif UI/UX Mandiri",
+                pkg4Feat2: "Fitur Custom (CMS / Filter / Database)",
+                pkg4Feat3: "Integrasi API / Payment Gateway",
+                pkg4Feat4: "Jaminan PageSpeed 90+ Score",
+                btnPesan: "Pesan Sekarang",
+                btnHubungi: "Hubungi Kami",
+                floatingBubble: "0% UANG MUKA",
+                heroStat: "Uang Muka",
                 portTitle: "Karya yang Telah Kami Bangun",
                 portCat1: "Arsitektur Interior",
                 portCat2: "Layanan Kebersihan",
                 portCat3: "Profil Digital Agency",
                 portCat4: "Perusahaan Solusi Air",
-                portVisit: "Lihat Situs →"
+                portVisit: "Lihat Situs →",
+                testTitle: "Apa Kata Klien Kami",
+                test1Quote: '"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"',
+                test1Role: "CEO, PT Maju Bersama",
+                test2Quote: '"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI yang luar biasa!"',
+                test2Role: "Marketing Manager",
+                test3Quote: '"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"',
+                test3Role: "Owner, Photography",
+                ctaTitle: "Siap Membangun Aset Digital?",
+                ctaDesc: "Hubungi kami sekarang untuk mendapatkan website premium dengan penawaran terbaik.",
+                ctaBtn: "Chat WhatsApp Sekarang",
+                footDesc: "Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.",
+                foot1Title: "Layanan",
+                foot2Title: "Dukungan",
+                foot3Title: "Sosial Media"
             },
             en: {
                 navHome: "Home",
@@ -525,12 +608,74 @@
                 heroTitle: "Digitalize Your Business <span>Exactly as Promised.</span>",
                 heroDesc: "We build professional digital infrastructure to streamline your operations. Get a premium website that convinces clients without high upfront costs.",
                 heroBtn: "Order Website Now",
+                layananTitle: "Digital Business Solutions",
+                layananDesc: "We don't just build websites, we build your brand identity on the internet.",
+                srv1Title: "Company Profile",
+                srv1Desc: "Professional website to build client and investor trust in a short time.",
+                srv2Title: "Landing Page",
+                srv2Desc: "One page with high conversion focus. Perfect for Google & Meta Ads.",
+                srv3Title: "Custom Web App",
+                srv3Desc: "Tailored solutions with self-management system (CMS) for specific business needs.",
+                hargaTitle: "Investment Package Options",
+                hargaDesc: "According to your scale and business goals.",
+                pkg1Name: "Landing Page",
+                pkg1Price: "$35",
+                pkg1Desc: "1 Page • Suitable for short promotions",
+                pkg1Feat1: "1 Responsive Page (Mobile Friendly)",
+                pkg1Feat2: "Basic Persuasive Copywriting",
+                pkg1Feat3: "Admin Dashboard Access",
+                pkg1Feat4: "Social Media & Gallery Integration",
+                pkg1Feat5: "Free Hosting & SSL 1 Year",
+                pkg1Feat6: "Custom Domain Email (.com)",
+                pkg2Name: "Value Package",
+                pkg2Price: "$50",
+                pkg2Range: "- $70",
+                pkg2Desc: "3 Pages • For businesses just starting out",
+                pkg2Feat1: "3 Pages Complete Structure",
+                pkg2Feat2: "Professional Copywriting",
+                pkg2Feat3: "1 Business Email (admin@domain)",
+                pkg2Feat4: "Basic On-Page SEO Optimization",
+                pkg2Feat5: "Google Maps Business Integration",
+                pkgBest: "BEST SELLER",
+                pkg3Name: "Profit Package",
+                pkg3Price: "$100",
+                pkg3Desc: "5 Pages • Best value for scaling up",
+                pkg3Feat1: "5 Premium Pages (Home, About, etc)",
+                pkg3Feat2: "Premium Sales Driven Copywriting",
+                pkg3Feat3: "3 Integrated Business Emails",
+                pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
+                pkg3Feat5: "Admin Guide Video Tutorial",
+                pkg4Name: "Pro Custom Package",
+                pkg4Price: "$200+",
+                pkg4Desc: "Unlimited Pages • Full custom solution",
+                pkg4Feat1: "Exclusive UI/UX Independent Design",
+                pkg4Feat2: "Custom Features (CMS / Filter / Database)",
+                pkg4Feat3: "API / Payment Gateway Integration",
+                pkg4Feat4: "PageSpeed 90+ Score Guaranteed",
+                btnPesan: "Order Now",
+                btnHubungi: "Contact Us",
+                floatingBubble: "0% DOWN PAYMENT",
+                heroStat: "Down Payment",
                 portTitle: "Our Built Masterpieces",
                 portCat1: "Interior Architecture",
                 portCat2: "Cleaning Services",
                 portCat3: "Digital Agency Profile",
                 portCat4: "Water Solution Company",
-                portVisit: "Visit Site →"
+                portVisit: "Visit Site →",
+                testTitle: "What Our Clients Say",
+                test1Quote: '"Our company profile website looks very professional now. New clients trust our business more. Thank you Zephytor!"',
+                test1Role: "CEO, PT Maju Bersama",
+                test2Quote: '"Landing page from Zephytor increased our ad conversion by 3x. Amazing ROI!"',
+                test2Role: "Marketing Manager",
+                test3Quote: '"Fast execution and results exceeded expectations. Clean and modern design. Highly recommended!"',
+                test3Role: "Owner, Photography",
+                ctaTitle: "Ready to Build Digital Assets?",
+                ctaDesc: "Contact us now to get a premium website with the best offer.",
+                ctaBtn: "Chat WhatsApp Now",
+                footDesc: "Digital transformation for Indonesian businesses with modern design & high performance.",
+                foot1Title: "Services",
+                foot2Title: "Support",
+                foot3Title: "Social Media"
             }
         };
 
@@ -633,7 +778,7 @@
                     this.classList.add('active');
                 }
             });
-        });
+    });
     </script>
 </body>
 
