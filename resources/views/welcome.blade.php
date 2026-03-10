@@ -8,6 +8,7 @@
     <meta name="description"
         content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.">
     <link rel="stylesheet" href="/css/landing.css?v=3.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 
 <body data-spy="scroll" data-target="#floatingNav" data-offset="100">
@@ -731,7 +732,7 @@
                     <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
                         <li><a href="https://wa.me/6285892778882" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
-                        <li><a href="mailto:hello@zephytor.com">hello@zephytor.com</a></li>
+                        <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
                     </ul>
                 </div>
                 <div>
