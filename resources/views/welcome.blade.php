@@ -7,8 +7,8 @@
     <title>Zephytor — Jasa Pembuatan Website Premium</title>
     <meta name="description"
         content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.">
-    <link rel="stylesheet" href="/css/landing.css?v=3.0">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=3.0">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 </head>
 
 <body data-spy="scroll" data-target="#floatingNav" data-offset="100">
@@ -401,8 +401,7 @@
                 <!-- Cuci Sepatu -->
                 <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=2574&auto=format&fit=crop"
-                            alt="Cuci Sepatu">
+                        <img src="{{ asset('images/portfolio/cuci-sepatu.png') }}" alt="Cuci Sepatu">
                     </div>
                     <div class="portfolio-info">
                         <div>
@@ -415,8 +414,7 @@
                 <!-- InDepth -->
                 <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
-                            alt="InDepth">
+                        <img src="{{ asset('images/portfolio/indepth.png') }}" alt="InDepth">
                     </div>
                     <div class="portfolio-info">
                         <div>
@@ -429,8 +427,7 @@
                 <!-- Tirta Bhumi -->
                 <a href="https://tirtabhumi.com" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop"
-                            alt="Tirta Bhumi">
+                        <img src="{{ asset('images/portfolio/tirtabhumi.png') }}" alt="Tirta Bhumi">
                     </div>
                     <div class="portfolio-info">
                         <div>
@@ -1050,7 +1047,7 @@
                 faq6Q: "Apakah editing website dapat dilakukan sendiri?",
                 faq6A: "Tentu saja! Karena setiap website kami lengkapi dengan akses Dashboard Pengelolaan (CMS) yang user-friendly, Anda dapat dengan mudah mengedit konten sendiri tanpa coding.",
                 faq7Q: "Apakah penambahan halaman baru dapat dilakukan sendiri?",
-                faq7A: "Ya, Anda dapat menambahkan halaman baru melalui dashboard admin. Kami juga menyediakan Video Tutorial Panduan Admin untuk memudahkan Anda.",
+                faq7A: "Ya, Anda dapat menambahkan halaman baru melalui dashboard admin.",
                 faq8Q: "Apakah mendapatkan domain gratis pada tiap paketnya?",
                 faq8A: "Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.",
                 faq9Q: "Berapa kapasitas hosting websitenya?",
@@ -1115,7 +1112,7 @@
                 hargaDesc: "According to your scale and business goals.",
                 pkgRev: "Unlimited Free Revisions",
                 pkg1Name: "Landing Page",
-                pkg1Price: "$55",
+                pkg1Price: "$110",
                 pkg1Desc: "1 Page • Suitable for short promotions",
                 pkg1Feat1: "1 Responsive Page (Mobile Friendly)",
                 pkg1Feat2: "Basic Persuasive Copywriting",
@@ -1123,8 +1120,8 @@
                 pkg1Feat4: "Social Media & Gallery Integration",
                 pkg1Feat5: "Free Domain & Hosting",
                 pkg2Name: "Value Package",
-                pkg2Price: "$100",
-                pkg2Range: "- $175",
+                pkg2Price: "$200",
+                pkg2Range: "- $350",
                 pkg2Desc: "3 Pages • For businesses just starting out",
                 pkg2Feat1: "3 Pages Complete Structure",
                 pkg2Feat2: "Professional Copywriting",
@@ -1133,7 +1130,7 @@
                 pkg2Feat5: "Google Maps Business Integration",
                 pkgBest: "BEST SELLER",
                 pkg3Name: "Premium Package",
-                pkg3Price: "$250",
+                pkg3Price: "$500",
                 pkg3Desc: "5 Pages • Best value for scaling up",
                 pkg3Feat1: "5 Premium Pages (Home, About, etc)",
                 pkg3Feat2: "Premium Sales Driven Copywriting",
@@ -1141,7 +1138,7 @@
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Admin Guide Video Tutorial",
                 pkg4Name: "Enterprise Package",
-                pkg4Price: "$500+",
+                pkg4Price: "$1000+",
                 pkg4Desc: "Unlimited Pages • Full custom solution",
                 pkg4Feat1: "Exclusive UI/UX Independent Design",
                 pkg4Feat2: "Custom Features (CMS / Filter / Database)",
@@ -1194,7 +1191,7 @@
                 faq6Q: "Can the website be edited by myself?",
                 faq6A: "Yes, you will be given access to a user-friendly admin dashboard (CMS) so you can edit the content yourself without coding.",
                 faq7Q: "Can I add new pages myself?",
-                faq7A: "Yes, you can easily add pages via the CMS dashboard. We also provide Admin Guide Video Tutorials to make it easier for you.",
+                faq7A: "Yes, you can easily add pages via the CMS dashboard.",
                 faq8Q: "Do I get a free domain in each package?",
                 faq8A: "Currently, hosting and SSL are included for free for 1 year in all packages. Free domains (like .com, .id) are available for certain packages according to promotional terms.",
                 faq9Q: "What is the hosting capacity of the website?",
