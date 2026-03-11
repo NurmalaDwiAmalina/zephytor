@@ -242,7 +242,7 @@
                 <!-- Paket 1 -->
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg1Name">Landing Page</div>
-                    <div class="price-val" data-i18n="pkg1Price">Rp 500rb</div>
+                    <div class="price-val" data-i18n="pkg1Price">Rp 850rb</div>
                     <div class="price-desc" data-i18n="pkg1Desc">1 Halaman • Cocok untuk promosi singkat</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -264,20 +264,20 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat5">Gratis Hosting & SSL 1 Tahun</span></li>
+                            </svg> <span data-i18n="pkg1Feat5">Gratis Domain & Hosting</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+500K" class="btn btn-outline"
+                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+850K" class="btn btn-outline"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg2Name">Paket Murah</div>
-                    <div class="price-val"><span data-i18n="pkg2Price">Rp 750rb</span> <small data-i18n="pkg2Range">-
-                            1Jt</small></div>
+                    <div class="price-val"><span data-i18n="pkg2Price">Rp 1.5jt</span> <small data-i18n="pkg2Range">-
+                            2.5jt</small></div>
                     <div class="price-desc" data-i18n="pkg2Desc">3 Halaman • Untuk bisnis yang baru mulai</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -312,7 +312,7 @@
                 <div class="price-card popular reveal">
                     <div class="popular-badge" data-i18n="pkgBest">TERLARIS</div>
                     <div class="plan-name" data-i18n="pkg3Name">Paket Untung</div>
-                    <div class="price-val" data-i18n="pkg3Price">Rp 1.5jt</div>
+                    <div class="price-val" data-i18n="pkg3Price">Rp 3.5jt</div>
                     <div class="price-desc" data-i18n="pkg3Desc">5 Halaman • Best value for scale-up</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -340,13 +340,13 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Untung+1.5Jt" class="btn btn-primary"
+                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 4 -->
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg4Name">Paket Pro Custom</div>
-                    <div class="price-val" data-i18n="pkg4Price">Rp 3jt+</div>
+                    <div class="price-val" data-i18n="pkg4Price">Rp 7jt+</div>
                     <div class="price-desc" data-i18n="pkg4Desc">Unlimited Halaman • Full custom solution</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -634,10 +634,9 @@
                 <h2 class="section-title" data-i18n="faqTitle">Hal yang Sering Ditanyakan</h2>
             </div>
 
-            <div class="faq-accordion reveal">
-                <div class="faq-item">
+            <div class="faq-accordion reveal">\n <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq1Q">Apakah ada jaminan jika hasil tidak sesuai?</h4>
+                        <h4 data-i18n="faq1Q"></h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -646,14 +645,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq1A">Tentu! Kami memberikan <b>gratis revisi tampilan sepuasnya</b> hingga Anda
-                            benar-benar puas dengan hasil akhirnya sebelum website dipublikasikan.</p>
+                        <p data-i18n="faq1A"></p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq2Q">Berapa lama waktu pengerjaan?</h4>
+                        <h4 data-i18n="faq2Q"></h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -662,14 +659,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq2A">Umumnya pengerjaan memakan waktu 48 jam hingga 1 minggu tergantung pada
-                            kompleksitas fitur dan antrian proyek yang sedang berjalan.</p>
+                        <p data-i18n="faq2A"></p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq3Q">Apakah saya mendapatkan akses dashboard?</h4>
+                        <h4 data-i18n="faq3Q"></h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -678,8 +673,203 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq3A">Ya, setiap proyek dilengkapi dengan dashboard admin premium yang memudahkan
-                            Anda mengelola konten, pesanan, dan analitik website secara mandiri tanpa coding.</p>
+                        <p data-i18n="faq3A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq4Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq4A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq5Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq5A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq6Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq6A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq7Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq7A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq8Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq8A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq9Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq9A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq10Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq10A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq11Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq11A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq12Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq12A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq13Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq13A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq14Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq14A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq15Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq15A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq16Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq16A"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq17Q"></h4>
+                        <div class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq17A"></p>
                     </div>
                 </div>
             </div>
@@ -780,16 +970,16 @@
                 hargaDesc: "Sesuai dengan skala dan target gol bisnis Anda.",
                 pkgRev: "Gratis Revisi Sepuasnya",
                 pkg1Name: "Landing Page",
-                pkg1Price: "Rp 500rb",
+                pkg1Price: "Rp 850rb",
                 pkg1Desc: "1 Halaman • Cocok untuk promosi singkat",
                 pkg1Feat1: "1 Halaman Responsif (Mobile Friendly)",
                 pkg1Feat2: "Copywriting Persuasif Basic",
                 pkg1Feat3: "Akses Dashboard Pengelolaan",
                 pkg1Feat4: "Integrasi Link Sosmed & Galeri",
-                pkg1Feat5: "Gratis Hosting & SSL 1 Tahun",
-                pkg2Name: "Paket Murah",
-                pkg2Price: "Rp 750rb",
-                pkg2Range: "- 1Jt",
+                pkg1Feat5: "Gratis Domain & Hosting",
+                pkg2Name: "Paket Menengah",
+                pkg2Price: "Rp 1.5jt",
+                pkg2Range: "- 2.5jt",
                 pkg2Desc: "3 Halaman • Untuk bisnis yang baru mulai",
                 pkg2Feat1: "3 Halaman Struktur Lengkap",
                 pkg2Feat2: "Copywriting Profesional",
@@ -797,16 +987,16 @@
                 pkg2Feat4: "Optimasi SEO On-Page Basic",
                 pkg2Feat5: "Integrasi Google Maps Bisnis",
                 pkgBest: "TERLARIS",
-                pkg3Name: "Paket Untung",
-                pkg3Price: "Rp 1.5jt",
+                pkg3Name: "Paket Premium",
+                pkg3Price: "Rp 3.5jt",
                 pkg3Desc: "5 Halaman • Best value untuk scale-up",
                 pkg3Feat1: "5 Halaman Premium (Home, About, etc)",
                 pkg3Feat2: "Premium Sales Driven Copywriting",
                 pkg3Feat3: "3 Email Bisnis Terintegrasi",
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Video Tutorial Panduan Admin",
-                pkg4Name: "Paket Pro Custom",
-                pkg4Price: "Rp 3jt+",
+                pkg4Name: "Paket Enterprise",
+                pkg4Price: "Rp 7jt+",
                 pkg4Desc: "Unlimited Halaman • Full custom solution",
                 pkg4Feat1: "Desain Eksklusif UI/UX Mandiri",
                 pkg4Feat2: "Fitur Custom (CMS / Filter / Database)",
@@ -846,10 +1036,40 @@
                 step3Title: "Development & Launch",
                 step3Desc: "Proses coding yang cepat dan optimasi performa maksimal sebelum live.",
                 faqTitle: "Pertanyaan yang Sering Diajukan",
-                faq1Q: "Apakah ada jaminan jika hasil tidak sesuai?",
-                faq1A: "Tentu! Kami memberikan gratis revisi tampilan sepuasnya hingga Anda benar-benar puas dengan hasil akhirnya sebelum website dipublikasikan.",
-                faq2Q: "Berapa lama waktu pengerjaan?",
-                faq2A: "Umumnya 48 jam hingga 1 minggu tergantung kompleksitas proyek.",
+                faq1Q: "Jenis website apa saja yang \"bisa\" dibuat menggunakan layanan ini?",
+                faq1A: "Kami melayani pembuatan berbagai website profesional mulai dari Company Profile, Landing Page, dan e-commerce atau Custom Web App untuk kebutuhan bisnis Anda.",
+                faq2Q: "Jenis website apa saja yang \"tidak bisa\" dibuat menggunakan layanan ini?",
+                faq2A: "Kami tidak melayani pembuatan website untuk keperluan judi online, penipuan, pornografi, atau hal-hal lain yang melanggar hukum di Indonesia.",
+                faq3Q: "Bagaimana jika website sudah jadi dan perlu revisi?",
+                faq3A: "Tenang saja! Kami memberikan fasilitas gratis revisi sepuasnya hingga Anda benar-benar puas dengan hasil akhirnya sebelum website dipublikasikan.",
+                faq4Q: "Tampilan websitenya akan seperti apa?",
+                faq4A: "Tampilan website Anda akan dirancang secara eksklusif (custom) menyesuaikan identitas brand dan preferensi Anda. Kami tidak menggunakan template kaku, sehingga website Anda akan terlihat unik dan premium.",
+                faq5Q: "Apakah logo website nantinya dibuatkan?",
+                faq5A: "Jika Anda belum memiliki logo, kami dapat membantu membuatkan logo sederhana secara gratis. Untuk desain logo premium dapat dipesan dengan biaya tambahan.",
+                faq6Q: "Apakah editing website dapat dilakukan sendiri?",
+                faq6A: "Tentu saja! Karena setiap website kami lengkapi dengan akses Dashboard Pengelolaan (CMS) yang user-friendly, Anda dapat dengan mudah mengedit konten sendiri tanpa coding.",
+                faq7Q: "Apakah penambahan halaman baru dapat dilakukan sendiri?",
+                faq7A: "Ya, Anda dapat menambahkan halaman baru melalui dashboard admin. Kami juga menyediakan Video Tutorial Panduan Admin untuk memudahkan Anda.",
+                faq8Q: "Apakah mendapatkan domain gratis pada tiap paketnya?",
+                faq8A: "Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.",
+                faq9Q: "Berapa kapasitas hosting websitenya?",
+                faq9A: "Kapasitas hosting bervariasi tergantung pada paket yang Anda pilih, mulai dari kapasitas ideal standar hingga resource unlimited untuk keperluan Custom App.",
+                faq10Q: "Apakah mendapatkan gratis SSL?",
+                faq10A: "Ya! Kami selalu memastikan keamanan pengunjung website Anda dengan menyertakan perlindungan Free SSL Certificate tanpa memungut biaya tambahan.",
+                faq11Q: "Apakah sudah mendapat email dengan nama domain sendiri?",
+                faq11A: "Tentu. Mulai dari paket tertentu, Anda sudah mendapatkan email bisnis profesional (contoh: admin@domainanda.com) yang bisa langsung digunakan.",
+                faq12Q: "Apakah bisa menambahkan logo sosmed yang terhubung langsung ke sosmednya?",
+                faq12A: "Ya, semua paket sudah termasuk Integrasi Link Sosmed & Galeri, pengunjung bisa langsung diarahkan ke platform media sosial Anda.",
+                faq13Q: "Apakah dikenakan biaya jika ingin dibantu update website?",
+                faq13A: "Selama masa garansi/revisi (sebelum rilis akhir), tidak ada biaya. Jika Anda butuh bantuan update secara rutin ke depannya, kami menyediakan layanan maintenance (bulanan/tahunan) yang terjangkau.",
+                faq14Q: "Apakah bisa mengubah template setelah website selesai diproses?",
+                faq14A: "Karena website dibangun dengan desain custom secara eksklusif, perombakan desain secara total setelah proyek dinyatakan selesai akan dianggap sebagai permintaan redesign dengan biaya terpisah.",
+                faq15Q: "Berapa batas konten per halaman?",
+                faq15A: "Tidak ada batasan yang kaku, asalkan tidak membatasi performa kecepatan dan User Experience pengunjung. Tim kami akan selalu menyarankan panjang halaman yang optimal untuk target SEO & konversi.",
+                faq16Q: "Bagaimana perhitungan jumlah halaman multi bahasa?",
+                faq16A: "Apabila menyertakan multi bahasa, bahasa utama akan dihitung sebagai halaman dasarnya, sedangkan setiap duplikasi terjemahan dianggap sebagai halaman tambahan, dan biasanya dikerjakan dalam paket Pro Custom.",
+                faq17Q: "Setelah website selesai, apakah otomatis muncul di halaman pertama Google?",
+                faq17A: "Berada di halaman utama Google (SEO) merupakan proses berkelanjutan. Paket kami sudah mencakup optimasi SEO On-Page di awal sebagai fondasi agar mesin pencari (Google) lebih mudah melakukan indeks dan memberikan ranking ke depannya.",
                 expTitle: "Dibalik Layar Zephytor",
                 expDesc: "Kami adalah tim yang berdedikasi untuk mentransformasi bisnis Anda di dunia digital.",
                 exp1Desc: "Membangun pondasi teknis yang kuat dan performa yang ultra-cepat.",
@@ -894,16 +1114,16 @@
                 hargaDesc: "According to your scale and business goals.",
                 pkgRev: "Unlimited Free Revisions",
                 pkg1Name: "Landing Page",
-                pkg1Price: "$35",
+                pkg1Price: "$55",
                 pkg1Desc: "1 Page • Suitable for short promotions",
                 pkg1Feat1: "1 Responsive Page (Mobile Friendly)",
                 pkg1Feat2: "Basic Persuasive Copywriting",
                 pkg1Feat3: "Admin Dashboard Access",
                 pkg1Feat4: "Social Media & Gallery Integration",
-                pkg1Feat5: "Free Hosting & SSL 1 Year",
+                pkg1Feat5: "Free Domain & Hosting",
                 pkg2Name: "Value Package",
-                pkg2Price: "$50",
-                pkg2Range: "- $70",
+                pkg2Price: "$100",
+                pkg2Range: "- $175",
                 pkg2Desc: "3 Pages • For businesses just starting out",
                 pkg2Feat1: "3 Pages Complete Structure",
                 pkg2Feat2: "Professional Copywriting",
@@ -911,16 +1131,16 @@
                 pkg2Feat4: "Basic On-Page SEO Optimization",
                 pkg2Feat5: "Google Maps Business Integration",
                 pkgBest: "BEST SELLER",
-                pkg3Name: "Profit Package",
-                pkg3Price: "$100",
+                pkg3Name: "Premium Package",
+                pkg3Price: "$250",
                 pkg3Desc: "5 Pages • Best value for scaling up",
                 pkg3Feat1: "5 Premium Pages (Home, About, etc)",
                 pkg3Feat2: "Premium Sales Driven Copywriting",
                 pkg3Feat3: "3 Integrated Business Emails",
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Admin Guide Video Tutorial",
-                pkg4Name: "Pro Custom Package",
-                pkg4Price: "$200+",
+                pkg4Name: "Enterprise Package",
+                pkg4Price: "$500+",
                 pkg4Desc: "Unlimited Pages • Full custom solution",
                 pkg4Feat1: "Exclusive UI/UX Independent Design",
                 pkg4Feat2: "Custom Features (CMS / Filter / Database)",
@@ -960,10 +1180,40 @@
                 step3Title: "Development & Launch",
                 step3Desc: "Fast coding process and maximum performance optimization before going live.",
                 faqTitle: "Frequently Asked Questions",
-                faq1Q: "What if the result is not as expected?",
-                faq1A: "Don't worry! We offer unlimited free revisions until you are completely satisfied with the design before the website goes live.",
-                faq2Q: "How long does the development take?",
-                faq2A: "Generally 48 hours to 1 week depending on project complexity.",
+                faq1Q: "What kind of websites \"can\" be created using this service?",
+                faq1A: "We build various professional websites ranging from Company Profiles, Landing Pages, e-commerce sites, to Custom Web Apps for your business needs.",
+                faq2Q: "What kind of websites \"cannot\" be created using this service?",
+                faq2A: "We do not accept websites that violate the law (e.g., gambling, fraud, pornography).",
+                faq3Q: "What if the website is done and needs revision?",
+                faq3A: "Don't worry! We provide unlimited free revisions before your website goes live.",
+                faq4Q: "What will the website look like?",
+                faq4A: "The website design is exclusive (custom) and tailored to your brand identity. We do not use rigid generic templates, so your website will look unique and premium.",
+                faq5Q: "Will a website logo be created later?",
+                faq5A: "If you don't have a logo, we can assist with a basic logo for free. Premium logo design can be ordered separately.",
+                faq6Q: "Can the website be edited by myself?",
+                faq6A: "Yes, you will be given access to a user-friendly admin dashboard (CMS) so you can edit the content yourself without coding.",
+                faq7Q: "Can I add new pages myself?",
+                faq7A: "Yes, you can easily add pages via the CMS dashboard. We also provide Admin Guide Video Tutorials to make it easier for you.",
+                faq8Q: "Do I get a free domain in each package?",
+                faq8A: "Currently, hosting and SSL are included for free for 1 year in all packages. Free domains (like .com, .id) are available for certain packages according to promotional terms.",
+                faq9Q: "What is the hosting capacity of the website?",
+                faq9A: "The capacity varies depending on the package you choose, ranging from an ideal standard capacity to unlimited resources for Custom App needs.",
+                faq10Q: "Do I get a free SSL?",
+                faq10A: "Of course, all our packages include a Free SSL Certificate to ensure your website's security at no additional cost.",
+                faq11Q: "Will I get an email with my own domain name?",
+                faq11A: "Certainly. Starting from specific packages, you already receive professional business emails (e.g., admin@yourdomain.com) ready for use.",
+                faq12Q: "Can I add social media logos that link directly to my social media?",
+                faq12A: "Yes, all packages include Social Media & Gallery Integration, allowing visitors to be directed straight to your social media platforms.",
+                faq13Q: "Will there be a fee if I want help updating the website?",
+                faq13A: "During the warranty/revision period (before final release), it's free. For ongoing routine updates, we provide affordable maintenance services (monthly/yearly).",
+                faq14Q: "Can I change the template after the website is finished?",
+                faq14A: "Because the website is built with a custom exclusive design, a total design overhaul after the project is considered complete will be treated as a redesign request with a separate fee.",
+                faq15Q: "What is the content limit per page?",
+                faq15A: "There are no strict limits as long as it doesn't hinder speed performance and User Experience. Our team will recommend the optimal page length for SEO and conversion targets.",
+                faq16Q: "How is the number of multi-language pages calculated?",
+                faq16A: "When including multiple languages, the primary language counts as the base page, while each translated duplicate counts as an additional page, typically handled within the Pro Custom package.",
+                faq17Q: "After the website is finished, does it automatically appear on the first page of Google?",
+                faq17A: "Appearing on Google's first page (SEO) is an ongoing process. Our packages already include initial On-Page SEO optimization to make it much easier for search engines (Google) to index and rank your site in the future.",
                 expTitle: "Behind the Scenes of Zephytor",
                 expDesc: "We are a team dedicated to transforming your business in the digital world.",
                 exp1Desc: "Building a strong technical foundation and ultra-fast performance.",
