@@ -696,6 +696,7 @@ body.dark-theme .service-card {
   background: var(--bg-subtle);
   border: 1px solid var(--border);
   transition: var(--transition);
+  text-decoration: none;
 }
 
 .portfolio-card:hover {
