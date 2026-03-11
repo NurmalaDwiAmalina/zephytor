@@ -634,7 +634,8 @@
                 <h2 class="section-title" data-i18n="faqTitle">Hal yang Sering Ditanyakan</h2>
             </div>
 
-            <div class="faq-accordion reveal">\n <div class="faq-item">
+            <div class="faq-accordion reveal">
+                <div class="faq-item">
                     <div class="faq-question">
                         <h4 data-i18n="faq1Q"></h4>
                         <div class="faq-toggle">
