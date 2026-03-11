@@ -62,7 +62,7 @@
     <nav class="floating-nav" id="floatingNav">
         <a href="#hero" data-i18n="navInfo">INFO</a>
         <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
-        <a href="#harga" data-i18n="navHitung">HITUNG</a>
+        <a href="#kalkulator" data-i18n="navHitung">HITUNG</a>
         <a href="#testimoni" data-i18n="navKontak">KONTAK</a>
         <a href="https://wa.me/6285892778882" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
     </nav>
@@ -71,7 +71,7 @@
     <section class="hero" id="hero">
         <div class="container">
             <div class="reveal">
-                <div class="section-badge" data-i18n="heroBadge">✨ Tersedia Slot Maret 2026</div>
+                <div class="section-badge" data-i18n="heroBadge">✨ Tersedia Slot April 2026</div>
                 <h1 data-i18n="heroTitle">Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span></h1>
                 <p data-i18n="heroDesc">Kami membangun infrastruktur digital profesional untuk merampingkan operasional
                     Anda. Tanpa modal
@@ -275,7 +275,7 @@
                 </div>
                 <!-- Paket 2 -->
                 <div class="price-card reveal">
-                    <div class="plan-name" data-i18n="pkg2Name">Paket Murah</div>
+                    <div class="plan-name" data-i18n="pkg2Name">Paket Menengah</div>
                     <div class="price-val"><span data-i18n="pkg2Price">Rp 1.5jt</span> <small data-i18n="pkg2Range">-
                             2.5jt</small></div>
                     <div class="price-desc" data-i18n="pkg2Desc">3 Halaman • Untuk bisnis yang baru mulai</div>
@@ -311,7 +311,7 @@
                 <!-- Paket 3 -->
                 <div class="price-card popular reveal">
                     <div class="popular-badge" data-i18n="pkgBest">TERLARIS</div>
-                    <div class="plan-name" data-i18n="pkg3Name">Paket Untung</div>
+                    <div class="plan-name" data-i18n="pkg3Name">Paket Premium</div>
                     <div class="price-val" data-i18n="pkg3Price">Rp 3.5jt</div>
                     <div class="price-desc" data-i18n="pkg3Desc">5 Halaman • Best value for scale-up</div>
                     <ul>
@@ -345,7 +345,7 @@
                 </div>
                 <!-- Paket 4 -->
                 <div class="price-card reveal">
-                    <div class="plan-name" data-i18n="pkg4Name">Paket Pro Custom</div>
+                    <div class="plan-name" data-i18n="pkg4Name">Paket Enterprise</div>
                     <div class="price-val" data-i18n="pkg4Price">Rp 7jt+</div>
                     <div class="price-desc" data-i18n="pkg4Desc">Unlimited Halaman • Full custom solution</div>
                     <ul>
@@ -470,7 +470,7 @@
     </section>
 
     <!-- CALCULATOR -->
-    <section id="harga" class="section-alt">
+    <section id="kalkulator" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
                 <div class="section-badge">SIMULASI ROI</div>
@@ -634,7 +634,7 @@
             <div class="faq-accordion reveal">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq1Q"></h4>
+                        <h4 data-i18n="faq1Q">Jenis website apa saja yang "bisa" dibuat menggunakan layanan ini?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -643,12 +643,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq1A"></p>
+                        <p data-i18n="faq1A">Kami melayani pembuatan berbagai website profesional mulai dari Company Profile, Landing Page, dan e-commerce atau Custom Web App untuk kebutuhan bisnis Anda.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq2Q"></h4>
+                        <h4 data-i18n="faq2Q">Jenis website apa saja yang "tidak bisa" dibuat menggunakan layanan ini?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -657,12 +657,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq2A"></p>
+                        <p data-i18n="faq2A">Kami tidak melayani pembuatan website untuk keperluan judi online, penipuan, pornografi, atau hal-hal lain yang melanggar hukum di Indonesia.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq3Q"></h4>
+                        <h4 data-i18n="faq3Q">Bagaimana jika website sudah jadi dan perlu revisi?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -671,12 +671,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq3A"></p>
+                        <p data-i18n="faq3A">Tenang saja! Kami memberikan fasilitas gratis revisi sepuasnya hingga Anda benar-benar puas dengan hasil akhirnya sebelum website dipublikasikan.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq4Q"></h4>
+                        <h4 data-i18n="faq4Q">Tampilan websitenya akan seperti apa?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -685,12 +685,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq4A"></p>
+                        <p data-i18n="faq4A">Tampilan website Anda akan dirancang secara eksklusif (custom) menyesuaikan identitas brand dan preferensi Anda. Kami tidak menggunakan template kaku, sehingga website Anda akan terlihat unik dan premium.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq5Q"></h4>
+                        <h4 data-i18n="faq5Q">Apakah logo website nantinya dibuatkan?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -699,12 +699,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq5A"></p>
+                        <p data-i18n="faq5A">Jika Anda belum memiliki logo, kami dapat membantu membuatkan logo sederhana secara gratis. Untuk desain logo premium dapat dipesan dengan biaya tambahan.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq6Q"></h4>
+                        <h4 data-i18n="faq6Q">Apakah editing website dapat dilakukan sendiri?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -713,12 +713,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq6A"></p>
+                        <p data-i18n="faq6A">Tentu saja! Karena setiap website kami lengkapi dengan akses Dashboard Pengelolaan (CMS) yang user-friendly, Anda dapat dengan mudah mengedit konten sendiri tanpa coding.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq7Q"></h4>
+                        <h4 data-i18n="faq7Q">Apakah penambahan halaman baru dapat dilakukan sendiri?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -727,12 +727,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq7A"></p>
+                        <p data-i18n="faq7A">Ya, Anda dapat menambahkan halaman baru melalui dashboard admin.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq8Q"></h4>
+                        <h4 data-i18n="faq8Q">Apakah mendapatkan domain gratis pada tiap paketnya?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -741,12 +741,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq8A"></p>
+                        <p data-i18n="faq8A">Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq9Q"></h4>
+                        <h4 data-i18n="faq9Q">Berapa kapasitas hosting websitenya?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -755,12 +755,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq9A"></p>
+                        <p data-i18n="faq9A">Kapasitas hosting bervariasi tergantung pada paket yang Anda pilih, mulai dari kapasitas ideal standar hingga resource unlimited untuk keperluan Custom App.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq10Q"></h4>
+                        <h4 data-i18n="faq10Q">Apakah mendapatkan gratis SSL?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -769,12 +769,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq10A"></p>
+                        <p data-i18n="faq10A">Ya! Kami selalu memastikan keamanan pengunjung website Anda dengan menyertakan perlindungan Free SSL Certificate tanpa memungut biaya tambahan.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq11Q"></h4>
+                        <h4 data-i18n="faq11Q">Apakah sudah mendapat email dengan nama domain sendiri?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -783,12 +783,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq11A"></p>
+                        <p data-i18n="faq11A">Tentu. Mulai dari paket tertentu, Anda sudah mendapatkan email bisnis profesional (contoh: admin@domainanda.com) yang bisa langsung digunakan.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq12Q"></h4>
+                        <h4 data-i18n="faq12Q">Apakah bisa menambahkan logo sosmed yang terhubung langsung ke sosmednya?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -797,12 +797,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq12A"></p>
+                        <p data-i18n="faq12A">Ya, semua paket sudah termasuk Integrasi Link Sosmed & Galeri, pengunjung bisa langsung diarahkan ke platform media sosial Anda.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq13Q"></h4>
+                        <h4 data-i18n="faq13Q">Apakah dikenakan biaya jika ingin dibantu update website?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -811,12 +811,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq13A"></p>
+                        <p data-i18n="faq13A">Selama masa garansi/revisi (sebelum rilis akhir), tidak ada biaya. Jika Anda butuh bantuan update secara rutin ke depannya, kami menyediakan layanan maintenance (bulanan/tahunan) yang terjangkau.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq14Q"></h4>
+                        <h4 data-i18n="faq14Q">Apakah bisa mengubah template setelah website selesai diproses?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -825,12 +825,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq14A"></p>
+                        <p data-i18n="faq14A">Karena website dibangun dengan desain custom secara eksklusif, perombakan desain secara total setelah proyek dinyatakan selesai akan dianggap sebagai permintaan redesign dengan biaya terpisah.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq15Q"></h4>
+                        <h4 data-i18n="faq15Q">Berapa batas konten per halaman?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -839,12 +839,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq15A"></p>
+                        <p data-i18n="faq15A">Tidak ada batasan yang kaku, asalkan tidak membatasi performa kecepatan dan User Experience pengunjung. Tim kami akan selalu menyarankan panjang halaman yang optimal untuk target SEO & konversi.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq16Q"></h4>
+                        <h4 data-i18n="faq16Q">Bagaimana perhitungan jumlah halaman multi bahasa?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -853,12 +853,12 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq16A"></p>
+                        <p data-i18n="faq16A">Apabila menyertakan multi bahasa, bahasa utama akan dihitung sebagai halaman dasarnya, sedangkan setiap duplikasi terjemahan dianggap sebagai halaman tambahan, dan biasanya dikerjakan dalam paket Pro Custom.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq17Q"></h4>
+                        <h4 data-i18n="faq17Q">Setelah website selesai, apakah otomatis muncul di halaman pertama Google?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -867,7 +867,7 @@
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <p data-i18n="faq17A"></p>
+                        <p data-i18n="faq17A">Berada di halaman utama Google (SEO) merupakan proses berkelanjutan. Paket kami sudah mencakup optimasi SEO On-Page di awal sebagai fondasi agar mesin pencari (Google) lebih mudah melakukan indeks dan memberikan ranking ke depannya.</p>
                     </div>
                 </div>
             </div>
@@ -952,7 +952,7 @@
                 calcResultLabel: "Potensi Kenaikan Leads",
                 calcNote: "*Berdasarkan peningkatan efisiensi UX standar Zephytor",
                 btnKonsultasi: "Konsultasi Gratis",
-                heroBadge: "✨ Tersedia Slot Maret 2026",
+                heroBadge: "✨ Tersedia Slot April 2026",
                 heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span>",
                 heroDesc: "Kami membangun infrastruktur digital profesional untuk merampingkan operasional Anda. Dengan pembayaran full di awal dan gratis revisi sepuasnya, jaminan hasil memuaskan.",
                 heroBtn: "Pesan Website Sekarang",
