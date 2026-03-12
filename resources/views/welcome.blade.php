@@ -67,6 +67,22 @@
         <a href="https://wa.me/6285892778882" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
     </nav>
 
+    <!-- UI/UX CHECKER BANNER -->
+    <div style="background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(165,243,252,0.1)); border-bottom: 1px solid var(--border); padding: 18px 0;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: space-between;">
+                <p style="margin: 0; font-size: 0.95rem; color: var(--text-b);">
+                    Sudah punya website? <strong style="color: var(--text-h);">Yuk check User Interface & User Experience kamu ✨</strong>
+                </p>
+                <form action="/analyze" method="GET" style="display: flex; gap: 10px; flex: 1; max-width: 460px; min-width: 260px;">
+                    <input type="url" name="url" placeholder="https://website-kamu.com" required
+                        style="flex: 1; padding: 11px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-subtle); color: var(--text-h); font-size: 0.875rem; outline: none; font-family: var(--font-b);">
+                    <button type="submit" class="btn btn-primary" style="padding: 11px 20px; font-size: 0.875rem; white-space: nowrap; border-radius: 12px;">Analisa →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- HERO -->
     <section class="hero" id="hero">
         <div class="container">
