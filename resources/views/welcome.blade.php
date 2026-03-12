@@ -62,7 +62,7 @@
     <nav class="floating-nav" id="floatingNav">
         <a href="#hero" data-i18n="navInfo">INFO</a>
         <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
-        <a href="#kalkulator" data-i18n="navHitung">HITUNG</a>
+        <a href="#mvp" data-i18n="navMvp">MVP</a>
         <a href="#testimoni" data-i18n="navKontak">KONTAK</a>
         <a href="https://wa.me/6285892778882" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
     </nav>
@@ -469,64 +469,28 @@
         </div>
     </section>
 
-    <!-- CALCULATOR -->
-    <section id="kalkulator" class="section-alt">
+    <!-- MVP -->
+    <section id="mvp" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <div class="section-badge">SIMULASI ROI</div>
-                <h2 class="section-title" data-i18n="calcTitle">Hitung Potensi Bisnis Anda</h2>
-                <p class="mx-auto" style="max-width: 600px;" data-i18n="calcDesc">Simulasikan kenaikan performa bisnis
-                    Anda setelah digitalisasi bersama Zephytor.</p>
+                <div class="section-badge" data-i18n="mvpBadge">KECEPATAN PENGIRIMAN</div>
+                <h2 class="section-title" data-i18n="mvpTitle">MVP Siap dalam Hitungan Jam</h2>
+                <p class="mx-auto" style="max-width: 600px;" data-i18n="mvpDesc">Kami bergerak cepat. Dari ide ke produk yang bisa digunakan — tanpa menunggu berbulan-bulan.</p>
             </div>
 
-            <div class="faq-accordion reveal"
-                style="background: rgba(255,255,255,0.4); backdrop-filter: blur(40px); padding: 60px; border-radius: 48px; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 40px 100px -20px rgba(0,0,0,0.05);">
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
-                    <div class="calc-inputs">
-                        <div style="margin-bottom: 40px;">
-                            <label
-                                style="display: block; margin-bottom: 16px; font-weight: 800; color: var(--text-h); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                                <span data-i18n="calcInput1">Traffic Pengunjung / Bulan</span>
-                            </label>
-                            <input type="range" id="trafficInput" min="100" max="10000" step="100" value="1000"
-                                style="width: 100%; height: 6px; background: var(--border); border-radius: 10px; appearance: none; accent-color: var(--primary);">
-                            <div
-                                style="display: flex; justify-content: space-between; margin-top: 16px; font-size: 1rem; font-weight: 700; color: var(--text-h);">
-                                <span style="opacity: 0.3;">100</span>
-                                <span id="trafficValue"
-                                    style="color: var(--primary); background: var(--primary-glow); padding: 4px 12px; border-radius: 8px;">1,000</span>
-                                <span style="opacity: 0.3;">10,000</span>
-                            </div>
-                        </div>
-                        <div>
-                            <label
-                                style="display: block; margin-bottom: 16px; font-weight: 800; color: var(--text-h); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                                <span data-i18n="calcInput2">Tingkat Konversi (Sekarang)</span>
-                            </label>
-                            <input type="range" id="convInput" min="0.1" max="5" step="0.1" value="1"
-                                style="width: 100%; height: 6px; background: var(--border); border-radius: 10px; appearance: none; accent-color: var(--primary);">
-                            <div
-                                style="display: flex; justify-content: space-between; margin-top: 16px; font-size: 1rem; font-weight: 700; color: var(--text-h);">
-                                <span style="opacity: 0.3;">0.1%</span>
-                                <span id="convValue"
-                                    style="color: var(--primary); background: var(--primary-glow); padding: 4px 12px; border-radius: 8px;">1%</span>
-                                <span style="opacity: 0.3;">5%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        style="background: #ffffff; padding: 60px; border-radius: 40px; display: flex; flex-direction: column; justify-content: center; text-align: center; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top:0; left:0; width: 100%; height: 4px; background: var(--primary);">
-                        </div>
-                        <h4 style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 24px; font-weight: 800;"
-                            data-i18n="calcResultLabel">Potensi Kenaikan Leads</h4>
-                        <div style="font-size: 5rem; font-weight: 800; color: var(--text-h); font-family: var(--font-h); line-height: 1;"
-                            id="resultLeads">+30</div>
-                        <p style="font-size: 0.85rem; margin-top: 32px; color: var(--text-muted); line-height: 1.6;"
-                            data-i18n="calcNote">*Berdasarkan standar optimasi infrastruktur Zephytor</p>
-                    </div>
+            <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 16px;">
+                <div style="background: rgba(255,255,255,0.6); backdrop-filter: blur(40px); padding: 56px 48px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 20px 60px -15px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: flex-start; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top:0; left:0; width: 100%; height: 4px; background: var(--primary);"></div>
+                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); font-family: var(--font-h); line-height: 1; margin-bottom: 20px;" data-i18n="mvpSimpleTime">&lt; 3 Jam</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-h); margin-bottom: 12px;" data-i18n="mvpSimpleTitle">Sistem Tidak Kompleks</h3>
+                    <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="mvpSimpleDesc">Landing page, company profile, atau portofolio — MVP Anda sudah jadi dan siap diluncurkan kurang dari 3 jam.</p>
+                </div>
+
+                <div style="background: var(--primary); padding: 56px 48px; border-radius: 40px; box-shadow: 0 20px 60px -15px rgba(99,102,241,0.35); display: flex; flex-direction: column; align-items: flex-start; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -60px; right: -60px; width: 180px; height: 180px; background: rgba(255,255,255,0.08); border-radius: 50%;"></div>
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #ffffff; font-family: var(--font-h); line-height: 1; margin-bottom: 20px;" data-i18n="mvpComplexTime">&lt; 1 Minggu</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="mvpComplexTitle">Sistem Kompleks</h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.95rem;" data-i18n="mvpComplexDesc">Web app dengan fitur custom, dashboard, atau integrasi API — MVP fungsional selesai kurang dari 1 minggu. Cukup untuk validasi pasar Anda.</p>
                 </div>
             </div>
         </div>
@@ -940,17 +904,19 @@
             id: {
                 navInfo: "INFO",
                 navLayanan: "LAYANAN",
-                navHitung: "HITUNG",
+                navMvp: "MVP",
                 navKontak: "KONTAK",
                 btnMulai: "Mulai",
                 faqBadge: "TANYA JAWAB",
-                calcBadge: "SIMULASI",
-                calcTitle: "Hitung Potensi Bisnis Anda",
-                calcDesc: "Simulasikan kenaikan performa bisnis Anda setelah digitalisasi bersama Zephytor.",
-                calcInput1: "Traffic Pengunjung / Bulan",
-                calcInput2: "Tingkat Konversi (Lama)",
-                calcResultLabel: "Potensi Kenaikan Leads",
-                calcNote: "*Berdasarkan peningkatan efisiensi UX standar Zephytor",
+                mvpBadge: "KECEPATAN PENGIRIMAN",
+                mvpTitle: "MVP Siap dalam Hitungan Jam",
+                mvpDesc: "Kami bergerak cepat. Dari ide ke produk yang bisa digunakan — tanpa menunggu berbulan-bulan.",
+                mvpSimpleTime: "< 3 Jam",
+                mvpSimpleTitle: "Sistem Tidak Kompleks",
+                mvpSimpleDesc: "Landing page, company profile, atau portofolio — MVP Anda sudah jadi dan siap diluncurkan kurang dari 3 jam.",
+                mvpComplexTime: "< 1 Minggu",
+                mvpComplexTitle: "Sistem Kompleks",
+                mvpComplexDesc: "Web app dengan fitur custom, dashboard, atau integrasi API — MVP fungsional selesai kurang dari 1 minggu. Cukup untuk validasi pasar Anda.",
                 btnKonsultasi: "Konsultasi Gratis",
                 heroBadge: "✨ Tersedia Slot April 2026",
                 heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span>",
@@ -1084,17 +1050,19 @@
             en: {
                 navInfo: "INFO",
                 navLayanan: "SERVICES",
-                navHitung: "CALC",
+                navMvp: "MVP",
                 navKontak: "CONTACT",
                 btnMulai: "Start",
                 faqBadge: "QUESTIONS",
-                calcBadge: "SIMULATION",
-                calcTitle: "Calculate Your Business Potential",
-                calcDesc: "Simulate your business performance increase after digitalization with Zephytor.",
-                calcInput1: "Monthly Website Traffic",
-                calcInput2: "Current Conversion Rate",
-                calcResultLabel: "Potential Leads Increase",
-                calcNote: "*Based on Zephytor standard UX efficiency improvement",
+                mvpBadge: "DELIVERY SPEED",
+                mvpTitle: "MVP Ready in Hours",
+                mvpDesc: "We move fast. From idea to usable product — no waiting months.",
+                mvpSimpleTime: "< 3 Hours",
+                mvpSimpleTitle: "Simple System",
+                mvpSimpleDesc: "Landing page, company profile, or portfolio — your MVP is ready and launchable in under 3 hours.",
+                mvpComplexTime: "< 1 Week",
+                mvpComplexTitle: "Complex System",
+                mvpComplexDesc: "Web app with custom features, dashboard, or API integrations — a functional MVP done in under 1 week. Enough to validate your market.",
                 btnKonsultasi: "Free Consultation",
                 heroBadge: "✨ March 2026 Slots Available",
                 heroTitle: "Digitalize Your Business <span>Exactly as Promised.</span>",
@@ -1342,32 +1310,6 @@
                 }
             });
         });
-
-        // Calculator Logic
-        const trafficInput = document.getElementById('trafficInput');
-        const convInput = document.getElementById('convInput');
-        const resultLeads = document.getElementById('resultLeads');
-        const trafficValue = document.getElementById('trafficValue');
-        const convValue = document.getElementById('convValue');
-
-        function updateCalc() {
-            const traffic = parseInt(trafficInput.value);
-            const conv = parseFloat(convInput.value);
-
-            // Standard Zephytor improvement is usually 3-4x baseline or +2%
-            const newConv = conv + 2.5;
-            const baselineLeads = traffic * (conv / 100);
-            const projectedLeads = traffic * (newConv / 100);
-            const increase = Math.round(projectedLeads - baselineLeads);
-
-            trafficValue.innerText = traffic.toLocaleString();
-            convValue.innerText = conv + '%';
-            resultLeads.innerText = '+' + increase.toLocaleString();
-        }
-
-        trafficInput.addEventListener('input', updateCalc);
-        convInput.addEventListener('input', updateCalc);
-        updateCalc();
 
         // Scroll Progress Logic
         const progressBar = document.getElementById('scrollProgress');
