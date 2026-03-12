@@ -7,7 +7,7 @@
     <title>Zephytor — Jasa Pembuatan Website Premium</title>
     <meta name="description"
         content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.">
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=3.0">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=4.0">
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 </head>
 
@@ -85,6 +85,9 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
         <div class="container">
             <div class="reveal">
                 <div class="section-badge" data-i18n="heroBadge">✨ Tersedia Slot April 2026</div>
