@@ -7,7 +7,7 @@
     <title>Zephytor — Jasa Pembuatan Website Premium</title>
     <meta name="description"
         content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.">
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=4.0">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=4.1">
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 </head>
 
@@ -68,16 +68,30 @@
     </nav>
 
     <!-- UI/UX CHECKER BANNER -->
-    <div style="background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(165,243,252,0.1)); border-bottom: 1px solid var(--border); padding: 18px 0;">
+    <div class="checker-bar">
+        <div class="checker-glow checker-glow-l"></div>
+        <div class="checker-glow checker-glow-r"></div>
         <div class="container">
-            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: space-between;">
-                <p style="margin: 0; font-size: 0.95rem; color: var(--text-b);">
-                    Sudah punya website? <strong style="color: var(--text-h);">Yuk check User Interface & User Experience kamu ✨</strong>
-                </p>
-                <form action="/analyze" method="GET" style="display: flex; gap: 10px; flex: 1; max-width: 460px; min-width: 260px;">
-                    <input type="url" name="url" placeholder="https://website-kamu.com" required
-                        style="flex: 1; padding: 11px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-subtle); color: var(--text-h); font-size: 0.875rem; outline: none; font-family: var(--font-b);">
-                    <button type="submit" class="btn btn-primary" style="padding: 11px 20px; font-size: 0.875rem; white-space: nowrap; border-radius: 12px;">Analisa →</button>
+            <div class="checker-inner">
+                <div class="checker-label">
+                    <span class="checker-badge">✦ Gratis</span>
+                    <p class="checker-title">Audit UI/UX Website Kamu <span>Sekarang</span></p>
+                    <p class="checker-sub">Masukkan URL website dan dapatkan laporan lengkap dalam detik.</p>
+                </div>
+                <form action="/analyze" method="GET" class="checker-form">
+                    <div class="checker-input-wrap">
+                        <svg class="checker-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <input type="url" name="url" class="checker-input" placeholder="https://website-kamu.com" required>
+                        <button type="submit" class="checker-btn">
+                            Analisa
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

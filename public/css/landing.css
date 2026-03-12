@@ -180,6 +180,184 @@ body.dark-theme {
 }
 
 /* ============================================================
+   UI/UX CHECKER BANNER
+   ============================================================ */
+.checker-bar {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #08080f 0%, #110522 100%);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 48px 0 52px;
+}
+
+.checker-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.35;
+  filter: blur(80px);
+}
+
+.checker-glow-l {
+  background: radial-gradient(circle, #00d2ff 0%, transparent 70%);
+  top: -150px;
+  left: -80px;
+}
+
+.checker-glow-r {
+  background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+  bottom: -150px;
+  right: -80px;
+}
+
+.checker-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.checker-label {
+  flex: 1;
+  min-width: 220px;
+}
+
+.checker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #00d2ff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.checker-title {
+  font-family: var(--font-h);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.checker-title span {
+  background: linear-gradient(135deg, #00d2ff 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.checker-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.checker-form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+}
+
+.checker-input-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 6px 6px 6px 16px;
+  gap: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(12px);
+}
+
+.checker-input-wrap:focus-within {
+  border-color: rgba(0, 210, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.checker-icon {
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.checker-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: var(--font-b);
+  font-size: 0.9rem;
+  padding: 10px 0;
+  min-width: 0;
+}
+
+.checker-input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.checker-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #00d2ff 0%, #a855f7 100%);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: var(--font-b);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(0, 210, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.checker-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(0, 210, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .checker-inner {
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .checker-label {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .checker-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .checker-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ============================================================
    NAVBAR & LOGO
    ============================================================ */
 .navbar-top {
