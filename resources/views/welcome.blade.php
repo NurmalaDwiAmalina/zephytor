@@ -26,14 +26,15 @@
     <div class="navbar-top">
         <div class="container">
             <a href="#" class="nav-logo">
-                <svg class="logo-svg" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Overlapping Parallel Zs -->
+                <svg class="logo-svg" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Overlapping Parallel Zs Emblem -->
                     <path d="M5 25H30L15 45H40" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
                         stroke-linejoin="miter" />
                     <path d="M20 5H45L30 25H55" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
                         stroke-linejoin="miter" />
-                    <text x="65" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800"
-                        fill="currentColor">Ephytor</text>
+                    <!-- Name text -->
+                    <text x="72" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800"
+                        fill="currentColor">Zephytor</text>
                 </svg>
             </a>
             <div style="display: flex; align-items: center; gap: 16px;">
@@ -67,35 +68,7 @@
         <a href="https://wa.me/6285892778882" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
     </nav>
 
-    <!-- UI/UX CHECKER BANNER -->
-    <div class="checker-bar">
-        <div class="checker-glow checker-glow-l"></div>
-        <div class="checker-glow checker-glow-r"></div>
-        <div class="container">
-            <div class="checker-inner">
-                <div class="checker-label">
-                    <span class="checker-badge">✦ Gratis</span>
-                    <p class="checker-title">Audit UI/UX Website Kamu <span>Sekarang</span></p>
-                    <p class="checker-sub">Masukkan URL website dan dapatkan laporan lengkap dalam detik.</p>
-                </div>
-                <form action="/analyze" method="GET" class="checker-form">
-                    <div class="checker-input-wrap">
-                        <svg class="checker-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
-                        <input type="url" name="url" class="checker-input" placeholder="https://website-kamu.com" required>
-                        <button type="submit" class="checker-btn">
-                            Analisa
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
 
     <!-- HERO -->
     <section class="hero" id="hero">
@@ -157,6 +130,57 @@
                 <div class="card-stat floating">
                     <h2 data-i18n="heroStatVal">Full</h2>
                     <p data-i18n="heroStat">Payment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- UI/UX CHECKER SECTION -->
+    <section class="checker-section">
+        <div class="checker-grid-bg"></div>
+        <div class="container">
+            <div class="checker-card reveal">
+                <div class="checker-card-glow"></div>
+                <div class="checker-header">
+                    <span class="checker-badge">✦ Instant Analysis</span>
+                    <h2 class="checker-title" data-i18n="auditTitle">Audit UI/UX Website Kamu <span>Sekarang</span></h2>
+                    <p class="checker-sub" data-i18n="auditSub">Dapatkan laporan performa, desain, dan aksesibilitas dalam hitungan detik.</p>
+                </div>
+                <form action="/analyze" method="GET" class="checker-form-v2">
+                    <div class="checker-input-container">
+                        <div class="checker-input-group">
+                            <div class="checker-input-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <input type="url" name="url" class="checker-field" placeholder="https://website-bisnis-anda.com" required>
+                        </div>
+                        <button type="submit" class="checker-submit-btn">
+                            <span>Mulai Analisa</span>
+                            <div class="btn-shine"></div>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="checker-footer">
+                    <div class="checker-stat-item">
+                        <span class="stat-value">98%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="checker-divider"></div>
+                    <div class="checker-stat-item">
+                        <span class="stat-value">< 3s</span>
+                        <span class="stat-label">Analysis Speed</span>
+                    </div>
+                    <div class="checker-divider"></div>
+                    <div class="checker-stat-item">
+                        <span class="stat-value">Free</span>
+                        <span class="stat-label">Unlimited Checks</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -511,19 +535,19 @@
                 <p class="mx-auto" style="max-width: 600px;" data-i18n="mvpDesc">Kami bergerak cepat. Dari ide ke produk yang bisa digunakan — tanpa menunggu berbulan-bulan.</p>
             </div>
 
-            <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 16px;">
-                <div style="background: rgba(255,255,255,0.6); backdrop-filter: blur(40px); padding: 56px 48px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 20px 60px -15px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: flex-start; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top:0; left:0; width: 100%; height: 4px; background: var(--primary);"></div>
-                    <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); font-family: var(--font-h); line-height: 1; margin-bottom: 20px;" data-i18n="mvpSimpleTime">&lt; 3 Jam</div>
-                    <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-h); margin-bottom: 12px;" data-i18n="mvpSimpleTitle">Sistem Tidak Kompleks</h3>
-                    <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;" data-i18n="mvpSimpleDesc">Landing page, company profile, atau portofolio — MVP Anda sudah jadi dan siap diluncurkan kurang dari 3 jam.</p>
+            <div class="mvp-grid reveal">
+                <div class="mvp-card mvp-card-light">
+                    <div class="mvp-line"></div>
+                    <div class="mvp-time" data-i18n="mvpSimpleTime">&lt; 3 Jam</div>
+                    <h3 class="mvp-card-title" data-i18n="mvpSimpleTitle">Sistem Tidak Kompleks</h3>
+                    <p class="mvp-card-desc" data-i18n="mvpSimpleDesc">Landing page, company profile, atau portofolio — MVP Anda sudah jadi dan siap diluncurkan kurang dari 3 jam.</p>
                 </div>
 
-                <div style="background: var(--primary); padding: 56px 48px; border-radius: 40px; box-shadow: 0 20px 60px -15px rgba(99,102,241,0.35); display: flex; flex-direction: column; align-items: flex-start; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -60px; right: -60px; width: 180px; height: 180px; background: rgba(255,255,255,0.08); border-radius: 50%;"></div>
-                    <div style="font-size: 3.5rem; font-weight: 800; color: #ffffff; font-family: var(--font-h); line-height: 1; margin-bottom: 20px;" data-i18n="mvpComplexTime">&lt; 1 Minggu</div>
-                    <h3 style="font-size: 1.2rem; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="mvpComplexTitle">Sistem Kompleks</h3>
-                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.95rem;" data-i18n="mvpComplexDesc">Web app dengan fitur custom, dashboard, atau integrasi API — MVP fungsional selesai kurang dari 1 minggu. Cukup untuk validasi pasar Anda.</p>
+                <div class="mvp-card mvp-card-primary">
+                    <div class="mvp-orb"></div>
+                    <div class="mvp-time" data-i18n="mvpComplexTime">&lt; 1 Minggu</div>
+                    <h3 class="mvp-card-title" data-i18n="mvpComplexTitle">Sistem Kompleks</h3>
+                    <p class="mvp-card-desc" data-i18n="mvpComplexDesc">Web app dengan fitur custom, dashboard, atau integrasi API — MVP fungsional selesai kurang dari 1 minggu. Cukup untuk validasi pasar Anda.</p>
                 </div>
             </div>
         </div>
@@ -893,13 +917,13 @@
             <div class="footer-grid">
                 <div>
                     <a href="#" class="nav-logo">
-                        <svg class="logo-svg" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="logo-svg" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 25H30L15 45H40" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
                                 stroke-linejoin="miter" />
                             <path d="M20 5H45L30 25H55" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
                                 stroke-linejoin="miter" />
-                            <text x="65" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="28"
-                                font-weight="800" fill="currentColor">Ephytor</text>
+                            <text x="72" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="28"
+                                font-weight="800" fill="currentColor">Zephytor</text>
                         </svg>
                     </a>
                     <p style="margin-top: 24px;" data-i18n="footDesc">Transformasi digital bisnis Indonesia dengan
@@ -1075,6 +1099,8 @@
                 ctaTitle: "Siap Membangun Aset Digital?",
                 ctaDesc: "Hubungi kami sekarang untuk mendapatkan website premium dengan penawaran terbaik.",
                 ctaBtn: "Chat WhatsApp Sekarang",
+                auditTitle: "Audit UI/UX Website Kamu <span>Sekarang</span>",
+                auditSub: "Masukkan URL website dan dapatkan laporan lengkap dalam hitungan detik.",
                 footDesc: "Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.",
                 foot1Title: "Layanan",
                 foot2Title: "Dukungan",
@@ -1221,6 +1247,8 @@
                 ctaTitle: "Ready to Build Digital Assets?",
                 ctaDesc: "Contact us now to get a premium website with the best offer.",
                 ctaBtn: "Chat WhatsApp Now",
+                auditTitle: "Audit Your Website's UI/UX <span>Now</span>",
+                auditSub: "Enter your website URL and get a full report in seconds.",
                 footDesc: "Digital transformation for Indonesian businesses with modern design & high performance.",
                 foot1Title: "Services",
                 foot2Title: "Support",
