@@ -1550,17 +1550,21 @@ body.dark-theme .faq-item.active {
 
 /* CTA */
 .cta-box {
-  background: var(--text-h) !important;
-  color: var(--bg) !important;
+  background: #000000 !important;
+  color: #ffffff !important;
   border-radius: 24px;
   padding: 80px 40px;
   text-align: center;
-  color: #fff !important;
   position: relative;
   overflow: hidden;
   margin: 0 auto 100px;
   max-width: 960px;
-  box-shadow: none;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .cta-box {
+  background: #1d1d1f !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cta-box::before {
@@ -1910,9 +1914,14 @@ body.dark-theme .mvp-card-light {
 }
 
 .mvp-card-primary {
-  background: var(--text-h);
-  color: var(--bg);
-  box-shadow: none;
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .mvp-card-primary {
+  background: #1d1d1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mvp-orb {
@@ -1938,7 +1947,7 @@ body.dark-theme .mvp-card-light {
 }
 
 .mvp-card-primary .mvp-time {
-  color: var(--bg);
+  color: #ffffff;
 }
 
 .mvp-card-title {
