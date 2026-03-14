@@ -283,9 +283,54 @@
             box-shadow: 0 0 0 3px var(--primary-glow);
         }
 
+        @media (max-width: 991px) {
+            .page-content div[style*="grid-template-columns: 1fr 1.5fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+            .analyze-navbar .inner {
+                padding: 0 16px;
+            }
+        }
+
         @media (max-width: 640px) {
             .try-again-form { flex-direction: column; }
             .analyze-navbar .url-chip { display: none; }
+            .score-ring-wrap {
+                width: 120px;
+                height: 120px;
+            }
+            .score-ring-wrap svg {
+                width: 120px;
+                height: 120px;
+            }
+            .score-ring-wrap circle {
+                cx: 60;
+                cy: 60;
+                r: 52;
+                stroke-width: 6;
+            }
+            /* Circumference for r=52: 2*π*52 ≈ 326 */
+            #overallRing {
+                stroke-dasharray: 326;
+                stroke-dashoffset: 326;
+            }
+            .score-ring-inner .score-num {
+                font-size: 2rem;
+            }
+            .score-ring-inner .score-grade {
+                font-size: 0.8rem;
+            }
+            .page-content {
+                padding-top: 80px;
+            }
+            h1 {
+                font-size: 1.8rem !important;
+            }
+            .rec-item {
+                padding: 16px 20px;
+                gap: 12px;
+            }
         }
     </style>
 </head>
@@ -298,7 +343,7 @@
                 <svg class="logo-svg" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 32px; color: var(--text-h);">
                     <path d="M5 25H30L15 45H40" stroke="currentColor" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter" />
                     <path d="M20 5H45L30 25H55" stroke="currentColor" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter" />
-                    <text x="65" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="currentColor">Ephytor</text>
+                    <text x="65" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="currentColor">Zephytor</text>
                 </svg>
             </a>
             <div class="url-chip" title="{{ $url }}">{{ $url }}</div>
@@ -469,9 +514,10 @@
             document.getElementById('summaryText').textContent = summary;
 
             const ring = document.getElementById('overallRing');
+            const circumference = window.innerWidth <= 640 ? 326 : 427;
             ring.style.stroke = scoreColor(overall_score);
             setTimeout(() => {
-                ring.style.strokeDashoffset = ringOffset(overall_score, 427);
+                ring.style.strokeDashoffset = ringOffset(overall_score, circumference);
             }, 100);
 
             // Screenshot

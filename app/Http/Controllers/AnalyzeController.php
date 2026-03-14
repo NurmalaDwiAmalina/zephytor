@@ -21,7 +21,8 @@ class AnalyzeController extends Controller
         $request->validate(['url' => 'required|url']);
         $url = $request->input('url');
 
-        $screenshotUrl = 'https://image.thum.io/get/width/1200/crop/900/' . $url;
+        $thumioKey = env('THUMIO_KEY');
+        $screenshotUrl = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'width/1200/crop/900/' . $url;
 
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . config('services.openai.key'),
@@ -54,7 +55,7 @@ class AnalyzeController extends Controller
         if ($response->failed()) {
             return response()->json([
                 'success' => false,
-                'error'   => 'Gagal menghubungi OpenAI. Pastikan OPENAI_API_KEY sudah diset dengan benar.',
+                'error'   => 'Gagal menghubungi OpenAI. Error: ' . ($response->json('error.message') ?? $response->status()),
             ], 500);
         }
 

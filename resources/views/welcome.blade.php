@@ -30,6 +30,12 @@
 
 <body data-spy="scroll" data-target="#floatingNav" data-offset="100">
 
+    <div class="bg-mesh">
+        <div class="mesh-orb orb-1"></div>
+        <div class="mesh-orb orb-2"></div>
+        <div class="mesh-orb orb-3"></div>
+    </div>
+
     <div class="scroll-sidebar">
         <div class="explore-text">EXPLORE</div>
         <div class="progress-container">
@@ -37,22 +43,10 @@
         </div>
     </div>
 
-    <div class="floating-promo" data-i18n="floatingBubble">
-        PEMBAYARAN FULL
-    </div>
     <div class="navbar-top">
         <div class="container">
             <a href="#" class="nav-logo">
-                <svg class="logo-svg" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Overlapping Parallel Zs Emblem -->
-                    <path d="M5 25H30L15 45H40" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
-                        stroke-linejoin="miter" />
-                    <path d="M20 5H45L30 25H55" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
-                        stroke-linejoin="miter" />
-                    <!-- Name text -->
-                    <text x="72" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800"
-                        fill="currentColor">Zephytor</text>
-                </svg>
+                <span style="font-family: var(--font-h); font-size: 28px; font-weight: 800; color: var(--logo-color); letter-spacing: -1px;">Zephytor</span>
             </a>
             <div style="display: flex; align-items: center; gap: 16px;">
                 <div class="lang-switcher">
@@ -129,26 +123,26 @@
                         <div class="dot dot-g"></div>
                     </div>
                     <div class="code-line">
-                        <span class="text-cyan">class</span>&nbsp;<span class="text-purple">Zephytor</span>&nbsp;{
+                        <span style="color: var(--text-muted)">class</span>&nbsp;<span style="color: var(--text-h)">Zephytor</span>&nbsp;{
                     </div>
                     <div class="code-line">
-                        &nbsp;&nbsp;<span class="text-cyan">public</span>&nbsp;function&nbsp;<span
-                            class="text-purple">buildSuccess</span>()&nbsp;{
+                        &nbsp;&nbsp;<span style="color: var(--text-muted)">public</span>&nbsp;function&nbsp;<span
+                            style="color: var(--text-h)">buildSuccess</span>()&nbsp;{
                     </div>
                     <div class="code-line">
                         &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[
                     </div>
                     <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-cyan">'design'</span>&nbsp;=>&nbsp;<span
-                            class="text-purple">'Premium'</span>,
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--text-muted)">'design'</span>&nbsp;=>&nbsp;<span
+                            style="color: var(--text-h)">'Premium'</span>,
                     </div>
                     <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-cyan">'speed'</span>&nbsp;=>&nbsp;<span
-                            class="text-purple">'Ultra Fast'</span>,
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--text-muted)">'speed'</span>&nbsp;=>&nbsp;<span
+                            style="color: var(--text-h)">'Ultra Fast'</span>,
                     </div>
                     <div class="code-line">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                            class="text-cyan">'conversion'</span>&nbsp;=>&nbsp;<span class="text-purple">'High'</span>
+                            style="color: var(--text-muted)">'conversion'</span>&nbsp;=>&nbsp;<span style="color: var(--text-h)">'High'</span>
                     </div>
                     <div class="code-line">
                         &nbsp;&nbsp;&nbsp;&nbsp;];
@@ -159,10 +153,6 @@
                     <div class="code-line">
                         }
                     </div>
-                </div>
-                <div class="card-stat floating">
-                    <h2 data-i18n="heroStatVal">Full</h2>
-                    <p data-i18n="heroStat">Payment</p>
                 </div>
             </div>
         </div>
@@ -321,6 +311,42 @@
         </div>
     </section>
 
+    <!-- KEUNGGULAN -->
+    <section id="keunggulan" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="section-badge" data-i18n="advBadge">ADVANTAGES</div>
+                <h2 class="section-title" data-i18n="advTitle">KEUNGGULAN LAYANAN KAMI</h2>
+            </div>
+            <div class="adv-grid">
+                <div class="adv-item reveal">
+                    <div class="adv-icon">📈</div>
+                    <p data-i18n="adv1">Website sudah terintegrasi dengan Google Analytics dan Google Search Console</p>
+                </div>
+                <div class="adv-item reveal">
+                    <div class="adv-icon">🔍</div>
+                    <p data-i18n="adv2">Website SEO friendly</p>
+                </div>
+                <div class="adv-item reveal">
+                    <div class="adv-icon">⚡</div>
+                    <p data-i18n="adv3">Website 3 halaman bisa selesai kurang dari 3 jam</p>
+                </div>
+                <div class="adv-item reveal">
+                    <div class="adv-icon">💻</div>
+                    <p data-i18n="adv4">Menggunakan bahasa pemrograman terbaru yang ringan</p>
+                </div>
+                <div class="adv-item reveal">
+                    <div class="adv-icon">🛡️</div>
+                    <p data-i18n="adv5">Sistem lebih stabil dan minim error</p>
+                </div>
+                <div class="adv-item reveal">
+                    <div class="adv-icon">💰</div>
+                    <p data-i18n="adv6">HARGA YANG KAMI TAWARKAN LEBIH MURAH DIBANDINGKAN COMPETITOR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- HARGA -->
     <section id="harga" class="section-alt">
         <div class="container">
@@ -332,7 +358,7 @@
                 <!-- Paket 1 -->
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg1Name">Landing Page</div>
-                    <div class="price-val" data-i18n="pkg1Price">Rp 850rb</div>
+                    <div class="price-val" data-i18n="pkg1Price">Rp 300rb</div>
                     <div class="price-desc" data-i18n="pkg1Desc">1 Halaman • Cocok untuk promosi singkat</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -354,51 +380,12 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat5">Gratis Domain & Hosting</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+850K" class="btn btn-outline"
+                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
-                <div class="price-card reveal">
-                    <div class="plan-name" data-i18n="pkg2Name">Paket Menengah</div>
-                    <div class="price-val"><span data-i18n="pkg2Price">Rp 1.5jt</span> <small data-i18n="pkg2Range">-
-                            2.5jt</small></div>
-                    <div class="price-desc" data-i18n="pkg2Desc">3 Halaman • Untuk bisnis yang baru mulai</div>
-                    <ul>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg2Feat1">3 Halaman Struktur Lengkap</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg2Feat2">Copywriting Profesional</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg2Feat3">1 Email Bisnis (admin@domain)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg2Feat4">Optimasi SEO On-Page Basic</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg2Feat5">Integrasi Google Maps Bisnis</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
-                    </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Murah+Zephytor" class="btn btn-outline"
-                        data-i18n="btnPesan">Pesan Sekarang</a>
-                </div>
-                <!-- Paket 3 -->
                 <div class="price-card popular reveal">
                     <div class="popular-badge" data-i18n="pkgBest">TERLARIS</div>
                     <div class="plan-name" data-i18n="pkg3Name">Paket Premium</div>
@@ -433,7 +420,7 @@
                     <a href="https://wa.me/6285892778882?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
-                <!-- Paket 4 -->
+                <!-- Paket 3 -->
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg4Name">Paket Enterprise</div>
                     <div class="price-val" data-i18n="pkg4Price">Rp 7jt+</div>
@@ -587,7 +574,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimoni" class="section-alt">
+    <section id="testimoni">
         <div class="container">
             <div class="section-header text-center reveal">
                 <h2 class="section-title" data-i18n="testTitle">Apa Kata <span class="gradient-text">Klien Kami</span></h2>
@@ -763,20 +750,6 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq2Q">Jenis website apa saja yang "tidak bisa" dibuat menggunakan layanan ini?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq2A">Kami tidak melayani pembuatan website untuk keperluan judi online, penipuan, pornografi, atau hal-hal lain yang melanggar hukum di Indonesia.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
                         <h4 data-i18n="faq3Q">Bagaimana jika website sudah jadi dan perlu revisi?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -805,20 +778,6 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq5Q">Apakah logo website nantinya dibuatkan?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq5A">Jika Anda belum memiliki logo, kami dapat membantu membuatkan logo sederhana secara gratis. Untuk desain logo premium dapat dipesan dengan biaya tambahan.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
                         <h4 data-i18n="faq6Q">Apakah editing website dapat dilakukan sendiri?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -829,20 +788,6 @@
                     </div>
                     <div class="faq-answer">
                         <p data-i18n="faq6A">Tentu saja! Karena setiap website kami lengkapi dengan akses Dashboard Pengelolaan (CMS) yang user-friendly, Anda dapat dengan mudah mengedit konten sendiri tanpa coding.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq7Q">Apakah penambahan halaman baru dapat dilakukan sendiri?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq7A">Ya, Anda dapat menambahkan halaman baru melalui dashboard admin.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -861,34 +806,6 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4 data-i18n="faq9Q">Berapa kapasitas hosting websitenya?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq9A">Kapasitas hosting bervariasi tergantung pada paket yang Anda pilih, mulai dari kapasitas ideal standar hingga resource unlimited untuk keperluan Custom App.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq10Q">Apakah mendapatkan gratis SSL?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq10A">Ya! Kami selalu memastikan keamanan pengunjung website Anda dengan menyertakan perlindungan Free SSL Certificate tanpa memungut biaya tambahan.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
                         <h4 data-i18n="faq11Q">Apakah sudah mendapat email dengan nama domain sendiri?</h4>
                         <div class="faq-toggle">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -899,76 +816,6 @@
                     </div>
                     <div class="faq-answer">
                         <p data-i18n="faq11A">Tentu. Mulai dari paket tertentu, Anda sudah mendapatkan email bisnis profesional (contoh: admin@domainanda.com) yang bisa langsung digunakan.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq12Q">Apakah bisa menambahkan logo sosmed yang terhubung langsung ke sosmednya?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq12A">Ya, semua paket sudah termasuk Integrasi Link Sosmed & Galeri, pengunjung bisa langsung diarahkan ke platform media sosial Anda.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq13Q">Apakah dikenakan biaya jika ingin dibantu update website?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq13A">Selama masa garansi/revisi (sebelum rilis akhir), tidak ada biaya. Jika Anda butuh bantuan update secara rutin ke depannya, kami menyediakan layanan maintenance (bulanan/tahunan) yang terjangkau.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq14Q">Apakah bisa mengubah template setelah website selesai diproses?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq14A">Karena website dibangun dengan desain custom secara eksklusif, perombakan desain secara total setelah proyek dinyatakan selesai akan dianggap sebagai permintaan redesign dengan biaya terpisah.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq15Q">Berapa batas konten per halaman?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq15A">Tidak ada batasan yang kaku, asalkan tidak membatasi performa kecepatan dan User Experience pengunjung. Tim kami akan selalu menyarankan panjang halaman yang optimal untuk target SEO & konversi.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq16Q">Bagaimana perhitungan jumlah halaman multi bahasa?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq16A">Apabila menyertakan multi bahasa, bahasa utama akan dihitung sebagai halaman dasarnya, sedangkan setiap duplikasi terjemahan dianggap sebagai halaman tambahan, dan biasanya dikerjakan dalam paket Pro Custom.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1005,23 +852,35 @@
         </div>
     </div>
 
+    <!-- NEWSLETTER -->
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box reveal">
+                <div class="newsletter-content">
+                    <h2 data-i18n="newsTitle">Dapatkan Insight Digital Bisnis Terkini</h2>
+                    <p data-i18n="newsDesc">Berlangganan newsletter kami untuk tips strategi digital & info promo eksklusif setiap minggunya.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Alamat email Anda..." required>
+                        <button type="submit" class="btn btn-primary" data-i18n="btnSubscribe">Langganan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
+        <div class="footer-giant-text">SASTRO JENDRO</div>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <a href="#" class="nav-logo">
-                        <svg class="logo-svg" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 25H30L15 45H40" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
-                                stroke-linejoin="miter" />
-                            <path d="M20 5H45L30 25H55" stroke="currentColor" stroke-width="6" stroke-linecap="butt"
-                                stroke-linejoin="miter" />
-                            <text x="72" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="28"
-                                font-weight="800" fill="currentColor">Zephytor</text>
-                        </svg>
+                        <span style="font-family: var(--font-h); font-size: 28px; font-weight: 800; color: var(--logo-color); letter-spacing: -1px;">Zephytor</span>
                     </a>
-                    <p style="margin-top: 24px;" data-i18n="footDesc">Transformasi digital bisnis Indonesia dengan
-                        desain modern & performa tinggi.</p>
+                    <p style="margin-top: 24px;" data-i18n="footDesc">Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.</p>
                 </div>
                 <div>
                     <h4 data-i18n="foot1Title">Layanan</h4>
@@ -1071,7 +930,7 @@
                 btnKonsultasi: "Konsultasi Gratis",
                 heroBadge: "✨ Tersedia Slot April 2026",
                 heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span>",
-                heroDesc: "Kami membangun infrastruktur digital profesional untuk merampingkan operasional Anda. Dengan pembayaran full di awal dan gratis revisi sepuasnya, jaminan hasil memuaskan.",
+                heroDesc: "Kami membangun infrastruktur digital profesional untuk merampingkan operasional Anda. Tanpa modal awal yang besar, dapatkan website premium yang meyakinkan klien.",
                 heroBtn: "Pesan Website Sekarang",
                 layananTitle: "Solusi Bisnis Digital",
                 layananDesc: "Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.",
@@ -1085,22 +944,12 @@
                 hargaDesc: "Sesuai dengan skala dan target gol bisnis Anda.",
                 pkgRev: "Gratis Revisi Sepuasnya",
                 pkg1Name: "Landing Page",
-                pkg1Price: "Rp 850rb",
+                pkg1Price: "Rp 300rb",
                 pkg1Desc: "1 Halaman • Cocok untuk promosi singkat",
                 pkg1Feat1: "1 Halaman Responsif (Mobile Friendly)",
                 pkg1Feat2: "Copywriting Persuasif Basic",
                 pkg1Feat3: "Akses Dashboard Pengelolaan",
                 pkg1Feat4: "Integrasi Link Sosmed & Galeri",
-                pkg1Feat5: "Gratis Domain & Hosting",
-                pkg2Name: "Paket Menengah",
-                pkg2Price: "Rp 1.5jt",
-                pkg2Range: "- 2.5jt",
-                pkg2Desc: "3 Halaman • Untuk bisnis yang baru mulai",
-                pkg2Feat1: "3 Halaman Struktur Lengkap",
-                pkg2Feat2: "Copywriting Profesional",
-                pkg2Feat3: "1 Email Bisnis (admin@domain)",
-                pkg2Feat4: "Optimasi SEO On-Page Basic",
-                pkg2Feat5: "Integrasi Google Maps Bisnis",
                 pkgBest: "TERLARIS",
                 pkg3Name: "Paket Premium",
                 pkg3Price: "Rp 3.5jt",
@@ -1119,9 +968,14 @@
                 pkg4Feat4: "Jaminan PageSpeed 90+ Score",
                 btnPesan: "Pesan Sekarang",
                 btnHubungi: "Hubungi Kami",
-                floatingBubble: "PEMBAYARAN FULL",
-                heroStat: "Payment",
-                heroStatVal: "Full",
+                advBadge: "KEUNGGULAN",
+                advTitle: "KEUNGGULAN LAYANAN KAMI",
+                adv1: "Website sudah terintegrasi dengan Google Analytics dan Google Search Console",
+                adv2: "Website SEO friendly",
+                adv3: "Website 3 halaman bisa selesai kurang dari 3 jam",
+                adv4: "Menggunakan bahasa pemrograman terbaru yang ringan",
+                adv5: "Sistem lebih stabil dan minim error",
+                adv6: "HARGA YANG KAMI TAWARKAN LEBIH MURAH DIBANDINGKAN COMPETITOR",
                 portTitle: "Karya yang Telah Kami Bangun",
                 portCat1: "Arsitektur Interior",
                 portCat2: "Layanan Kebersihan",
@@ -1198,9 +1052,12 @@
                 exp3Desc: "Strategi konten dan alur konversi yang efektif meningkatkan ROI.",
                 ctaTitle: "Siap Membangun Aset Digital?",
                 ctaDesc: "Hubungi kami sekarang untuk mendapatkan website premium dengan penawaran terbaik.",
-                ctaBtn: "Chat WhatsApp Sekarang",
+                ctaBtn: "Konsultasi Sekarang",
                 auditTitle: "Audit UI/UX Website Kamu <span>Sekarang</span>",
                 auditSub: "Masukkan URL website dan dapatkan laporan lengkap dalam hitungan detik.",
+                newsTitle: "Dapatkan Insight Digital Bisnis Terkini",
+                newsDesc: "Berlangganan newsletter kami untuk tips strategi digital & info promo eksklusif setiap minggunya.",
+                btnSubscribe: "Langganan",
                 footDesc: "Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.",
                 foot1Title: "Layanan",
                 foot2Title: "Dukungan",
@@ -1225,7 +1082,7 @@
                 btnKonsultasi: "Free Consultation",
                 heroBadge: "✨ March 2026 Slots Available",
                 heroTitle: "Digitalize Your Business <span>Exactly as Promised.</span>",
-                heroDesc: "We build professional digital infrastructure to streamline your operations. With full upfront payment and unlimited free revisions, we guarantee your satisfaction.",
+                heroDesc: "We build professional digital infrastructure to streamline your operations. Without high upfront capital, get a premium website that convinces clients.",
                 heroBtn: "Order Website Now",
                 layananTitle: "Digital Business Solutions",
                 layananDesc: "We don't just build websites, we build your brand identity on the internet.",
@@ -1239,25 +1096,15 @@
                 hargaDesc: "According to your scale and business goals.",
                 pkgRev: "Unlimited Free Revisions",
                 pkg1Name: "Landing Page",
-                pkg1Price: "$110",
+                pkg1Price: "$19",
                 pkg1Desc: "1 Page • Suitable for short promotions",
                 pkg1Feat1: "1 Responsive Page (Mobile Friendly)",
                 pkg1Feat2: "Basic Persuasive Copywriting",
                 pkg1Feat3: "Admin Dashboard Access",
                 pkg1Feat4: "Social Media & Gallery Integration",
-                pkg1Feat5: "Free Domain & Hosting",
-                pkg2Name: "Value Package",
-                pkg2Price: "$200",
-                pkg2Range: "- $350",
-                pkg2Desc: "3 Pages • For businesses just starting out",
-                pkg2Feat1: "3 Pages Complete Structure",
-                pkg2Feat2: "Professional Copywriting",
-                pkg2Feat3: "1 Business Email (admin@domain)",
-                pkg2Feat4: "Basic On-Page SEO Optimization",
-                pkg2Feat5: "Google Maps Business Integration",
                 pkgBest: "BEST SELLER",
                 pkg3Name: "Premium Package",
-                pkg3Price: "$500",
+                pkg3Price: "$220",
                 pkg3Desc: "5 Pages • Best value for scaling up",
                 pkg3Feat1: "5 Premium Pages (Home, About, etc)",
                 pkg3Feat2: "Premium Sales Driven Copywriting",
@@ -1265,7 +1112,7 @@
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Admin Guide Video Tutorial",
                 pkg4Name: "Enterprise Package",
-                pkg4Price: "$1000+",
+                pkg4Price: "$450+",
                 pkg4Desc: "Unlimited Pages • Full custom solution",
                 pkg4Feat1: "Exclusive UI/UX Independent Design",
                 pkg4Feat2: "Custom Features (CMS / Filter / Database)",
@@ -1273,9 +1120,14 @@
                 pkg4Feat4: "PageSpeed 90+ Score Guaranteed",
                 btnPesan: "Order Now",
                 btnHubungi: "Contact Us",
-                floatingBubble: "FULL PAYMENT",
-                heroStat: "Payment",
-                heroStatVal: "Full",
+                advBadge: "ADVANTAGES",
+                advTitle: "OUR SERVICE ADVANTAGES",
+                adv1: "Website integrated with Google Analytics and Google Search Console",
+                adv2: "SEO friendly website",
+                adv3: "3-page website can be completed in less than 3 hours",
+                adv4: "Uses latest lightweight programming languages",
+                adv5: "More stable system with minimum errors",
+                adv6: "OUR PRICES ARE CHEAPER THAN COMPETITORS",
                 portTitle: "Our Built Masterpieces",
                 portCat1: "Interior Architecture",
                 portCat2: "Cleaning Services",
@@ -1352,9 +1204,12 @@
                 exp3Desc: "Content strategy and effective conversion flows to increase ROI.",
                 ctaTitle: "Ready to Build Digital Assets?",
                 ctaDesc: "Contact us now to get a premium website with the best offer.",
-                ctaBtn: "Chat WhatsApp Now",
+                ctaBtn: "Consult Now",
                 auditTitle: "Audit Your Website's UI/UX <span>Now</span>",
                 auditSub: "Enter your website URL and get a full report in seconds.",
+                newsTitle: "Get Latest Digital Business Insights",
+                newsDesc: "Subscribe to our newsletter for digital strategy tips & exclusive promo info every week.",
+                btnSubscribe: "Subscribe",
                 footDesc: "Digital transformation for Indonesian businesses with modern design & high performance.",
                 foot1Title: "Services",
                 foot2Title: "Support",
