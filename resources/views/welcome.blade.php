@@ -7,6 +7,21 @@
     <title>Zephytor — Jasa Pembuatan Website Premium</title>
     <meta name="description"
         content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zephytor.online/">
+    <meta property="og:title" content="Zephytor — Jasa Pembuatan Website & Digitalisasi Bisnis Premium">
+    <meta property="og:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
+    <meta property="og:image" content="{{ asset('logo-baru.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.zephytor.online/">
+    <meta property="twitter:title" content="Zephytor — Jasa Pembuatan Website & Digitalisasi Bisnis Premium">
+    <meta property="twitter:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
+    <meta property="twitter:image" content="{{ asset('logo-baru.png') }}">
+
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=5.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
