@@ -7,7 +7,9 @@
     <title>Zephytor — Jasa Pembuatan Website Premium</title>
     <meta name="description"
         content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.">
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=4.1">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=5.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 </head>
 
@@ -86,6 +88,22 @@
                     <a href="https://wa.me/6285892778882" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">50+</span>
+                        <span class="hero-stat-label">Proyek Selesai</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">100%</span>
+                        <span class="hero-stat-label">Kepuasan Klien</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">&lt; 48h</span>
+                        <span class="hero-stat-label">MVP Delivery</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-visual reveal">
@@ -190,7 +208,7 @@
     <section id="tantangan" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="probTitle">Kenapa Banyak Bisnis Gagal Go-Digital?</h2>
+                <h2 class="section-title" data-i18n="probTitle">Kenapa Banyak Bisnis <span class="gradient-text">Gagal Go-Digital?</span></h2>
                 <p class="mx-auto" style="max-width: 600px;" data-i18n="probDesc">Digitalisasi bukan hanya soal punya
                     website, tapi soal efisiensi dan hasil nyata.</p>
             </div>
@@ -221,7 +239,7 @@
     <section id="layanan">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis Digital Kami</h2>
+                <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis <span class="gradient-text">Digital Kami</span></h2>
                 <p class="mx-auto" style="max-width: 600px;" data-i18n="layananDesc">Kami membangun infrastruktur yang
                     mempercepat pertumbuhan bisnis Anda.</p>
             </div>
@@ -292,7 +310,7 @@
     <section id="harga" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="hargaTitle">Pilihan Paket Investasi</h2>
+                <h2 class="section-title" data-i18n="hargaTitle">Pilihan <span class="gradient-text">Paket Investasi</span></h2>
                 <p data-i18n="hargaDesc">Sesuai dengan skala dan target gol bisnis Anda.</p>
             </div>
             <div class="pricing-grid">
@@ -437,8 +455,8 @@
     <!-- PORTFOLIO -->
     <section id="portfolio">
         <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title" data-i18n="portTitle">Karya yang Telah Kami Bangun</h2>
+            <div class="section-header text-center reveal">
+                <h2 class="section-title" data-i18n="portTitle">Karya yang Telah <span class="gradient-text">Kami Bangun</span></h2>
             </div>
             <div class="portfolio-grid">
                 <!-- Daiji Design -->
@@ -557,16 +575,14 @@
     <section id="testimoni" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="testTitle">Apa Kata Klien Kami</h2>
+                <h2 class="section-title" data-i18n="testTitle">Apa Kata <span class="gradient-text">Klien Kami</span></h2>
             </div>
             <div class="testimonials-wrapper reveal">
                 <div class="testimonials-track">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat
-                            profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"
-                        </blockquote>
+                        <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"</blockquote>
                         <div class="author">
                             <div class="avatar">R</div>
                             <div class="author-info">
@@ -578,8 +594,7 @@
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami
-                            hingga 3x lipat. ROI yang luar biasa!"</blockquote>
+                        <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI yang luar biasa!"</blockquote>
                         <div class="author">
                             <div class="avatar">P</div>
                             <div class="author-info">
@@ -591,8 +606,7 @@
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya
-                            clean dan modern. Highly recommended!"</blockquote>
+                        <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"</blockquote>
                         <div class="author">
                             <div class="avatar">A</div>
                             <div class="author-info">
@@ -601,12 +615,46 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Repetition for infinite scroll -->
+                    <!-- Testimonial 4 -->
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat
-                            profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"
-                        </blockquote>
+                        <blockquote data-i18n="test4Quote">"Serius kaget sama hasilnya! Website kami sekarang terlihat jauh lebih premium dari kompetitor. Klien yang datang langsung bilang website-nya bikin mereka lebih yakin."</blockquote>
+                        <div class="author">
+                            <div class="avatar">B</div>
+                            <div class="author-info">
+                                <div class="name">Budi Santoso</div>
+                                <div class="role" data-i18n="test4Role">Owner, Kuliner Nusantara</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test5Quote">"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"</blockquote>
+                        <div class="author">
+                            <div class="avatar">S</div>
+                            <div class="author-info">
+                                <div class="name">Sinta Maharani</div>
+                                <div class="role" data-i18n="test5Role">CEO, Butik Fashion</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test6Quote">"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"</blockquote>
+                        <div class="author">
+                            <div class="avatar">D</div>
+                            <div class="author-info">
+                                <div class="name">Dimas Prasetyo</div>
+                                <div class="role" data-i18n="test6Role">Photographer &amp; Videographer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicates for seamless infinite loop -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"</blockquote>
                         <div class="author">
                             <div class="avatar">R</div>
                             <div class="author-info">
@@ -617,8 +665,7 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami
-                            hingga 3x lipat. ROI yang luar biasa!"</blockquote>
+                        <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI yang luar biasa!"</blockquote>
                         <div class="author">
                             <div class="avatar">P</div>
                             <div class="author-info">
@@ -629,13 +676,45 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya
-                            clean dan modern. Highly recommended!"</blockquote>
+                        <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"</blockquote>
                         <div class="author">
                             <div class="avatar">A</div>
                             <div class="author-info">
                                 <div class="name">Andika Pratama</div>
                                 <div class="role" data-i18n="test3Role">Creative Director</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test4Quote">"Serius kaget sama hasilnya! Website kami sekarang terlihat jauh lebih premium dari kompetitor. Klien yang datang langsung bilang website-nya bikin mereka lebih yakin."</blockquote>
+                        <div class="author">
+                            <div class="avatar">B</div>
+                            <div class="author-info">
+                                <div class="name">Budi Santoso</div>
+                                <div class="role" data-i18n="test4Role">Owner, Kuliner Nusantara</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test5Quote">"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"</blockquote>
+                        <div class="author">
+                            <div class="avatar">S</div>
+                            <div class="author-info">
+                                <div class="name">Sinta Maharani</div>
+                                <div class="role" data-i18n="test5Role">CEO, Butik Fashion</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote data-i18n="test6Quote">"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"</blockquote>
+                        <div class="author">
+                            <div class="avatar">D</div>
+                            <div class="author-info">
+                                <div class="name">Dimas Prasetyo</div>
+                                <div class="role" data-i18n="test6Role">Photographer &amp; Videographer</div>
                             </div>
                         </div>
                     </div>
@@ -1041,6 +1120,12 @@
                 test2Role: "Marketing Director",
                 test3Quote: '"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"',
                 test3Role: "Creative Director",
+                test4Quote: '"Serius kaget sama hasilnya! Website kami sekarang terlihat jauh lebih premium dari kompetitor. Klien yang datang langsung bilang website-nya bikin mereka lebih yakin."',
+                test4Role: "Owner, Kuliner Nusantara",
+                test5Quote: '"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"',
+                test5Role: "CEO, Butik Fashion",
+                test6Quote: '"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"',
+                test6Role: "Photographer & Videographer",
                 probTitle: "Kenapa Banyak Bisnis Gagal Go-Digital?",
                 probDesc: "Digitalisasi bukan hanya soal punya website, tapi soal efisiensi dan hasil nyata.",
                 prob1Title: "Hasil Tidak Sesuai",
@@ -1189,6 +1274,12 @@
                 test2Role: "Marketing Director",
                 test3Quote: '"Fast execution and results exceeded expectations. Clean and modern design. Highly recommended!"',
                 test3Role: "Creative Director",
+                test4Quote: '"Truly blown away by the results! Our website now looks far more premium than our competitors. Clients say the website makes them more confident."',
+                test4Role: "Owner, Kuliner Nusantara",
+                test5Quote: '"The process was transparent and communication responsive. From brief to live in just 4 days. Results beyond expectation and all revisions handled without drama!"',
+                test5Role: "CEO, Fashion Boutique",
+                test6Quote: '"Best investment for my business. Online portfolio from Zephytor doubled new client inquiries in the first month. The design is incredibly premium!"',
+                test6Role: "Photographer & Videographer",
                 probTitle: "Why Do Many Businesses Fail to Go Digital?",
                 probDesc: "Digitalization is not just about having a website, it's about efficiency and real results.",
                 prob1Title: "Results Not as Expected",
@@ -1315,30 +1406,42 @@
         // Floating Nav logic
         const floatingNav = document.getElementById('floatingNav');
         const navLinks = document.querySelectorAll('.floating-nav a:not(.btn-mulai)');
-        const sections = document.querySelectorAll('section');
 
-        window.addEventListener('scroll', () => {
-            // Visibility
-            if (window.scrollY > 400) floatingNav.classList.add('visible');
+        // Map each nav link to its target section element
+        const navSections = Array.from(navLinks).map(link => {
+            const href = link.getAttribute('href');
+            return {
+                link,
+                section: href ? document.querySelector(href) : null
+            };
+        }).filter(item => item.section);
+
+        function updateActiveNav() {
+            // Show/hide floating nav
+            if (window.scrollY > 300) floatingNav.classList.add('visible');
             else floatingNav.classList.remove('visible');
 
-            // Scroll Spy
-            let current = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute("id");
+            // Find current active section based on scroll position
+            // A nav section is "active" if we've scrolled past its top (minus offset)
+            // The LAST one that matches wins (most recently entered)
+            const scrollY = window.scrollY + window.innerHeight * 0.4;
+
+            let activeLink = navSections[0]?.link; // default to first
+
+            navSections.forEach(({ link, section }) => {
+                if (section.offsetTop <= scrollY) {
+                    activeLink = link;
                 }
             });
 
-            navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href").includes(current)) {
-                    link.classList.add("active");
-                }
-            });
-        });
+            navLinks.forEach(link => link.classList.remove('active'));
+            if (activeLink) activeLink.classList.add('active');
+        }
+
+        // Run on scroll and on load
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        window.addEventListener('load', updateActiveNav);
+        updateActiveNav();
 
         // Smooth scroll & Click active
         navLinks.forEach(a => {
