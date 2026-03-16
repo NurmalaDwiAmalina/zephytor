@@ -33,9 +33,9 @@
             gap: 16px;
         }
         .analyze-navbar .url-chip {
-            background: var(--primary-glow);
-            border: 1px solid rgba(99,102,241,0.2);
-            color: var(--primary);
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--text-h);
             padding: 6px 16px;
             border-radius: 100px;
             font-size: 0.82rem;
@@ -60,7 +60,7 @@
             width: 60px;
             height: 60px;
             border: 3px solid var(--border);
-            border-top-color: var(--primary);
+            border-top-color: var(--text-h);
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
             margin: 0 auto 32px;
@@ -91,8 +91,8 @@
             flex-shrink: 0;
             transition: background 0.3s;
         }
-        .loading-steps li.active .dot { background: var(--primary); }
-        .loading-steps li.done .dot { background: #22c55e; }
+        .loading-steps li.active .dot { background: var(--text-h); }
+        .loading-steps li.done .dot { background: #000000; }
         .loading-steps li.done { color: var(--text-b); }
 
         /* Overall Score Ring */
@@ -191,10 +191,10 @@
             align-items: flex-start;
         }
         .feedback-list li .icon { flex-shrink: 0; margin-top: 2px; }
-        .feedback-list li.positive { color: #16a34a; }
-        .feedback-list li.issue { color: #dc2626; }
-        body.dark-theme .feedback-list li.positive { color: #4ade80; }
-        body.dark-theme .feedback-list li.issue { color: #f87171; }
+        .feedback-list li.positive { color: var(--text-h); font-weight: 700; }
+        .feedback-list li.issue { color: var(--text-muted); }
+        body.dark-theme .feedback-list li.positive { color: #ffffff; }
+        body.dark-theme .feedback-list li.issue { color: #999999; }
 
         /* Recommendations */
         .recommendations-list {
@@ -352,7 +352,7 @@
                     <svg id="moonIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
                     <svg id="sunIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" /></svg>
                 </button>
-                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor%2C%20saya%20ingin%20konsultasi%20gratis" class="btn btn-primary btn-sm">Konsultasi Gratis</a>
+                <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20ingin%20konsultasi%20gratis" class="btn btn-primary btn-sm">Konsultasi Gratis</a>
             </div>
         </div>
     </div>
@@ -398,7 +398,7 @@
                             <div class="score-ring-wrap">
                                 <svg width="160" height="160" viewBox="0 0 160 160">
                                     <circle cx="80" cy="80" r="68" fill="none" stroke="var(--border)" stroke-width="8"/>
-                                    <circle id="overallRing" cx="80" cy="80" r="68" fill="none" stroke="#6366f1" stroke-width="8"
+                                    <circle id="overallRing" cx="80" cy="80" r="68" fill="none" stroke="#000000" stroke-width="8"
                                         stroke-linecap="round" stroke-dasharray="427" stroke-dashoffset="427"
                                         style="transition: stroke-dashoffset 1.2s cubic-bezier(0.16,1,0.3,1), stroke 0.3s;"/>
                                 </svg>
@@ -450,9 +450,9 @@
                     <div style="position: absolute; top: -80px; right: -80px; width: 240px; height: 240px; background: rgba(255,255,255,0.06); border-radius: 50%;"></div>
                     <div style="position: absolute; bottom: -60px; left: -60px; width: 180px; height: 180px; background: rgba(255,255,255,0.06); border-radius: 50%;"></div>
                     <div style="position: relative; z-index: 1;">
-                        <h2 style="font-size: 2rem; font-weight: 800; color: #fff; font-family: var(--font-h); margin-bottom: 16px;">Mau Website yang Lebih Baik?</h2>
+                        <h2 style="font-size: 2rem; font-weight: 800; color: #fff; font-family: var(--font-h); margin-bottom: 16px;">Kami Bisa Bantu Meningkatkan UI/UX Mu</h2>
                         <p style="color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7;">Tim Zephytor siap mewujudkan website impian kamu — desain premium, performa tinggi, dan hasil yang memuaskan.</p>
-                        <a href="https://wa.me/6285892778882?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn btn-white btn-lg" style="padding: 16px 40px; border-radius: 16px; font-size: 1rem;">Chat Sekarang →</a>
+                        <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn btn-white btn-lg" style="padding: 16px 40px; border-radius: 16px; font-size: 1rem;">Chat Sekarang untuk Konsultasi Gratis →</a>
                     </div>
                 </div>
 
@@ -480,10 +480,10 @@
 
         // Score color helper
         function scoreColor(score) {
-            if (score >= 80) return '#22c55e';
-            if (score >= 65) return '#f59e0b';
-            if (score >= 50) return '#f97316';
-            return '#ef4444';
+            if (score >= 80) return '#000000';
+            if (score >= 65) return '#333333';
+            if (score >= 50) return '#666666';
+            return '#999999';
         }
 
         // Circumference for r=68 (main ring): 2*π*68 ≈ 427
@@ -619,6 +619,15 @@
 
         runAnalysis();
     </script>
+    <style>
+        img, .hero-image-wrap img, .portfolio-img img {
+            filter: grayscale(1) contrast(1.1);
+            transition: filter 0.5s ease;
+        }
+        img:hover, .portfolio-card:hover img {
+            filter: grayscale(0) contrast(1.0);
+        }
+    </style>
 </body>
 
 </html>

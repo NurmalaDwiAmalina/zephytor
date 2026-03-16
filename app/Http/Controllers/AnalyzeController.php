@@ -24,8 +24,16 @@ class AnalyzeController extends Controller
         $thumioKey = env('THUMIO_KEY');
         $screenshotUrl = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'width/1200/crop/900/' . $url;
 
+        $apiKey = config('services.openai.key');
+        if (!$apiKey) {
+            return response()->json([
+                'success' => false,
+                'error'   => 'Konfigurasi API Key OpenAI belum diset di server. Silakan hubungi admin.',
+            ], 500);
+        }
+
         $response = Http::withHeaders([
-            'Authorization' => 'Bearer ' . config('services.openai.key'),
+            'Authorization' => 'Bearer ' . $apiKey,
             'Content-Type'  => 'application/json',
         ])->timeout(90)->post('https://api.openai.com/v1/chat/completions', [
             'model'           => 'gpt-4o',

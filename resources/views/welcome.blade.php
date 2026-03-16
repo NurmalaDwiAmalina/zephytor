@@ -22,7 +22,7 @@
     <meta property="twitter:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
     <meta property="twitter:image" content="{{ asset('logo-baru.png') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=5.0">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=8.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -64,7 +64,7 @@
                             d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" />
                     </svg>
                 </button>
-                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor%2C%20saya%20ingin%20konsultasi%20gratis"
+                <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20ingin%20konsultasi%20gratis"
                     class="btn btn-outline btn-sm" data-i18n="btnKonsultasi">Konsultasi Gratis</a>
             </div>
         </div>
@@ -76,7 +76,7 @@
         <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
         <a href="#mvp" data-i18n="navMvp">MVP</a>
         <a href="#testimoni" data-i18n="navKontak">KONTAK</a>
-        <a href="https://wa.me/6285892778882" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
+        <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
     </nav>
 
 
@@ -94,7 +94,7 @@
                     Anda. Tanpa modal
                     awal yang besar, dapatkan website premium yang meyakinkan klien.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/6285892778882" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
+                    <a href="https://wa.me/6285801153409" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
                 </div>
@@ -116,42 +116,11 @@
                 </div>
             </div>
             <div class="hero-visual reveal">
-                <div class="hero-glass floating">
-                    <div class="controls">
-                        <div class="dot dot-r"></div>
-                        <div class="dot dot-y"></div>
-                        <div class="dot dot-g"></div>
-                    </div>
-                    <div class="code-line">
-                        <span style="color: var(--text-muted)">class</span>&nbsp;<span style="color: var(--text-h)">Zephytor</span>&nbsp;{
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;<span style="color: var(--text-muted)">public</span>&nbsp;function&nbsp;<span
-                            style="color: var(--text-h)">buildSuccess</span>()&nbsp;{
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--text-muted)">'design'</span>&nbsp;=>&nbsp;<span
-                            style="color: var(--text-h)">'Premium'</span>,
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--text-muted)">'speed'</span>&nbsp;=>&nbsp;<span
-                            style="color: var(--text-h)">'Ultra Fast'</span>,
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                            style="color: var(--text-muted)">'conversion'</span>&nbsp;=>&nbsp;<span style="color: var(--text-h)">'High'</span>
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;&nbsp;&nbsp;];
-                    </div>
-                    <div class="code-line">
-                        &nbsp;&nbsp;}
-                    </div>
-                    <div class="code-line">
-                        }
+                <div class="hero-image-wrap floating">
+                    <img src="{{ asset('premium_website_mockup.png') }}" alt="Premium Project Preview" style="width: 100%; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                    <div class="card-stat">
+                        <h2 style="font-size: 2.2rem; margin-bottom: 4px;">99%</h2>
+                        <p style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Uptime & Speed</p>
                     </div>
                 </div>
             </div>
@@ -166,8 +135,8 @@
                 <div class="checker-card-glow"></div>
                 <div class="checker-header">
                     <span class="checker-badge">✦ Instant Analysis</span>
-                    <h2 class="checker-title" data-i18n="auditTitle">Audit UI/UX Website Kamu <span>Sekarang</span></h2>
-                    <p class="checker-sub" data-i18n="auditSub">Dapatkan laporan performa, desain, dan aksesibilitas dalam hitungan detik.</p>
+                    <h2 class="checker-title" data-i18n="auditTitle">Yakin UI/UX Website Kamu <span>Sudah Bagus?</span></h2>
+                    <p class="checker-sub" data-i18n="auditSub">Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.</p>
                 </div>
                 <form action="/analyze" method="GET" class="checker-form-v2">
                     <div class="checker-input-container">
@@ -244,31 +213,37 @@
     <section id="layanan">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis <span class="gradient-text">Digital Kami</span></h2>
-                <p class="mx-auto" style="max-width: 600px;" data-i18n="layananDesc">Kami membangun infrastruktur yang
-                    mempercepat pertumbuhan bisnis Anda.</p>
+                <div class="section-badge">SERVICES</div>
+                <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis Digital</h2>
+                <p class="mx-auto" style="max-width: 600px;" data-i18n="layananDesc">Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal" data-number="01">
+                <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
                             <polyline points="9 22 9 12 15 12 15 22" />
                         </svg></div>
                     <h3 data-i18n="srv1Title">Company Profile</h3>
-                    <p data-i18n="srv1Desc">Website profesional untuk membangun kepercayaan klien dan investor dalam
-                        waktu singkat.</p>
+                    <p data-i18n="srv1Desc">Website profesional untuk membangun kepercayaan klien dan investor dalam waktu singkat.</p>
+                    <div class="btn-link">
+                        <span data-i18n="btnMulai">Mulai</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
-                <div class="service-card reveal" data-number="02">
+                <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                         </svg></div>
                     <h3 data-i18n="srv2Title">Landing Page</h3>
-                    <p data-i18n="srv2Desc">Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google &
-                        Meta Ads.</p>
+                    <p data-i18n="srv2Desc">Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google & Meta Ads.</p>
+                    <div class="btn-link">
+                        <span data-i18n="btnMulai">Mulai</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
-                <div class="service-card reveal" data-number="03">
+                <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" />
@@ -276,8 +251,11 @@
                             <path d="M12 8h.01" />
                         </svg></div>
                     <h3 data-i18n="srv3Title">Custom Web App</h3>
-                    <p data-i18n="srv3Desc">Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan
-                        spesifik bisnis Anda.</p>
+                    <p data-i18n="srv3Desc">Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan spesifik bisnis Anda.</p>
+                    <div class="btn-link">
+                        <span data-i18n="btnMulai">Mulai</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,25 +265,36 @@
     <section id="alur-kerja">
         <div class="container">
             <div class="section-header text-center reveal">
+                <div class="section-badge">WORKFLOW</div>
                 <h2 class="section-title" data-i18n="stepTitle">Cara Kami Bekerja</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal" data-number="01">
                     <div class="service-icon">01</div>
                     <h3 data-i18n="step1Title">Konsultasi Strategi</h3>
-                    <p data-i18n="step1Desc">Kami mendalami model bisnis Anda untuk menentukan fitur yang paling
-                        krusial.</p>
+                    <p data-i18n="step1Desc">Kami mendalami model bisnis Anda untuk menentukan fitur yang paling krusial.</p>
+                    <div class="btn-link">
+                        <span data-i18n="btnMulai">Mulai</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
                 <div class="service-card reveal" data-number="02">
                     <div class="service-icon">02</div>
                     <h3 data-i18n="step2Title">Desain Eksklusif</h3>
-                    <p data-i18n="step2Desc">UI/UX yang dirancang khusus untuk meningkatkan kepercayaan dan konversi.
-                    </p>
+                    <p data-i18n="step2Desc">UI/UX yang dirancang khusus untuk meningkatkan kepercayaan dan konversi.</p>
+                    <div class="btn-link">
+                        <span data-i18n="btnMulai">Mulai</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
                 <div class="service-card reveal" data-number="03">
                     <div class="service-icon">03</div>
                     <h3 data-i18n="step3Title">Development & Launch</h3>
                     <p data-i18n="step3Desc">Proses coding yang cepat dan optimasi performa maksimal sebelum live.</p>
+                    <div class="btn-link">
+                        <span data-i18n="btnMulai">Mulai</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,7 +371,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
+                    <a href="https://wa.me/6285801153409?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
@@ -417,7 +406,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
+                    <a href="https://wa.me/6285801153409?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 3 -->
@@ -447,9 +436,13 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
+                    <a href="https://wa.me/6285801153409?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
                         data-i18n="btnHubungi">Hubungi Kami</a>
                 </div>
+            </div>
+            <div class="reveal text-center" style="margin-top: 50px; opacity: 0.8; font-size: 0.95rem; color: var(--text-h);">
+                <p><strong>Note:</strong> Paket Landing Page (Rp 300rb) sudah termasuk domain <strong>.online / .site</strong></p>
+                <p>Paket lainnya sudah termasuk domain <strong>.com / .id</strong></p>
             </div>
         </div>
     </section>
@@ -481,11 +474,16 @@
                         <img src="{{ asset('images/portfolio/cuci-sepatu.png') }}" alt="Cuci Sepatu">
                     </div>
                     <div class="portfolio-info">
-                        <div>
-                            <h4>Cuci Sepatu Pro</h4>
-                            <p data-i18n="portCat2">Cleaning Services</p>
+                        <div class="portfolio-meta">
+                            <span class="portfolio-badge" data-i18n="portCat2">Cleaning Services</span>
+                            <span class="portfolio-date">10 Mart 2026</span>
                         </div>
-                        <span class="text-cyan" data-i18n="portVisit">Kunjungi Situs →</span>
+                        <h4>Cuci Sepatu Pro</h4>
+                        <p>Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.</p>
+                        <div class="btn-link">
+                            <span data-i18n="portVisit">Kunjungi Situs</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
                     </div>
                 </a>
                 <!-- InDepth -->
@@ -494,11 +492,16 @@
                         <img src="{{ asset('images/portfolio/indepth.png') }}" alt="InDepth">
                     </div>
                     <div class="portfolio-info">
-                        <div>
-                            <h4>InDepth</h4>
-                            <p data-i18n="portCat3">Digital Agency Profile</p>
+                        <div class="portfolio-meta">
+                            <span class="portfolio-badge" data-i18n="portCat3">Digital Agency</span>
+                            <span class="portfolio-date">5 Mart 2026</span>
                         </div>
-                        <span class="text-cyan" data-i18n="portVisit">indepth.co.id →</span>
+                        <h4>InDepth Digital</h4>
+                        <p>Website perusahaan agensi digital dengan fokus pada visual yang memukau dan pengalaman pengguna yang seamless.</p>
+                        <div class="btn-link">
+                            <span>indepth.co.id</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
                     </div>
                 </a>
                 <!-- Tirta Bhumi -->
@@ -507,40 +510,57 @@
                         <img src="{{ asset('images/portfolio/tirtabhumi.png') }}" alt="Tirta Bhumi">
                     </div>
                     <div class="portfolio-info">
-                        <div>
-                            <h4>Tirta Bhumi</h4>
-                            <p data-i18n="portCat4">Water Solution Company</p>
+                        <div class="portfolio-meta">
+                            <span class="portfolio-badge" data-i18n="portCat4">Water Solution</span>
+                            <span class="portfolio-date">28 Feb 2026</span>
                         </div>
-                        <span class="text-cyan" data-i18n="portVisit">tirtabhumi.com →</span>
+                        <h4>Tirta Bhumi</h4>
+                        <p>Solusi manajemen air bersih dengan dashboard monitoring kualitas air yang canggih dan integrasi data lapangan.</p>
+                        <div class="btn-link">
+                            <span>tirtabhumi.com</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- EXPERTISE -->
+    <!-- EXPERTISE / TEAM -->
     <section id="expertise">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="expTitle">Siapa yang Membangun Proyek Anda?</h2>
-                <p class="mx-auto" style="max-width: 600px;" data-i18n="expDesc">Tim ahli yang berdedikasi untuk
-                    memberikan hasil terbaik bagi bisnis Anda.</p>
+                <div class="section-badge">OUR TEAM</div>
+                <h2 class="section-title" data-i18n="expTitle">Dibalik Layar Zephytor</h2>
+                <p class="mx-auto" style="max-width: 600px;" data-i18n="expDesc">Kami adalah tim yang berdedikasi untuk mentransformasi bisnis Anda di dunia digital.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
                     <div class="service-icon">👨‍💻</div>
                     <h3>Full-Stack Developer</h3>
-                    <p data-i18n="exp1Desc">Ahli dalam membangun sistem yang cepat, aman, dan mudah diskalakan.</p>
+                    <p data-i18n="exp1Desc">Membangun pondasi teknis yang kuat dan performa yang ultra-cepat.</p>
+                    <div class="btn-link">
+                        <span>Lihat Detail</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">🎨</div>
                     <h3>UI/UX Designer</h3>
-                    <p data-i18n="exp2Desc">Fokus pada estetika dan pengalaman pengguna yang intuitif.</p>
+                    <p data-i18n="exp2Desc">Merancang visual premium yang memikat audiens target Anda.</p>
+                    <div class="btn-link">
+                        <span>Lihat Detail</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📊</div>
                     <h3>Digital strategist</h3>
-                    <p data-i18n="exp3Desc">Memastikan setiap elemen website Anda mendukung tujuan bisnis.</p>
+                    <p data-i18n="exp3Desc">Strategi konten dan alur konversi yang efektif meningkatkan ROI.</p>
+                    <div class="btn-link">
+                        <span>Lihat Detail</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -845,7 +865,7 @@
                 <p data-i18n="ctaDesc" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px;">Hubungi kami
                     sekarang untuk mendapatkan website premium dengan penawaran terbaik.
                 </p>
-                <a href="https://wa.me/6285892778882" class="btn btn-white btn-lg" data-i18n="ctaBtn"
+                <a href="https://wa.me/6285801153409" class="btn btn-white btn-lg" data-i18n="ctaBtn"
                     style="padding: 18px 48px; font-size: 1.1rem; border-radius: 20px;">Chat WhatsApp
                     Sekarang</a>
             </div>
@@ -873,7 +893,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-giant-text">SASTRO JENDRO</div>
+        <div class="footer-giant-text">ZEPHYTOR</div>
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -893,7 +913,7 @@
                 <div>
                     <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
-                        <li><a href="https://wa.me/6285892778882" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
+                        <li><a href="https://wa.me/6285801153409" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
                         <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
                     </ul>
                 </div>
@@ -931,8 +951,7 @@
                 heroBadge: "✨ Tersedia Slot April 2026",
                 heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span>",
                 heroDesc: "Kami membangun infrastruktur digital profesional untuk merampingkan operasional Anda. Tanpa modal awal yang besar, dapatkan website premium yang meyakinkan klien.",
-                heroBtn: "Pesan Website Sekarang",
-                layananTitle: "Solusi Bisnis Digital",
+                layananTitle: "Solusi Digital Bisnis",
                 layananDesc: "Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.",
                 srv1Title: "Company Profile",
                 srv1Desc: "Website profesional untuk membangun kepercayaan klien dan investor dalam waktu singkat.",
@@ -1053,8 +1072,8 @@
                 ctaTitle: "Siap Membangun Aset Digital?",
                 ctaDesc: "Hubungi kami sekarang untuk mendapatkan website premium dengan penawaran terbaik.",
                 ctaBtn: "Konsultasi Sekarang",
-                auditTitle: "Audit UI/UX Website Kamu <span>Sekarang</span>",
-                auditSub: "Masukkan URL website dan dapatkan laporan lengkap dalam hitungan detik.",
+                auditTitle: "Yakin UI/UX Website Kamu <span>Sudah Bagus?</span>",
+                auditSub: "Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.",
                 newsTitle: "Dapatkan Insight Digital Bisnis Terkini",
                 newsDesc: "Berlangganan newsletter kami untuk tips strategi digital & info promo eksklusif setiap minggunya.",
                 btnSubscribe: "Langganan",
@@ -1354,6 +1373,15 @@
             progressBar.style.height = scrolled + '%';
         });
     </script>
+    <style>
+        img, .hero-image-wrap img, .portfolio-img img {
+            filter: grayscale(1) contrast(1.1);
+            transition: filter 0.5s ease;
+        }
+        img:hover, .portfolio-card:hover img {
+            filter: grayscale(0) contrast(1.0);
+        }
+    </style>
 </body>
 
 </html>
