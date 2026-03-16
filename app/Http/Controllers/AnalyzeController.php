@@ -22,7 +22,8 @@ class AnalyzeController extends Controller
         $url = $request->input('url');
 
         $thumioKey = env('THUMIO_KEY');
-        $screenshotUrl = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'width/1200/crop/900/' . $url;
+        // Removed refresh/true and reduced wait to 3 to prevent OpenAI download timeouts
+        $screenshotUrl = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'wait/3/width/1200/crop/900/' . $url;
 
         $apiKey = config('services.openai.key');
         if (!$apiKey) {

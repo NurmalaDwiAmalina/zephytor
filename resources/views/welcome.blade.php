@@ -124,8 +124,7 @@
                     <h2 class="checker-title" data-i18n="auditTitle">Yakin UI/UX Website Kamu <span>Sudah Bagus?</span></h2>
                     <p class="checker-sub" data-i18n="auditSub">Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.</p>
                 </div>
-                <form action="/analyze" method="POST" class="checker-form-v2">
-                    @csrf
+                <form action="/analyze" method="GET" class="checker-form-v2">
                     <div class="checker-input-container">
                         <div class="checker-input-group">
                             <div class="checker-input-icon">
