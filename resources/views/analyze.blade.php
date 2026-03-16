@@ -15,66 +15,168 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 10px 12px 10px 24px;
             border-radius: 100px;
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
             width: max-content;
             max-width: 95vw;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         body.dark-theme .analyze-navbar {
-            background: #000000;
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: rgba(10, 10, 12, 0.8);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .analyze-navbar .nav-logo {
+            display: flex;
+            align-items: center;
         }
 
         .analyze-navbar .nav-logo span {
             color: #000000 !important;
+            font-family: var(--font-h);
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: -1.2px;
         }
 
         body.dark-theme .analyze-navbar .nav-logo span {
             color: #ffffff !important;
         }
 
-        .analyze-navbar .btn-primary-bw {
-            background: #000000 !important;
-            color: #ffffff !important;
-            border: none;
-            padding: 10px 24px;
+        .url-chip {
+            background: rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            color: var(--text-h);
+            padding: 8px 18px;
             border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-width: 280px;
             transition: all 0.3s;
         }
 
-        body.dark-theme .analyze-navbar .btn-primary-bw {
-            background: #ffffff !important;
-            color: #000000 !important;
+        body.dark-theme .url-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.08);
         }
 
-        .analyze-navbar .btn-primary-bw:hover {
-            opacity: 0.85;
-            transform: translateY(-1px);
-        }
-
-        .analyze-navbar .url-chip {
-            background: rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            color: var(--text-h);
-            padding: 6px 16px;
+        .theme-toggle-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px 4px 4px;
+            background: rgba(0, 0, 0, 0.03);
             border-radius: 100px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 320px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        body.dark-theme .theme-toggle-wrap {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .theme-toggle-wrap:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        body.dark-theme .theme-toggle-wrap:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-toggle-icon {
+            width: 32px;
+            height: 32px;
+            background: #ffffff;
+            color: #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        body.dark-theme .theme-toggle-icon {
+            background: #000000;
+            color: #ffffff;
+            transform: rotate(360deg);
+        }
+
+        .theme-toggle-text {
+            font-size: 0.65rem;
+            font-weight: 900;
+            color: var(--text-h);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-konsultasi-nav {
+            background: #000000;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-theme .btn-konsultasi-nav {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .btn-konsultasi-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            opacity: 0.9;
+        }
+
+        .btn-konsultasi-nav:active {
+            transform: scale(0.96);
+        }
+        .url-chip:hover {
+            background: rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-theme .url-chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        @media (max-width: 640px) {
+            .analyze-navbar {
+                padding: 8px 8px 8px 16px;
+                gap: 12px;
+            }
+            .url-chip {
+                display: none;
+            }
+            .analyze-navbar .nav-logo span {
+                font-size: 18px;
+            }
+            .theme-toggle-text {
+                display: none;
+            }
+            .theme-toggle-wrap {
+                padding: 4px;
+            }
         }
         .page-content {
             padding-top: 100px;
@@ -377,16 +479,22 @@
     <!-- Floating Navbar (Top for Analyze) -->
     <div class="analyze-navbar">
         <a href="/" class="nav-logo" style="text-decoration: none;">
-            <span style="font-family: var(--font-h); font-size: 24px; font-weight: 800; letter-spacing: -1.5px;">Zephytor</span>
+            <span>Zephytor</span>
         </a>
-        <div class="url-chip" title="{{ $url }}" style="max-width: 200px;">{{ $url }}</div>
+        <div class="url-chip" title="{{ $url }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ $url }}</span>
+        </div>
         
         <div style="display: flex; gap: 12px; align-items: center;">
-            <button id="themeToggle" class="btn btn-outline btn-sm" style="padding: 10px; min-width: 44px; border-radius: 100px;">
-                <svg id="moonIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
-                <svg id="sunIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" /></svg>
-            </button>
-            <a href="https://wa.me/6285801153409" class="btn-primary-bw">Konsultasi</a>
+            <div id="themeToggle" class="theme-toggle-wrap">
+                <div class="theme-toggle-icon">
+                    <svg id="moonIcon" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+                    <svg id="sunIcon" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" /></svg>
+                </div>
+                <span class="theme-toggle-text">Mode</span>
+            </div>
+            <a href="https://wa.me/6285801153409" class="btn-konsultasi-nav">Konsultasi</a>
         </div>
     </div>
 
