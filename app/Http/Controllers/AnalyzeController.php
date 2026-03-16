@@ -21,7 +21,9 @@ class AnalyzeController extends Controller
         $request->validate(['url' => 'required|url']);
         $url = $request->input('url');
 
-        $screenshotUrl = 'https://api.screenshotlayer.com/api/capture?access_key=59f1707cd829a2889241b71d9dcb9f9b&url=' . urlencode($url) . '&viewport=1200x900&format=png';
+        $thumioKey = env('THUMIO_KEY');
+        // Removed refresh/true and reduced wait to 3 to prevent OpenAI download timeouts
+        $screenshotUrl = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'wait/3/width/1200/crop/900/' . $url;
 
         $apiKey = config('services.openai.key');
         if (!$apiKey) {
