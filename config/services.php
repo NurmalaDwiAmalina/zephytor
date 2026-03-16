@@ -39,4 +39,8 @@ return [
         'key' => env('OPENAI_API_KEY', env('OPENAI_API_KYE')),
     ],
 
+    'thumio' => [
+        'key' => env('THUMIO_KEY'),
+    ],
+
 ];

@@ -21,21 +21,29 @@ class AnalyzeController extends Controller
         $request->validate(['url' => 'required|url']);
         $url = $request->input('url');
 
-        $thumioKey = env('THUMIO_KEY');
-        // Step 1: Download screenshot from thum.io first to avoid OpenAI download timeout
+        $thumioKey = config('services.thumio.key');
+        // Step 1: Download screenshot from thum.io first
         $screenshotUrlRaw = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'wait/5/width/1200/crop/900/' . $url;
         
         try {
-            $imageResponse = Http::timeout(60)->get($screenshotUrlRaw);
-            if ($imageResponse->failed()) {
-                throw new \Exception("Gagal mengambil screenshot dari Thum.io (Status: " . $imageResponse->status() . ")");
+            $imageResponse = Http::timeout(90)->get($screenshotUrlRaw);
+            
+            // Fallback: If 403 (quota or auth error), try without the key
+            if ($imageResponse->status() === 403 && $thumioKey) {
+                $screenshotUrlRaw = 'https://image.thum.io/get/wait/5/width/1200/crop/900/' . $url;
+                $imageResponse = Http::timeout(90)->get($screenshotUrlRaw);
             }
+
+            if (!$imageResponse->successful()) {
+                throw new \Exception("Thum.io returned status: " . $imageResponse->status());
+            }
+            
             $imageData = base64_encode($imageResponse->body());
             $screenshotBase64 = 'data:image/png;base64,' . $imageData;
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'error'   => 'Gagal memproses gambar website: ' . $e->getMessage(),
+                'error'   => 'Gagal memproses gambar website: ' . $e->getMessage() . '. Pastikan URL website dapat diakses dan coba lagi.',
             ], 500);
         }
 
