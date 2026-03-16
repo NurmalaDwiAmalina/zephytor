@@ -107,9 +107,8 @@ section {
   font-size: 0.65rem;
   font-weight: 800;
   color: var(--text-h);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 24px;
+  text-transform: none;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -925,7 +924,7 @@ body.dark-theme .lang-switcher-float {
 }
 
 .hero {
-  padding: 140px 0 100px;
+  padding: 100px 0 60px;
   position: relative;
   overflow: hidden;
   background: var(--bg);
@@ -1444,13 +1443,13 @@ body.dark-theme .portfolio-img {
 }
 
 .portfolio-info {
-  padding: 32px;
+  padding: 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 12px;
+  gap: 8px;
 }
 
 .portfolio-meta {
@@ -2299,7 +2298,7 @@ body.dark-theme .mvp-card-primary:hover {
   display: flex;
   align-items: center;
   gap: 36px;
-  margin-top: 24px;
+  margin-top: 20px;
   padding: 24px 32px;
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(20px);

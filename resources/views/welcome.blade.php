@@ -75,7 +75,7 @@
         <div class="hero-orb hero-orb-3"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="section-badge" data-i18n="heroBadge">✨ Tersedia Slot April 2026</div>
+                <div class="section-badge" data-i18n="heroBadge">🚀 Partner Transformasi Digital Terpercaya</div>
                 <h1 data-i18n="heroTitle">Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span></h1>
                 <p data-i18n="heroDesc">Kami membangun infrastruktur digital profesional untuk merampingkan operasional
                     Anda. Tanpa modal
@@ -101,7 +101,7 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-image-wrap floating">
-                    <img src="{{ asset('premium_website_mockup.png') }}" alt="Premium Project Preview" style="width: 100%; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.3);">
+                    <img src="{{ asset('images/premium_website_mockup.png') }}" alt="Premium Project Preview" style="width: 100%; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.3);">
                     <div class="card-stat">
                         <h2 style="font-size: 2.2rem; margin-bottom: 4px;">99%</h2>
                         <p style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Uptime & Speed</p>
@@ -446,7 +446,7 @@
                 <!-- Cuci Sepatu -->
                 <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2600&auto=format&fit=crop" alt="Cuci Sepatu">
+                        <img src="{{ asset('images/portfolio/cuci-sepatu.png') }}" alt="Cuci Sepatu">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
@@ -463,7 +463,7 @@
                 <!-- InDepth -->
                 <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2632&auto=format&fit=crop" alt="InDepth">
+                        <img src="{{ asset('images/portfolio/indepth.png') }}" alt="InDepth">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
@@ -480,7 +480,7 @@
                 <!-- Tirta Bhumi -->
                 <a href="https://tirtabhumi.com" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop" alt="Tirta Bhumi">
+                        <img src="{{ asset('images/portfolio/tirtabhumi.png') }}" alt="Tirta Bhumi">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
