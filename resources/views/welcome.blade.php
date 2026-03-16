@@ -43,48 +43,27 @@
         </div>
     </div>
 
-    <div class="navbar-top">
-        <div class="container">
-            <a href="#" class="nav-logo">
-                <span style="font-family: var(--font-h); font-size: 28px; font-weight: 800; color: var(--logo-color); letter-spacing: -1px;">Zephytor</span>
-            </a>
-            <div class="nav-menu">
-                <a href="#hero" class="nav-link-item" data-i18n="navInfo">INFO</a>
-                <a href="#hero-checker" class="nav-link-item" data-i18n="navAudit">AUDIT</a>
-                <a href="#layanan" class="nav-link-item" data-i18n="navLayanan">LAYANAN</a>
-                <a href="#mvp" class="nav-link-item" data-i18n="navMvp">MVP</a>
-                <a href="/kontak" class="nav-link-item" data-i18n="navKontak">KONTAK</a>
-            </div>
-            <div style="display: flex; align-items: center; gap: 16px;">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" onclick="setLanguage('id')">ID</button>
-                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-                </div>
-                <button id="themeToggle" class="btn btn-outline btn-sm" style="padding: 10px; min-width: 44px;">
-                    <svg id="moonIcon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                    </svg>
-                    <svg id="sunIcon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"
-                        style="display:none;">
-                        <circle cx="12" cy="12" r="5" />
-                        <path
-                            d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" />
-                    </svg>
-                </button>
-                <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20ingin%20konsultasi%20gratis"
-                    class="btn btn-outline btn-sm" data-i18n="btnKonsultasi">Konsultasi Gratis</a>
-            </div>
-        </div>
+
+
+    <!-- FLOATING LANG SWITCHER (top right) -->
+    <div class="lang-switcher-top" id="langSwitcherTop">
+        <button class="lang-btn active" onclick="setLanguage('id')">ID</button>
+        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
     </div>
 
     <!-- FLOATING NAV -->
     <nav class="floating-nav" id="floatingNav">
+        <div class="nav-logo-float">
+            <span>Zephytor</span>
+        </div>
+        <div class="nav-sep"></div>
         <a href="#hero" data-i18n="navInfo">INFO</a>
         <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
         <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
         <a href="#mvp" data-i18n="navMvp">MVP</a>
         <a href="/kontak" data-i18n="navKontak">KONTAK</a>
-        <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
+        <div class="nav-sep"></div>
+        <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnKonsultasi">Konsultasi Gratis</a>
     </nav>
 
 
@@ -107,26 +86,11 @@
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
                 </div>
 
-                <!-- UI/UX CHECKER INTEGRATED -->
-                <div class="hero-checker" id="hero-checker" style="margin-top: 40px; opacity: 1; transform: none;">
-                    <div class="checker-mini-card">
-                        <div class="checker-badge" data-i18n="auditTitle">✨ Audit UI/UX Website Kamu Gratis</div>
-                        <form action="/analyze" method="POST" class="checker-mini-form">
-                            @csrf
-                            <input type="url" name="url" placeholder="Paste URL website Anda..." required>
-                            <button type="submit">Cek Sekarang</button>
-                        </form>
-                    </div>
-                </div>
+
                 <div class="hero-stats">
                     <div class="hero-stat-item">
                         <span class="hero-stat-num">50+</span>
-                        <span class="hero-stat-label">Proyek Selesai</span>
-                    </div>
-                    <div class="hero-stat-divider"></div>
-                    <div class="hero-stat-item">
-                        <span class="hero-stat-num">100%</span>
-                        <span class="hero-stat-label">Kepuasan Klien</span>
+                        <span class="hero-stat-label">Real Project Selesai</span>
                     </div>
                     <div class="hero-stat-divider"></div>
                     <div class="hero-stat-item">
@@ -148,6 +112,58 @@
     </section>
     
 
+
+    <!-- UI/UX CHECKER SECTION -->
+    <section class="checker-section" id="hero-checker">
+        <div class="checker-grid-bg"></div>
+        <div class="container">
+            <div class="checker-card reveal">
+                <div class="checker-card-glow"></div>
+                <div class="checker-header">
+                    <span class="checker-badge">✦ Instant Analysis</span>
+                    <h2 class="checker-title" data-i18n="auditTitle">Yakin UI/UX Website Kamu <span>Sudah Bagus?</span></h2>
+                    <p class="checker-sub" data-i18n="auditSub">Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.</p>
+                </div>
+                <form action="/analyze" method="POST" class="checker-form-v2">
+                    @csrf
+                    <div class="checker-input-container">
+                        <div class="checker-input-group">
+                            <div class="checker-input-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <input type="url" name="url" class="checker-field" placeholder="https://website-bisnis-anda.com" required>
+                        </div>
+                        <button type="submit" class="checker-submit-btn">
+                            <span>Mulai Analisa</span>
+                            <div class="btn-shine"></div>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="checker-footer">
+                    <div class="checker-stat-item">
+                        <span class="stat-value">98%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="checker-divider"></div>
+                    <div class="checker-stat-item">
+                        <span class="stat-value">< 3s</span>
+                        <span class="stat-label">Analysis Speed</span>
+                    </div>
+                    <div class="checker-divider"></div>
+                    <div class="checker-stat-item">
+                        <span class="stat-value">Free</span>
+                        <span class="stat-label">Unlimited Checks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- TANTANGAN -->
     <section id="tantangan" class="section-alt">
@@ -184,7 +200,7 @@
     <section id="layanan">
         <div class="container">
             <div class="section-header text-center reveal">
-                <div class="section-badge">SERVICES</div>
+                <div class="section-badge">LAYANAN</div>
                 <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis Digital</h2>
                 <p class="mx-auto" style="max-width: 600px;" data-i18n="layananDesc">Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.</p>
             </div>
@@ -197,10 +213,6 @@
                         </svg></div>
                     <h3 data-i18n="srv1Title">Company Profile</h3>
                     <p data-i18n="srv1Desc">Website profesional untuk membangun kepercayaan klien dan investor dalam waktu singkat.</p>
-                    <div class="btn-link">
-                        <span data-i18n="btnMulai">Mulai</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
@@ -209,10 +221,6 @@
                         </svg></div>
                     <h3 data-i18n="srv2Title">Landing Page</h3>
                     <p data-i18n="srv2Desc">Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google & Meta Ads.</p>
-                    <div class="btn-link">
-                        <span data-i18n="btnMulai">Mulai</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
@@ -223,10 +231,6 @@
                         </svg></div>
                     <h3 data-i18n="srv3Title">Custom Web App</h3>
                     <p data-i18n="srv3Desc">Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan spesifik bisnis Anda.</p>
-                    <div class="btn-link">
-                        <span data-i18n="btnMulai">Mulai</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
                 </div>
             </div>
         </div>
@@ -244,28 +248,16 @@
                     <div class="service-icon">01</div>
                     <h3 data-i18n="step1Title">Konsultasi Strategi</h3>
                     <p data-i18n="step1Desc">Kami mendalami model bisnis Anda untuk menentukan fitur yang paling krusial.</p>
-                    <div class="btn-link">
-                        <span data-i18n="btnMulai">Mulai</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
                 </div>
                 <div class="service-card reveal" data-number="02">
                     <div class="service-icon">02</div>
                     <h3 data-i18n="step2Title">Desain Eksklusif</h3>
                     <p data-i18n="step2Desc">UI/UX yang dirancang khusus untuk meningkatkan kepercayaan dan konversi.</p>
-                    <div class="btn-link">
-                        <span data-i18n="btnMulai">Mulai</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
                 </div>
                 <div class="service-card reveal" data-number="03">
                     <div class="service-icon">03</div>
                     <h3 data-i18n="step3Title">Development & Launch</h3>
                     <p data-i18n="step3Desc">Proses coding yang cepat dan optimasi performa maksimal sebelum live.</p>
-                    <div class="btn-link">
-                        <span data-i18n="btnMulai">Mulai</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
                 </div>
             </div>
         </div>
@@ -301,7 +293,7 @@
                 </div>
                 <div class="adv-item reveal">
                     <div class="adv-icon">💰</div>
-                    <p data-i18n="adv6">HARGA YANG KAMI TAWARKAN LEBIH MURAH DIBANDINGKAN COMPETITOR</p>
+                    <p data-i18n="adv6">Harga yang kami tawarkan lebih murah dibandingkan kompetitor</p>
                 </div>
             </div>
         </div>
@@ -311,7 +303,7 @@
     <section id="harga" class="section-alt">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="hargaTitle">Pilihan <span class="gradient-text">Paket Investasi</span></h2>
+                <h2 class="section-title" data-i18n="hargaTitle">Pilih Paket Investasi</h2>
                 <p data-i18n="hargaDesc">Sesuai dengan skala dan target gol bisnis Anda.</p>
             </div>
             <div class="pricing-grid">
@@ -344,7 +336,7 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
+                            </svg> <span data-i18n="pkg1Rev">Garansi 1 Bulan</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
                         data-i18n="btnPesan">Pesan Sekarang</a>
@@ -383,7 +375,7 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
+                            </svg> <span data-i18n="pkg3Rev">Garansi 3 Bulan</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
                         data-i18n="btnPesan">Pesan Sekarang</a>
@@ -417,7 +409,7 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
+                            </svg> <span data-i18n="pkg4Rev">Garansi 12 Bulan</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
                         data-i18n="btnHubungi">Hubungi Kami</a>
@@ -440,27 +432,30 @@
                             alt="Daiji Design">
                     </div>
                     <div class="portfolio-info">
-                        <div>
-                            <h4>Daiji Design</h4>
-                            <p data-i18n="portCat1">Interior Architecture</p>
+                        <div class="portfolio-meta">
+                            <span class="portfolio-badge" data-i18n="portCat1">Arsitektur Interior</span>
                         </div>
-                        <span class="text-cyan" data-i18n="portVisit">Kunjungi Situs →</span>
+                        <h4 data-i18n="port1Title">Daiji Design</h4>
+                        <p data-i18n="port1Desc">Desain arsitektur interior premium yang menggabungkan estetika modern dengan fungsionalitas ruang yang optimal.</p>
+                        <div class="btn-link">
+                            <span data-i18n="portVisit">daijidesign.com</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
                     </div>
                 </a>
                 <!-- Cuci Sepatu -->
                 <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="{{ asset('images/portfolio/cuci-sepatu.png') }}" alt="Cuci Sepatu">
+                        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2600&auto=format&fit=crop" alt="Cuci Sepatu">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat2">Cleaning Services</span>
-                            <span class="portfolio-date">10 Maret 2026</span>
+                            <span class="portfolio-badge" data-i18n="portCat2">Layanan Kebersihan</span>
                         </div>
-                        <h4>Cuci Sepatu Pro</h4>
-                        <p>Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.</p>
+                        <h4 data-i18n="port2Title">Cuci Sepatu Pro</h4>
+                        <p data-i18n="port2Desc">Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.</p>
                         <div class="btn-link">
-                            <span data-i18n="portVisit">Kunjungi Situs</span>
+                            <span data-i18n="portVisit">cucisepatu.pro</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </div>
                     </div>
@@ -468,17 +463,16 @@
                 <!-- InDepth -->
                 <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="{{ asset('images/portfolio/indepth.png') }}" alt="InDepth">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2632&auto=format&fit=crop" alt="InDepth">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat3">Digital Agency</span>
-                            <span class="portfolio-date">5 Maret 2026</span>
+                            <span class="portfolio-badge" data-i18n="portCat3">Hipnoterapi Premium</span>
                         </div>
-                        <h4>InDepth Digital</h4>
-                        <p>Website perusahaan agensi digital dengan fokus pada visual yang memukau dan pengalaman pengguna yang seamless.</p>
+                        <h4 data-i18n="port3Title">InDepth Mental Wellness</h4>
+                        <p data-i18n="port3Desc">Klinik Hipnoterapi Premium Semarang. Sesi Privat. Pendek. Berdampak Nyata. Sebagian orang mencari terapi. Sebagian lainnya memilih perubahan yang terarah. InDepth Mental Wellness menghadirkan pengalaman hipnoterapi privat dengan pendekatan eksklusif, sistem profesional, dan evaluasi hasil yang jelas dalam satu sesi terstruktur.</p>
                         <div class="btn-link">
-                            <span>indepth.co.id</span>
+                            <span data-i18n="portVisit">indepth.co.id</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </div>
                     </div>
@@ -486,17 +480,16 @@
                 <!-- Tirta Bhumi -->
                 <a href="https://tirtabhumi.com" target="_blank" class="portfolio-card reveal">
                     <div class="portfolio-img">
-                        <img src="{{ asset('images/portfolio/tirtabhumi.png') }}" alt="Tirta Bhumi">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop" alt="Tirta Bhumi">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat4">Water Solution</span>
-                            <span class="portfolio-date">28 Feb 2026</span>
+                            <span class="portfolio-badge" data-i18n="portCat4">IT Infrastructure & Procurement</span>
                         </div>
-                        <h4>Tirta Bhumi</h4>
-                        <p>Solusi manajemen air bersih dengan dashboard monitoring kualitas air yang canggih dan integrasi data lapangan.</p>
+                        <h4 data-i18n="port4Title">Tirta Bhumi</h4>
+                        <p data-i18n="port4Desc">Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. We are a trusted Digital Services, IT Infrastructure, and Procurement company. We help your business Go Digital, manage internet networks, and fulfill office operational needs with ease.</p>
                         <div class="btn-link">
-                            <span>tirtabhumi.com</span>
+                            <span data-i18n="portVisit">tirtabhumi.com</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </div>
                     </div>
@@ -505,45 +498,6 @@
         </div>
     </section>
 
-    <!-- EXPERTISE / TEAM -->
-    <section id="expertise">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <div class="section-badge">OUR TEAM</div>
-                <h2 class="section-title" data-i18n="expTitle">Dibalik Layar Zephytor</h2>
-                <p class="mx-auto" style="max-width: 600px;" data-i18n="expDesc">Kami adalah tim yang berdedikasi untuk mentransformasi bisnis Anda di dunia digital.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon">👨‍💻</div>
-                    <h3>Full-Stack Developer</h3>
-                    <p data-i18n="exp1Desc">Membangun pondasi teknis yang kuat dan performa yang ultra-cepat.</p>
-                    <div class="btn-link">
-                        <span>Lihat Detail</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">🎨</div>
-                    <h3>UI/UX Designer</h3>
-                    <p data-i18n="exp2Desc">Merancang visual premium yang memikat audiens target Anda.</p>
-                    <div class="btn-link">
-                        <span>Lihat Detail</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">📊</div>
-                    <h3>Digital Strategist</h3>
-                    <p data-i18n="exp3Desc">Strategi konten dan alur konversi yang efektif meningkatkan ROI.</p>
-                    <div class="btn-link">
-                        <span>Lihat Detail</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- MVP -->
     <section id="mvp" class="section-alt">
@@ -576,7 +530,7 @@
     <section id="testimoni">
         <div class="container">
             <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="testTitle">Apa Kata <span class="gradient-text">Klien Kami</span></h2>
+                <h2 class="section-title" data-i18n="testTitle">Apa Kata Klien Kami</h2>
             </div>
             <div class="testimonials-wrapper reveal">
                 <div class="testimonials-track">
@@ -594,7 +548,7 @@
                     </div>
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI yang luar biasa!"</blockquote>
                         <div class="author">
                             <div class="avatar">P</div>
@@ -606,7 +560,7 @@
                     </div>
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"</blockquote>
                         <div class="author">
                             <div class="avatar">A</div>
@@ -618,7 +572,7 @@
                     </div>
                     <!-- Testimonial 4 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test4Quote">"Serius kaget sama hasilnya! Website kami sekarang terlihat jauh lebih premium dari kompetitor. Klien yang datang langsung bilang website-nya bikin mereka lebih yakin."</blockquote>
                         <div class="author">
                             <div class="avatar">B</div>
@@ -628,9 +582,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Testimonial 5 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
                         <blockquote data-i18n="test5Quote">"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"</blockquote>
                         <div class="author">
                             <div class="avatar">S</div>
@@ -642,7 +594,7 @@
                     </div>
                     <!-- Testimonial 6 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test6Quote">"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"</blockquote>
                         <div class="author">
                             <div class="avatar">D</div>
@@ -654,7 +606,7 @@
                     </div>
                     <!-- Duplicates for seamless infinite loop -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test1Quote">"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"</blockquote>
                         <div class="author">
                             <div class="avatar">R</div>
@@ -665,7 +617,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test2Quote">"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI yang luar biasa!"</blockquote>
                         <div class="author">
                             <div class="avatar">P</div>
@@ -676,7 +628,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test3Quote">"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"</blockquote>
                         <div class="author">
                             <div class="avatar">A</div>
@@ -687,7 +639,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test4Quote">"Serius kaget sama hasilnya! Website kami sekarang terlihat jauh lebih premium dari kompetitor. Klien yang datang langsung bilang website-nya bikin mereka lebih yakin."</blockquote>
                         <div class="author">
                             <div class="avatar">B</div>
@@ -698,7 +650,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test5Quote">"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"</blockquote>
                         <div class="author">
                             <div class="avatar">S</div>
@@ -709,7 +661,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+
                         <blockquote data-i18n="test6Quote">"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"</blockquote>
                         <div class="author">
                             <div class="avatar">D</div>
@@ -773,62 +725,6 @@
                     </div>
                     <div class="faq-answer">
                         <p data-i18n="faq4A">Tampilan website Anda akan dirancang secara eksklusif (custom) menyesuaikan identitas brand dan preferensi Anda. Kami tidak menggunakan template kaku, sehingga website Anda akan terlihat unik dan premium.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq6Q">Apakah editing website dapat dilakukan sendiri?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq6A">Tentu saja! Karena setiap website kami lengkapi dengan akses Dashboard Pengelolaan (CMS) yang user-friendly, Anda dapat dengan mudah mengedit konten sendiri tanpa coding.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq8Q">Apakah mendapatkan domain gratis pada tiap paketnya?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq8A">Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq11Q">Apakah sudah mendapat email dengan nama domain sendiri?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq11A">Tentu. Mulai dari paket tertentu, Anda sudah mendapatkan email bisnis profesional (contoh: admin@domainanda.com) yang bisa langsung digunakan.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4 data-i18n="faq17Q">Setelah website selesai, apakah otomatis muncul di halaman pertama Google?</h4>
-                        <div class="faq-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p data-i18n="faq17A">Berada di halaman utama Google (SEO) merupakan proses berkelanjutan. Paket kami sudah mencakup optimasi SEO On-Page di awal sebagai fondasi agar mesin pencari (Google) lebih mudah melakukan indeks dan memberikan ranking ke depannya.</p>
                     </div>
                 </div>
             </div>
@@ -931,8 +827,8 @@
                 mvpComplexTitle: "Sistem Kompleks",
                 mvpComplexDesc: "Web app dengan fitur custom, dashboard, atau integrasi API — MVP fungsional selesai kurang dari 1 minggu. Cukup untuk validasi pasar Anda.",
                 btnKonsultasi: "Konsultasi Gratis",
-                heroBadge: "✨ Tersedia Slot April 2026",
-                heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span>",
+                heroBadge: "🚀 Partner Transformasi Digital Terpercaya",
+                heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Janji.</span>",
                 heroDesc: "Kami membangun infrastruktur digital profesional untuk merampingkan operasional Anda. Tanpa modal awal yang besar, dapatkan website premium yang meyakinkan klien.",
                 layananTitle: "Solusi Digital Bisnis",
                 layananDesc: "Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.",
@@ -953,6 +849,7 @@
                 pkg1Feat3: "Akses Dashboard Pengelolaan",
                 pkg1Feat4: "Integrasi Link Sosmed & Galeri",
                 pkg1Feat5: "Gratis Domain .online / .site",
+                pkg1Rev: "Garansi 1 Bulan",
                 pkgBest: "TERLARIS",
                 pkg3Name: "Paket Premium",
                 pkg3Price: "Rp 3.5jt",
@@ -963,6 +860,7 @@
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Video Tutorial Panduan Admin",
                 pkg3Feat6: "Gratis Domain .com / .id",
+                pkg3Rev: "Garansi 3 Bulan",
                 pkg4Name: "Paket Enterprise",
                 pkg4Price: "Rp 7jt+",
                 pkg4Desc: "Unlimited Halaman • Full custom solution",
@@ -971,6 +869,7 @@
                 pkg4Feat3: "Integrasi API / Payment Gateway",
                 pkg4Feat4: "Jaminan PageSpeed 90+ Score",
                 pkg4Feat5: "Gratis Domain .com / .id",
+                pkg4Rev: "Garansi 12 Bulan",
                 btnPesan: "Pesan Sekarang",
                 btnHubungi: "Hubungi Kami",
                 advBadge: "KEUNGGULAN",
@@ -980,12 +879,20 @@
                 adv3: "Website 3 halaman bisa selesai kurang dari 3 jam",
                 adv4: "Menggunakan bahasa pemrograman terbaru yang ringan",
                 adv5: "Sistem lebih stabil dan minim error",
-                adv6: "HARGA YANG KAMI TAWARKAN LEBIH MURAH DIBANDINGKAN COMPETITOR",
+                adv6: "Harga yang kami tawarkan lebih murah dibandingkan kompetitor",
                 portTitle: "Karya yang Telah Kami Bangun",
+                port1Title: "Daiji Design",
+                port1Desc: "Desain arsitektur interior premium yang menggabungkan estetika modern dengan fungsionalitas ruang yang optimal.",
+                port2Title: "Cuci Sepatu Pro",
+                port2Desc: "Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.",
+                port3Title: "InDepth Mental Wellness",
+                port3Desc: "Klinik Hipnoterapi Premium Semarang. Sesi Privat. Pendek. Berdampak Nyata. Sebagian orang mencari terapi. Sebagian lainnya memilih perubahan yang terarah. InDepth Mental Wellness menghadirkan pengalaman hipnoterapi privat dengan pendekatan eksklusif, sistem profesional, dan evaluasi hasil yang jelas dalam satu sesi terstruktur.",
+                port4Title: "Tirta Bhumi",
+                port4Desc: "Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. Kami membantu bisnis Anda Go Digital, mengelola jaringan internet, dan memenuhi kebutuhan operasional kantor dengan mudah.",
                 portCat1: "Arsitektur Interior",
                 portCat2: "Layanan Kebersihan",
-                portCat3: "Profil Digital Agency",
-                portCat4: "Perusahaan Solusi Air",
+                portCat3: "Hipnoterapi Premium",
+                portCat4: "IT Infrastructure & Procurement",
                 portVisit: "Lihat Situs →",
                 testTitle: "Apa Kata Klien Kami",
                 test1Quote: '"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"',
@@ -1086,7 +993,7 @@
                 mvpComplexTitle: "Complex System",
                 mvpComplexDesc: "Web app with custom features, dashboard, or API integrations — a functional MVP done in under 1 week. Enough to validate your market.",
                 btnKonsultasi: "Free Consultation",
-                heroBadge: "✨ March 2026 Slots Available",
+                heroBadge: "🚀 Trusted Digital Transformation Partner",
                 heroTitle: "Digitalize Your Business <span>Exactly as Promised.</span>",
                 heroDesc: "We build professional digital infrastructure to streamline your operations. Without high upfront capital, get a premium website that convinces clients.",
                 heroBtn: "Order Website Now",
@@ -1100,15 +1007,14 @@
                 srv3Desc: "Tailored solutions with self-management system (CMS) for specific business needs.",
                 hargaTitle: "Investment Package Options",
                 hargaDesc: "According to your scale and business goals.",
-                pkgRev: "Unlimited Free Revisions",
                 pkg1Name: "Landing Page",
-                pkg1Price: "$19",
                 pkg1Desc: "1 Page • Suitable for short promotions",
                 pkg1Feat1: "1 Responsive Page (Mobile Friendly)",
                 pkg1Feat2: "Basic Persuasive Copywriting",
                 pkg1Feat3: "Admin Dashboard Access",
                 pkg1Feat4: "Social Media & Gallery Integration",
                 pkg1Feat5: "Free .online / .site Domain",
+                pkg1Rev: "1 Month Guarantee",
                 pkgBest: "BEST SELLER",
                 pkg3Name: "Premium Package",
                 pkg3Price: "$220",
@@ -1119,6 +1025,7 @@
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Admin Guide Video Tutorial",
                 pkg3Feat6: "Free .com / .id Domain",
+                pkg3Rev: "3 Months Guarantee",
                 pkg4Name: "Enterprise Package",
                 pkg4Price: "$450+",
                 pkg4Desc: "Unlimited Pages • Full custom solution",
@@ -1127,6 +1034,7 @@
                 pkg4Feat3: "API / Payment Gateway Integration",
                 pkg4Feat4: "PageSpeed 90+ Score Guaranteed",
                 pkg4Feat5: "Free .com / .id Domain",
+                pkg4Rev: "12 Months Guarantee",
                 btnPesan: "Order Now",
                 btnHubungi: "Contact Us",
                 advBadge: "ADVANTAGES",
@@ -1136,12 +1044,20 @@
                 adv3: "3-page website can be completed in less than 3 hours",
                 adv4: "Uses latest lightweight programming languages",
                 adv5: "More stable system with minimum errors",
-                adv6: "OUR PRICES ARE CHEAPER THAN COMPETITORS",
+                adv6: "Our prices are cheaper than competitors",
                 portTitle: "Our Built Masterpieces",
+                port1Title: "Daiji Design",
+                port1Desc: "Premium interior architecture design that combines modern aesthetics with optimal spatial functionality.",
+                port2Title: "Cuci Sepatu Pro",
+                port2Desc: "Premium shoe cleaning service platform with online booking system and real-time processing status tracking.",
+                port3Title: "InDepth Mental Wellness",
+                port3Desc: "Premium Hypnotherapy Clinic Semarang. Private Sessions. Short. Real Impact. Some seek therapy. Others choose directed change. InDepth Mental Wellness presents private hypnotherapy experience with exclusive approach, professional system, and clear outcome evaluation in one structured session.",
+                port4Title: "Tirta Bhumi",
+                port4Desc: "Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. We are a trusted Digital Services, IT Infrastructure, and Procurement company. We help your business Go Digital, manage internet networks, and fulfill office operational needs with ease.",
                 portCat1: "Interior Architecture",
                 portCat2: "Cleaning Services",
-                portCat3: "Digital Agency Profile",
-                portCat4: "Water Solution Company",
+                portCat3: "Premium Hypnotherapy",
+                portCat4: "IT Infrastructure & Procurement",
                 portVisit: "Visit Site →",
                 testTitle: "What Our Clients Say",
                 test1Quote: '"Our company profile website looks very professional now. New clients trust our business more. Thank you Zephytor!"',
@@ -1229,7 +1145,7 @@
         function setLanguage(lang) {
             localStorage.setItem('lang', lang);
 
-            // Update buttons
+            // Update all lang buttons (top switcher)
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
             });
@@ -1247,33 +1163,7 @@
         const savedLang = localStorage.getItem('lang') || 'id';
         setLanguage(savedLang);
 
-        // Theme Toggle Logic
-        const body = document.body;
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-
-        function updateTheme(isDark) {
-            if (isDark) {
-                body.classList.add('dark-theme');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            } else {
-                body.classList.remove('dark-theme');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            }
-        }
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
-        updateTheme(savedTheme === 'dark');
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = !body.classList.contains('dark-theme');
-            updateTheme(isDark);
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
+        // Theme logic removed per request
 
         // Reveal Observer
         const reveals = document.querySelectorAll('.reveal');
@@ -1289,33 +1179,28 @@
         // Map each nav link to its target section element
         const navSections = Array.from(navLinks).map(link => {
             const href = link.getAttribute('href');
-            return {
-                link,
-                section: href ? document.querySelector(href) : null
-            };
+            let section = null;
+            try {
+                if (href && href.startsWith('#')) {
+                    section = document.querySelector(href);
+                }
+            } catch (e) {}
+            return { link, section };
         }).filter(item => item.section);
 
         function updateActiveNav() {
+            const floatingNav = document.getElementById('floatingNav');
+            const langSwitcherTop = document.getElementById('langSwitcherTop');
+            
             // Show/hide floating nav
-            // On mobile, show always or after 20px. On desktop, show after 200px.
-            const threshold = window.innerWidth < 992 ? 20 : 200;
+            const threshold = 400; // Show only after scrolling down 400px (past hero)
             
             if (window.scrollY > threshold) {
                 floatingNav.classList.add('visible');
+                if (langSwitcherTop) langSwitcherTop.classList.add('scrolled');
             } else {
-                if (window.innerWidth < 992) floatingNav.classList.add('visible');
-                else floatingNav.classList.remove('visible');
-            }
-
-            // Keep top navbar visible but styled
-            document.querySelector('.navbar-top').style.opacity = '1';
-            document.querySelector('.navbar-top').style.pointerEvents = 'auto';
-
-            // Scrolled class for header styling
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar-top').classList.add('scrolled');
-            } else {
-                document.querySelector('.navbar-top').classList.remove('scrolled');
+                floatingNav.classList.remove('visible');
+                if (langSwitcherTop) langSwitcherTop.classList.remove('scrolled');
             }
 
             // Find current active section based on scroll position
@@ -1343,16 +1228,17 @@
         // Smooth scroll & Click active
         navLinks.forEach(a => {
             a.addEventListener('click', function (e) {
-                e.preventDefault();
                 const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-
-                    // Manual active class on click for immediate feedback
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
+                if (targetId && targetId.startsWith('#')) {
+                    e.preventDefault();
+                    try {
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                            navLinks.forEach(link => link.classList.remove('active'));
+                            this.classList.add('active');
+                        }
+                    } catch (err) {}
                 }
             });
         });
@@ -1375,10 +1261,10 @@
         // Scroll Progress Logic
         const progressBar = document.getElementById('scrollProgress');
         window.addEventListener('scroll', () => {
-            const windisplay = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const windisplay = window.scrollY || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = (windisplay / height) * 100;
-            progressBar.style.height = scrolled + '%';
+            if (progressBar) progressBar.style.height = scrolled + '%';
         });
     </script>
     <style>
