@@ -9,3 +9,7 @@ Route::get('/', function () {
 
 Route::get('/analyze', [AnalyzeController::class, 'index']);
 Route::post('/analyze', [AnalyzeController::class, 'analyze']);
+
+Route::get('/kontak', function () {
+    return view('kontak');
+});

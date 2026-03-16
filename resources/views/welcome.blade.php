@@ -22,7 +22,7 @@
     <meta property="twitter:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
     <meta property="twitter:image" content="{{ asset('logo-baru.png') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=8.0">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=9.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -48,6 +48,13 @@
             <a href="#" class="nav-logo">
                 <span style="font-family: var(--font-h); font-size: 28px; font-weight: 800; color: var(--logo-color); letter-spacing: -1px;">Zephytor</span>
             </a>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link-item" data-i18n="navInfo">INFO</a>
+                <a href="#hero-checker" class="nav-link-item" data-i18n="navAudit">AUDIT</a>
+                <a href="#layanan" class="nav-link-item" data-i18n="navLayanan">LAYANAN</a>
+                <a href="#mvp" class="nav-link-item" data-i18n="navMvp">MVP</a>
+                <a href="/kontak" class="nav-link-item" data-i18n="navKontak">KONTAK</a>
+            </div>
             <div style="display: flex; align-items: center; gap: 16px;">
                 <div class="lang-switcher">
                     <button class="lang-btn active" onclick="setLanguage('id')">ID</button>
@@ -73,9 +80,10 @@
     <!-- FLOATING NAV -->
     <nav class="floating-nav" id="floatingNav">
         <a href="#hero" data-i18n="navInfo">INFO</a>
+        <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
         <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
         <a href="#mvp" data-i18n="navMvp">MVP</a>
-        <a href="#testimoni" data-i18n="navKontak">KONTAK</a>
+        <a href="/kontak" data-i18n="navKontak">KONTAK</a>
         <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnMulai">Mulai</a>
     </nav>
 
@@ -87,7 +95,7 @@
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
         <div class="container">
-            <div class="reveal">
+            <div class="hero-content">
                 <div class="section-badge" data-i18n="heroBadge">✨ Tersedia Slot April 2026</div>
                 <h1 data-i18n="heroTitle">Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span></h1>
                 <p data-i18n="heroDesc">Kami membangun infrastruktur digital profesional untuk merampingkan operasional
@@ -97,6 +105,18 @@
                     <a href="https://wa.me/6285801153409" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
+                </div>
+
+                <!-- UI/UX CHECKER INTEGRATED -->
+                <div class="hero-checker" id="hero-checker" style="margin-top: 40px; opacity: 1; transform: none;">
+                    <div class="checker-mini-card">
+                        <div class="checker-badge" data-i18n="auditTitle">✨ Audit UI/UX Website Kamu Gratis</div>
+                        <form action="/analyze" method="POST" class="checker-mini-form">
+                            @csrf
+                            <input type="url" name="url" placeholder="Paste URL website Anda..." required>
+                            <button type="submit">Cek Sekarang</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat-item">
@@ -115,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-visual reveal">
+            <div class="hero-visual">
                 <div class="hero-image-wrap floating">
                     <img src="{{ asset('premium_website_mockup.png') }}" alt="Premium Project Preview" style="width: 100%; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.3);">
                     <div class="card-stat">
@@ -127,56 +147,7 @@
         </div>
     </section>
     
-    <!-- UI/UX CHECKER SECTION -->
-    <section class="checker-section">
-        <div class="checker-grid-bg"></div>
-        <div class="container">
-            <div class="checker-card reveal">
-                <div class="checker-card-glow"></div>
-                <div class="checker-header">
-                    <span class="checker-badge">✦ Instant Analysis</span>
-                    <h2 class="checker-title" data-i18n="auditTitle">Yakin UI/UX Website Kamu <span>Sudah Bagus?</span></h2>
-                    <p class="checker-sub" data-i18n="auditSub">Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.</p>
-                </div>
-                <form action="/analyze" method="GET" class="checker-form-v2">
-                    <div class="checker-input-container">
-                        <div class="checker-input-group">
-                            <div class="checker-input-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                                </svg>
-                            </div>
-                            <input type="url" name="url" class="checker-field" placeholder="https://website-bisnis-anda.com" required>
-                        </div>
-                        <button type="submit" class="checker-submit-btn">
-                            <span>Mulai Analisa</span>
-                            <div class="btn-shine"></div>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-                <div class="checker-footer">
-                    <div class="checker-stat-item">
-                        <span class="stat-value">98%</span>
-                        <span class="stat-label">Accuracy</span>
-                    </div>
-                    <div class="checker-divider"></div>
-                    <div class="checker-stat-item">
-                        <span class="stat-value">< 3s</span>
-                        <span class="stat-label">Analysis Speed</span>
-                    </div>
-                    <div class="checker-divider"></div>
-                    <div class="checker-stat-item">
-                        <span class="stat-value">Free</span>
-                        <span class="stat-label">Unlimited Checks</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- TANTANGAN -->
     <section id="tantangan" class="section-alt">
@@ -369,6 +340,10 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg1Feat5">Gratis Domain .online / .site</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
@@ -404,6 +379,10 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg3Feat6">Gratis Domain .com / .id</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
@@ -434,15 +413,15 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg4Feat5">Gratis Domain .com / .id</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkgRev">Gratis Revisi Sepuasnya</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
                         data-i18n="btnHubungi">Hubungi Kami</a>
                 </div>
-            </div>
-            <div class="reveal text-center" style="margin-top: 50px; opacity: 0.8; font-size: 0.95rem; color: var(--text-h);">
-                <p><strong>Note:</strong> Paket Landing Page (Rp 300rb) sudah termasuk domain <strong>.online / .site</strong></p>
-                <p>Paket lainnya sudah termasuk domain <strong>.com / .id</strong></p>
             </div>
         </div>
     </section>
@@ -476,7 +455,7 @@
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
                             <span class="portfolio-badge" data-i18n="portCat2">Cleaning Services</span>
-                            <span class="portfolio-date">10 Mart 2026</span>
+                            <span class="portfolio-date">10 Maret 2026</span>
                         </div>
                         <h4>Cuci Sepatu Pro</h4>
                         <p>Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.</p>
@@ -494,7 +473,7 @@
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
                             <span class="portfolio-badge" data-i18n="portCat3">Digital Agency</span>
-                            <span class="portfolio-date">5 Mart 2026</span>
+                            <span class="portfolio-date">5 Maret 2026</span>
                         </div>
                         <h4>InDepth Digital</h4>
                         <p>Website perusahaan agensi digital dengan fokus pada visual yang memukau dan pengalaman pengguna yang seamless.</p>
@@ -555,7 +534,7 @@
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📊</div>
-                    <h3>Digital strategist</h3>
+                    <h3>Digital Strategist</h3>
                     <p data-i18n="exp3Desc">Strategi konten dan alur konversi yang efektif meningkatkan ROI.</p>
                     <div class="btn-link">
                         <span>Lihat Detail</span>
@@ -855,6 +834,8 @@
             </div>
         </div>
     </section>
+    
+
 
     <!-- CTA -->
     <div class="container">
@@ -913,6 +894,7 @@
                 <div>
                     <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
+                        <li><a href="/kontak" data-i18n="navKontak">Kontak Kami</a></li>
                         <li><a href="https://wa.me/6285801153409" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
                         <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
                     </ul>
@@ -933,6 +915,7 @@
         const i18n = {
             id: {
                 navInfo: "INFO",
+                navAudit: "AUDIT",
                 navLayanan: "LAYANAN",
                 navMvp: "MVP",
                 navKontak: "KONTAK",
@@ -969,6 +952,7 @@
                 pkg1Feat2: "Copywriting Persuasif Basic",
                 pkg1Feat3: "Akses Dashboard Pengelolaan",
                 pkg1Feat4: "Integrasi Link Sosmed & Galeri",
+                pkg1Feat5: "Gratis Domain .online / .site",
                 pkgBest: "TERLARIS",
                 pkg3Name: "Paket Premium",
                 pkg3Price: "Rp 3.5jt",
@@ -978,6 +962,7 @@
                 pkg3Feat3: "3 Email Bisnis Terintegrasi",
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Video Tutorial Panduan Admin",
+                pkg3Feat6: "Gratis Domain .com / .id",
                 pkg4Name: "Paket Enterprise",
                 pkg4Price: "Rp 7jt+",
                 pkg4Desc: "Unlimited Halaman • Full custom solution",
@@ -985,6 +970,7 @@
                 pkg4Feat2: "Fitur Custom (CMS / Filter / Database)",
                 pkg4Feat3: "Integrasi API / Payment Gateway",
                 pkg4Feat4: "Jaminan PageSpeed 90+ Score",
+                pkg4Feat5: "Gratis Domain .com / .id",
                 btnPesan: "Pesan Sekarang",
                 btnHubungi: "Hubungi Kami",
                 advBadge: "KEUNGGULAN",
@@ -1013,7 +999,7 @@
                 test5Quote: '"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"',
                 test5Role: "CEO, Butik Fashion",
                 test6Quote: '"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"',
-                test6Role: "Photographer & Videographer",
+                test6Role: "Fotografer & Videografer",
                 probTitle: "Kenapa Banyak Bisnis Gagal Go-Digital?",
                 probDesc: "Digitalisasi bukan hanya soal punya website, tapi soal efisiensi dan hasil nyata.",
                 prob1Title: "Hasil Tidak Sesuai",
@@ -1084,6 +1070,7 @@
             },
             en: {
                 navInfo: "INFO",
+                navAudit: "AUDIT",
                 navLayanan: "SERVICES",
                 navMvp: "MVP",
                 navKontak: "CONTACT",
@@ -1121,6 +1108,7 @@
                 pkg1Feat2: "Basic Persuasive Copywriting",
                 pkg1Feat3: "Admin Dashboard Access",
                 pkg1Feat4: "Social Media & Gallery Integration",
+                pkg1Feat5: "Free .online / .site Domain",
                 pkgBest: "BEST SELLER",
                 pkg3Name: "Premium Package",
                 pkg3Price: "$220",
@@ -1130,6 +1118,7 @@
                 pkg3Feat3: "3 Integrated Business Emails",
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Admin Guide Video Tutorial",
+                pkg3Feat6: "Free .com / .id Domain",
                 pkg4Name: "Enterprise Package",
                 pkg4Price: "$450+",
                 pkg4Desc: "Unlimited Pages • Full custom solution",
@@ -1137,6 +1126,7 @@
                 pkg4Feat2: "Custom Features (CMS / Filter / Database)",
                 pkg4Feat3: "API / Payment Gateway Integration",
                 pkg4Feat4: "PageSpeed 90+ Score Guaranteed",
+                pkg4Feat5: "Free .com / .id Domain",
                 btnPesan: "Order Now",
                 btnHubungi: "Contact Us",
                 advBadge: "ADVANTAGES",
@@ -1292,9 +1282,9 @@
         }, { threshold: 0.1 });
         reveals.forEach(r => obs.observe(r));
 
-        // Floating Nav logic
+        // Floating Nav & Top Nav logic
         const floatingNav = document.getElementById('floatingNav');
-        const navLinks = document.querySelectorAll('.floating-nav a:not(.btn-mulai)');
+        const navLinks = document.querySelectorAll('.floating-nav a:not(.btn-mulai), .nav-menu .nav-link-item');
 
         // Map each nav link to its target section element
         const navSections = Array.from(navLinks).map(link => {
@@ -1307,8 +1297,26 @@
 
         function updateActiveNav() {
             // Show/hide floating nav
-            if (window.scrollY > 300) floatingNav.classList.add('visible');
-            else floatingNav.classList.remove('visible');
+            // On mobile, show always or after 20px. On desktop, show after 200px.
+            const threshold = window.innerWidth < 992 ? 20 : 200;
+            
+            if (window.scrollY > threshold) {
+                floatingNav.classList.add('visible');
+            } else {
+                if (window.innerWidth < 992) floatingNav.classList.add('visible');
+                else floatingNav.classList.remove('visible');
+            }
+
+            // Keep top navbar visible but styled
+            document.querySelector('.navbar-top').style.opacity = '1';
+            document.querySelector('.navbar-top').style.pointerEvents = 'auto';
+
+            // Scrolled class for header styling
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar-top').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar-top').classList.remove('scrolled');
+            }
 
             // Find current active section based on scroll position
             // A nav section is "active" if we've scrolled past its top (minus offset)
