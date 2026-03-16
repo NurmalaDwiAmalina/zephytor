@@ -6,32 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisa UI/UX — Zephytor</title>
     <meta name="description" content="Hasil analisa User Interface dan User Experience website Anda oleh Zephytor.">
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v={{ time() }}">
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <style>
         .analyze-navbar {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: rgba(248, 250, 252, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-        }
-        body.dark-theme .analyze-navbar {
-            background: rgba(3, 7, 18, 0.85);
-        }
-        .analyze-navbar .inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 8px 16px;
+            border-radius: 100px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
             gap: 16px;
+            width: max-content;
+            max-width: 95vw;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
+        body.dark-theme .analyze-navbar {
+            background: #000000;
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .analyze-navbar .nav-logo span {
+            color: #000000 !important;
+        }
+
+        body.dark-theme .analyze-navbar .nav-logo span {
+            color: #ffffff !important;
+        }
+
+        .analyze-navbar .btn-primary-bw {
+            background: #000000 !important;
+            color: #ffffff !important;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        body.dark-theme .analyze-navbar .btn-primary-bw {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        .analyze-navbar .btn-primary-bw:hover {
+            opacity: 0.85;
+            transform: translateY(-1px);
+        }
+
         .analyze-navbar .url-chip {
             background: rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0, 0, 0, 0.1);
@@ -335,27 +366,31 @@
     </style>
 </head>
 
-<body>
-    <!-- Navbar -->
+
+<body class="dark-theme">
+    <div class="bg-mesh">
+        <div class="mesh-orb orb-1"></div>
+        <div class="mesh-orb orb-2"></div>
+        <div class="mesh-orb orb-3"></div>
+    </div>
+
+    <!-- Floating Navbar (Top for Analyze) -->
     <div class="analyze-navbar">
-        <div class="inner">
-            <a href="/" style="text-decoration: none;">
-                <svg class="logo-svg" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 32px; color: var(--text-h);">
-                    <path d="M5 25H30L15 45H40" stroke="currentColor" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter" />
-                    <path d="M20 5H45L30 25H55" stroke="currentColor" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter" />
-                    <text x="65" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="currentColor">Zephytor</text>
-                </svg>
-            </a>
-            <div class="url-chip" title="{{ $url }}">{{ $url }}</div>
-            <div style="display: flex; gap: 12px; align-items: center;">
-                <button id="themeToggle" class="btn btn-outline btn-sm" style="padding: 10px; min-width: 44px;">
-                    <svg id="moonIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
-                    <svg id="sunIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" /></svg>
-                </button>
-                <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20ingin%20konsultasi%20gratis" class="btn btn-primary btn-sm">Konsultasi Gratis</a>
-            </div>
+        <a href="/" class="nav-logo" style="text-decoration: none;">
+            <span style="font-family: var(--font-h); font-size: 24px; font-weight: 800; letter-spacing: -1.5px;">Zephytor</span>
+        </a>
+        <div class="url-chip" title="{{ $url }}" style="max-width: 200px;">{{ $url }}</div>
+        
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <button id="themeToggle" class="btn btn-outline btn-sm" style="padding: 10px; min-width: 44px; border-radius: 100px;">
+                <svg id="moonIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+                <svg id="sunIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" /></svg>
+            </button>
+            <a href="https://wa.me/6285801153409" class="btn-primary-bw">Konsultasi</a>
         </div>
     </div>
+
+
 
     <div class="page-content">
         <div class="container">
@@ -431,12 +466,7 @@
                     </div>
                 </div>
 
-                <!-- Category Scores -->
-                <div style="margin-bottom: 64px;">
-                    <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-h); font-family: var(--font-h); margin-bottom: 8px;">Penilaian Per Kategori</h2>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0;">Detail analisa setiap aspek UI/UX website kamu.</p>
-                    <div class="categories-grid" id="categoriesGrid"></div>
-                </div>
+
 
                 <!-- Recommendations -->
                 <div style="margin-bottom: 80px;">
@@ -476,6 +506,19 @@
             const isDark = !body.classList.contains('dark-theme');
             updateTheme(isDark);
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.querySelectorAll('.lang-btn-nav').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+            window.location.href = '/?lang=' + lang;
+        }
+
+        const currentLang = localStorage.getItem('lang') || 'id';
+        document.querySelectorAll('.lang-btn-nav').forEach(btn => {
+            btn.classList.toggle('active', btn.innerText.toLowerCase() === currentLang);
         });
 
         // Score color helper
@@ -524,28 +567,7 @@
             document.getElementById('screenshotImg').src = screenshotUrl;
             document.getElementById('screenshotLink').href = '{{ $url }}';
 
-            // Categories
-            const grid = document.getElementById('categoriesGrid');
-            grid.innerHTML = categories.map(cat => {
-                const posHTML = (cat.positives || []).map(p =>
-                    `<li class="positive"><span class="icon">✓</span> ${p}</li>`).join('');
-                const issHTML = (cat.issues || []).map(i =>
-                    `<li class="issue"><span class="icon">✗</span> ${i}</li>`).join('');
-                const feedbackHTML = (posHTML || issHTML)
-                    ? `<ul class="feedback-list">${posHTML}${issHTML}</ul>` : '';
-                return `
-                <div class="category-card">
-                    <div class="category-header">
-                        <div class="category-name">${cat.name}</div>
-                        <div class="mini-ring">
-                            ${buildMiniRingSVG(cat.score)}
-                            <div class="mini-ring-score">${cat.score}</div>
-                        </div>
-                    </div>
-                    <p class="category-desc">${cat.description}</p>
-                    ${feedbackHTML}
-                </div>`;
-            }).join('');
+
 
             // Recommendations
             const recList = document.getElementById('recommendationsList');
@@ -615,6 +637,41 @@
                 clearInterval(stepInterval);
                 showError('Koneksi gagal. Pastikan internet Anda stabil dan coba lagi.');
             }
+        }
+
+
+        // Reveal Observer (Scroll Animations)
+        const reveals = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            threshold: 0.05,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(r => {
+            if (r.getBoundingClientRect().top < window.innerHeight) {
+                r.classList.add('visible');
+            } else {
+                revealObserver.observe(r);
+            }
+        });
+
+        if (!window.IntersectionObserver) {
+            reveals.forEach(r => r.classList.add('visible'));
+        }
+
+        // Floating Nav logic
+        const floatingNav = document.getElementById('floatingNav');
+        if (floatingNav) {
+            floatingNav.classList.add('visible');
         }
 
         runAnalysis();

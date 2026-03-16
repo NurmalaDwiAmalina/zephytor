@@ -22,7 +22,7 @@
     <meta property="twitter:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
     <meta property="twitter:image" content="{{ asset('logo-baru.png') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=9.0">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v={{ time() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -53,17 +53,53 @@
 
     <!-- FLOATING NAV -->
     <nav class="floating-nav" id="floatingNav">
-        <div class="nav-logo-float">
-            <span>Zephytor</span>
+        <!-- Desktop Pill -->
+        <div class="nav-pill-desktop">
+            <div class="nav-logo-float"><span>Zephytor</span></div>
+            <a href="#hero" class="active" data-i18n="navInfo">INFO</a>
+            <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
+            <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
+            <a href="#mvp" data-i18n="navMvp">MVP</a>
+            <a href="/kontak" data-i18n="navKontak">KONTAK</a>
+            <div class="nav-pill-sep"></div>
+            <div class="lang-switcher-nav">
+                <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
+                <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
+            </div>
+            <div class="nav-pill-sep"></div>
+            <a href="https://wa.me/6285801153409" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
         </div>
-        <div class="nav-sep"></div>
-        <a href="#hero" data-i18n="navInfo">INFO</a>
-        <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
-        <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
-        <a href="#mvp" data-i18n="navMvp">MVP</a>
-        <a href="/kontak" data-i18n="navKontak">KONTAK</a>
-        <div class="nav-sep"></div>
-        <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm btn-mulai" data-i18n="btnKonsultasi">Konsultasi Gratis</a>
+
+        <!-- Mobile Card -->
+        <div class="nav-card-mobile">
+            <div class="nav-handle"></div>
+            <div class="nav-primary-grid">
+                <a href="#hero" class="nav-item-big active">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span data-i18n="navInfo">INFO</span>
+                </a>
+                <a href="#hero-checker" class="nav-item-big">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <span data-i18n="navAudit">AUDIT</span>
+                </a>
+            </div>
+            <div class="nav-bottom-row">
+                <div class="nav-bottom-left">
+                    <div class="nav-logo-mini">Z</div>
+                    <div class="nav-menu-toggle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                        <span>MENU</span>
+                    </div>
+                </div>
+                <div class="nav-bottom-right">
+                    <div class="nav-lang-switch">
+                        <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
+                        <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
+                    </div>
+                    <a href="https://wa.me/6285801153409" class="nav-btn-konsultasi" data-i18n="btnMulai">Konsultasi</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
 
@@ -74,13 +110,13 @@
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="section-badge" data-i18n="heroBadge">🚀 Partner Transformasi Digital Terpercaya</div>
-                <h1 data-i18n="heroTitle">Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span></h1>
-                <p data-i18n="heroDesc">Kami membangun infrastruktur digital profesional untuk merampingkan operasional
+            <div class="hero-content reveal">
+                <div class="section-badge reveal-delay-1" data-i18n="heroBadge">🚀 Partner Transformasi Digital Terpercaya</div>
+                <h1 class="reveal-delay-2" data-i18n="heroTitle">Digitalisasi Bisnis Anda <span>Sesuai Hasil Akhir.</span></h1>
+                <p class="reveal-delay-3" data-i18n="heroDesc">Kami membangun infrastruktur digital profesional untuk merampingkan operasional
                     Anda. Tanpa modal
                     awal yang besar, dapatkan website premium yang meyakinkan klien.</p>
-                <div class="hero-buttons">
+                <div class="hero-buttons reveal-delay-4">
                     <a href="https://wa.me/6285801153409" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
@@ -173,19 +209,19 @@
                     website, tapi soal efisiensi dan hasil nyata.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal" data-number="01">
+                <div class="service-card reveal reveal-delay-1" data-number="01">
                     <div class="service-icon">❌</div>
                     <h3 data-i18n="prob1Title">Hasil Tidak Sesuai</h3>
                     <p data-i18n="prob1Desc">Kebanyakan agency membatasi revisi sehingga hasil akhir seringkali tidak
                         sesuai dengan ekspektasi awal Anda.</p>
                 </div>
-                <div class="service-card reveal" data-number="02">
+                <div class="service-card reveal reveal-delay-2" data-number="02">
                     <div class="service-icon">❌</div>
                     <h3 data-i18n="prob2Title">Desain Kaku</h3>
                     <p data-i18n="prob2Desc">Template murahan yang membuat brand Anda terlihat tidak profesional di mata
                         klien.</p>
                 </div>
-                <div class="service-card reveal" data-number="03">
+                <div class="service-card reveal reveal-delay-3" data-number="03">
                     <div class="service-icon">❌</div>
                     <h3 data-i18n="prob3Title">Sulit Dikelola</h3>
                     <p data-i18n="prob3Desc">Sistem yang rumit membuat Anda ketergantungan pada developer terus-menerus.
@@ -199,12 +235,12 @@
     <section id="layanan">
         <div class="container">
             <div class="section-header text-center reveal">
-                <div class="section-badge">LAYANAN</div>
+                <div class="section-badge" data-i18n="navLayanan">LAYANAN</div>
                 <h2 class="section-title" data-i18n="layananTitle">Solusi Bisnis Digital</h2>
                 <p class="mx-auto" style="max-width: 600px;" data-i18n="layananDesc">Kami bukan sekadar membuat website, kami membangun identitas brand Anda di internet.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal">
+                <div class="service-card reveal reveal-delay-1">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
@@ -213,7 +249,7 @@
                     <h3 data-i18n="srv1Title">Company Profile</h3>
                     <p data-i18n="srv1Desc">Website profesional untuk membangun kepercayaan klien dan investor dalam waktu singkat.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal reveal-delay-2">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
@@ -221,7 +257,7 @@
                     <h3 data-i18n="srv2Title">Landing Page</h3>
                     <p data-i18n="srv2Desc">Satu halaman dengan fokus konversi tinggi. Sangat cocok untuk iklan Google & Meta Ads.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal reveal-delay-3">
                     <div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" />
@@ -239,21 +275,21 @@
     <section id="alur-kerja">
         <div class="container">
             <div class="section-header text-center reveal">
-                <div class="section-badge">WORKFLOW</div>
+                <div class="section-badge" data-i18n="stepBadge">WORKFLOW</div>
                 <h2 class="section-title" data-i18n="stepTitle">Cara Kami Bekerja</h2>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal" data-number="01">
+                <div class="service-card reveal reveal-delay-1" data-number="01">
                     <div class="service-icon">01</div>
                     <h3 data-i18n="step1Title">Konsultasi Strategi</h3>
                     <p data-i18n="step1Desc">Kami mendalami model bisnis Anda untuk menentukan fitur yang paling krusial.</p>
                 </div>
-                <div class="service-card reveal" data-number="02">
+                <div class="service-card reveal reveal-delay-2" data-number="02">
                     <div class="service-icon">02</div>
                     <h3 data-i18n="step2Title">Desain Eksklusif</h3>
                     <p data-i18n="step2Desc">UI/UX yang dirancang khusus untuk meningkatkan kepercayaan dan konversi.</p>
                 </div>
-                <div class="service-card reveal" data-number="03">
+                <div class="service-card reveal reveal-delay-3" data-number="03">
                     <div class="service-icon">03</div>
                     <h3 data-i18n="step3Title">Development & Launch</h3>
                     <p data-i18n="step3Desc">Proses coding yang cepat dan optimasi performa maksimal sebelum live.</p>
@@ -270,27 +306,27 @@
                 <h2 class="section-title" data-i18n="advTitle">KEUNGGULAN LAYANAN KAMI</h2>
             </div>
             <div class="adv-grid">
-                <div class="adv-item reveal">
+                <div class="adv-item reveal reveal-delay-1">
                     <div class="adv-icon">📈</div>
                     <p data-i18n="adv1">Website sudah terintegrasi dengan Google Analytics dan Google Search Console</p>
                 </div>
-                <div class="adv-item reveal">
+                <div class="adv-item reveal reveal-delay-2">
                     <div class="adv-icon">🔍</div>
                     <p data-i18n="adv2">Website SEO friendly</p>
                 </div>
-                <div class="adv-item reveal">
+                <div class="adv-item reveal reveal-delay-3">
                     <div class="adv-icon">⚡</div>
                     <p data-i18n="adv3">Website 3 halaman bisa selesai kurang dari 3 jam</p>
                 </div>
-                <div class="adv-item reveal">
+                <div class="adv-item reveal reveal-delay-4">
                     <div class="adv-icon">💻</div>
                     <p data-i18n="adv4">Menggunakan bahasa pemrograman terbaru yang ringan</p>
                 </div>
-                <div class="adv-item reveal">
+                <div class="adv-item reveal reveal-delay-1">
                     <div class="adv-icon">🛡️</div>
                     <p data-i18n="adv5">Sistem lebih stabil dan minim error</p>
                 </div>
-                <div class="adv-item reveal">
+                <div class="adv-item reveal reveal-delay-2">
                     <div class="adv-icon">💰</div>
                     <p data-i18n="adv6">Harga yang kami tawarkan lebih murah dibandingkan kompetitor</p>
                 </div>
@@ -425,7 +461,7 @@
             </div>
             <div class="portfolio-grid">
                 <!-- Daiji Design -->
-                <a href="https://daijidesign.com" target="_blank" class="portfolio-card reveal">
+                <a href="https://daijidesign.com" target="_blank" class="portfolio-card reveal reveal-delay-1">
                     <div class="portfolio-img">
                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop"
                             alt="Daiji Design">
@@ -443,7 +479,7 @@
                     </div>
                 </a>
                 <!-- Cuci Sepatu -->
-                <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal">
+                <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal reveal-delay-2">
                     <div class="portfolio-img">
                         <img src="{{ asset('images/portfolio/cuci-sepatu.png') }}" alt="Cuci Sepatu">
                     </div>
@@ -460,13 +496,13 @@
                     </div>
                 </a>
                 <!-- InDepth -->
-                <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal">
+                <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal reveal-delay-3">
                     <div class="portfolio-img">
                         <img src="{{ asset('images/portfolio/indepth.png') }}" alt="InDepth">
                     </div>
                     <div class="portfolio-info">
                         <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat3">Hipnoterapi Premium</span>
+                            <span class="portfolio-badge" data-i18n="portCat3">Healthcare & Mental Wellness</span>
                         </div>
                         <h4 data-i18n="port3Title">InDepth Mental Wellness</h4>
                         <p data-i18n="port3Desc">Klinik Hipnoterapi Premium Semarang. Sesi Privat. Pendek. Berdampak Nyata. Sebagian orang mencari terapi. Sebagian lainnya memilih perubahan yang terarah. InDepth Mental Wellness menghadirkan pengalaman hipnoterapi privat dengan pendekatan eksklusif, sistem profesional, dan evaluasi hasil yang jelas dalam satu sesi terstruktur.</p>
@@ -477,7 +513,7 @@
                     </div>
                 </a>
                 <!-- Tirta Bhumi -->
-                <a href="https://tirtabhumi.com" target="_blank" class="portfolio-card reveal">
+                <a href="https://tirtabhumi.com" target="_blank" class="portfolio-card reveal reveal-delay-4">
                     <div class="portfolio-img">
                         <img src="{{ asset('images/portfolio/tirtabhumi.png') }}" alt="Tirta Bhumi">
                     </div>
@@ -741,9 +777,7 @@
                 <p data-i18n="ctaDesc" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px;">Hubungi kami
                     sekarang untuk mendapatkan website premium dengan penawaran terbaik.
                 </p>
-                <a href="https://wa.me/6285801153409" class="btn btn-white btn-lg" data-i18n="ctaBtn"
-                    style="padding: 18px 48px; font-size: 1.1rem; border-radius: 20px;">Chat WhatsApp
-                    Sekarang</a>
+                <a href="https://wa.me/6285801153409" class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
             </div>
         </div>
     </div>
@@ -814,7 +848,7 @@
                 navLayanan: "LAYANAN",
                 navMvp: "MVP",
                 navKontak: "KONTAK",
-                btnMulai: "Mulai",
+                btnMulai: "Konsultasi",
                 faqBadge: "TANYA JAWAB",
                 mvpBadge: "KECEPATAN PENGIRIMAN",
                 mvpTitle: "MVP Siap dalam Hitungan Jam",
@@ -825,6 +859,7 @@
                 mvpComplexTime: "< 1 Minggu",
                 mvpComplexTitle: "Sistem Kompleks",
                 mvpComplexDesc: "Web app dengan fitur custom, dashboard, atau integrasi API — MVP fungsional selesai kurang dari 1 minggu. Cukup untuk validasi pasar Anda.",
+                stepBadge: "ALUR KERJA",
                 btnKonsultasi: "Konsultasi Gratis",
                 heroBadge: "🚀 Partner Transformasi Digital Terpercaya",
                 heroTitle: "Digitalisasi Bisnis Anda <span>Sesuai Janji.</span>",
@@ -890,7 +925,7 @@
                 port4Desc: "Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. Kami membantu bisnis Anda Go Digital, mengelola jaringan internet, dan memenuhi kebutuhan operasional kantor dengan mudah.",
                 portCat1: "Arsitektur Interior",
                 portCat2: "Layanan Kebersihan",
-                portCat3: "Hipnoterapi Premium",
+                portCat3: "Healthcare & Mental Wellness",
                 portCat4: "IT Infrastructure & Procurement",
                 portVisit: "Lihat Situs →",
                 testTitle: "Apa Kata Klien Kami",
@@ -980,7 +1015,7 @@
                 navLayanan: "SERVICES",
                 navMvp: "MVP",
                 navKontak: "CONTACT",
-                btnMulai: "Start",
+                btnMulai: "Consult",
                 faqBadge: "QUESTIONS",
                 mvpBadge: "DELIVERY SPEED",
                 mvpTitle: "MVP Ready in Hours",
@@ -991,6 +1026,7 @@
                 mvpComplexTime: "< 1 Week",
                 mvpComplexTitle: "Complex System",
                 mvpComplexDesc: "Web app with custom features, dashboard, or API integrations — a functional MVP done in under 1 week. Enough to validate your market.",
+                stepBadge: "WORKFLOW",
                 btnKonsultasi: "Free Consultation",
                 heroBadge: "🚀 Trusted Digital Transformation Partner",
                 heroTitle: "Digitalize Your Business <span>Exactly as Promised.</span>",
@@ -1055,7 +1091,7 @@
                 port4Desc: "Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. We are a trusted Digital Services, IT Infrastructure, and Procurement company. We help your business Go Digital, manage internet networks, and fulfill office operational needs with ease.",
                 portCat1: "Interior Architecture",
                 portCat2: "Cleaning Services",
-                portCat3: "Premium Hypnotherapy",
+                portCat3: "Healthcare & Mental Wellness",
                 portCat4: "IT Infrastructure & Procurement",
                 portVisit: "Visit Site →",
                 testTitle: "What Our Clients Say",
@@ -1144,8 +1180,8 @@
         function setLanguage(lang) {
             localStorage.setItem('lang', lang);
 
-            // Update all lang buttons (top switcher)
-            document.querySelectorAll('.lang-btn').forEach(btn => {
+            // Update all lang buttons
+            document.querySelectorAll('.lang-btn-nav').forEach(btn => {
                 btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
             });
 
@@ -1164,16 +1200,39 @@
 
         // Theme logic removed per request
 
-        // Reveal Observer
+        // Reveal Observer (Scroll Animations)
         const reveals = document.querySelectorAll('.reveal');
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        reveals.forEach(r => obs.observe(r));
+        const observerOptions = {
+            threshold: 0.05,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(r => {
+            // If element is already in viewport on load, show it immediately
+            if (r.getBoundingClientRect().top < window.innerHeight) {
+                r.classList.add('visible');
+            } else {
+                revealObserver.observe(r);
+            }
+        });
+
+        // Fallback for older browsers or if observer fails
+        if (!window.IntersectionObserver) {
+            reveals.forEach(r => r.classList.add('visible'));
+        }
 
         // Floating Nav & Top Nav logic
         const floatingNav = document.getElementById('floatingNav');
-        const navLinks = document.querySelectorAll('.floating-nav a:not(.btn-mulai), .nav-menu .nav-link-item');
+        const navLinks = document.querySelectorAll('.nav-pill-desktop a:not(.btn-mulai-pill), .nav-item-big, .nav-menu .nav-link-item');
 
         // Map each nav link to its target section element
         const navSections = Array.from(navLinks).map(link => {
@@ -1191,14 +1250,12 @@
             const floatingNav = document.getElementById('floatingNav');
             const langSwitcherTop = document.getElementById('langSwitcherTop');
             
-            // Show/hide floating nav
-            const threshold = 400; // Show only after scrolling down 400px (past hero)
+            // Floating nav is now always visible from start as per user request
+            floatingNav.classList.add('visible');
             
-            if (window.scrollY > threshold) {
-                floatingNav.classList.add('visible');
+            if (window.scrollY > -1) { // Always true
                 if (langSwitcherTop) langSwitcherTop.classList.add('scrolled');
             } else {
-                floatingNav.classList.remove('visible');
                 if (langSwitcherTop) langSwitcherTop.classList.remove('scrolled');
             }
 

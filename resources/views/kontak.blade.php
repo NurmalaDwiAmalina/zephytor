@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak Kami — Zephytor</title>
-    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v=9.0">
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v={{ time() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -203,12 +203,53 @@
 
     <!-- FLOATING NAV -->
     <nav class="floating-nav" id="floatingNav">
-        <a href="/#hero">INFO</a>
-        <a href="/#hero-checker">AUDIT</a>
-        <a href="/#layanan">LAYANAN</a>
-        <a href="/#mvp">MVP</a>
-        <a href="/kontak" class="active">KONTAK</a>
-        <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm btn-mulai">Mulai</a>
+        <!-- Desktop Pill -->
+        <div class="nav-pill-desktop">
+            <div class="nav-logo-float"><span>Zephytor</span></div>
+            <a href="/#hero" data-i18n="navInfo">INFO</a>
+            <a href="/#hero-checker" data-i18n="navAudit">AUDIT</a>
+            <a href="/#layanan" data-i18n="navLayanan">LAYANAN</a>
+            <a href="/#mvp" data-i18n="navMvp">MVP</a>
+            <a href="/kontak" class="active" data-i18n="navKontak">KONTAK</a>
+            <div class="nav-pill-sep"></div>
+            <div class="lang-switcher-nav">
+                <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
+                <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
+            </div>
+            <div class="nav-pill-sep"></div>
+            <a href="https://wa.me/6285801153409" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
+        </div>
+
+        <!-- Mobile Card -->
+        <div class="nav-card-mobile">
+            <div class="nav-handle"></div>
+            <div class="nav-primary-grid">
+                <a href="/#hero" class="nav-item-big">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>HOME</span>
+                </a>
+                <a href="/#hero-checker" class="nav-item-big">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <span>AUDIT</span>
+                </a>
+            </div>
+            <div class="nav-bottom-row">
+                <div class="nav-bottom-left">
+                    <div class="nav-logo-mini">Z</div>
+                    <div class="nav-menu-toggle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                        <span>MENU</span>
+                    </div>
+                </div>
+                <div class="nav-bottom-right">
+                    <div class="nav-lang-switch">
+                        <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
+                        <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
+                    </div>
+                    <a href="https://wa.me/6285801153409" class="nav-btn-konsultasi">Konsultasi</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <main class="contact-page">
@@ -233,14 +274,7 @@
                         <a href="https://wa.me/6285801153409">+62 858-0115-3409</a>
                     </div>
 
-                    <div class="info-item">
-                        <h4>Ikuti Kami</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-icon">IG</a>
-                            <a href="#" class="social-icon">LN</a>
-                            <a href="#" class="social-icon">TW</a>
-                        </div>
-                    </div>
+
                 </div>
 
                 <!-- Right Column: Form -->
@@ -348,19 +382,56 @@
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
 
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.querySelectorAll('.lang-btn-nav').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+            // If contact page also uses i18n, redirect or update here. 
+            // For now just keep stay consistent.
+            window.location.href = '/?lang=' + lang; 
+        }
+
+        const currentLang = localStorage.getItem('lang') || 'id';
+        document.querySelectorAll('.lang-btn-nav').forEach(btn => {
+            btn.classList.toggle('active', btn.innerText.toLowerCase() === currentLang);
+        });
+
+        // Reveal Observer (Scroll Animations)
+        const reveals = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            threshold: 0.05,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(r => {
+            if (r.getBoundingClientRect().top < window.innerHeight) {
+                r.classList.add('visible');
+            } else {
+                revealObserver.observe(r);
+            }
+        });
+
+        if (!window.IntersectionObserver) {
+            reveals.forEach(r => r.classList.add('visible'));
+        }
+
         // Floating Nav logic
         const floatingNav = document.getElementById('floatingNav');
         const navbarTop = document.querySelector('.navbar-top');
         
         function handleScroll() {
-            const threshold = window.innerWidth < 992 ? 20 : 300;
-            
-            if (window.scrollY > threshold) {
-                floatingNav.classList.add('visible');
-            } else {
-                if (window.innerWidth < 992) floatingNav.classList.add('visible');
-                else floatingNav.classList.remove('visible');
-            }
+            // Force visible from start as per home page behavior
+            floatingNav.classList.add('visible');
             
             navbarTop.style.opacity = '1';
             navbarTop.style.pointerEvents = 'auto';

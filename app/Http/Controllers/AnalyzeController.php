@@ -22,9 +22,24 @@ class AnalyzeController extends Controller
         $url = $request->input('url');
 
         $thumioKey = env('THUMIO_KEY');
-        // Removed refresh/true and reduced wait to 3 to prevent OpenAI download timeouts
-        $screenshotUrl = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'wait/3/width/1200/crop/900/' . $url;
+        // Step 1: Download screenshot from thum.io first to avoid OpenAI download timeout
+        $screenshotUrlRaw = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'wait/5/width/1200/crop/900/' . $url;
+        
+        try {
+            $imageResponse = Http::timeout(60)->get($screenshotUrlRaw);
+            if ($imageResponse->failed()) {
+                throw new \Exception("Gagal mengambil screenshot dari Thum.io (Status: " . $imageResponse->status() . ")");
+            }
+            $imageData = base64_encode($imageResponse->body());
+            $screenshotBase64 = 'data:image/png;base64,' . $imageData;
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error'   => 'Gagal memproses gambar website: ' . $e->getMessage(),
+            ], 500);
+        }
 
+        // Step 2: Send to OpenAI
         $apiKey = config('services.openai.key');
         if (!$apiKey) {
             return response()->json([
@@ -36,7 +51,7 @@ class AnalyzeController extends Controller
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . $apiKey,
             'Content-Type'  => 'application/json',
-        ])->timeout(90)->post('https://api.openai.com/v1/chat/completions', [
+        ])->timeout(120)->post('https://api.openai.com/v1/chat/completions', [
             'model'           => 'gpt-4o',
             'max_tokens'      => 2000,
             'response_format' => ['type' => 'json_object'],
@@ -50,7 +65,7 @@ class AnalyzeController extends Controller
                     'content' => [
                         [
                             'type'      => 'image_url',
-                            'image_url' => ['url' => $screenshotUrl, 'detail' => 'high'],
+                            'image_url' => ['url' => $screenshotBase64, 'detail' => 'high'],
                         ],
                         [
                             'type' => 'text',
@@ -81,7 +96,7 @@ class AnalyzeController extends Controller
         return response()->json([
             'success'    => true,
             'data'       => $data,
-            'screenshot' => $screenshotUrl,
+            'screenshot' => $screenshotUrlRaw,
         ]);
     }
 
