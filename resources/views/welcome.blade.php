@@ -358,7 +358,7 @@
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg1Name">Landing Page</div>
                     <div class="price-val" data-i18n="pkg1Price">Rp 300rb</div>
-                    <div class="price-desc" data-i18n="pkg1Desc">1 Halaman • Cocok untuk promosi singkat</div>
+                    <div class="price-desc" data-i18n="pkg1Desc">Cocok untuk sales, personal branding individual, dkk</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
@@ -393,7 +393,7 @@
                     <div class="popular-badge" data-i18n="pkgBest">TERLARIS</div>
                     <div class="plan-name" data-i18n="pkg3Name">Paket Premium</div>
                     <div class="price-val" data-i18n="pkg3Price">Rp 3.5jt</div>
-                    <div class="price-desc" data-i18n="pkg3Desc">5 Halaman • Best value for scale-up</div>
+                    <div class="price-desc" data-i18n="pkg3Desc">Cocok untuk sales top achiever & bisnis umkm</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
@@ -907,7 +907,7 @@
                 faq7Q: "Apakah penambahan halaman baru dapat dilakukan sendiri?",
                 faq7A: "Ya, Anda dapat menambahkan halaman baru melalui dashboard admin.",
                 faq8Q: "Apakah mendapatkan domain gratis pada tiap paketnya?",
-                faq8A: "Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .co.id, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.",
+                faq8A: "Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .co.id, .id, .online, .site) gratis pada paket-paket tertentu sesuai ketentuan promo.",
                 faq9Q: "Berapa kapasitas hosting websitenya?",
                 faq9A: "Kapasitas hosting bervariasi tergantung pada paket yang Anda pilih, mulai dari kapasitas ideal standar hingga resource unlimited untuk keperluan Custom App.",
                 faq10Q: "Apakah mendapatkan gratis SSL?",

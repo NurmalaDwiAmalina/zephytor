@@ -181,8 +181,31 @@
             background: rgba(255,255,255,0.1);
             color: #ffffff;
         }
-        body.dark-theme .nav-back-btn:hover {
+        .nav-back-btn:hover {
             background: rgba(255,255,255,0.2);
+        }
+
+        /* PREMIUM BUTTON CTA */
+        .btn-white {
+            background: #ffffff !important;
+            color: #000000 !important;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+            filter: brightness(0.95);
+        }
+
+        .btn-white:active {
+            transform: scale(0.95) translateY(0);
         }
 
         @media (max-width: 640px) {
@@ -633,13 +656,14 @@
                 </div>
 
                 <!-- CTA -->
-                <div style="background: var(--primary); border-radius: 40px; padding: 64px 48px; text-align: center; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -80px; right: -80px; width: 240px; height: 240px; background: rgba(255,255,255,0.06); border-radius: 50%;"></div>
-                    <div style="position: absolute; bottom: -60px; left: -60px; width: 180px; height: 180px; background: rgba(255,255,255,0.06); border-radius: 50%;"></div>
+                <div style="background: #000; border-radius: 40px; padding: 64px 48px; text-align: center; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+                    <div style="position: absolute; top: -80px; right: -80px; width: 240px; height: 240px; background: rgba(255,255,255,0.05); border-radius: 50%;"></div>
+                    <div style="position: absolute; bottom: -60px; left: -60px; width: 180px; height: 180px; background: rgba(255,255,255,0.05); border-radius: 50%;"></div>
                     <div style="position: relative; z-index: 1;">
-                        <h2 style="font-size: 2rem; font-weight: 800; color: #fff; font-family: var(--font-h); margin-bottom: 16px;">Kami Bisa Bantu Meningkatkan UI/UX Mu</h2>
-                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7;">Tim Zephytor siap mewujudkan website impian kamu — desain premium, performa tinggi, dan hasil yang memuaskan.</p>
-                        <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn btn-white btn-lg" style="padding: 16px 40px; border-radius: 16px; font-size: 1rem;">Chat Sekarang untuk Konsultasi Gratis →</a>
+                        <span style="font-size: 0.75rem; font-weight: 800; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: 12px;">Next Step →</span>
+                        <h2 style="font-size: 2.2rem; font-weight: 900; color: #fff; font-family: var(--font-h); margin-bottom: 16px; letter-spacing: -1px;">Ingin Website Kamu <br>Jadi Super Premium?</h2>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; font-size: 1rem;">Tim Zephytor siap membantu meningkatkan setiap aspek di atas. Jangan biarkan website lama menghambat pertumbuhan bisnis Anda.</p>
+                        <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn-white" style="padding: 18px 48px; border-radius: 100px; font-size: 1.05rem;">Chat Sekarang untuk Konsultasi Gratis →</a>
                     </div>
                 </div>
 
