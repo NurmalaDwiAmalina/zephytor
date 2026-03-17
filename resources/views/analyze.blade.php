@@ -30,9 +30,9 @@
         }
 
         body.dark-theme .analyze-navbar {
-            background: rgba(10, 10, 12, 0.8);
-            border-color: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(10, 10, 12, 0.95);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
         }
 
         .analyze-navbar .nav-logo {
@@ -160,9 +160,34 @@
             border-color: rgba(255, 255, 255, 0.15);
         }
 
+        .nav-back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px 8px 12px;
+            background: rgba(0,0,0,0.06);
+            border-radius: 100px;
+            text-decoration: none;
+            color: var(--text-h);
+            font-weight: 800;
+            font-size: 0.8rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-back-btn:hover {
+            background: rgba(0,0,0,0.12);
+            transform: translateX(-4px);
+        }
+        body.dark-theme .nav-back-btn {
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+        }
+        body.dark-theme .nav-back-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
         @media (max-width: 640px) {
             .analyze-navbar {
-                padding: 8px 8px 8px 16px;
+                padding: 8px 8px 8px 12px;
                 gap: 12px;
             }
             .url-chip {
@@ -177,11 +202,22 @@
             .theme-toggle-wrap {
                 padding: 4px;
             }
+            .nav-back-btn span {
+                display: none;
+            }
+            .nav-back-btn {
+                padding: 8px;
+            }
         }
         .page-content {
-            padding-top: 100px;
-            padding-bottom: 100px;
+            padding-top: 160px;
+            padding-bottom: 120px;
             min-height: 100vh;
+        }
+        @media (max-width: 640px) {
+            .page-content {
+                padding-top: 120px;
+            }
         }
 
         /* Loading */
@@ -248,11 +284,12 @@
             z-index: 1;
         }
         .score-ring-inner .score-num {
-            font-size: 2.8rem;
-            font-weight: 800;
+            font-size: 3.5rem;
+            font-weight: 900;
             font-family: var(--font-h);
             line-height: 1;
             color: var(--text-h);
+            letter-spacing: -2px;
         }
         .score-ring-inner .score-grade {
             font-size: 1rem;
@@ -313,7 +350,10 @@
             font-size: 0.88rem;
             color: var(--text-muted);
             line-height: 1.6;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        body.dark-theme .category-desc {
+            color: #cccccc;
         }
         .feedback-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
         .feedback-list li {
@@ -327,7 +367,7 @@
         .feedback-list li.positive { color: var(--text-h); font-weight: 700; }
         .feedback-list li.issue { color: var(--text-muted); }
         body.dark-theme .feedback-list li.positive { color: #ffffff; }
-        body.dark-theme .feedback-list li.issue { color: #999999; }
+        body.dark-theme .feedback-list li.issue { color: #bbbbbb; }
 
         /* Recommendations */
         .recommendations-list {
@@ -369,6 +409,10 @@
             color: var(--text-b);
             line-height: 1.6;
             padding-top: 6px;
+            font-weight: 500;
+        }
+        body.dark-theme .rec-text {
+            color: #eeeeee;
         }
 
         /* Screenshot */
@@ -478,6 +522,10 @@
 
     <!-- Floating Navbar (Top for Analyze) -->
     <div class="analyze-navbar">
+        <a href="/" class="nav-back-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Kembali</span>
+        </a>
         <a href="/" class="nav-logo" style="text-decoration: none;">
             <span>Zephytor</span>
         </a>
@@ -528,10 +576,10 @@
             <div id="resultsState" style="display:none;">
 
                 <!-- Header -->
-                <div style="text-align: center; margin-bottom: 60px;">
-                    <div class="section-badge">LAPORAN UI/UX</div>
-                    <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--text-h); font-family: var(--font-h); margin: 16px 0 12px;">Hasil Analisa Website</h1>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Dianalisa menggunakan GPT-4o Vision oleh Zephytor</p>
+                <div style="text-align: center; margin-bottom: 80px; padding-top: 40px;">
+                    <div class="section-badge" style="margin-bottom: 24px;">LAPORAN UI/UX</div>
+                    <h1 style="font-size: 3rem; font-weight: 950; color: var(--text-h); font-family: var(--font-h); margin: 0 0 16px; letter-spacing: -0.04em;">Hasil Analisa Website</h1>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Laporan komprehensif mengenai kualitas desain dan pengalaman pengguna website Anda.</p>
                 </div>
 
                 <!-- Overall + Screenshot -->
@@ -551,8 +599,9 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 style="font-size: 1rem; font-weight: 800; color: var(--text-h); font-family: var(--font-h); margin-bottom: 12px;">Skor Keseluruhan</h3>
-                        <p id="summaryText" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; max-width: 320px; margin: 0 auto;"></p>
+                        <h3 style="font-size: 1.1rem; font-weight: 900; color: var(--text-h); font-family: var(--font-h); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Skor Keseluruhan</h3>
+                        <p id="summaryText" style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; max-width: 360px; margin: 0 auto; font-weight: 500;"></p>
+                        <style>body.dark-theme #summaryText { color: #eeeeee; }</style>
 
                         <!-- Try another -->
                         <div style="margin-top: 32px;">

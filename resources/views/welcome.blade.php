@@ -83,11 +83,23 @@
                     <span data-i18n="navAudit">AUDIT</span>
                 </a>
             </div>
+            
+            <div class="nav-secondary-grid" id="navSecondaryGrid">
+                <a href="#layanan" class="nav-item-small">
+                    <span data-i18n="navLayanan">LAYANAN</span>
+                </a>
+                <a href="#mvp" class="nav-item-small">
+                    <span data-i18n="navMvp">MVP</span>
+                </a>
+                <a href="/kontak" class="nav-item-small">
+                    <span data-i18n="navKontak">KONTAK</span>
+                </a>
+            </div>
             <div class="nav-bottom-row">
                 <div class="nav-bottom-left">
-                    <div class="nav-logo-mini">Z</div>
-                    <div class="nav-menu-toggle">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    <a href="/" class="nav-logo-mini" style="text-decoration: none;"><span>Zephytor</span></a>
+                    <div class="nav-menu-toggle" id="mobileMenuToggle">
+                        <svg id="menuToggleIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                         <span>MENU</span>
                     </div>
                 </div>
@@ -406,7 +418,7 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat6">Gratis Domain .com / .id</span></li>
+                            </svg> <span data-i18n="pkg3Feat6">Gratis Domain .com, .co.id, .id</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
@@ -424,114 +436,56 @@
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat1">Desain Eksklusif UI/UX Mandiri</span></li>
+                            </svg> <span data-i18n="pkg4Feat1">Unlimited Halaman (Custom)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat2">Fitur Custom (CMS / Filter / Database)</span></li>
+                            </svg> <span data-i18n="pkg4Feat2">Desain Eksklusif UI/UX Mandiri</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat3">Integrasi API / Payment Gateway</span></li>
+                            </svg> <span data-i18n="pkg4Feat3">Fitur Custom (CMS / Filter / Database)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat4">Jaminan PageSpeed 90+ Score</span></li>
+                            </svg> <span data-i18n="pkg4Feat4">Integrasi API / Payment Gateway (Syarat NIB/Legalitas)</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat5">Gratis Domain .com / .id</span></li>
+                            </svg> <span data-i18n="pkg4Feat5">Jaminan PageSpeed 90+ Score</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg4Feat6">Premium Sales Driven Copywriting</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg4Feat7">Email Bisnis Terintegrasi</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg4Feat8">Full SEO Optimized (Ready to Rank)</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg4Feat9">Video Tutorial Panduan Admin</span></li>
+                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> <span data-i18n="pkg4Feat10">Gratis Domain .com, .co.id, .id</span></li>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg4Rev">Garansi 12 Bulan</span></li>
                     </ul>
                     <a href="https://wa.me/6285801153409?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
-                        data-i18n="btnHubungi">Hubungi Kami</a>
+                        data-i18n="btnHubungi">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="portTitle">Karya yang Telah <span class="gradient-text">Kami Bangun</span></h2>
-            </div>
-            <div class="portfolio-grid">
-                <!-- Daiji Design -->
-                <a href="https://daijidesign.com" target="_blank" class="portfolio-card reveal reveal-delay-1">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop"
-                            alt="Daiji Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat1">Arsitektur Interior</span>
-                        </div>
-                        <h4 data-i18n="port1Title">Daiji Design</h4>
-                        <p data-i18n="port1Desc">Desain arsitektur interior premium yang menggabungkan estetika modern dengan fungsionalitas ruang yang optimal.</p>
-                        <div class="btn-link">
-                            <span data-i18n="portVisit">daijidesign.com</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </div>
-                    </div>
-                </a>
-                <!-- Cuci Sepatu -->
-                <a href="https://cucisepatu-gray.vercel.app/" target="_blank" class="portfolio-card reveal reveal-delay-2">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('images/portfolio/cuci-sepatu.png') }}" alt="Cuci Sepatu">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat2">Layanan Kebersihan</span>
-                        </div>
-                        <h4 data-i18n="port2Title">Cuci Sepatu Pro</h4>
-                        <p data-i18n="port2Desc">Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.</p>
-                        <div class="btn-link">
-                            <span data-i18n="portVisit">cucisepatu.pro</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </div>
-                    </div>
-                </a>
-                <!-- InDepth -->
-                <a href="https://indepth.co.id" target="_blank" class="portfolio-card reveal reveal-delay-3">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('images/portfolio/indepth.png') }}" alt="InDepth">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat3">Healthcare & Mental Wellness</span>
-                        </div>
-                        <h4 data-i18n="port3Title">InDepth Mental Wellness</h4>
-                        <p data-i18n="port3Desc">Klinik Hipnoterapi Premium Semarang. Sesi Privat. Pendek. Berdampak Nyata. Sebagian orang mencari terapi. Sebagian lainnya memilih perubahan yang terarah. InDepth Mental Wellness menghadirkan pengalaman hipnoterapi privat dengan pendekatan eksklusif, sistem profesional, dan evaluasi hasil yang jelas dalam satu sesi terstruktur.</p>
-                        <div class="btn-link">
-                            <span data-i18n="portVisit">indepth.co.id</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </div>
-                    </div>
-                </a>
-                <!-- Tirta Bhumi -->
-                <a href="https://tirtabhumi.com" target="_blank" class="portfolio-card reveal reveal-delay-4">
-                    <div class="portfolio-img">
-                        <img src="{{ asset('images/portfolio/tirtabhumi.png') }}" alt="Tirta Bhumi">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-meta">
-                            <span class="portfolio-badge" data-i18n="portCat4">IT Infrastructure & Procurement</span>
-                        </div>
-                        <h4 data-i18n="port4Title">Tirta Bhumi</h4>
-                        <p data-i18n="port4Desc">Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. We are a trusted Digital Services, IT Infrastructure, and Procurement company. We help your business Go Digital, manage internet networks, and fulfill office operational needs with ease.</p>
-                        <div class="btn-link">
-                            <span data-i18n="portVisit">tirtabhumi.com</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+
 
 
     <!-- MVP -->
@@ -782,24 +736,7 @@
         </div>
     </div>
 
-    <!-- NEWSLETTER -->
-    <!-- NEWSLETTER -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-box reveal">
-                <div class="newsletter-content">
-                    <h2 data-i18n="newsTitle">Dapatkan Insight Digital Bisnis Terkini</h2>
-                    <p data-i18n="newsDesc">Berlangganan newsletter kami untuk tips strategi digital & info promo eksklusif setiap minggunya.</p>
-                </div>
-                <form class="newsletter-form">
-                    <div class="newsletter-input-group">
-                        <input type="email" placeholder="Alamat email Anda..." required>
-                        <button type="submit" class="btn btn-primary" data-i18n="btnSubscribe">Langganan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -873,11 +810,7 @@
                 srv3Title: "Custom Web App",
                 srv3Desc: "Solusi fitur khusus dengan sistem manajemen mandiri (CMS) sesuai kebutuhan spesifik bisnis Anda.",
                 hargaTitle: "Pilihan Paket Investasi",
-                hargaDesc: "Sesuai dengan skala dan target gol bisnis Anda.",
-                pkgRev: "Gratis Revisi Sepuasnya",
-                pkg1Name: "Landing Page",
-                pkg1Price: "Rp 300rb",
-                pkg1Desc: "1 Halaman • Cocok untuk promosi singkat",
+                pkg1Desc: "Cocok untuk sales, personal branding individual, dkk",
                 pkg1Feat1: "1 Halaman Responsif (Mobile Friendly)",
                 pkg1Feat2: "Copywriting Persuasif Basic",
                 pkg1Feat3: "Akses Dashboard Pengelolaan",
@@ -887,25 +820,27 @@
                 pkgBest: "TERLARIS",
                 pkg3Name: "Paket Premium",
                 pkg3Price: "Rp 3.5jt",
-                pkg3Desc: "5 Halaman • Best value untuk scale-up",
+                pkg3Desc: "Cocok untuk sales top achiever & bisnis umkm",
                 pkg3Feat1: "5 Halaman Premium (Home, About, etc)",
                 pkg3Feat2: "Premium Sales Driven Copywriting",
                 pkg3Feat3: "3 Email Bisnis Terintegrasi",
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Video Tutorial Panduan Admin",
-                pkg3Feat6: "Gratis Domain .com / .id",
+                pkg3Feat6: "Gratis Domain .com, .co.id, .id",
                 pkg3Rev: "Garansi 3 Bulan",
-                pkg4Name: "Paket Enterprise",
-                pkg4Price: "Rp 7jt+",
-                pkg4Desc: "Unlimited Halaman • Full custom solution",
-                pkg4Feat1: "Desain Eksklusif UI/UX Mandiri",
-                pkg4Feat2: "Fitur Custom (CMS / Filter / Database)",
-                pkg4Feat3: "Integrasi API / Payment Gateway",
-                pkg4Feat4: "Jaminan PageSpeed 90+ Score",
-                pkg4Feat5: "Gratis Domain .com / .id",
+                pkg4Feat1: "Unlimited Halaman (Custom)",
+                pkg4Feat2: "Desain Eksklusif UI/UX Mandiri",
+                pkg4Feat3: "Fitur Custom (CMS / Filter / Database)",
+                pkg4Feat4: "Integrasi API / Payment Gateway (Syarat NIB/Legalitas)",
+                pkg4Feat5: "Jaminan PageSpeed 90+ Score",
+                pkg4Feat6: "Premium Sales Driven Copywriting",
+                pkg4Feat7: "Email Bisnis Terintegrasi",
+                pkg4Feat8: "Full SEO Optimized (Ready to Rank)",
+                pkg4Feat9: "Video Tutorial Panduan Admin",
+                pkg4Feat10: "Gratis Domain .com, .co.id, .id",
                 pkg4Rev: "Garansi 12 Bulan",
                 btnPesan: "Pesan Sekarang",
-                btnHubungi: "Hubungi Kami",
+                btnHubungi: "Pesan Sekarang",
                 advBadge: "KEUNGGULAN",
                 advTitle: "KEUNGGULAN LAYANAN KAMI",
                 adv1: "Website sudah terintegrasi dengan Google Analytics dan Google Search Console",
@@ -914,7 +849,7 @@
                 adv4: "Menggunakan bahasa pemrograman terbaru yang ringan",
                 adv5: "Sistem lebih stabil dan minim error",
                 adv6: "Harga yang kami tawarkan lebih murah dibandingkan kompetitor",
-                portTitle: "Karya yang Telah Kami Bangun",
+
                 port1Title: "Daiji Design",
                 port1Desc: "Desain arsitektur interior premium yang menggabungkan estetika modern dengan fungsionalitas ruang yang optimal.",
                 port2Title: "Cuci Sepatu Pro",
@@ -972,7 +907,7 @@
                 faq7Q: "Apakah penambahan halaman baru dapat dilakukan sendiri?",
                 faq7A: "Ya, Anda dapat menambahkan halaman baru melalui dashboard admin.",
                 faq8Q: "Apakah mendapatkan domain gratis pada tiap paketnya?",
-                faq8A: "Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.",
+                faq8A: "Saat ini hosting dan SSL sudah termasuk gratis selama 1 tahun untuk seluruh paket. Untuk domain (seperti .com, .co.id, .id) gratis pada paket-paket tertentu sesuai ketentuan promo.",
                 faq9Q: "Berapa kapasitas hosting websitenya?",
                 faq9A: "Kapasitas hosting bervariasi tergantung pada paket yang Anda pilih, mulai dari kapasitas ideal standar hingga resource unlimited untuk keperluan Custom App.",
                 faq10Q: "Apakah mendapatkan gratis SSL?",
@@ -1001,9 +936,7 @@
                 ctaBtn: "Konsultasi Sekarang",
                 auditTitle: "Yakin UI/UX Website Kamu <span>Sudah Bagus?</span>",
                 auditSub: "Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.",
-                newsTitle: "Dapatkan Insight Digital Bisnis Terkini",
-                newsDesc: "Berlangganan newsletter kami untuk tips strategi digital & info promo eksklusif setiap minggunya.",
-                btnSubscribe: "Langganan",
+
                 footDesc: "Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.",
                 foot1Title: "Layanan",
                 foot2Title: "Dukungan",
@@ -1042,8 +975,7 @@
                 srv3Desc: "Tailored solutions with self-management system (CMS) for specific business needs.",
                 hargaTitle: "Investment Package Options",
                 hargaDesc: "According to your scale and business goals.",
-                pkg1Name: "Landing Page",
-                pkg1Desc: "1 Page • Suitable for short promotions",
+                pkg1Desc: "Perfect for sales & personal branding individuals",
                 pkg1Feat1: "1 Responsive Page (Mobile Friendly)",
                 pkg1Feat2: "Basic Persuasive Copywriting",
                 pkg1Feat3: "Admin Dashboard Access",
@@ -1053,25 +985,27 @@
                 pkgBest: "BEST SELLER",
                 pkg3Name: "Premium Package",
                 pkg3Price: "$220",
-                pkg3Desc: "5 Pages • Best value for scaling up",
+                pkg3Desc: "Perfect for top achiever sales & SME business",
                 pkg3Feat1: "5 Premium Pages (Home, About, etc)",
                 pkg3Feat2: "Premium Sales Driven Copywriting",
                 pkg3Feat3: "3 Integrated Business Emails",
                 pkg3Feat4: "Full SEO Optimized (Ready to Rank)",
                 pkg3Feat5: "Admin Guide Video Tutorial",
-                pkg3Feat6: "Free .com / .id Domain",
+                pkg3Feat6: "Free .com, .co.id, .id Domain",
                 pkg3Rev: "3 Months Guarantee",
-                pkg4Name: "Enterprise Package",
-                pkg4Price: "$450+",
-                pkg4Desc: "Unlimited Pages • Full custom solution",
-                pkg4Feat1: "Exclusive UI/UX Independent Design",
-                pkg4Feat2: "Custom Features (CMS / Filter / Database)",
-                pkg4Feat3: "API / Payment Gateway Integration",
-                pkg4Feat4: "PageSpeed 90+ Score Guaranteed",
-                pkg4Feat5: "Free .com / .id Domain",
+                pkg4Feat1: "Unlimited Pages (Custom)",
+                pkg4Feat2: "Exclusive UI/UX Independent Design",
+                pkg4Feat3: "Custom Features (CMS / Filter / Database)",
+                pkg4Feat4: "API / Payment Gateway Integration (Legal/NIB Req)",
+                pkg4Feat5: "PageSpeed 90+ Score Guaranteed",
+                pkg4Feat6: "Premium Sales Driven Copywriting",
+                pkg4Feat7: "Integrated Business Emails",
+                pkg4Feat8: "Full SEO Optimized (Ready to Rank)",
+                pkg4Feat9: "Admin Guide Video Tutorial",
+                pkg4Feat10: "Free .com, .co.id, .id Domain",
                 pkg4Rev: "12 Months Guarantee",
                 btnPesan: "Order Now",
-                btnHubungi: "Contact Us",
+                btnHubungi: "Order Now",
                 advBadge: "ADVANTAGES",
                 advTitle: "OUR SERVICE ADVANTAGES",
                 adv1: "Website integrated with Google Analytics and Google Search Console",
@@ -1080,7 +1014,6 @@
                 adv4: "Uses latest lightweight programming languages",
                 adv5: "More stable system with minimum errors",
                 adv6: "Our prices are cheaper than competitors",
-                portTitle: "Our Built Masterpieces",
                 port1Title: "Daiji Design",
                 port1Desc: "Premium interior architecture design that combines modern aesthetics with optimal spatial functionality.",
                 port2Title: "Cuci Sepatu Pro",
@@ -1167,9 +1100,7 @@
                 ctaBtn: "Consult Now",
                 auditTitle: "Audit Your Website's UI/UX <span>Now</span>",
                 auditSub: "Enter your website URL and get a full report in seconds.",
-                newsTitle: "Get Latest Digital Business Insights",
-                newsDesc: "Subscribe to our newsletter for digital strategy tips & exclusive promo info every week.",
-                btnSubscribe: "Subscribe",
+
                 footDesc: "Digital transformation for Indonesian businesses with modern design & high performance.",
                 foot1Title: "Services",
                 foot2Title: "Support",
@@ -1311,6 +1242,50 @@
                 if (!isActive) {
                     item.classList.add('active');
                 }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navCardMobile = document.querySelector('.nav-card-mobile');
+        const menuToggleIcon = document.getElementById('menuToggleIcon');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navCardMobile.classList.toggle('expanded');
+                if (navCardMobile.classList.contains('expanded')) {
+                    menuToggleIcon.style.transform = 'rotate(180deg)';
+                } else {
+                    menuToggleIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Swipe up detection
+            let touchstartY = 0;
+            let touchendY = 0;
+            
+            navCardMobile.addEventListener('touchstart', e => {
+                touchstartY = e.changedTouches[0].screenY;
+            }, {passive: true});
+
+            navCardMobile.addEventListener('touchend', e => {
+                touchendY = e.changedTouches[0].screenY;
+                if (touchstartY - touchendY > 50) { // Swipe up
+                    navCardMobile.classList.add('expanded');
+                    if (menuToggleIcon) menuToggleIcon.style.transform = 'rotate(180deg)';
+                }
+                if (touchendY - touchstartY > 50) { // Swipe down
+                    navCardMobile.classList.remove('expanded');
+                    if (menuToggleIcon) menuToggleIcon.style.transform = 'rotate(0deg)';
+                }
+            }, {passive: true});
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-card-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                navCardMobile.classList.remove('expanded');
+                if (menuToggleIcon) menuToggleIcon.style.transform = 'rotate(0deg)';
             });
         });
 
