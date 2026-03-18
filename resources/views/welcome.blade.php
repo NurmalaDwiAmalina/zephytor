@@ -58,7 +58,7 @@
             <div class="nav-logo-float"><span>Zephytor</span></div>
             <a href="#hero" class="active" data-i18n="navInfo">INFO</a>
             <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
-            <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
+            <a href="#hasil-kerja" data-i18n="navLayanan">LAYANAN</a>
             <a href="#mvp" data-i18n="navMvp">MVP</a>
             <a href="#harga" data-i18n="navPaket">PAKET</a>
             <a href="/kontak" data-i18n="navKontak">KONTAK</a>
@@ -86,7 +86,7 @@
             </div>
             
             <div class="nav-secondary-grid" id="navSecondaryGrid">
-                <a href="#layanan" class="nav-item-small">
+                <a href="#hasil-kerja" class="nav-item-small">
                     <span data-i18n="navLayanan">LAYANAN</span>
                 </a>
                 <a href="#mvp" class="nav-item-small">
@@ -287,6 +287,36 @@
         </div>
     </section>
 
+    </section>
+
+    <!-- SHOWCASE HASIL KERJA -->
+    <section id="hasil-kerja" class="section-alt">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title" data-i18n="showTitle">Liat Nih, Hasilnya Sekeren Apa 👀</h2>
+                <p class="mx-auto" style="max-width: 600px;" data-i18n="showDesc">Gak pake ribet urusan desain kaku, brand kamu langsung kelihatan kece dan profesional.</p>
+            </div>
+            
+            <div class="showcase-grid" style="grid-template-columns: 1fr; max-width: 800px; margin-inline: auto;">
+                <!-- Main Showcase ONLY -->
+                <div class="showcase-item reveal showcase-featured">
+                    <div class="showcase-img">
+                        <img src="{{ asset('images/trio_mockups.png') }}" alt="Main Showcase">
+                    </div>
+                    <div class="showcase-info text-center">
+                        <h3 data-i18n="show2Title">Berbagai Niche Lainnya ✨</h3>
+                        <p data-i18n="show2Desc">Desain premium yang fleksibel untuk segala jenis bisnis kamu.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 60px;">
+                <p style="font-size: 1.25rem; font-weight: 800; margin-bottom: 24px;" data-i18n="showCtaText">Mau punya tampilan yang se-premium ini juga? 🤫</p>
+                <a href="https://wa.me/6285801153409" class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
+            </div>
+        </div>
+    </section>
+
     <!-- ALUR KERJA -->
     <section id="alur-kerja">
         <div class="container">
@@ -347,9 +377,8 @@
                     <p data-i18n="adv6">Harga yang kami tawarkan lebih murah dibandingkan kompetitor</p>
                 </div>
             </div>
-        </div>
     </section>
-
+    
     <!-- HARGA -->
     <section id="harga" class="section-alt">
         <div class="container">
@@ -804,16 +833,16 @@
                 stepBadge: "ALUR FRAMEWORK KITA",
                 btnKonsultasi: "Konsultasi Gratis",
                 heroBadge: "🚀 Berhenti Menebak, Mulai Go-Digital yang Tepat",
-                heroTitle: "Website Profesional yang <span>Meningkatkan Kepercayaan & Penjualan.</span>",
-                heroDesc: "Bukan web dengan kata-kata asal-asalan. Kita bangunin desain premium dengan framework & alur kata yang terstruktur. Rapi, elegan, dan tinggal kamu pakai buat jualan.",
-                layananTitle: "Solusi Digital yang Sebenarnya",
+                heroTitle: "Bikin Website yang Didesain Buat Jualan, Biar Kamu Fokus Closing. 🚀",
+                heroDesc: "Gak pake ribet urusan desain & coding. Kita buatkan website premium dengan alur copywriting yang 'nge-hook' buat brand kamu.",
+                layananTitle: "Layanan Kita Bisa Buat Apa Aja? 🤔",
                 layananDesc: "Kita nggak cuma ngerjain coding. Ada framework teruji di balik setiap website yang kita buat untuk ningkatin konversi brand kamu.",
-                srv1Title: "Company Profile",
-                srv1Desc: "Bantu klien dan investor mikir dua kali kalau mau skip brand kamu. Desain profesional spesifik untuk ningkatin trust.",
-                srv2Title: "Landing Page",
-                srv2Desc: "Bikin audiens kamu kepikiran buat beli. Dibangun pakai alur copywriting spesifik untuk maksimalin ROI iklan (Google/Meta Ads).",
-                srv3Title: "Custom Web App",
-                srv3Desc: "Berhenti ngurusin operasional manual. Solusi sistem (CMS & Dashboard) rapi yang tinggal pakai buat scale up bisnismu.",
+                srv1Title: "Profil Perusahaan Kece",
+                srv1Desc: "Bikin klien ngerasa 'wow' dan investor makin yakin sama brand lo. Profesional & Berwibawa.",
+                srv2Title: "Landing Page Juara",
+                srv2Desc: "Fokus buat satu hal aja: JUALAN. Dirancang khusus buat lo yang main Ads (Google/Meta).",
+                srv3Title: "Sistem Custom Lo",
+                srv3Desc: "Punya ide sistem khusus? Kita rakitin dashboard admin yang super simpel & tinggal pakai.",
                 hargaTitle: "Investasi Buat Aset Digitalmu",
                 pkg1Desc: "Pas buat sales, personal branding, atau kamu yang baru mau mulai jualan online.",
                 pkg1Feat1: "1 Halaman Responsif (Cakep di HP)",
@@ -852,49 +881,52 @@
                 adv2: "Strukturnya rapi & SEO Friendly banget",
                 adv3: "Web 3 halaman bisa live kurang dari 3 jam",
                 adv4: "Pake teknologi terbaru yang bikin loadingnya super enteng",
-                adv5: "Sistem stabil, aman, dan minim banget error",
                 adv6: "Harga lebih masuk akal dibanding agensi lain dengan kualitas setara",
-
-                port1Title: "Daiji Design",
-                port1Desc: "Desain arsitektur interior premium yang menggabungkan estetika modern dengan fungsionalitas ruang yang optimal.",
-                port2Title: "Cuci Sepatu Pro",
-                port2Desc: "Platform layanan cuci sepatu premium dengan sistem booking online dan tracking status pengerjaan secara real-time.",
-                port3Title: "InDepth Mental Wellness",
-                port3Desc: "Klinik Hipnoterapi Premium Semarang. Sesi Privat. Pendek. Berdampak Nyata. Sebagian orang mencari terapi. Sebagian lainnya memilih perubahan yang terarah. InDepth Mental Wellness menghadirkan pengalaman hipnoterapi privat dengan pendekatan eksklusif, sistem profesional, dan evaluasi hasil yang jelas dalam satu sesi terstruktur.",
-                port4Title: "Tirta Bhumi",
-                port4Desc: "Grow Faster, Digitalize Better with Tirta Bhumi Indonesia. Kami membantu bisnis Anda Go Digital, mengelola jaringan internet, dan memenuhi kebutuhan operasional kantor dengan mudah.",
-                portCat1: "Arsitektur Interior",
-                portCat2: "Layanan Kebersihan",
-                portCat3: "Healthcare & Mental Wellness",
-                portCat4: "IT Infrastructure & Procurement",
-                portVisit: "Lihat Situs →",
-                testTitle: "Apa Kata Klien Kami",
-                test1Quote: '"Website company profile kami jadi terlihat sangat profesional. Klien baru semakin percaya dengan bisnis kami. Terima kasih Zephytor!"',
+                showTitle: "Liat Nih, Hasilnya Sekeren Apa 👀",
+                showDesc: "Gak pake skill desain kaku, brand kamu langsung kelihatan kece dan profesional.",
+                show1Title: "Niche Kuliner & FnB 🍔",
+                show1Desc: "Visual yang bikin laper & tombol order yang gampang diklik.",
+                show2Title: "Berbagai Niche Lainnya ✨",
+                show2Desc: "Desain premium yang fleksibel untuk segala jenis bisnis lo.",
+                show3Title: "Personal Branding 🤳",
+                show3Desc: "Eksklusif, bersih, dan langsung ningkatin kredibilitas kamu.",
+                showCtaText: "Mau punya tampilan yang se-premium ini juga? 🤫",
+                showBtn: "Pilih Paket Kamu Sekarang →",
+                showPriceLabel: "INVESTASI TERJANGKAU",
+                showPriceVal: "RP 300rb",
+                promoHookTitle: "Website ini bikin lo kepikiran buat beli bukan karena desain asal-asalan.",
+                promoHookDesc: "Ada framework + alur copywriting di baliknya. Nah, kita bisa rakitin juga buat bisnismu sekarang. 😍",
+                promoHookBtn: "Gass Kita Eksekusi 🚀",
+                navLayanan: "LIHAT HASIL",
+                navPaket: "PAKET",
+                hargaTitle: "Pilih Cara Kamu Buat Go-Digital 🤔",
+                testTitle: "Banyak orang yang puas dan terbantu sama Zephytor ⭐⭐⭐⭐⭐",
+                test1Quote: '"Website profile kita jadi kelihatan mahal banget. Klien baru makin percaya. Gokil emang Zephytor!"',
                 test1Role: "Founder, Tech Start-up",
-                test2Quote: '"Landing page dari Zephytor meningkatkan konversi iklan kami hingga 3x lipat. ROI yang luar biasa!"',
+                test2Quote: '"Landing page-nya beneran ningkatin konversi iklan sampe 3x lipat. ROI-nya liar!"',
                 test2Role: "Marketing Director",
-                test3Quote: '"Pengerjaan cepat dan hasilnya melebihi ekspektasi. Desainnya clean dan modern. Highly recommended!"',
+                test3Quote: '"Kerjaannya cepet dan hasilnya di luar prediksi. Desainnya clean & modern banget. Recommended!"',
                 test3Role: "Creative Director",
-                test4Quote: '"Serius kaget sama hasilnya! Website kami sekarang terlihat jauh lebih premium dari kompetitor. Klien yang datang langsung bilang website-nya bikin mereka lebih yakin."',
+                test4Quote: '"Serius kaget sama hasilnya! Web kita sekarang jauh lebih premium dari kompetitor. Klien langsung yakin."',
                 test4Role: "Owner, Kuliner Nusantara",
-                test5Quote: '"Prosesnya transparan banget dan komunikasinya responsif. Dari brief sampai live cuma 4 hari. Hasilnya beyond expectation dan semua revisi dilayani tanpa drama!"',
+                test5Quote: '"Prosesnya transparan & responsif. Dari brief sampe live cuma 4 hari. Hasilnya beyond expectation!"',
                 test5Role: "CEO, Butik Fashion",
-                test6Quote: '"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"',
+                test6Quote: '"Investasi terbaik buat bisnis gue. Portofolio online langsung ningkatin inquiry klien baru 2x lipat."',
                 test6Role: "Fotografer & Videografer",
-                probTitle: "Sudah Investasi Website, Namun Belum Menghasilkan?",
-                probDesc: "Punya website dengan kata-kata asal-asalan itu sama aja buang duit. Calon klien udah kabur sebelum capek-capek nyekroll.",
-                prob1Title: "Desain & Copywriting Asal-asalan",
-                prob1Desc: "Nggak ada alur kata yang jelas, cuma copas template biasa. Pantas pengunjung lewat gitu aja tanpa nanya-nanya.",
-                prob2Title: "Bayar Mahal, Tapi Nggak Convert",
-                prob2Desc: "Web udah jadi bagus, tapi bikin orang kerasa kaku dan bingung mau ngapain pas lagi mampir ke situs kamu.",
-                prob3Title: "Sistem Ribet Bikin Pusing Sendiri",
-                prob3Desc: "Tiap mau ganti promo pusing harus manggil developer tiap saat. Momentum jualan jadi sering kelewat.",
-                stepTitle: "Tahapan Eksekusi Kami untuk Website Kamu",
-                step1Title: "1. Bedah Framework Sales Bisnismu",
-                step1Desc: "Kita bedah model bisnismu, cari angle copywriting, dan tentuin alur jualan yang paling bikin calon klien relate.",
-                step2Title: "2. Desain Premium + Struktur Rapi",
-                step2Desc: "Kita gabungin copy dari riset awal tadi bareng desain responsif yang kerasa mahal dan eksklusif.",
-                step3Title: "3. Launching Ngebut, Tinggal Pakai",
+                probTitle: "Sering Ngadepin Hal Ini? 😩",
+                probDesc: "Niat launching produk, eh stuck di halaman penawaran. Tenang, kita bantuin urus semuanya.",
+                prob1Title: "Ide Mentok, Halaman Gak Jadi",
+                prob1Desc: "Bingung mulai dari mana, hasil desain 'pas-pasan' dan kurang meyakinkan buat calon klien.",
+                prob2Title: "Desain Kaku & Gak Jelas",
+                prob2Desc: "Template murahan yang bikin brand kamu kelihatan gak profesional di mata klien premium.",
+                prob3Title: "Urusan Teknis yang Ribet",
+                prob3Desc: "Pusing tiap manu ganti isi web? Sistem kita tinggal klik-klik aja, gak pake ribet.",
+                stepTitle: "Liat nih, cara kita kerjainnya segampang ini 🤫",
+                step1Title: "1. Bedah Strategi & Copy",
+                step1Desc: "Kita dalami model bisnismu buat nentuin alur jualan yang paling 'nge-hook' buat pelanggan.",
+                step2Title: "2. Desain Premium Eksklusif",
+                step2Desc: "Kita gabungin copy jualan tadi bareng desain responsif yang kerasa mahal dan eksklusif.",
+                step3Title: "3. Launching Kilat, Langsung Close",
                 step3Desc: "Proses develop beres, sistem kenceng banget. Aset digital kamu kelar dan tinggal dipake aja buat dapet sales.",
                 faqTitle: "Yang Sering Ditanyain",
                 faq1Q: "Jenis website apa aja yang \"bisa\" dibikin di sini?",
@@ -1020,6 +1052,13 @@
                 adv4: "Uses latest lightweight programming languages",
                 adv5: "More stable system with minimum errors",
                 adv6: "Our prices are cheaper than competitors",
+                promoBadge: "🔥 LIMITED OFFER",
+                promoTitle: "This Landing Page makes you think about buying <span>not because of random words.</span>",
+                promoDesc: "There is a framework + word flow behind it. Now, we present premium design with a neat structure — you just use it for your own sale. 😍",
+                promoPriceLabel: "Investment Starting From",
+                promoPrice: "IDR 300,000",
+                promoBtn: "Get This Offer Now →",
+
                 port1Title: "Daiji Design",
                 port1Desc: "Premium interior architecture design that combines modern aesthetics with optimal spatial functionality.",
                 port2Title: "Cuci Sepatu Pro",
