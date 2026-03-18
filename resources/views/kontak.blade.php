@@ -184,6 +184,7 @@
                 <a href="/#hero-checker" class="nav-link-item">AUDIT</a>
                 <a href="/#layanan" class="nav-link-item">LAYANAN</a>
                 <a href="/#mvp" class="nav-link-item">MVP</a>
+                <a href="/#harga" class="nav-link-item">PAKET</a>
                 <a href="/kontak" class="nav-link-item active">KONTAK</a>
             </div>
             <div style="display: flex; align-items: center; gap: 16px;">
@@ -210,6 +211,7 @@
             <a href="/#hero-checker" data-i18n="navAudit">AUDIT</a>
             <a href="/#layanan" data-i18n="navLayanan">LAYANAN</a>
             <a href="/#mvp" data-i18n="navMvp">MVP</a>
+            <a href="/#harga" data-i18n="navPaket">PAKET</a>
             <a href="/kontak" class="active" data-i18n="navKontak">KONTAK</a>
             <div class="nav-pill-sep"></div>
             <div class="lang-switcher-nav">
@@ -233,6 +235,22 @@
                     <span>AUDIT</span>
                 </a>
             </div>
+            
+            <div class="nav-secondary-grid" id="navSecondaryGrid">
+                <a href="/#layanan" class="nav-item-small">
+                    <span data-i18n="navLayanan">LAYANAN</span>
+                </a>
+                <a href="/#mvp" class="nav-item-small">
+                    <span data-i18n="navMvp">MVP</span>
+                </a>
+                <a href="/#harga" class="nav-item-small">
+                    <span data-i18n="navPaket">PAKET</span>
+                </a>
+                <a href="/kontak" class="nav-item-small active">
+                    <span data-i18n="navKontak">KONTAK</span>
+                </a>
+            </div>
+            
             <div class="nav-bottom-row">
                 <div class="nav-bottom-left">
                     <div class="nav-logo-mini">Z</div>
