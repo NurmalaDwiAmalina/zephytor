@@ -197,7 +197,7 @@
                         <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" />
                     </svg>
                 </button>
-                <a href="https://wa.me/6285801153409" class="btn btn-primary btn-sm">Konsultasi Gratis</a>
+                <a href="https://wa.me/6285892778882" class="btn btn-primary btn-sm">Konsultasi Gratis</a>
             </div>
         </div>
     </div>
@@ -219,7 +219,7 @@
                 <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
             </div>
             <div class="nav-pill-sep"></div>
-            <a href="https://wa.me/6285801153409" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
+            <a href="https://wa.me/6285892778882" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
         </div>
 
         <!-- Mobile Card -->
@@ -264,7 +264,7 @@
                         <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
                         <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
                     </div>
-                    <a href="https://wa.me/6285801153409" class="nav-btn-konsultasi">Konsultasi</a>
+                    <a href="https://wa.me/6285892778882" class="nav-btn-konsultasi">Konsultasi</a>
                 </div>
             </div>
         </div>
@@ -289,7 +289,7 @@
 
                     <div class="info-item">
                         <h4>WhatsApp</h4>
-                        <a href="https://wa.me/6285801153409">+62 858-0115-3409</a>
+                        <a href="https://wa.me/6285892778882">+62 858-0115-3409</a>
                     </div>
 
 
@@ -357,7 +357,7 @@
                     <h4>Dukungan</h4>
                     <ul>
                         <li><a href="/kontak">Kontak Kami</a></li>
-                        <li><a href="https://wa.me/6285801153409">Konsultasi Gratis</a></li>
+                        <li><a href="https://wa.me/6285892778882">Konsultasi Gratis</a></li>
                         <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
                     </ul>
                 </div>

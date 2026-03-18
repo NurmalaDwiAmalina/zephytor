@@ -558,7 +558,7 @@
                 </div>
                 <span class="theme-toggle-text">Mode</span>
             </div>
-            <a href="https://wa.me/6285801153409" class="btn-konsultasi-nav">Konsultasi</a>
+            <a href="https://wa.me/6285892778882" class="btn-konsultasi-nav">Konsultasi</a>
         </div>
     </div>
 
@@ -656,7 +656,7 @@
                         <span style="font-size: 0.75rem; font-weight: 800; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: 12px;">Next Step →</span>
                         <h2 style="font-size: 2.2rem; font-weight: 900; color: #fff; font-family: var(--font-h); margin-bottom: 16px; letter-spacing: -1px;">Ingin Website Kamu <br>Jadi Super Premium?</h2>
                         <p style="color: rgba(255,255,255,0.6); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; font-size: 1rem;">Tim Zephytor siap membantu meningkatkan setiap aspek di atas. Jangan biarkan website lama menghambat pertumbuhan bisnis Anda.</p>
-                        <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn-white">Chat Kita Sekarang buat Konsultasi Gratis →</a>
+                        <a href="https://wa.me/6285892778882?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn-white">Chat Kita Sekarang buat Konsultasi Gratis →</a>
                     </div>
                 </div>
 

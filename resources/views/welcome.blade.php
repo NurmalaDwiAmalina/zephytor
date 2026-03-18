@@ -68,7 +68,7 @@
                 <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
             </div>
             <div class="nav-pill-sep"></div>
-            <a href="https://wa.me/6285801153409" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
+            <a href="https://wa.me/6285892778882" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
         </div>
 
         <!-- Mobile Card -->
@@ -112,7 +112,7 @@
                         <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
                         <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
                     </div>
-                    <a href="https://wa.me/6285801153409" class="nav-btn-konsultasi" data-i18n="btnMulai">Konsultasi</a>
+                    <a href="https://wa.me/6285892778882" class="nav-btn-konsultasi" data-i18n="btnMulai">Konsultasi</a>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                     Anda. Tanpa modal
                     awal yang besar, dapatkan website premium yang meyakinkan klien.</p>
                 <div class="hero-buttons reveal-delay-4">
-                    <a href="https://wa.me/6285801153409" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
+                    <a href="https://wa.me/6285892778882" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
                 </div>
@@ -315,7 +315,7 @@
             
             <div class="text-center" style="margin-top: 60px;">
                 <p style="font-size: 1.25rem; font-weight: 800; margin-bottom: 24px;" data-i18n="showCtaText">Mau punya tampilan yang se-premium ini juga? 🤫</p>
-                <a href="https://wa.me/6285801153409" class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
+                <a href="https://wa.me/6285892778882" class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
             </div>
         </div>
     </section>
@@ -421,7 +421,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg1Rev">Garansi 1 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285801153409?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
+                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
@@ -460,7 +460,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg3Rev">Garansi 3 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285801153409?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
+                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
                         data-i18n="btnPesan">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 3 -->
@@ -513,7 +513,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg4Rev">Garansi 12 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285801153409?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
+                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
                         data-i18n="btnHubungi">Pesan Sekarang</a>
                 </div>
             </div>
@@ -766,7 +766,7 @@
                 <p data-i18n="ctaDesc" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px;">Hubungi kami
                     sekarang untuk mendapatkan website premium dengan penawaran terbaik.
                 </p>
-                <a href="https://wa.me/6285801153409" class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
+                <a href="https://wa.me/6285892778882" class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
             </div>
         </div>
     </div>
@@ -796,7 +796,7 @@
                     <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
                         <li><a href="/kontak" data-i18n="navKontak">Kontak Kami</a></li>
-                        <li><a href="https://wa.me/6285801153409" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
+                        <li><a href="https://wa.me/6285892778882" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
                         <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
                     </ul>
                 </div>
