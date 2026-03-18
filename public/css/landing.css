@@ -859,21 +859,25 @@ body.dark-theme .nav-pill-desktop a:hover {
 }
 
 .nav-pill-desktop a.active {
-  background: #000000 !important;
-  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  color: #000000 !important;
   opacity: 1;
   transform: translateY(-1px);
   transition: background 0s, color 0s, transform 0.3s !important;
 }
 
 body.dark-theme .nav-pill-desktop a.active {
-  background: #ffffff !important;
-  color: #000000 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
 }
 
 .nav-pill-desktop a:active, .btn-mulai-pill:active {
   transform: scale(0.95);
   transition: transform 0.1s;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-pill-desktop a.active::after {
@@ -1005,15 +1009,15 @@ body.dark-theme .nav-item-big {
 }
 
 .nav-item-big.active {
-  background: #000000;
-  color: #ffffff;
-  border-color: #000000;
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
+  border-color: transparent;
 }
 
 body.dark-theme .nav-item-big.active {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 .nav-item-big svg {
@@ -1352,10 +1356,16 @@ body.dark-theme .hero .btn-outline {
   background: transparent;
 }
 
-.hero .btn-outline:hover {
+body.dark-theme .hero .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.45);
   color: #ffffff;
+}
+
+.hero .btn-outline:hover {
+  background: var(--text-h);
+  border-color: var(--text-h);
+  color: var(--bg);
 }
 
 .hero-visual {

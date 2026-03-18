@@ -255,9 +255,9 @@
     <main class="contact-page">
         <div class="container">
             <div class="section-header text-center reveal visible">
-                <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 16px;">Hubungi Kami</h1>
+                <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 16px;">Ngobrol Bareng Kita</h1>
                 <p class="mx-auto" style="max-width: 650px; opacity: 0.8; font-size: 1.1rem;">
-                    Punya pertanyaan seputar layanan, kerja sama, atau ingin berkonsultasi mengenai proyek digital Anda? Jangan ragu untuk menghubungi tim kami.
+                    Punya ide project seru atau masih bingung mau mulai dari mana? Santai aja, tim Zephytor siap dengerin dan kasih solusi terbaik buat bisnis kamu.
                 </p>
             </div>
 
@@ -279,7 +279,7 @@
 
                 <!-- Right Column: Form -->
                 <div class="contact-form-card">
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 32px;">Kirim Pesan Langsung</h3>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 32px;">Tinggalin Pesan di Sini</h3>
                     <form action="#">
                         <div class="form-group-row">
                             <div class="form-group">
@@ -305,8 +305,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Pesan Anda</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Tuliskan pesan Anda secara rinci..." required></textarea>
+                            <label for="message">Curhatin Ide Project Kamu</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Tulisin aja apa yang kamu butuhin, makin detail makin oke!" required></textarea>
                         </div>
 
                         <button type="submit" class="btn-submit">Kirim Sekarang</button>
@@ -325,7 +325,7 @@
                     <a href="/" class="nav-logo">
                         <span style="font-family: var(--font-h); font-size: 28px; font-weight: 800; color: var(--logo-color); letter-spacing: -1px;">Zephytor</span>
                     </a>
-                    <p style="margin-top: 24px;">Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.</p>
+                    <p style="margin-top: 24px;">Bantuin bisnis Indonesia jadi lebih keren di dunia digital dengan desain premium & performa kenceng.</p>
                 </div>
                 <div>
                     <h4>Layanan</h4>
