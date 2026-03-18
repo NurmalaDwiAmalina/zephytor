@@ -196,6 +196,11 @@
             font-weight: 900;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            padding: 18px 48px;
+            border-radius: 100px;
+            font-size: 1.05rem;
+            text-align: center;
+            line-height: 1.4;
         }
 
         .btn-white:hover {
@@ -497,26 +502,10 @@
             .try-again-form { flex-direction: column; }
             .analyze-navbar .url-chip { display: none; }
             .score-ring-wrap {
-                width: 120px;
-                height: 120px;
-            }
-            .score-ring-wrap svg {
-                width: 120px;
-                height: 120px;
-            }
-            .score-ring-wrap circle {
-                cx: 60;
-                cy: 60;
-                r: 52;
-                stroke-width: 6;
-            }
-            /* Circumference for r=52: 2*π*52 ≈ 326 */
-            #overallRing {
-                stroke-dasharray: 326;
-                stroke-dashoffset: 326;
+                transform: scale(0.85);
             }
             .score-ring-inner .score-num {
-                font-size: 2rem;
+                font-size: 3rem;
             }
             .score-ring-inner .score-grade {
                 font-size: 0.8rem;
@@ -530,6 +519,10 @@
             .rec-item {
                 padding: 16px 20px;
                 gap: 12px;
+            }
+            .btn-white {
+                padding: 14px 28px;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -663,7 +656,7 @@
                         <span style="font-size: 0.75rem; font-weight: 800; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: 12px;">Next Step →</span>
                         <h2 style="font-size: 2.2rem; font-weight: 900; color: #fff; font-family: var(--font-h); margin-bottom: 16px; letter-spacing: -1px;">Ingin Website Kamu <br>Jadi Super Premium?</h2>
                         <p style="color: rgba(255,255,255,0.6); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; font-size: 1rem;">Tim Zephytor siap membantu meningkatkan setiap aspek di atas. Jangan biarkan website lama menghambat pertumbuhan bisnis Anda.</p>
-                        <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn-white" style="padding: 18px 48px; border-radius: 100px; font-size: 1.05rem;">Chat Kita Sekarang buat Konsultasi Gratis →</a>
+                        <a href="https://wa.me/6285801153409?text=Halo%20Zephytor%2C%20saya%20sudah%20lihat%20hasil%20analisa%20UI%2FUX%20dan%20ingin%20konsultasi" class="btn-white">Chat Kita Sekarang buat Konsultasi Gratis →</a>
                     </div>
                 </div>
 

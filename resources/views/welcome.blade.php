@@ -60,6 +60,7 @@
             <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
             <a href="#layanan" data-i18n="navLayanan">LAYANAN</a>
             <a href="#mvp" data-i18n="navMvp">MVP</a>
+            <a href="#harga" data-i18n="navPaket">PAKET</a>
             <a href="/kontak" data-i18n="navKontak">KONTAK</a>
             <div class="nav-pill-sep"></div>
             <div class="lang-switcher-nav">
@@ -90,6 +91,9 @@
                 </a>
                 <a href="#mvp" class="nav-item-small">
                     <span data-i18n="navMvp">MVP</span>
+                </a>
+                <a href="#harga" class="nav-item-small">
+                    <span data-i18n="navPaket">PAKET</span>
                 </a>
                 <a href="/kontak" class="nav-item-small">
                     <span data-i18n="navKontak">KONTAK</span>
@@ -784,6 +788,7 @@
                 navAudit: "AUDIT",
                 navLayanan: "LAYANAN",
                 navMvp: "MVP",
+                navPaket: "PAKET",
                 navKontak: "KONTAK",
                 btnMulai: "Konsultasi",
                 faqBadge: "TANYA JAWAB",
@@ -842,7 +847,7 @@
                 btnPesan: "Pesan Sekarang",
                 btnHubungi: "Pesan Sekarang",
                 advBadge: "KENAPA KITA?",
-                advTitle: "KEUNGGULAN ZEPHYTOR",
+                advTitle: "NILAI LEBIH ZEPHYTOR",
                 adv1: "Website udah nyambung langsung ke Google Analytics & Search Console",
                 adv2: "Strukturnya rapi & SEO Friendly banget",
                 adv3: "Web 3 halaman bisa live kurang dari 3 jam",
@@ -876,7 +881,7 @@
                 test5Role: "CEO, Butik Fashion",
                 test6Quote: '"Investasi terbaik untuk bisnis saya. Portofolio online dari Zephytor langsung meningkatkan inquiry klien baru hingga 2x dalam bulan pertama. Desainnya juga sangat premium!"',
                 test6Role: "Fotografer & Videografer",
-                probTitle: "Kenapa Keluar Uang Banyak Tapi Web Kamu Susah Jualan?",
+                probTitle: "Sudah Investasi Website, Namun Belum Menghasilkan?",
                 probDesc: "Punya website dengan kata-kata asal-asalan itu sama aja buang duit. Calon klien udah kabur sebelum capek-capek nyekroll.",
                 prob1Title: "Desain & Copywriting Asal-asalan",
                 prob1Desc: "Nggak ada alur kata yang jelas, cuma copas template biasa. Pantas pengunjung lewat gitu aja tanpa nanya-nanya.",
@@ -884,7 +889,7 @@
                 prob2Desc: "Web udah jadi bagus, tapi bikin orang kerasa kaku dan bingung mau ngapain pas lagi mampir ke situs kamu.",
                 prob3Title: "Sistem Ribet Bikin Pusing Sendiri",
                 prob3Desc: "Tiap mau ganti promo pusing harus manggil developer tiap saat. Momentum jualan jadi sering kelewat.",
-                stepTitle: "Gini Alur Framework Kita Buat Kamu",
+                stepTitle: "Tahapan Eksekusi Kami untuk Website Kamu",
                 step1Title: "1. Bedah Framework Sales Bisnismu",
                 step1Desc: "Kita bedah model bisnismu, cari angle copywriting, dan tentuin alur jualan yang paling bikin calon klien relate.",
                 step2Title: "2. Desain Premium + Struktur Rapi",
@@ -947,6 +952,7 @@
                 navAudit: "AUDIT",
                 navLayanan: "SERVICES",
                 navMvp: "MVP",
+                navPaket: "PRICING",
                 navKontak: "CONTACT",
                 btnMulai: "Consult",
                 faqBadge: "QUESTIONS",
