@@ -174,7 +174,7 @@
                 <div class="checker-header">
                     <span class="checker-badge">✦ Instant Analysis</span>
                     <h2 class="checker-title" data-i18n="auditTitle">Yakin UI/UX Website Kamu <span>Sudah Bagus?</span></h2>
-                    <p class="checker-sub" data-i18n="auditSub">Yuk, cek sekarang dan dapatkan laporan performa dalam hitungan detik.</p>
+                    <p class="checker-sub" data-i18n="auditSub">Dapatkan analisis mendalam berdasarkan standar industri UX global dalam hitungan detik.</p>
                 </div>
                 <form action="/analyze" method="GET" class="checker-form-v2">
                     <div class="checker-input-container">
@@ -195,6 +195,9 @@
                             </svg>
                         </button>
                     </div>
+                    <p class="checker-law-note" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6; line-height: 1.5;" data-i18n="auditNote">
+                        *Evaluasi menggunakan standar 10 Usability Heuristics & Jakob's Law dari Nielsen Norman Group untuk menjamin kenyamanan pengunjung kamu.
+                    </p>
                 </form>
                 <div class="checker-footer">
                     <div class="checker-stat-item">
@@ -463,8 +466,7 @@
                 <!-- Paket 3 -->
                 <div class="price-card reveal">
                     <div class="plan-name" data-i18n="pkg4Name">Paket Enterprise</div>
-                    <div class="price-val" data-i18n="pkg4Price">Rp 7jt+</div>
-                    <div class="price-desc" data-i18n="pkg4Desc">Unlimited Halaman • Full custom solution</div>
+                    <div class="price-val price-custom-text" style="font-size: 1.8rem; font-weight: 800; margin: 30px 0; line-height: 1.2; letter-spacing: -1px; min-height: 110px; display: flex; align-items: center; justify-content: center;" data-i18n="pkg4Desc">Harga Menyesuaikan Kebutuhan</div>
                     <ul>
                         <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
                                 viewBox="0 0 24 24">
@@ -862,6 +864,9 @@
                 pkg3Feat5: "Video Tutorial (Anti Bingung)",
                 pkg3Feat6: "Gratis Domain .com, .id, atau .co.id",
                 pkg3Rev: "Garansi Full 3 Bulan",
+                pkg4Name: "Paket Enterprise",
+                pkg4Price: "",
+                pkg4Desc: "Harga Menyesuaikan Kebutuhan",
                 pkg4Feat1: "Bebas Nambah Halaman (Custom)",
                 pkg4Feat2: "Desain Eksklusif Dari Nol (Bukan Template)",
                 pkg4Feat3: "Fitur Custom (Filter, Database, dll)",
@@ -971,8 +976,9 @@
                 ctaTitle: "Udah Siap Go-Digital Dengan Bener?",
                 ctaDesc: "Yuk ngobrol bareng tim kita sekarang, tanya-tanya dulu aja nggak apa-apa kok!",
                 ctaBtn: "Chat Kita Sekarang",
-                auditTitle: "Yakin UI/UX Website Kamu <span>Udah Oke?</span>",
-                auditSub: "Coba masukin linknya di bawah, kita buatin laporan audit gratis buat kamu.",
+                auditTitle: "Yakin UI/UX Website Kamu <span>Sudah Bagus?</span>",
+                auditSub: "Dapatkan analisis mendalam berdasarkan standar industri UX global dalam hitungan detik.",
+                auditNote: "*Evaluasi menggunakan standar 10 Usability Heuristics & Jakob's Law dari Nielsen Norman Group untuk menjamin kenyamanan pengunjung kamu.",
 
                 footDesc: "Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.",
                 foot1Title: "Layanan",
@@ -1031,6 +1037,9 @@
                 pkg3Feat5: "Admin Guide Video Tutorial",
                 pkg3Feat6: "Free .com, .co.id, .id Domain",
                 pkg3Rev: "3 Months Guarantee",
+                pkg4Name: "Enterprise Package",
+                pkg4Price: "",
+                pkg4Desc: "Price Tailored to Your Needs",
                 pkg4Feat1: "Unlimited Pages (Custom)",
                 pkg4Feat2: "Exclusive UI/UX Independent Design",
                 pkg4Feat3: "Custom Features (CMS / Filter / Database)",
@@ -1144,7 +1153,8 @@
                 ctaDesc: "Contact us now to get a premium website with the best offer.",
                 ctaBtn: "Consult Now",
                 auditTitle: "Audit Your Website's UI/UX <span>Now</span>",
-                auditSub: "Enter your website URL and get a full report in seconds.",
+                auditSub: "Get in-depth analysis based on global UX industry standards in seconds.",
+                auditNote: "*Evaluation uses 10 Usability Heuristics & Jakob's Law standards from Nielsen Norman Group to ensure your visitors' comfort.",
 
                 footDesc: "Digital transformation for Indonesian businesses with modern design & high performance.",
                 foot1Title: "Services",

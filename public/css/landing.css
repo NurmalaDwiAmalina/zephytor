@@ -3076,7 +3076,6 @@ body.dark-theme .highlight-promo {
     }
 }
 
-@
 
 /* Showcase Section */
 .showcase-grid {
@@ -3151,4 +3150,3 @@ body.dark-theme .showcase-img {
         grid-template-columns: 1fr;
     }
 }
-@
