@@ -804,7 +804,7 @@
                 stepBadge: "ALUR FRAMEWORK KITA",
                 btnKonsultasi: "Konsultasi Gratis",
                 heroBadge: "🚀 Berhenti Menebak, Mulai Go-Digital yang Tepat",
-                heroTitle: "Landing Page yang Bikin <span>Kepikiran Buat Beli.</span>",
+                heroTitle: "Website Profesional yang <span>Meningkatkan Kepercayaan & Penjualan.</span>",
                 heroDesc: "Bukan web dengan kata-kata asal-asalan. Kita bangunin desain premium dengan framework & alur kata yang terstruktur. Rapi, elegan, dan tinggal kamu pakai buat jualan.",
                 layananTitle: "Solusi Digital yang Sebenarnya",
                 layananDesc: "Kita nggak cuma ngerjain coding. Ada framework teruji di balik setiap website yang kita buat untuk ningkatin konversi brand kamu.",
