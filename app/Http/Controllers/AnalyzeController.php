@@ -23,19 +23,21 @@ class AnalyzeController extends Controller
 
         $thumioKey = config('services.thumio.key');
         // Step 1: Download screenshot from thum.io first
-        $screenshotUrlRaw = 'https://image.thum.io/get/' . ($thumioKey ? 'auth/' . $thumioKey . '/' : '') . 'wait/5/width/1200/crop/900/' . $url;
+        // Note: Using public free pool because THUMIO_KEY is often a placeholder
+        $screenshotUrlRaw = 'https://image.thum.io/get/wait/5/width/1200/crop/900/' . $url;
         
         try {
             $imageResponse = Http::timeout(90)->get($screenshotUrlRaw);
             
-            // Fallback: If 403 (quota or auth error), try without the key
-            if ($imageResponse->status() === 403 && $thumioKey) {
-                $screenshotUrlRaw = 'https://image.thum.io/get/wait/5/width/1200/crop/900/' . $url;
-                $imageResponse = Http::timeout(90)->get($screenshotUrlRaw);
+            // Check if the image is too small (might be an error image or placeholder from thum.io)
+            if ($imageResponse->successful() && strlen($imageResponse->body()) < 15000) {
+                 // Try a different thum.io variant as a fallback
+                 $screenshotUrlRaw = 'https://image.thum.io/get/width/1200/' . $url;
+                 $imageResponse = Http::timeout(60)->get($screenshotUrlRaw);
             }
 
-            if (!$imageResponse->successful()) {
-                throw new \Exception("Thum.io returned status: " . $imageResponse->status());
+            if (!$imageResponse->successful() || strlen($imageResponse->body()) < 2000) {
+                throw new \Exception("Thum.io failed to provide a valid screenshot. Site might be blocking capture.");
             }
             
             $imageData = base64_encode($imageResponse->body());
@@ -104,7 +106,7 @@ class AnalyzeController extends Controller
         return response()->json([
             'success'    => true,
             'data'       => $data,
-            'screenshot' => $screenshotUrlRaw,
+            'screenshot' => $screenshotBase64, // Send base64 to ensure matching what AI saw
         ]);
     }
 

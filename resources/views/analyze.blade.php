@@ -598,9 +598,10 @@
                     <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Laporan komprehensif mengenai kualitas desain dan pengalaman pengguna website Anda.</p>
                 </div>
 
+
                 <!-- Overall + Screenshot -->
-                <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: center; margin-bottom: 64px;">
-                    <div style="text-align: center;">
+                <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; margin-bottom: 64px;">
+                     <div style="text-align: center; background: var(--card-bg); border-radius: 32px; padding: 40px; border: 1px solid var(--border);">
                         <div style="display: flex; justify-content: center; margin-bottom: 28px;">
                             <div class="score-ring-wrap">
                                 <svg width="160" height="160" viewBox="0 0 160 160">
@@ -615,31 +616,35 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 style="font-size: 1.1rem; font-weight: 900; color: var(--text-h); font-family: var(--font-h); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Skor Keseluruhan</h3>
+                        <h3 style="font-size: 1.1rem; font-weight: 950; color: var(--text-h); font-family: var(--font-h); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Skor Keseluruhan</h3>
                         <p id="summaryText" style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; max-width: 360px; margin: 0 auto; font-weight: 500;"></p>
-                        <style>body.dark-theme #summaryText { color: #eeeeee; }</style>
-
-                        <!-- Try another -->
+                        
                         <div style="margin-top: 32px;">
-                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Cek website lain:</p>
                             <form action="/analyze" method="GET" class="try-again-form">
-                                <input type="url" name="url" placeholder="https://website-lain.com" required>
-                                <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Analisa →</button>
+                                <input type="url" name="url" placeholder="Cek website lain.." required>
+                                <button type="submit" class="btn btn-primary">Analisa Lagi</button>
                             </form>
                         </div>
                     </div>
 
                     <div>
-                        <div class="screenshot-wrap">
-                            <img id="screenshotImg" src="" alt="Screenshot website" loading="eager" onerror="this.style.display='none'">
+                        <div class="screenshot-wrap" style="box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid var(--border); position: relative; min-height: 300px; background: rgba(0,0,0,0.05); border-radius: 20px;">
+                            <img id="screenshotImg" src="" alt="Screenshot website" loading="eager" style="width: 100%; height: auto; border-radius: 20px;">
+                            <div id="screenshotLoading" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); color: white; border-radius: 20px;">
+                                Mengunduh Tampilan...
+                            </div>
                         </div>
-                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; text-align: center;">
-                            Screenshot: <a id="screenshotLink" href="#" target="_blank" style="color: var(--primary);">{{ $url }}</a>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 12px; text-align: center;">
+                            Screenshot dari: <a id="screenshotLink" href="#" target="_blank" style="color: var(--primary); font-weight: 700;">{{ $url }}</a>
                         </p>
                     </div>
                 </div>
 
-
+                <!-- Penilaian Per Kategori -->
+                <div style="margin-bottom: 64px;">
+                    <div class="section-badge" style="margin-bottom: 24px;">DETAIL PENILAIAN</div>
+                    <div id="categoriesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;"></div>
+                </div>
 
                 <!-- Recommendations -->
                 <div style="margin-bottom: 80px;">
@@ -697,10 +702,10 @@
 
         // Score color helper
         function scoreColor(score) {
-            if (score >= 80) return '#000000';
-            if (score >= 65) return '#333333';
-            if (score >= 50) return '#666666';
-            return '#999999';
+            if (score >= 85) return '#22c55e'; // Green
+            if (score >= 70) return '#eab308'; // Yellow/Gold
+            if (score >= 50) return '#f97316'; // Orange
+            return '#ef4444'; // Red
         }
 
         // Circumference for r=68 (main ring): 2*π*68 ≈ 427
@@ -724,6 +729,11 @@
         function renderResults(data, screenshotUrl) {
             const { overall_score, grade, summary, categories, top_recommendations } = data;
 
+            // Hide error and loading
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('errorState').style.display = 'none';
+            document.getElementById('resultsState').style.display = 'block';
+
             // Overall ring
             document.getElementById('overallScoreNum').textContent = overall_score;
             document.getElementById('overallGrade').textContent = grade;
@@ -737,14 +747,40 @@
                 ring.style.strokeDashoffset = ringOffset(overall_score, circumference);
             }, 100);
 
-            // Screenshot
+            // Screenshot Logic with loader
             const imgEl = document.getElementById('screenshotImg');
+            const imgLoader = document.getElementById('screenshotLoading');
+            
+            imgEl.onload = () => { if(imgLoader) imgLoader.style.display = 'none'; };
+            imgEl.onerror = () => { 
+                if(imgLoader) imgLoader.innerText = 'Gagal memuat tampilan.';
+                imgEl.src = 'https://undraw.co/api/illustrations/svg/error.svg'; // Placeholder
+            };
+            
             imgEl.src = screenshotUrl;
-            imgEl.loading = 'eager';
             document.getElementById('screenshotLink').href = '{{ $url }}';
             document.getElementById('screenshotLink').textContent = '{{ $url }}';
 
-
+            // Categories
+            const catGrid = document.getElementById('categoriesGrid');
+            catGrid.innerHTML = (categories || []).map(cat => {
+                const positives = (cat.positives || []).map(p =>
+                    `<li style="color:#22c55e; font-size:0.82rem; margin-bottom:4px;">✓ ${p}</li>`).join('');
+                const issues = (cat.issues || []).map(p =>
+                    `<li style="color:#ef4444; font-size:0.82rem; margin-bottom:4px;">✗ ${p}</li>`).join('');
+                const pct = Math.round(cat.score);
+                return `<div style="background:var(--bg); border:1px solid var(--border); border-radius:20px; padding:24px; box-shadow:var(--shadow);">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <span style="font-weight:800; font-size:0.95rem; color:var(--text-h); font-family:var(--font-h);">${cat.name}</span>
+                        <span style="font-weight:900; font-size:1.1rem; color:${scoreColor(cat.score)};">${pct}</span>
+                    </div>
+                    <div style="background:var(--border); border-radius:100px; height:6px; margin-bottom:14px; overflow:hidden;">
+                        <div style="width:${pct}%; height:100%; background:${scoreColor(cat.score)}; border-radius:100px; transition:width 1s cubic-bezier(0.16,1,0.3,1);"></div>
+                    </div>
+                    <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:12px; line-height:1.5;">${cat.description}</p>
+                    ${positives || issues ? `<ul style="list-style:none; padding:0; margin:0;">${positives}${issues}</ul>` : ''}
+                </div>`;
+            }).join('');
 
             // Recommendations
             const recList = document.getElementById('recommendationsList');
