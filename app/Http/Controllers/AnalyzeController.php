@@ -66,7 +66,7 @@ class AnalyzeController extends Controller
             'messages'        => [
                 [
                     'role'    => 'system',
-                    'content' => 'You are a professional UI/UX designer and web performance analyst. Always respond with valid JSON only. Be specific and constructive in your analysis.',
+                    'content' => 'You are a professional UI/UX designer and web performance analyst. You will analyze a screenshot of a website. The website is NOT thum.io; thum.io is just the service used to capture the image. ALWAYS focus on the actual website content shown in the image. NEVER mention "thum.io" or "image.thum.io" in your response. Always respond with valid JSON only. Be specific and constructive in your analysis.',
                 ],
                 [
                     'role'    => 'user',
@@ -112,7 +112,8 @@ class AnalyzeController extends Controller
     {
         return <<<PROMPT
 Analisa screenshot website ini secara mendalam dari perspektif UI (User Interface) dan UX (User Experience).
-Website yang dianalisa: {$url}
+Website yang dianalisa adalah: {$url}
+PENTING: Abaikan tanda air atau referensi ke layanan pengambil gambar (seperti thum.io). Fokuslah sepenuhnya pada desain website {$url}. Jangan pernah menyebutkan "thum.io" dalam analisa Anda.
 
 Berikan penilaian jujur dan konstruktif. Kembalikan HANYA JSON dengan struktur berikut:
 

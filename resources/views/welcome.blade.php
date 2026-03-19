@@ -101,7 +101,7 @@
             </div>
             <div class="nav-bottom-row">
                 <div class="nav-bottom-left">
-                    <a href="/" class="nav-logo-mini" style="text-decoration: none;"><span>Zephytor</span></a>
+                    <a href="/" class="nav-logo-mini" style="text-decoration: none; font-family: 'Playfair Display', serif;"><span>Zephytor</span></a>
                     <div class="nav-menu-toggle" id="mobileMenuToggle">
                         <svg id="menuToggleIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                         <span>MENU</span>
@@ -421,8 +421,8 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg1Rev">Garansi 1 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Landing+Page+300rb" class="btn btn-outline"
-                        data-i18n="btnPesan">Pesan Sekarang</a>
+                    <a href="https://wa.me/6285892778882?text=Halo+Zephytor,+saya+tertarik+dengan+Landing+Page+300rb" class="btn btn-outline"
+                        data-i18n="btnPilih">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
                 <div class="price-card popular reveal">
@@ -460,8 +460,8 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg3Rev">Garansi 3 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Premium+3.5Jt" class="btn btn-primary"
-                        data-i18n="btnPesan">Pesan Sekarang</a>
+                    <a href="https://wa.me/6285892778882?text=Halo+Zephytor,+saya+tertarik+dengan+Paket+Premium+3.5jt" class="btn btn-primary"
+                        data-i18n="btnPilih">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 3 -->
                 <div class="price-card reveal">
@@ -513,7 +513,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg4Rev">Garansi 12 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Pesan+Paket+Pro+Custom" class="btn btn-outline"
+                    <a href="https://wa.me/6285892778882?text=Halo+Zephytor,+saya+ingin+konsultasi+Paket+Enterprise" class="btn btn-outline"
                         data-i18n="btnHubungi">Pesan Sekarang</a>
                 </div>
             </div>
@@ -879,7 +879,8 @@
                 pkg4Feat10: "Gratis Domain .com / .id / .co.id",
                 pkg4Rev: "Garansi Full 12 Bulan",
                 btnPesan: "Pesan Sekarang",
-                btnHubungi: "Pesan Sekarang",
+                btnPilih: "Pilih Paket Ini",
+                btnHubungi: "Konsultasi Sekarang",
                 advBadge: "KENAPA KITA?",
                 advTitle: "NILAI LEBIH ZEPHYTOR",
                 adv1: "Website udah nyambung langsung ke Google Analytics & Search Console",
@@ -1052,7 +1053,8 @@
                 pkg4Feat10: "Free .com, .co.id, .id Domain",
                 pkg4Rev: "12 Months Guarantee",
                 btnPesan: "Order Now",
-                btnHubungi: "Order Now",
+                btnPilih: "Choose This Package",
+                btnHubungi: "Consult Now",
                 advBadge: "ADVANTAGES",
                 advTitle: "OUR SERVICE ADVANTAGES",
                 adv1: "Website integrated with Google Analytics and Google Search Console",
@@ -1306,34 +1308,57 @@
         const menuToggleIcon = document.getElementById('menuToggleIcon');
 
         if (mobileMenuToggle) {
+            const navHandle = document.querySelector('.nav-handle');
+
             mobileMenuToggle.addEventListener('click', () => {
                 navCardMobile.classList.toggle('expanded');
-                if (navCardMobile.classList.contains('expanded')) {
-                    menuToggleIcon.style.transform = 'rotate(180deg)';
-                } else {
-                    menuToggleIcon.style.transform = 'rotate(0deg)';
-                }
+                menuToggleIcon.style.transform = navCardMobile.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
             });
 
-            // Swipe up detection
-            let touchstartY = 0;
-            let touchendY = 0;
-            
-            navCardMobile.addEventListener('touchstart', e => {
-                touchstartY = e.changedTouches[0].screenY;
-            }, {passive: true});
+            if (navHandle) {
+                navHandle.addEventListener('click', () => {
+                    navCardMobile.classList.toggle('expanded');
+                    menuToggleIcon.style.transform = navCardMobile.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+            }
 
-            navCardMobile.addEventListener('touchend', e => {
-                touchendY = e.changedTouches[0].screenY;
-                if (touchstartY - touchendY > 50) { // Swipe up
-                    navCardMobile.classList.add('expanded');
-                    if (menuToggleIcon) menuToggleIcon.style.transform = 'rotate(180deg)';
+            // Handle & Card Swipe logic
+            let startY = 0;
+            let currentY = 0;
+
+            const onTouchStart = (e) => {
+                startY = e.touches[0].pageY;
+            };
+
+            const onTouchMove = (e) => {
+                currentY = e.touches[0].pageY;
+                let diff = startY - currentY;
+                
+                // Optional: visual feedback during swipe
+                if (diff > 0 && !navCardMobile.classList.contains('expanded')) {
+                    // Pulling up
                 }
-                if (touchendY - touchstartY > 50) { // Swipe down
-                    navCardMobile.classList.remove('expanded');
-                    if (menuToggleIcon) menuToggleIcon.style.transform = 'rotate(0deg)';
+            };
+
+            const onTouchEnd = (e) => {
+                let diff = startY - e.changedTouches[0].pageY;
+                if (Math.abs(diff) > 30) {
+                    if (diff > 30) { // Swipe up
+                        navCardMobile.classList.add('expanded');
+                        menuToggleIcon.style.transform = 'rotate(180deg)';
+                    } else if (diff < -30) { // Swipe down
+                        navCardMobile.classList.remove('expanded');
+                        menuToggleIcon.style.transform = 'rotate(0deg)';
+                    }
                 }
-            }, {passive: true});
+            };
+
+            navCardMobile.addEventListener('touchstart', onTouchStart, {passive: true});
+            navCardMobile.addEventListener('touchend', onTouchEnd, {passive: true});
+            
+            // Specifically on handle for better response
+            navHandle.addEventListener('touchstart', onTouchStart, {passive: true});
+            navHandle.addEventListener('touchend', onTouchEnd, {passive: true});
         }
 
         // Close menu on link click

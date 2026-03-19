@@ -253,9 +253,9 @@
             
             <div class="nav-bottom-row">
                 <div class="nav-bottom-left">
-                    <div class="nav-logo-mini">Z</div>
-                    <div class="nav-menu-toggle">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    <a href="/" class="nav-logo-mini" style="text-decoration: none; font-family: 'Playfair Display', serif;"><span>Zephytor</span></a>
+                    <div class="nav-menu-toggle" id="mobileMenuToggle">
+                        <svg id="menuToggleIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                         <span>MENU</span>
                     </div>
                 </div>
@@ -461,6 +461,62 @@
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('load', handleScroll);
         handleScroll();
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navCardMobile = document.querySelector('.nav-card-mobile');
+        const menuToggleIcon = document.getElementById('menuToggleIcon');
+
+        if (mobileMenuToggle) {
+            const navHandle = document.querySelector('.nav-handle');
+            
+            mobileMenuToggle.addEventListener('click', () => {
+                navCardMobile.classList.toggle('expanded');
+                menuToggleIcon.style.transform = navCardMobile.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
+            });
+
+            if (navHandle) {
+                navHandle.addEventListener('click', () => {
+                    navCardMobile.classList.toggle('expanded');
+                    menuToggleIcon.style.transform = navCardMobile.classList.contains('expanded') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+            }
+
+            // Handle & Card Swipe logic
+            let startY = 0;
+
+            const onTouchStart = (e) => {
+                startY = e.touches[0].pageY;
+            };
+
+            const onTouchEnd = (e) => {
+                let diff = startY - e.changedTouches[0].pageY;
+                if (Math.abs(diff) > 30) {
+                    if (diff > 30) { // Swipe up
+                        navCardMobile.classList.add('expanded');
+                        menuToggleIcon.style.transform = 'rotate(180deg)';
+                    } else if (diff < -30) { // Swipe down
+                        navCardMobile.classList.remove('expanded');
+                        menuToggleIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            };
+
+            navCardMobile.addEventListener('touchstart', onTouchStart, {passive: true});
+            navCardMobile.addEventListener('touchend', onTouchEnd, {passive: true});
+            
+            // Specifically on handle for better response
+            navHandle.addEventListener('touchstart', onTouchStart, {passive: true});
+            navHandle.addEventListener('touchend', onTouchEnd, {passive: true});
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-card-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                navCardMobile.classList.remove('expanded');
+                if (menuToggleIcon) menuToggleIcon.style.transform = 'rotate(0deg)';
+            });
+        });
     </script>
 </body>
 
