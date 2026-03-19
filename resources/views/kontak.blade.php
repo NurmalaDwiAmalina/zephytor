@@ -364,8 +364,9 @@
                 <div>
                     <h4>Sosial Media</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/zephytor?igsh=cHBjNXJzMXcyeHln" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@zephytor?_r=1&_t=ZS-94nTYfDMvXV" target="_blank">TikTok</a></li>
+                        <li><a href="https://www.facebook.com/share/1CVboN13Nm/" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
             </div>
