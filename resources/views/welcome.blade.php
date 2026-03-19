@@ -101,7 +101,7 @@
             </div>
             <div class="nav-bottom-row">
                 <div class="nav-bottom-left">
-                    <a href="/" class="nav-logo-mini" style="text-decoration: none; font-family: 'Playfair Display', serif;"><span>Zephytor</span></a>
+                    <a href="/" class="nav-logo-mini" style="text-decoration: none;"><span>Zephytor</span></a>
                     <div class="nav-menu-toggle" id="mobileMenuToggle">
                         <svg id="menuToggleIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                         <span>MENU</span>
@@ -780,7 +780,7 @@
             <div class="footer-grid">
                 <div>
                     <a href="#" class="nav-logo">
-                        <span style="font-family: var(--font-h); font-size: 28px; font-weight: 800; color: var(--logo-color); letter-spacing: -1px;">Zephytor</span>
+                        <span style="font-family: var(--font-h); font-size: 24px; font-weight: 900; color: var(--logo-color); letter-spacing: -1.2px;">Zephytor</span>
                     </a>
                     <p style="margin-top: 24px;" data-i18n="footDesc">Transformasi digital bisnis Indonesia dengan desain modern & performa tinggi.</p>
                 </div>

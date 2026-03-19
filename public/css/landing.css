@@ -817,12 +817,15 @@ body.dark-theme .nav-pill-desktop {
 
 .nav-logo-float {
   padding: 0 20px;
-  font-weight: 950;
-  font-size: 1.1rem;
-  letter-spacing: -0.05em;
+  font-family: var(--font-h);
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -1.2px;
   color: #000000;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
   margin-right: 8px;
+  display: flex;
+  align-items: center;
 }
 
 body.dark-theme .nav-logo-float {
@@ -1052,14 +1055,14 @@ body.dark-theme .nav-bottom-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
+  padding: 8px 14px;
   background: #000;
   color: #fff;
   border-radius: 14px;
   font-weight: 900;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: var(--font-h);
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
 }
 
 body.dark-theme .nav-logo-mini {
