@@ -289,7 +289,7 @@
 
                     <div class="info-item">
                         <h4>WhatsApp</h4>
-                        <a href="https://wa.me/6285892778882">+62 858-0115-3409</a>
+                        <a href="https://wa.me/6285892778882">+62 858-9277-8882</a>
                     </div>
 
 

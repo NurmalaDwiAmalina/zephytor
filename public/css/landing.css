@@ -973,6 +973,7 @@ body.dark-theme .nav-card-mobile {
   .nav-pill-desktop { display: none; }
   .nav-card-mobile { display: flex; }
   .floating-nav { bottom: 16px; }
+  body { padding-bottom: 120px; }
 }
 
 .nav-handle {

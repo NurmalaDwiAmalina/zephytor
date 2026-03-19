@@ -631,7 +631,7 @@
 
                     <div>
                         <div class="screenshot-wrap">
-                            <img id="screenshotImg" src="" alt="Screenshot website" loading="lazy">
+                            <img id="screenshotImg" src="" alt="Screenshot website" loading="eager" onerror="this.style.display='none'">
                         </div>
                         <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; text-align: center;">
                             Screenshot: <a id="screenshotLink" href="#" target="_blank" style="color: var(--primary);">{{ $url }}</a>
@@ -738,8 +738,11 @@
             }, 100);
 
             // Screenshot
-            document.getElementById('screenshotImg').src = screenshotUrl;
+            const imgEl = document.getElementById('screenshotImg');
+            imgEl.src = screenshotUrl;
+            imgEl.loading = 'eager';
             document.getElementById('screenshotLink').href = '{{ $url }}';
+            document.getElementById('screenshotLink').textContent = '{{ $url }}';
 
 
 
