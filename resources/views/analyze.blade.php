@@ -558,7 +558,7 @@
                 </div>
                 <span class="theme-toggle-text">Mode</span>
             </div>
-            <a href="https://wa.me/6285892778882" class="btn-konsultasi-nav">Konsultasi</a>
+            <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-konsultasi-nav">Konsultasi</a>
         </div>
     </div>
 

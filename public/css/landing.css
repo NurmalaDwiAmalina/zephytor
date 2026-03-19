@@ -2606,6 +2606,8 @@ body.dark-theme .mvp-card-light .mvp-card-desc {
 @media (max-width: 640px) {
   .mvp-card {
     padding: 40px 32px;
+    align-items: center;
+    text-align: center;
   }
 
   .mvp-time {
@@ -3154,4 +3156,9 @@ body.dark-theme .showcase-img {
     }
 }
 
-
+@media (max-width: 640px) {
+    .service-card {
+        align-items: center;
+        text-align: center;
+    }
+}

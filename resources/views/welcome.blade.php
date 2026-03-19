@@ -68,7 +68,7 @@
                 <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
             </div>
             <div class="nav-pill-sep"></div>
-            <a href="https://wa.me/6285892778882" class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
+            <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
         </div>
 
         <!-- Mobile Card -->
@@ -112,7 +112,7 @@
                         <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
                         <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
                     </div>
-                    <a href="https://wa.me/6285892778882" class="nav-btn-konsultasi" data-i18n="btnMulai">Konsultasi</a>
+                    <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="nav-btn-konsultasi" data-i18n="btnMulai">Konsultasi</a>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                     Anda. Tanpa modal
                     awal yang besar, dapatkan website premium yang meyakinkan klien.</p>
                 <div class="hero-buttons reveal-delay-4">
-                    <a href="https://wa.me/6285892778882" class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
+                    <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
                 </div>
@@ -315,7 +315,7 @@
             
             <div class="text-center" style="margin-top: 60px;">
                 <p style="font-size: 1.25rem; font-weight: 800; margin-bottom: 24px;" data-i18n="showCtaText">Mau punya tampilan yang se-premium ini juga? 🤫</p>
-                <a href="https://wa.me/6285892778882" class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
+                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
             </div>
         </div>
     </section>
@@ -766,7 +766,7 @@
                 <p data-i18n="ctaDesc" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px;">Hubungi kami
                     sekarang untuk mendapatkan website premium dengan penawaran terbaik.
                 </p>
-                <a href="https://wa.me/6285892778882" class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
+                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
             </div>
         </div>
     </div>
@@ -796,7 +796,7 @@
                     <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
                         <li><a href="/kontak" data-i18n="navKontak">Kontak Kami</a></li>
-                        <li><a href="https://wa.me/6285892778882" data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
+                        <li><a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
                         <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
                     </ul>
                 </div>
@@ -929,11 +929,11 @@
                 prob3Title: "Urusan Teknis yang Ribet",
                 prob3Desc: "Pusing tiap manu ganti isi web? Sistem kita tinggal klik-klik aja, gak pake ribet.",
                 stepTitle: "Liat nih, cara kita kerjainnya segampang ini 🤫",
-                step1Title: "1. Bedah Strategi & Copy",
+                step1Title: "Bedah Strategi & Copy",
                 step1Desc: "Kita dalami model bisnismu buat nentuin alur jualan yang paling 'nge-hook' buat pelanggan.",
-                step2Title: "2. Desain Premium Eksklusif",
+                step2Title: "Desain Premium Eksklusif",
                 step2Desc: "Kita gabungin copy jualan tadi bareng desain responsif yang kerasa mahal dan eksklusif.",
-                step3Title: "3. Launching Kilat, Langsung Close",
+                step3Title: "Launching Kilat, Langsung Close",
                 step3Desc: "Proses develop beres, sistem kenceng banget. Aset digital kamu kelar dan tinggal dipake aja buat dapet sales.",
                 faqTitle: "Yang Sering Ditanyain",
                 faq1Q: "Jenis website apa aja yang \"bisa\" dibikin di sini?",
