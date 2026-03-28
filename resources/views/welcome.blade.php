@@ -30,8 +30,8 @@
     <meta name="keywords" content="jasa pembuatan website, website company profile, landing page, website portofolio, web developer Indonesia, digital agency">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon.svg') }}?v=2">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
