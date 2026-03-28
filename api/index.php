@@ -32,11 +32,10 @@ $_SERVER['APP_EVENTS_CACHE'] = $bootstrapCache . '/events.php';
 $_SERVER['APP_ROUTES_CACHE'] = $bootstrapCache . '/routes-v7.php';
 $_SERVER['APP_CONFIG_CACHE'] = $bootstrapCache . '/config.php';
 
-// Force session and cache to use 'file' driver on Vercel
-// to avoid "readonly database" errors with SQLite.
-$_ENV['SESSION_DRIVER'] = 'file';
+// Use database session driver so sessions persist across serverless invocations.
+$_ENV['SESSION_DRIVER'] = 'database';
 $_ENV['CACHE_DRIVER'] = 'file';
-$_SERVER['SESSION_DRIVER'] = 'file';
+$_SERVER['SESSION_DRIVER'] = 'database';
 $_SERVER['CACHE_DRIVER'] = 'file';
 
 // Forward to public/index.php
