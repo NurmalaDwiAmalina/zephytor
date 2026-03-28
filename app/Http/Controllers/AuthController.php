@@ -29,12 +29,16 @@ class AuthController extends Controller
             return redirect('/login')->with('error', 'Login Google gagal. Silakan coba lagi.');
         }
 
+        $adminEmails = array_map('trim', explode(',', env('ADMIN_EMAIL', '')));
+        $isAdmin = in_array($googleUser->getEmail(), array_filter($adminEmails));
+
         $user = User::updateOrCreate(
             ['google_id' => $googleUser->getId()],
             [
                 'name'   => $googleUser->getName(),
                 'email'  => $googleUser->getEmail(),
                 'avatar' => $googleUser->getAvatar(),
+                'role'   => $isAdmin ? 'admin' : 'user',
             ]
         );
 
