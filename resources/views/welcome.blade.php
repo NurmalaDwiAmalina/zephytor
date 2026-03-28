@@ -68,7 +68,11 @@
                 <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
             </div>
             <div class="nav-pill-sep"></div>
-            <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
+            @auth
+                <a href="/dashboard" class="btn-mulai-pill">Dashboard</a>
+            @else
+                <a href="/login" class="btn-mulai-pill" data-i18n="btnMulai">Masuk</a>
+            @endauth
         </div>
 
         <!-- Mobile Card -->
@@ -421,7 +425,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg1Rev">Garansi 1 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Halo+Zephytor,+saya+tertarik+dengan+Landing+Page+300rb" class="btn btn-outline"
+                    <a href="/dashboard/orders/create?package_id=1" class="btn btn-outline"
                         data-i18n="btnPilih">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 2 -->
@@ -460,7 +464,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg3Rev">Garansi 3 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Halo+Zephytor,+saya+tertarik+dengan+Paket+Premium+3.5jt" class="btn btn-primary"
+                    <a href="/dashboard/orders/create?package_id=2" class="btn btn-primary"
                         data-i18n="btnPilih">Pesan Sekarang</a>
                 </div>
                 <!-- Paket 3 -->
@@ -513,7 +517,7 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg> <span data-i18n="pkg4Rev">Garansi 12 Bulan</span></li>
                     </ul>
-                    <a href="https://wa.me/6285892778882?text=Halo+Zephytor,+saya+ingin+konsultasi+Paket+Enterprise" class="btn btn-outline"
+                    <a href="/dashboard/orders/create?package_id=3" class="btn btn-outline"
                         data-i18n="btnHubungi">Pesan Sekarang</a>
                 </div>
             </div>

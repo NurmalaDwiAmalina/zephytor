@@ -10,16 +10,18 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Create admin user — update email to your Google account
+        User::updateOrCreate(
+            ['email' => 'admin@zephytor.com'],
+            [
+                'name'  => 'Admin Zephytor',
+                'email' => 'admin@zephytor.com',
+                'role'  => 'admin',
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        $this->call(PackageSeeder::class);
     }
 }
