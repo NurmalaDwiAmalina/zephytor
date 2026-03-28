@@ -193,7 +193,6 @@
 <div class="auth-page">
   <div class="auth-card">
     <a href="/" class="auth-logo">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,2 30,28 2,28" fill="currentColor"/></svg>
       <span class="auth-logo-text">Zephytor</span>
     </a>
 
