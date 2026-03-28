@@ -36,8 +36,8 @@
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@@context": "https://schema.org",
+      "@@type": "ProfessionalService",
       "name": "Zephytor",
       "description": "Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.",
       "url": "https://www.zephytor.online/",
