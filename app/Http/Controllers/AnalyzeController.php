@@ -21,9 +21,7 @@ class AnalyzeController extends Controller
         $request->validate(['url' => 'required|url']);
         $url = $request->input('url');
 
-        $thumioKey = config('services.thumio.key');
-        // Step 1: Download screenshot from thum.io first
-        // Note: Using public free pool because THUMIO_KEY is often a placeholder
+        // Step 1: Download screenshot from thum.io
         $screenshotUrlRaw = 'https://image.thum.io/get/wait/5/width/1200/crop/900/' . $url;
         
         try {

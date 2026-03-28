@@ -56,12 +56,6 @@
         <!-- Desktop Pill -->
         <div class="nav-pill-desktop">
             <div class="nav-logo-float"><span>Zephytor</span></div>
-            <a href="#hero" class="active" data-i18n="navInfo">INFO</a>
-            <a href="#hero-checker" data-i18n="navAudit">AUDIT</a>
-            <a href="#hasil-kerja" data-i18n="navLayanan">LAYANAN</a>
-            <a href="#mvp" data-i18n="navMvp">MVP</a>
-            <a href="#harga" data-i18n="navPaket">PAKET</a>
-            <a href="/kontak" data-i18n="navKontak">KONTAK</a>
             <div class="nav-pill-sep"></div>
             <div class="lang-switcher-nav">
                 <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
@@ -71,38 +65,13 @@
             @auth
                 <a href="/dashboard" class="btn-mulai-pill">Dashboard</a>
             @else
-                <a href="/login" class="btn-mulai-pill" data-i18n="btnMulai">Masuk</a>
+                <a href="/login" class="btn-mulai-pill" data-i18n="btnMulai">Login</a>
             @endauth
         </div>
 
         <!-- Mobile Card -->
         <div class="nav-card-mobile">
             <div class="nav-handle"></div>
-            <div class="nav-primary-grid">
-                <a href="#hero" class="nav-item-big active">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                    <span data-i18n="navInfo">INFO</span>
-                </a>
-                <a href="#hero-checker" class="nav-item-big">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <span data-i18n="navAudit">AUDIT</span>
-                </a>
-            </div>
-            
-            <div class="nav-secondary-grid" id="navSecondaryGrid">
-                <a href="#hasil-kerja" class="nav-item-small">
-                    <span data-i18n="navLayanan">LAYANAN</span>
-                </a>
-                <a href="#mvp" class="nav-item-small">
-                    <span data-i18n="navMvp">MVP</span>
-                </a>
-                <a href="#harga" class="nav-item-small">
-                    <span data-i18n="navPaket">PAKET</span>
-                </a>
-                <a href="/kontak" class="nav-item-small">
-                    <span data-i18n="navKontak">KONTAK</span>
-                </a>
-            </div>
             <div class="nav-bottom-row">
                 <div class="nav-bottom-left">
                     <a href="/" class="nav-logo-mini" style="text-decoration: none;"><span>Zephytor</span></a>
@@ -116,7 +85,11 @@
                         <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
                         <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
                     </div>
-                    <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="nav-btn-konsultasi" data-i18n="btnMulai">Konsultasi</a>
+                    @auth
+                        <a href="/dashboard" class="nav-btn-konsultasi">Dashboard</a>
+                    @else
+                        <a href="/login" class="nav-btn-konsultasi">Login</a>
+                    @endauth
                 </div>
             </div>
         </div>

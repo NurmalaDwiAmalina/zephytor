@@ -72,7 +72,15 @@ class OrderController extends Controller
                 'max_tokens' => 1000,
             ]);
 
+            if ($response->failed()) {
+                throw new \Exception('OpenAI request failed: ' . $response->status());
+            }
+
             $sow = json_decode($response->json()['choices'][0]['message']['content'], true);
+
+            if (!$sow) {
+                throw new \Exception('Invalid JSON response from OpenAI.');
+            }
         } catch (\Exception $e) {
             // Fallback scope of work
             $sow = $this->defaultSow($order);
