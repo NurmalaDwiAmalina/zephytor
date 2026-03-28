@@ -47,7 +47,8 @@ class ZephyToolController extends Controller
         $email       = htmlspecialchars($data['contact_email'] ?? '');
         $colorPrimary   = $data['color_primary'] ?? '#000000';
         $colorSecondary = $data['color_secondary'] ?? '#ffffff';
-        $template    = $data['template'];
+        $template       = $data['template'];
+        $companyUrl     = config('company.url');
 
         $serviceItems = array_filter(array_map('trim', explode(',', $services)));
         $serviceHtml = '';
@@ -193,7 +194,7 @@ class ZephyToolController extends Controller
   </div>
 </footer>
 
-<a href="https://zephytor.com" class="generated-badge" target="_blank">⚡ By Zephytor</a>
+<a href="{$companyUrl}" class="generated-badge" target="_blank">⚡ By Zephytor</a>
 </body>
 </html>
 HTML;

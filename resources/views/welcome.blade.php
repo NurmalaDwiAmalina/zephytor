@@ -10,20 +10,20 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.zephytor.online/">
+    <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:title" content="Zephytor — Jasa Pembuatan Website & Digitalisasi Bisnis Premium">
     <meta property="og:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
     <meta property="og:image" content="{{ asset('logo-baru.png') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.zephytor.online/">
+    <meta property="twitter:url" content="{{ config('app.url') }}">
     <meta property="twitter:title" content="Zephytor — Jasa Pembuatan Website & Digitalisasi Bisnis Premium">
     <meta property="twitter:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
     <meta property="twitter:image" content="{{ asset('logo-baru.png') }}">
 
     <!-- SEO -->
-    <link rel="canonical" href="https://www.zephytor.online/">
+    <link rel="canonical" href="{{ config('app.url') }}">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0f172a">
     <meta name="author" content="Zephytor">
@@ -40,7 +40,7 @@
       "@@type": "ProfessionalService",
       "name": "Zephytor",
       "description": "Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.",
-      "url": "https://www.zephytor.online/",
+      "url": "{{ config('app.url') }}",
       "image": "{{ asset('logo-baru.png') }}",
       "priceRange": "$$",
       "areaServed": "Indonesia",
@@ -89,7 +89,7 @@
             @auth
                 <a href="/dashboard" class="btn-mulai-pill">Dashboard</a>
             @else
-                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-konsultasi-pill" target="_blank" data-i18n="btnMulai">Konsultasi</a>
+                <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-konsultasi-pill" target="_blank" data-i18n="btnMulai">Konsultasi</a>
                 <a href="/login" class="btn-mulai-pill">Login</a>
             @endauth
         </div>
@@ -135,7 +135,7 @@
                     Anda. Tanpa modal
                     awal yang besar, dapatkan website premium yang meyakinkan klien.</p>
                 <div class="hero-buttons reveal-delay-4">
-                    <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
+                    <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-lg" data-i18n="heroBtn">Pesan
                         Website Sekarang</a>
                     <a href="#layanan" class="btn btn-outline btn-lg" data-i18n="navLayanan">Lihat Layanan</a>
                 </div>
@@ -317,7 +317,7 @@
             
             <div class="text-center" style="margin-top: 60px;">
                 <p style="font-size: 1.25rem; font-weight: 800; margin-bottom: 24px;" data-i18n="showCtaText">Mau punya tampilan yang se-premium ini juga? 🤫</p>
-                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
+                <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-lg" data-i18n="showBtn">Pilih Paket Kamu Sekarang →</a>
             </div>
         </div>
     </section>
@@ -392,132 +392,41 @@
                 <p data-i18n="hargaDesc">Sesuai dengan skala dan target gol bisnis Anda.</p>
             </div>
             <div class="pricing-grid">
-                <!-- Paket 1 -->
-                <div class="price-card reveal">
-                    <div class="plan-name" data-i18n="pkg1Name">Landing Page</div>
-                    <div class="price-val" data-i18n="pkg1Price">Rp 300rb</div>
-                    <div class="price-desc" data-i18n="pkg1Desc">Cocok untuk sales, personal branding individual, dkk</div>
+                @foreach($packages as $package)
+                <div class="price-card {{ $package->is_popular ? 'popular' : '' }} reveal">
+                    @if($package->badge)
+                        <div class="popular-badge">{{ $package->badge }}</div>
+                    @endif
+                    <div class="plan-name">{{ $package->name }}</div>
+                    @if($package->price)
+                        <div class="price-val">{{ $package->price_display }}</div>
+                        @if($package->description)
+                            <div class="price-desc">{{ $package->description }}</div>
+                        @endif
+                    @else
+                        <div class="price-val price-custom-text" style="font-size: 1.8rem; font-weight: 800; margin: 30px 0; line-height: 1.2; letter-spacing: -1px; min-height: 110px; display: flex; align-items: center; justify-content: center;">{{ $package->description ?? $package->price_display }}</div>
+                    @endif
                     <ul>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
+                        @foreach($package->features as $feature)
+                        <li>
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat1">1 Halaman Responsif (Mobile Friendly)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
+                            </svg>
+                            <span>{{ $feature }}</span>
+                        </li>
+                        @endforeach
+                        @if($package->guarantee)
+                        <li>
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                                 <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat2">Copywriting Persuasif Basic</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat3">Akses Dashboard Pengelolaan</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat4">Integrasi Link Sosmed & Galeri</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Feat5">Gratis Domain .online / .site</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg1Rev">Garansi 1 Bulan</span></li>
+                            </svg>
+                            <span>{{ $package->guarantee }}</span>
+                        </li>
+                        @endif
                     </ul>
-                    <a href="/dashboard/orders/create?package_id=1" class="btn btn-outline"
-                        data-i18n="btnPilih">Pesan Sekarang</a>
+                    <a href="/dashboard/orders/create?package_id={{ $package->id }}" class="btn {{ $package->is_popular ? 'btn-primary' : 'btn-outline' }}">Pesan Sekarang</a>
                 </div>
-                <!-- Paket 2 -->
-                <div class="price-card popular reveal">
-                    <div class="popular-badge" data-i18n="pkgBest">TERLARIS</div>
-                    <div class="plan-name" data-i18n="pkg3Name">Paket Premium</div>
-                    <div class="price-val" data-i18n="pkg3Price">Rp 3.5jt</div>
-                    <div class="price-desc" data-i18n="pkg3Desc">Cocok untuk sales top achiever & bisnis umkm</div>
-                    <ul>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat1">5 Halaman Premium (Home, About, etc)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat2">Premium Sales Driven Copywriting</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat3">3 Email Bisnis Terintegrasi</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat4">Full SEO Optimized (Ready to Rank)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat5">Video Tutorial Panduan Admin</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Feat6">Gratis Domain .com, .co.id, .id</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg3Rev">Garansi 3 Bulan</span></li>
-                    </ul>
-                    <a href="/dashboard/orders/create?package_id=2" class="btn btn-primary"
-                        data-i18n="btnPilih">Pesan Sekarang</a>
-                </div>
-                <!-- Paket 3 -->
-                <div class="price-card reveal">
-                    <div class="plan-name" data-i18n="pkg4Name">Paket Enterprise</div>
-                    <div class="price-val price-custom-text" style="font-size: 1.8rem; font-weight: 800; margin: 30px 0; line-height: 1.2; letter-spacing: -1px; min-height: 110px; display: flex; align-items: center; justify-content: center;" data-i18n="pkg4Desc">Harga Menyesuaikan Kebutuhan</div>
-                    <ul>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat1">Unlimited Halaman (Custom)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat2">Desain Eksklusif UI/UX Mandiri</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat3">Fitur Custom (CMS / Filter / Database)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat4">Integrasi API / Payment Gateway (Syarat NIB/Legalitas)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat5">Jaminan PageSpeed 90+ Score</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat6">Premium Sales Driven Copywriting</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat7">Email Bisnis Terintegrasi</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat8">Full SEO Optimized (Ready to Rank)</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat9">Video Tutorial Panduan Admin</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Feat10">Gratis Domain .com, .co.id, .id</span></li>
-                        <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg> <span data-i18n="pkg4Rev">Garansi 12 Bulan</span></li>
-                    </ul>
-                    <a href="/dashboard/orders/create?package_id=3" class="btn btn-outline"
-                        data-i18n="btnHubungi">Pesan Sekarang</a>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -768,7 +677,7 @@
                 <p data-i18n="ctaDesc" style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px;">Hubungi kami
                     sekarang untuk mendapatkan website premium dengan penawaran terbaik.
                 </p>
-                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
+                <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-white btn-lg cta-btn-fix" data-i18n="ctaBtn">Chat WhatsApp Sekarang</a>
             </div>
         </div>
     </div>
@@ -798,16 +707,16 @@
                     <h4 data-i18n="foot2Title">Dukungan</h4>
                     <ul>
                         <li><a href="/kontak" data-i18n="navKontak">Kontak Kami</a></li>
-                        <li><a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
-                        <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
+                        <li><a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
+                        <li><a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 data-i18n="foot3Title">Sosial Media</h4>
                     <ul>
-                        <li><a href="https://www.instagram.com/zephytor?igsh=cHBjNXJzMXcyeHln" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.tiktok.com/@zephytor?_r=1&_t=ZS-94nTYfDMvXV" target="_blank">TikTok</a></li>
-                        <li><a href="https://www.facebook.com/share/1CVboN13Nm/" target="_blank">Facebook</a></li>
+                        <li><a href="{{ config('company.instagram') }}" target="_blank">Instagram</a></li>
+                        <li><a href="{{ config('company.tiktok') }}" target="_blank">TikTok</a></li>
+                        <li><a href="{{ config('company.facebook') }}" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
             </div>

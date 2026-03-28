@@ -197,7 +197,7 @@
                         <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42m12.72-12.72l1.42-1.42" />
                     </svg>
                 </button>
-                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-sm">Konsultasi Gratis</a>
+                <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn btn-primary btn-sm">Konsultasi Gratis</a>
             </div>
         </div>
     </div>
@@ -219,7 +219,7 @@
                 <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
             </div>
             <div class="nav-pill-sep"></div>
-            <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
+            <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-mulai-pill" data-i18n="btnMulai">Konsultasi</a>
         </div>
 
         <!-- Mobile Card -->
@@ -264,7 +264,7 @@
                         <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
                         <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
                     </div>
-                    <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="nav-btn-konsultasi">Konsultasi</a>
+                    <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="nav-btn-konsultasi">Konsultasi</a>
                 </div>
             </div>
         </div>
@@ -284,12 +284,12 @@
                 <div class="contact-info-card">
                     <div class="info-item">
                         <h4>Email Resmi</h4>
-                        <a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a>
+                        <a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a>
                     </div>
 
                     <div class="info-item">
                         <h4>WhatsApp</h4>
-                        <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website.">+62 858-9277-8882</a>
+                        <a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website.">{{ config('company.phone_display') }}</a>
                     </div>
 
 
@@ -357,16 +357,16 @@
                     <h4>Dukungan</h4>
                     <ul>
                         <li><a href="/kontak">Kontak Kami</a></li>
-                        <li><a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website.">Konsultasi Gratis</a></li>
-                        <li><a href="mailto:zephytor@gmail.com">zephytor@gmail.com</a></li>
+                        <li><a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website.">Konsultasi Gratis</a></li>
+                        <li><a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Sosial Media</h4>
                     <ul>
-                        <li><a href="https://www.instagram.com/zephytor?igsh=cHBjNXJzMXcyeHln" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.tiktok.com/@zephytor?_r=1&_t=ZS-94nTYfDMvXV" target="_blank">TikTok</a></li>
-                        <li><a href="https://www.facebook.com/share/1CVboN13Nm/" target="_blank">Facebook</a></li>
+                        <li><a href="{{ config('company.instagram') }}" target="_blank">Instagram</a></li>
+                        <li><a href="{{ config('company.tiktok') }}" target="_blank">TikTok</a></li>
+                        <li><a href="{{ config('company.facebook') }}" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
             </div>

@@ -12,12 +12,12 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        // Create admin user — update email to your Google account
+        // Create admin user — set ADMIN_SEEDER_EMAIL and ADMIN_SEEDER_NAME in .env
         User::updateOrCreate(
-            ['email' => 'admin@zephytor.com'],
+            ['email' => config('company.admin_email')],
             [
-                'name'  => 'Admin Zephytor',
-                'email' => 'admin@zephytor.com',
+                'name'  => config('company.admin_name'),
+                'email' => config('company.admin_email'),
                 'role'  => 'admin',
             ]
         );

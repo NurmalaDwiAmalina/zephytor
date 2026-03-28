@@ -9,7 +9,8 @@ use App\Http\Controllers\Admin;
 
 // ── Public routes ────────────────────────────────────────
 Route::get('/', function () {
-    return view('welcome');
+    $packages = \App\Models\Package::where('is_active', true)->orderBy('sort_order')->get();
+    return view('welcome', compact('packages'));
 });
 
 Route::get('/analyze', [AnalyzeController::class, 'index']);

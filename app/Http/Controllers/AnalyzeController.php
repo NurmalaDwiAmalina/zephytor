@@ -22,15 +22,15 @@ class AnalyzeController extends Controller
         $url = $request->input('url');
 
         // Step 1: Download screenshot from thum.io
-        $screenshotUrlRaw = 'https://image.thum.io/get/wait/5/width/1200/crop/900/' . $url;
-        
+        $screenshotUrlRaw = config('services.thumio.url_primary') . $url;
+
         try {
             $imageResponse = Http::timeout(90)->get($screenshotUrlRaw);
-            
+
             // Check if the image is too small (might be an error image or placeholder from thum.io)
             if ($imageResponse->successful() && strlen($imageResponse->body()) < 15000) {
                  // Try a different thum.io variant as a fallback
-                 $screenshotUrlRaw = 'https://image.thum.io/get/width/1200/' . $url;
+                 $screenshotUrlRaw = config('services.thumio.url_fallback') . $url;
                  $imageResponse = Http::timeout(60)->get($screenshotUrlRaw);
             }
 
@@ -59,9 +59,9 @@ class AnalyzeController extends Controller
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . $apiKey,
             'Content-Type'  => 'application/json',
-        ])->timeout(120)->post('https://api.openai.com/v1/chat/completions', [
-            'model'           => 'gpt-4o',
-            'max_tokens'      => 2000,
+        ])->timeout(120)->post(config('services.openai.url'), [
+            'model'           => config('services.openai.model'),
+            'max_tokens'      => (int) config('services.openai.max_tokens_analyze'),
             'response_format' => ['type' => 'json_object'],
             'messages'        => [
                 [

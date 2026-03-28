@@ -36,11 +36,17 @@ return [
     ],
 
     'openai' => [
-        'key' => env('OPENAI_API_KEY'),
+        'key'              => env('OPENAI_API_KEY'),
+        'url'              => env('OPENAI_API_URL', 'https://api.openai.com/v1/chat/completions'),
+        'model'            => env('OPENAI_MODEL', 'gpt-4o'),
+        'max_tokens_analyze' => env('OPENAI_MAX_TOKENS_ANALYZE', 2000),
+        'max_tokens_sow'     => env('OPENAI_MAX_TOKENS_SOW', 1000),
     ],
 
     'thumio' => [
-        'key' => env('THUMIO_KEY'),
+        'key'          => env('THUMIO_KEY'),
+        'url_primary'  => env('THUMIO_URL_PRIMARY', 'https://image.thum.io/get/wait/5/width/1200/crop/900/'),
+        'url_fallback' => env('THUMIO_URL_FALLBACK', 'https://image.thum.io/get/width/1200/'),
     ],
 
     'google' => [

@@ -10,6 +10,8 @@ class PackageSeeder extends Seeder
 {
     public function run(): void
     {
+        $phone = config('company.phone_wa');
+
         $packages = [
             [
                 'name'          => 'Landing Page',
@@ -26,7 +28,7 @@ class PackageSeeder extends Seeder
                     'Gratis Domain .online / .site',
                 ],
                 'guarantee'     => 'Garansi 1 Bulan',
-                'wa_link'       => 'https://wa.me/6285892778882?text=Halo+Zephytor,+saya+tertarik+dengan+Paket+Landing+Page',
+                'wa_link'       => "https://wa.me/{$phone}?text=Halo+Zephytor,+saya+tertarik+dengan+Paket+Landing+Page",
                 'is_popular'    => false,
                 'is_active'     => true,
                 'sort_order'    => 1,
@@ -47,7 +49,7 @@ class PackageSeeder extends Seeder
                     'Gratis Domain .com, .co.id, .id',
                 ],
                 'guarantee'     => 'Garansi 3 Bulan',
-                'wa_link'       => 'https://wa.me/6285892778882?text=Halo+Zephytor,+saya+tertarik+dengan+Paket+Premium+3.5jt',
+                'wa_link'       => "https://wa.me/{$phone}?text=Halo+Zephytor,+saya+tertarik+dengan+Paket+Premium+3.5jt",
                 'is_popular'    => true,
                 'is_active'     => true,
                 'sort_order'    => 2,
@@ -72,7 +74,7 @@ class PackageSeeder extends Seeder
                     'Gratis Domain .com, .co.id, .id',
                 ],
                 'guarantee'     => 'Garansi 12 Bulan',
-                'wa_link'       => 'https://wa.me/6285892778882?text=Halo+Zephytor,+saya+ingin+konsultasi+Paket+Enterprise',
+                'wa_link'       => "https://wa.me/{$phone}?text=Halo+Zephytor,+saya+ingin+konsultasi+Paket+Enterprise",
                 'is_popular'    => false,
                 'is_active'     => true,
                 'sort_order'    => 3,

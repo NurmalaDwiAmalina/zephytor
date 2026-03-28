@@ -62,14 +62,14 @@ class OrderController extends Controller
             . "Format sebagai JSON dengan keys: description, deliverables (array), timeline, exclusions (array), revision_policy";
 
         try {
-            $response = Http::withToken($apiKey)->post('https://api.openai.com/v1/chat/completions', [
-                'model' => 'gpt-4o',
+            $response = Http::withToken($apiKey)->post(config('services.openai.url'), [
+                'model' => config('services.openai.model'),
                 'messages' => [
                     ['role' => 'system', 'content' => 'Kamu adalah konsultan proyek website profesional. Selalu jawab dalam format JSON valid.'],
                     ['role' => 'user', 'content' => $prompt],
                 ],
                 'response_format' => ['type' => 'json_object'],
-                'max_tokens' => 1000,
+                'max_tokens' => (int) config('services.openai.max_tokens_sow'),
             ]);
 
             if ($response->failed()) {
