@@ -81,7 +81,6 @@
         <!-- Desktop Pill -->
         <div class="nav-pill-desktop">
             <div class="nav-logo-float"><span>Zephytor</span></div>
-            <div class="nav-pill-sep"></div>
             <div class="lang-switcher-nav">
                 <button class="lang-btn-nav active" onclick="setLanguage('id')">ID</button>
                 <button class="lang-btn-nav" onclick="setLanguage('en')">EN</button>
@@ -90,7 +89,8 @@
             @auth
                 <a href="/dashboard" class="btn-mulai-pill">Dashboard</a>
             @else
-                <a href="/login" class="btn-mulai-pill" data-i18n="btnMulai">Login</a>
+                <a href="https://wa.me/6285892778882?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." class="btn-konsultasi-pill" target="_blank" data-i18n="btnMulai">Konsultasi</a>
+                <a href="/login" class="btn-mulai-pill">Login</a>
             @endauth
         </div>
 
