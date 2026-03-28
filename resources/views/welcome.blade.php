@@ -22,10 +22,35 @@
     <meta property="twitter:description" content="Bangun kehadiran digital profesional dalam 48 jam. Jasa pembuatan website Modern, Cepat, dan Berkelas untuk bisnis Anda.">
     <meta property="twitter:image" content="{{ asset('logo-baru.png') }}">
 
+    <!-- SEO -->
+    <link rel="canonical" href="https://www.zephytor.online/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="author" content="Zephytor">
+    <meta name="keywords" content="jasa pembuatan website, website company profile, landing page, website portofolio, web developer Indonesia, digital agency">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon.svg') }}">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Zephytor",
+      "description": "Jasa pembuatan website Company Profile, Portofolio, dan Landing Page dengan desain eksklusif.",
+      "url": "https://www.zephytor.online/",
+      "image": "{{ asset('logo-baru.png') }}",
+      "priceRange": "$$",
+      "areaServed": "Indonesia",
+      "serviceType": ["Website Development", "Company Profile", "Landing Page", "Portfolio Website"]
+    }
+    </script>
+
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v={{ time() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 </head>
 
 <body data-spy="scroll" data-target="#floatingNav" data-offset="100">
