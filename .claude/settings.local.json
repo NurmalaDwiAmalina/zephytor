@@ -8,7 +8,8 @@
       "Bash(php artisan:*)",
       "Bash(/usr/bin/php artisan:*)",
       "Read(//opt/homebrew/bin/**)",
-      "Read(//usr/local/bin/**)"
+      "Read(//usr/local/bin/**)",
+      "Bash(git push:*)"
     ]
   }
 }
