@@ -20,8 +20,7 @@
   <aside class="dash-sidebar" id="sidebar">
     <div class="sidebar-logo">
       <a href="/admin" class="logo-link">
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,2 30,28 2,28" fill="currentColor"/></svg>
-        <span>Admin</span>
+        <span>Zephytor</span>
       </a>
       <span class="admin-badge">ADMIN</span>
     </div>
