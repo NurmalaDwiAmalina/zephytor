@@ -51,6 +51,38 @@
         </div>
 
         <div class="form-group">
+          <label class="form-label" for="customer_name">Nama Lengkap <span style="color:#ef4444">*</span></label>
+          <input
+            type="text"
+            id="customer_name"
+            name="customer_name"
+            class="form-control"
+            value="{{ old('customer_name', Auth::user()->name) }}"
+            placeholder="Nama kamu"
+            required
+          >
+          @error('customer_name')
+            <span class="form-error">{{ $message }}</span>
+          @enderror
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phone">Nomor WhatsApp <span style="color:#ef4444">*</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="form-control"
+            value="{{ old('phone') }}"
+            placeholder="Contoh: 08123456789"
+            required
+          >
+          @error('phone')
+            <span class="form-error">{{ $message }}</span>
+          @enderror
+        </div>
+
+        <div class="form-group">
           <label class="form-label" for="notes">Catatan / Kebutuhan Khusus</label>
           <textarea
             id="notes"

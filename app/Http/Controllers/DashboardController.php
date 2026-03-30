@@ -43,20 +43,24 @@ class DashboardController extends Controller
     public function storeOrder(Request $request)
     {
         $request->validate([
-            'package_id' => 'required|exists:packages,id',
-            'notes' => 'nullable|string|max:1000',
+            'package_id'    => 'required|exists:packages,id',
+            'customer_name' => 'required|string|max:255',
+            'phone'         => 'required|string|max:20',
+            'notes'         => 'nullable|string|max:1000',
         ]);
 
         $package = Package::findOrFail($request->package_id);
         $user = Auth::user();
 
         $order = Order::create([
-            'order_number' => 'ORD-' . strtoupper(uniqid()),
-            'user_id'      => $user->id,
-            'package_id'   => $package->id,
-            'status'       => 'pending',
-            'total_price'  => $package->price,
-            'notes'        => $request->notes,
+            'order_number'  => 'ORD-' . strtoupper(uniqid()),
+            'user_id'       => $user->id,
+            'customer_name' => $request->customer_name,
+            'phone'         => $request->phone,
+            'package_id'    => $package->id,
+            'status'        => 'pending',
+            'total_price'   => $package->price,
+            'notes'         => $request->notes,
         ]);
 
         return redirect('/dashboard/orders')->with('success', 'Order berhasil dibuat! Tim kami akan segera menghubungi Anda.');

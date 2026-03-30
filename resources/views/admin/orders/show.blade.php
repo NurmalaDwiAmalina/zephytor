@@ -25,12 +25,20 @@
         <div class="panel-title" style="margin-bottom:16px">Informasi User</div>
         <div class="detail-row">
           <span>Nama</span>
-          <strong>{{ $order->user->name }}</strong>
+          <strong>{{ $order->customer_name ?? $order->user->name }}</strong>
         </div>
         <div class="detail-row">
           <span>Email</span>
           <span>{{ $order->user->email }}</span>
         </div>
+        @if($order->phone)
+        <div class="detail-row">
+          <span>WhatsApp</span>
+          <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', preg_replace('/^0/', '62', $order->phone)) }}?text=Halo%20{{ urlencode($order->customer_name ?? $order->user->name) }},%20saya%20dari%20tim%20Zephytor%20ingin%20menindaklanjuti%20pesanan%20{{ $order->order_number }}." target="_blank" style="color:#25d366;font-weight:700;">
+            {{ $order->phone }} →
+          </a>
+        </div>
+        @endif
         <div class="detail-row">
           <span>Tanggal Order</span>
           <span>{{ $order->created_at->format('d M Y, H:i') }}</span>
