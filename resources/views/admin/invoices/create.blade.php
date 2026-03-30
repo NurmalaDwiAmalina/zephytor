@@ -27,10 +27,10 @@
             @foreach($orders as $order)
               <option value="{{ $order->id }}"
                 data-price="{{ $order->total_price ?? $order->package->price ?? '' }}"
-                data-user="{{ $order->user->name }}"
+                data-user="{{ $order->customer_name ?? $order->user->name }}"
                 data-package="{{ $order->package->name }}"
                 {{ (isset($selectedOrder) && $selectedOrder->id == $order->id) || old('order_id') == $order->id ? 'selected' : '' }}>
-                {{ $order->order_number }} — {{ $order->user->name }} ({{ $order->package->name }})
+                {{ $order->order_number }} — {{ $order->customer_name ?? $order->user->name }} ({{ $order->package->name }})
               </option>
             @endforeach
           </select>
@@ -40,7 +40,7 @@
         <div class="inv-preview-card" id="orderPreview" style="{{ isset($selectedOrder) ? '' : 'display:none' }}">
           <div class="inv-preview-row">
             <span>Klien</span>
-            <strong id="prevUser">{{ $selectedOrder->user->name ?? '' }}</strong>
+            <strong id="prevUser">{{ $selectedOrder->customer_name ?? $selectedOrder->user->name ?? '' }}</strong>
           </div>
           <div class="inv-preview-row">
             <span>Paket</span>
