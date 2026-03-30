@@ -21,6 +21,9 @@ $app = Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->render(function (\Throwable $e) {
+            if ($e instanceof \Illuminate\Auth\AuthenticationException) {
+                return null;
+            }
             echo "<h1>LARAVEL DIAGNOSTIC ERROR:</h1>";
             echo "<p><strong>Message:</strong> " . $e->getMessage() . "</p>";
             echo "<p><strong>File:</strong> " . $e->getFile() . " on line " . $e->getLine() . "</p>";
