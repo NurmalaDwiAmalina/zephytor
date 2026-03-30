@@ -40,12 +40,12 @@
           <td><span class="code-text">{{ $order->order_number }}</span></td>
           <td>
             <div class="user-cell">
-              @if($order->user->avatar)
+              @if($order->user_id && $order->user->avatar)
                 <img src="{{ $order->user->avatar }}" class="user-mini-avatar">
               @endif
               <div>
-                <div class="user-cell-name">{{ $order->user->name }}</div>
-                <div class="user-cell-email">{{ $order->user->email }}</div>
+                <div class="user-cell-name">{{ $order->customer_name ?? $order->user->name }}</div>
+                <div class="user-cell-email">{{ $order->user_id ? $order->user->email : $order->phone }}</div>
               </div>
             </div>
           </td>

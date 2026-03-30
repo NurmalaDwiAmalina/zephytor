@@ -19,7 +19,10 @@ class Order extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withDefault([
+            'name'  => $this->customer_name ?? 'Klien',
+            'email' => '-',
+        ]);
     }
 
     public function package()

@@ -62,8 +62,8 @@
         </div>
         <div class="inv-party">
           <div class="inv-party-label">Kepada</div>
-          <div class="inv-party-name">{{ $invoice->user->name }}</div>
-          <div class="inv-party-sub">{{ $invoice->user->email }}</div>
+          <div class="inv-party-name">{{ $invoice->order->customer_name ?? $invoice->user->name }}</div>
+          <div class="inv-party-sub">{{ $invoice->user->email ?? '-' }}</div>
         </div>
       </div>
 

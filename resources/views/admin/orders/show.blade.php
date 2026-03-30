@@ -22,27 +22,52 @@
     <div>
       <!-- User info -->
       <div class="dash-panel">
-        <div class="panel-title" style="margin-bottom:16px">Informasi User</div>
-        <div class="detail-row">
-          <span>Nama</span>
-          <strong>{{ $order->customer_name ?? $order->user->name }}</strong>
+        <div class="panel-header">
+          <div class="panel-title">Informasi Klien</div>
+          @if(!$order->user_id)
+            <span style="font-size:0.75rem;background:#f59e0b22;color:#b45309;padding:2px 10px;border-radius:20px;font-weight:600;">Belum punya akun</span>
+          @endif
         </div>
-        <div class="detail-row">
-          <span>Email</span>
-          <span>{{ $order->user->email }}</span>
+        <div style="margin-top:16px;">
+          <div class="detail-row">
+            <span>Nama</span>
+            <strong>{{ $order->customer_name ?? $order->user->name }}</strong>
+          </div>
+          @if($order->phone)
+          <div class="detail-row">
+            <span>WhatsApp</span>
+            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', preg_replace('/^0/', '62', $order->phone)) }}?text=Halo%20{{ urlencode($order->customer_name ?? $order->user->name) }},%20saya%20dari%20tim%20Zephytor%20ingin%20menindaklanjuti%20pesanan%20{{ $order->order_number }}." target="_blank" style="color:#25d366;font-weight:700;">
+              {{ $order->phone }} →
+            </a>
+          </div>
+          @endif
+          @if($order->user_id)
+          <div class="detail-row">
+            <span>Email</span>
+            <span>{{ $order->user->email }}</span>
+          </div>
+          @endif
+          <div class="detail-row">
+            <span>Tanggal Order</span>
+            <span>{{ $order->created_at->format('d M Y, H:i') }}</span>
+          </div>
         </div>
-        @if($order->phone)
-        <div class="detail-row">
-          <span>WhatsApp</span>
-          <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', preg_replace('/^0/', '62', $order->phone)) }}?text=Halo%20{{ urlencode($order->customer_name ?? $order->user->name) }},%20saya%20dari%20tim%20Zephytor%20ingin%20menindaklanjuti%20pesanan%20{{ $order->order_number }}." target="_blank" style="color:#25d366;font-weight:700;">
-            {{ $order->phone }} →
-          </a>
+
+        @if(!$order->user_id)
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+          <div style="font-size:0.8rem;font-weight:600;color:var(--text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;">Link ke Akun</div>
+          <form action="/admin/orders/{{ $order->id }}/link-user" method="POST" style="display:flex;gap:8px;">
+            @csrf
+            <select name="user_id" class="form-control" style="flex:1;font-size:0.875rem;" required>
+              <option value="">— Pilih akun klien —</option>
+              @foreach(\App\Models\User::where('role','user')->orderBy('name')->get() as $u)
+                <option value="{{ $u->id }}">{{ $u->name }} ({{ $u->email }})</option>
+              @endforeach
+            </select>
+            <button type="submit" class="btn btn-sm btn-outline">Link</button>
+          </form>
         </div>
         @endif
-        <div class="detail-row">
-          <span>Tanggal Order</span>
-          <span>{{ $order->created_at->format('d M Y, H:i') }}</span>
-        </div>
       </div>
 
       <!-- Package info -->

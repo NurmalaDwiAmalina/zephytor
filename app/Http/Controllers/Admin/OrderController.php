@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Package;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class OrderController extends Controller
@@ -40,22 +41,9 @@ class OrderController extends Controller
             'notes'         => 'nullable|string|max:2000',
         ]);
 
-        // Jika tidak ada akun, buat akun otomatis dari nama + nomor HP
-        if ($request->user_id) {
-            $userId = $request->user_id;
-        } else {
-            $phone = preg_replace('/[^0-9]/', '', $request->phone);
-            $email = "manual_{$phone}@zephytor.local";
-            $user = User::firstOrCreate(
-                ['email' => $email],
-                ['name' => $request->customer_name, 'role' => 'user']
-            );
-            $userId = $user->id;
-        }
-
         $order = Order::create([
             'order_number'  => 'ORD-' . strtoupper(uniqid()),
-            'user_id'       => $userId,
+            'user_id'       => $request->user_id ?: null,
             'customer_name' => $request->customer_name,
             'phone'         => $request->phone,
             'package_id'    => $request->package_id,
@@ -65,6 +53,13 @@ class OrderController extends Controller
         ]);
 
         return redirect("/admin/orders/{$order->id}")->with('success', 'Pesanan manual berhasil dibuat.');
+    }
+
+    public function linkUser(Request $request, Order $order)
+    {
+        $request->validate(['user_id' => 'required|exists:users,id']);
+        $order->update(['user_id' => $request->user_id]);
+        return redirect()->back()->with('success', 'Akun berhasil dihubungkan ke pesanan ini.');
     }
 
     public function show(Order $order)

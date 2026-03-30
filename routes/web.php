@@ -55,6 +55,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::put('/orders/{order}', [Admin\OrderController::class, 'update']);
     Route::post('/orders/{order}/generate-sow', [Admin\OrderController::class, 'generateSow']);
     Route::post('/orders/{order}/agreement', [Admin\OrderController::class, 'storeAgreement']);
+    Route::post('/orders/{order}/link-user', [Admin\OrderController::class, 'linkUser']);
 
     Route::get('/invoices', [Admin\InvoiceController::class, 'index']);
     Route::get('/invoices/create', [Admin\InvoiceController::class, 'create']);
