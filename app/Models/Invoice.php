@@ -23,7 +23,10 @@ class Invoice extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withDefault([
+            'name'  => $this->order->customer_name ?? 'Klien',
+            'email' => '-',
+        ]);
     }
 
     public function getStatusLabelAttribute(): string
