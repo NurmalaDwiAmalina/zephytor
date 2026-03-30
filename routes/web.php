@@ -20,6 +20,10 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
+Route::get('/syarat-ketentuan', function () {
+    return view('syarat-ketentuan');
+});
+
 // ── Auth routes ──────────────────────────────────────────
 Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
 Route::get('/auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');

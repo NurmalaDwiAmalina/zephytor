@@ -101,6 +101,16 @@
           Setelah order dibuat, tim kami akan menghubungi kamu via WhatsApp/email untuk proses selanjutnya.
         </div>
 
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:0.9rem; line-height:1.5;">
+            <input type="checkbox" name="agree_tnc" id="agree_tnc" required style="margin-top:3px; flex-shrink:0; cursor:pointer;">
+            <span>Saya telah membaca dan menyetujui <a href="/syarat-ketentuan" target="_blank" style="color:var(--text-h);font-weight:700;text-decoration:underline;">Syarat &amp; Ketentuan</a> layanan Zephytor.</span>
+          </label>
+          @error('agree_tnc')
+            <span class="form-error">{{ $message }}</span>
+          @enderror
+        </div>
+
         <button type="submit" class="btn btn-primary btn-full">Kirim Pesanan Sekarang →</button>
       </form>
     </div>

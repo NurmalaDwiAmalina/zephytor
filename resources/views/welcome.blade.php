@@ -709,6 +709,7 @@
                         <li><a href="/kontak" data-i18n="navKontak">Kontak Kami</a></li>
                         <li><a href="https://wa.me/{{ config('company.phone_wa') }}?text=Halo%20Zephytor,%20saya%20mau%20tanya-tanya%20nih%20seputar%20pembuatan%20website." data-i18n="btnKonsultasi">Konsultasi Gratis</a></li>
                         <li><a href="mailto:{{ config('company.email') }}">{{ config('company.email') }}</a></li>
+                        <li><a href="/syarat-ketentuan">Syarat &amp; Ketentuan</a></li>
                     </ul>
                 </div>
                 <div>
