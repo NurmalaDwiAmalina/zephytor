@@ -110,6 +110,38 @@
       </div>
     </div>
 
+    <!-- S&K — hanya muncul saat download PDF -->
+    <div class="snk-pdf">
+      <div class="snk-pdf-header">
+        <div class="snk-pdf-title">SYARAT &amp; KETENTUAN LAYANAN</div>
+        <div class="snk-pdf-sub">Zephytor — Website Premium untuk Bisnis Indonesia</div>
+        <div class="snk-pdf-ver">Versi 1.1 &nbsp;·&nbsp; Berlaku: Januari 2025 &nbsp;·&nbsp; Revisi: Maret 2025</div>
+      </div>
+      <p class="snk-pdf-lead">Dengan melakukan pembayaran DP atau menyatakan persetujuan, Klien dianggap telah membaca, memahami, dan menyetujui seluruh isi Syarat &amp; Ketentuan ini.</p>
+      <div class="snk-pdf-cols">
+        <div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">1. Definisi</div><ul><li><b>"Penyedia Jasa"</b> = Zephytor beserta seluruh tim dan afiliasinya.</li><li><b>"Klien"</b> = individu, UMKM, atau entitas yang menggunakan layanan Zephytor.</li><li><b>"Proyek"</b> = keseluruhan pekerjaan yang disepakati dalam satu sesi kerja sama.</li><li><b>"Revisi"</b> = perubahan desain atau konten yang diminta Klien selama masa pengerjaan.</li><li><b>"Go-Live"</b> = tanggal website resmi dipublikasikan ke publik.</li><li><b>"Masa Garansi"</b> = periode purna jual sesuai paket, dihitung sejak tanggal Go-Live.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">3. Pembayaran</div><ul><li>DP 50% wajib dibayar sebelum pengerjaan dimulai.</li><li>Pelunasan 50% dibayar setelah Klien menyetujui hasil akhir, sebelum Go-Live.</li><li>Metode: Transfer BCA, QRIS, GoPay, OVO, Dana.</li><li>Konfirmasi transfer via WhatsApp beserta bukti bayar.</li><li>Invoice resmi diterbitkan dalam 1×24 jam setelah konfirmasi pembayaran masuk.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">4. Revisi &amp; Perubahan</div><ul><li>Revisi unlimited berlaku selama masa pengerjaan hingga sebelum Go-Live.</li><li>Revisi disampaikan via WhatsApp atau email resmi.</li><li>Perubahan total konsep setelah desain disetujui dapat dikenakan biaya tambahan.</li><li>Setelah Go-Live, revisi ditangani dalam Masa Garansi.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">5. Hak Kepemilikan &amp; HAKI</div><ul><li>Seluruh aset jadi hak milik penuh Klien setelah pelunasan 100%.</li><li>Sebelum pelunasan, aset tetap milik Zephytor.</li><li>Zephytor berhak menampilkan hasil kerja sebagai portofolio kecuali ada NDA tertulis.</li><li>Klien menjamin konten bebas dari pelanggaran hak cipta pihak ketiga.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">6. Konten &amp; Materi</div><ul><li>Klien menyediakan materi (teks, foto, logo, video) dalam format siap pakai.</li><li>Keterlambatan materi dari Klien tidak memengaruhi tenggat Penyedia Jasa.</li><li>Jika materi tidak dikirim, Zephytor dapat pakai placeholder bebas royalti.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">10. Kerahasiaan</div><ul><li>Informasi bisnis Klien tidak dibagikan ke pihak ketiga tanpa persetujuan tertulis.</li><li>Klien dapat meminta NDA terpisah sebelum proyek dimulai.</li><li>Kewajiban kerahasiaan berlaku selama 3 tahun setelah kerja sama berakhir.</li></ul></div>
+        </div>
+        <div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">2. Paket &amp; Harga</div><table class="snk-pdf-table"><thead><tr><th>Paket</th><th>Harga</th><th>Garansi</th></tr></thead><tbody><tr><td><b>Landing Page</b></td><td>Rp 300.000</td><td>1 Bulan</td></tr><tr><td><b>Premium</b></td><td>Rp 3.500.000</td><td>3 Bulan</td></tr><tr><td><b>Enterprise</b></td><td>Custom</td><td>12 Bulan</td></tr></tbody></table><p style="font-size:0.75rem;margin-top:6px;">Harga berlaku 7 hari kalender sejak tanggal penerbitan.</p></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">7. Masa Garansi</div><ul><li>Garansi mencakup perbaikan bug teknis dan masalah tampilan bukan akibat tindakan Klien.</li><li>Tidak berlaku untuk perubahan yang dilakukan sendiri oleh Klien atau pihak ketiga.</li><li>Klaim via WhatsApp disertai deskripsi masalah dan tangkapan layar.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">8. Pembatalan Proyek</div><ul><li>Batal sebelum pengerjaan: DP dikembalikan dikurangi biaya administrasi 10%.</li><li>Batal setelah pengerjaan dimulai: DP hangus.</li><li>Batal dari Penyedia Jasa karena force majeure: DP dikembalikan penuh dalam 3–5 hari kerja.</li><li>Semua pembatalan harus dikonfirmasi tertulis via WhatsApp atau email.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">9. Payment Gateway (Enterprise)</div><ul><li>Hanya untuk Paket Enterprise. Klien wajib memiliki NIB/SIUP yang masih berlaku.</li><li>Proses verifikasi sepenuhnya di luar kendali Zephytor.</li><li>Biaya transaksi (MDR) adalah tanggung jawab Klien.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">11. Batasan Tanggung Jawab</div><ul><li>Zephytor tidak bertanggung jawab atas kerugian bisnis atau kehilangan pendapatan Klien.</li><li>Tanggung jawab maksimum terbatas pada nilai total proyek yang telah dibayarkan.</li><li>Zephytor tidak menjamin hasil bisnis tertentu dari penggunaan website.</li></ul></div>
+          <div class="snk-pdf-section"><div class="snk-pdf-h">12. Penyelesaian Sengketa</div><ul><li>Sengketa diselesaikan melalui musyawarah mufakat dalam 14 hari kalender.</li><li>Jika tidak tercapai kesepakatan, melalui mediasi atau arbitrase yang disepakati bersama.</li><li>Perjanjian ini tunduk pada hukum Republik Indonesia.</li></ul></div>
+        </div>
+      </div>
+      <div class="snk-pdf-footer">
+        <b>13. Ketentuan Penutup:</b> Dengan memulai kerja sama, Klien menyatakan telah membaca, memahami, dan menyetujui seluruh isi dokumen ini.<br>
+        <b>ZEPHYTOR</b> &nbsp;·&nbsp; zephytor.online &nbsp;·&nbsp; zephytor@gmail.com &nbsp;·&nbsp; +62 858-9277-8882 (WhatsApp)
+      </div>
+    </div>
+
   </div><!-- #invoice-printable -->
 
 </div>
@@ -123,17 +155,20 @@ function downloadPDF() {
   btn.disabled = true;
   btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity=".3"/><path d="M21 12a9 9 0 00-9-9"/></svg> Menyiapkan...';
 
+  document.querySelector('.snk-pdf').style.display = 'block';
+
   const element = document.getElementById('invoice-printable');
   const opt = {
-    margin: [10, 10, 10, 10],
+    margin: [8, 8, 8, 8],
     filename: '{{ $invoice->invoice_number }}.pdf',
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+    html2canvas: { scale: 2, useCORS: true },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    pagebreak: { mode: ['css', 'legacy'] }
   };
 
   html2pdf().set(opt).from(element).save().then(() => {
+    document.querySelector('.snk-pdf').style.display = 'none';
     btn.disabled = false;
     btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PDF';
   });
@@ -141,6 +176,20 @@ function downloadPDF() {
 </script>
 <style>
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
+.snk-pdf { display: none; background: #fff; color: #111; padding: 24px; font-size: 0.72rem; line-height: 1.55; }
+.snk-pdf-header { text-align: center; padding-bottom: 12px; border-bottom: 1.5px solid #111; margin-bottom: 12px; }
+.snk-pdf-title { font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; }
+.snk-pdf-sub { font-size: 0.75rem; font-weight: 600; margin-top: 2px; }
+.snk-pdf-ver { font-size: 0.7rem; color: #666; margin-top: 2px; }
+.snk-pdf-lead { font-style: italic; border-left: 2px solid #111; padding: 6px 10px; margin-bottom: 12px; background: #f9f9f9; font-size: 0.72rem; }
+.snk-pdf-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.snk-pdf-section { margin-bottom: 10px; }
+.snk-pdf-h { font-weight: 700; text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.5px; margin-bottom: 4px; color: #111; }
+.snk-pdf ul { margin: 0; padding-left: 14px; }
+.snk-pdf ul li { margin-bottom: 2px; }
+.snk-pdf-table { width: 100%; border-collapse: collapse; font-size: 0.68rem; margin: 4px 0; }
+.snk-pdf-table th { background: #111; color: #fff; padding: 4px 8px; text-align: left; }
+.snk-pdf-table td { padding: 4px 8px; border-bottom: 1px solid #ddd; }
+.snk-pdf-footer { margin-top: 12px; padding-top: 10px; border-top: 1px solid #ddd; font-size: 0.7rem; color: #444; text-align: center; }
 </style>
 @endpush
