@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Package;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -18,6 +19,39 @@ class OrderController extends Controller
             ->paginate(15);
 
         return view('admin.orders.index', compact('orders'));
+    }
+
+    public function create()
+    {
+        $packages = Package::where('is_active', true)->orderBy('sort_order')->get();
+        $users = User::orderBy('name')->get();
+        return view('admin.orders.create', compact('packages', 'users'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'user_id'       => 'required|exists:users,id',
+            'package_id'    => 'required|exists:packages,id',
+            'customer_name' => 'required|string|max:255',
+            'phone'         => 'required|string|max:20',
+            'status'        => 'required|in:pending,in_progress,completed,cancelled',
+            'total_price'   => 'nullable|numeric|min:0',
+            'notes'         => 'nullable|string|max:2000',
+        ]);
+
+        $order = Order::create([
+            'order_number'  => 'ORD-' . strtoupper(uniqid()),
+            'user_id'       => $request->user_id,
+            'customer_name' => $request->customer_name,
+            'phone'         => $request->phone,
+            'package_id'    => $request->package_id,
+            'status'        => $request->status,
+            'total_price'   => $request->total_price ?: Package::find($request->package_id)->price,
+            'notes'         => $request->notes,
+        ]);
+
+        return redirect("/admin/orders/{$order->id}")->with('success', 'Pesanan manual berhasil dibuat.');
     }
 
     public function show(Order $order)

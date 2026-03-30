@@ -10,11 +10,14 @@
       <h2 class="page-h">Kelola Pesanan</h2>
       <p class="page-sub">Semua pesanan dari user.</p>
     </div>
-    <div class="filter-tabs">
-      <a href="/admin/orders" class="filter-tab {{ !request('status') ? 'active' : '' }}">Semua</a>
-      <a href="/admin/orders?status=pending" class="filter-tab {{ request('status') == 'pending' ? 'active' : '' }}">Pending</a>
-      <a href="/admin/orders?status=in_progress" class="filter-tab {{ request('status') == 'in_progress' ? 'active' : '' }}">Dikerjakan</a>
-      <a href="/admin/orders?status=completed" class="filter-tab {{ request('status') == 'completed' ? 'active' : '' }}">Selesai</a>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <div class="filter-tabs">
+        <a href="/admin/orders" class="filter-tab {{ !request('status') ? 'active' : '' }}">Semua</a>
+        <a href="/admin/orders?status=pending" class="filter-tab {{ request('status') == 'pending' ? 'active' : '' }}">Pending</a>
+        <a href="/admin/orders?status=in_progress" class="filter-tab {{ request('status') == 'in_progress' ? 'active' : '' }}">Dikerjakan</a>
+        <a href="/admin/orders?status=completed" class="filter-tab {{ request('status') == 'completed' ? 'active' : '' }}">Selesai</a>
+      </div>
+      <a href="/admin/orders/create" class="btn btn-primary btn-sm" style="white-space:nowrap;">+ Pesanan Manual</a>
     </div>
   </div>
 

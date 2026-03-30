@@ -49,6 +49,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::resource('/packages', Admin\PackageController::class)->except(['show']);
 
     Route::get('/orders', [Admin\OrderController::class, 'index']);
+    Route::get('/orders/create', [Admin\OrderController::class, 'create']);
+    Route::post('/orders', [Admin\OrderController::class, 'store']);
     Route::get('/orders/{order}', [Admin\OrderController::class, 'show']);
     Route::put('/orders/{order}', [Admin\OrderController::class, 'update']);
     Route::post('/orders/{order}/generate-sow', [Admin\OrderController::class, 'generateSow']);
