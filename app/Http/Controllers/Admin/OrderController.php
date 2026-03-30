@@ -31,7 +31,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'user_id'       => 'required|exists:users,id',
+            'user_id'       => 'nullable|exists:users,id',
             'package_id'    => 'required|exists:packages,id',
             'customer_name' => 'required|string|max:255',
             'phone'         => 'required|string|max:20',
@@ -40,9 +40,22 @@ class OrderController extends Controller
             'notes'         => 'nullable|string|max:2000',
         ]);
 
+        // Jika tidak ada akun, buat akun otomatis dari nama + nomor HP
+        if ($request->user_id) {
+            $userId = $request->user_id;
+        } else {
+            $phone = preg_replace('/[^0-9]/', '', $request->phone);
+            $email = "manual_{$phone}@zephytor.local";
+            $user = User::firstOrCreate(
+                ['email' => $email],
+                ['name' => $request->customer_name, 'role' => 'user']
+            );
+            $userId = $user->id;
+        }
+
         $order = Order::create([
             'order_number'  => 'ORD-' . strtoupper(uniqid()),
-            'user_id'       => $request->user_id,
+            'user_id'       => $userId,
             'customer_name' => $request->customer_name,
             'phone'         => $request->phone,
             'package_id'    => $request->package_id,

@@ -56,9 +56,9 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Akun User <span style="color:#ef4444">*</span></label>
-          <select name="user_id" id="user_id" class="form-control" required onchange="fillUserName(this)">
-            <option value="">— Cari / Pilih User —</option>
+          <label class="form-label">Akun User <span style="color:var(--text-muted);font-weight:400;">(opsional)</span></label>
+          <select name="user_id" id="user_id" class="form-control" onchange="fillUserName(this)">
+            <option value="">— Klien belum punya akun —</option>
             @foreach($users as $u)
               <option value="{{ $u->id }}"
                 data-name="{{ $u->name }}"
@@ -67,7 +67,7 @@
               </option>
             @endforeach
           </select>
-          <span class="form-hint">Akun yang akan dihubungkan ke pesanan ini.</span>
+          <span class="form-hint">Kosongkan jika klien belum daftar — akun akan dibuat otomatis dari nama &amp; nomor HP.</span>
           @error('user_id')<span class="form-error">{{ $message }}</span>@enderror
         </div>
 
