@@ -196,7 +196,7 @@ function downloadPDF() {
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 /* S&K hanya muncul saat di-print ke PDF */
-.snk-pdf { display: none; background: #fff; color: #111; padding: 24px; margin-top: 0; font-size: 0.72rem; line-height: 1.55; }
+.snk-pdf { display: none; background: #fff; color: #111; padding: 24px; margin-top: 0; font-size: 0.72rem; line-height: 1.55; page-break-before: always; }
 .snk-pdf-header { text-align: center; padding-bottom: 12px; border-bottom: 1.5px solid #111; margin-bottom: 12px; }
 .snk-pdf-title { font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; }
 .snk-pdf-sub { font-size: 0.75rem; font-weight: 600; margin-top: 2px; }
