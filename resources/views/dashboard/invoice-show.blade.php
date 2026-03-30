@@ -22,6 +22,47 @@
     </div>
   </div>
 
+  @if(session('success'))
+  <div class="alert-success" style="background:#d1fae5;border:1px solid #6ee7b7;color:#065f46;padding:14px 20px;border-radius:12px;margin-bottom:20px;font-weight:600;">
+    {{ session('success') }}
+  </div>
+  @endif
+
+  <!-- Upload Bukti Bayar -->
+  @if($invoice->status !== 'paid' && $invoice->status !== 'cancelled')
+  <div class="dash-panel" style="margin-bottom:24px;">
+    <div class="panel-title" style="margin-bottom:16px;">
+      Bukti Pembayaran
+      @if($invoice->payment_proof)
+        <span style="margin-left:10px;font-size:0.75rem;background:#d1fae5;color:#065f46;padding:2px 10px;border-radius:20px;font-weight:600;">Sudah Diupload</span>
+      @endif
+    </div>
+
+    @if($invoice->payment_proof)
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;padding:12px 16px;background:rgba(0,0,0,0.02);border-radius:10px;border:1px solid var(--border);">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      <div style="flex:1;">
+        <div style="font-weight:600;font-size:0.875rem;">Bukti dikirim {{ $invoice->proof_uploaded_at?->diffForHumans() }}</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);">Menunggu verifikasi admin</div>
+      </div>
+      <a href="/dashboard/invoices/{{ $invoice->id }}/proof" target="_blank" class="btn btn-sm btn-outline">Lihat →</a>
+    </div>
+    @endif
+
+    <form action="/dashboard/invoices/{{ $invoice->id }}/upload-proof" method="POST" enctype="multipart/form-data">
+      @csrf
+      <div style="border:2px dashed var(--border);border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:border-color 0.2s;" id="dropzone" onclick="document.getElementById('proofFile').click()">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 8px;display:block;opacity:0.4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <div style="font-weight:600;margin-bottom:4px;" id="dropzone-label">Klik untuk pilih file bukti bayar</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);">JPG, PNG, atau PDF · Maks. 5MB</div>
+        <input type="file" id="proofFile" name="proof" accept=".jpg,.jpeg,.png,.pdf" style="display:none" onchange="updateDropzone(this)">
+      </div>
+      @error('proof')<div style="color:#ef4444;font-size:0.85rem;margin-top:8px;">{{ $message }}</div>@enderror
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:12px;" id="uploadBtn" disabled>Upload Bukti Bayar</button>
+    </form>
+  </div>
+  @endif
+
   <div id="invoice-printable">
 
     <div class="invoice-doc">
@@ -150,6 +191,15 @@
 @push('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
+function updateDropzone(input) {
+  const btn = document.getElementById('uploadBtn');
+  const label = document.getElementById('dropzone-label');
+  if (input.files && input.files[0]) {
+    label.textContent = input.files[0].name;
+    btn.disabled = false;
+  }
+}
+
 function downloadPDF() {
   const btn = document.getElementById('downloadBtn');
   btn.disabled = true;

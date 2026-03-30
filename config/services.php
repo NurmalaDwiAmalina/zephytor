@@ -55,4 +55,9 @@ return [
         'redirect'      => env('GOOGLE_REDIRECT_URI', '/auth/google/callback'),
     ],
 
+    'supabase' => [
+        'url'         => env('SUPABASE_URL'),
+        'service_key' => env('SUPABASE_SERVICE_KEY'),
+    ],
+
 ];

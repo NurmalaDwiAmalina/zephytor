@@ -5,6 +5,7 @@ use App\Http\Controllers\AnalyzeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ZephyToolController;
+use App\Http\Controllers\PaymentProofController;
 use App\Http\Controllers\Admin;
 
 // ── Public routes ────────────────────────────────────────
@@ -38,6 +39,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::post('/orders', [DashboardController::class, 'storeOrder']);
     Route::get('/invoices', [DashboardController::class, 'invoices']);
     Route::get('/invoices/{invoice}', [DashboardController::class, 'showInvoice']);
+    Route::post('/invoices/{invoice}/upload-proof', [PaymentProofController::class, 'upload']);
+    Route::get('/invoices/{invoice}/proof', [PaymentProofController::class, 'view']);
     Route::get('/zephytool', [ZephyToolController::class, 'index']);
     Route::post('/zephytool/generate', [ZephyToolController::class, 'generate']);
 });
@@ -62,4 +65,5 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::post('/invoices', [Admin\InvoiceController::class, 'store']);
     Route::get('/invoices/{invoice}', [Admin\InvoiceController::class, 'show']);
     Route::put('/invoices/{invoice}/status', [Admin\InvoiceController::class, 'updateStatus']);
+    Route::get('/invoices/{invoice}/proof', [PaymentProofController::class, 'view']);
 });

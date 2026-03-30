@@ -9,11 +9,13 @@ class Invoice extends Model
     protected $fillable = [
         'invoice_number', 'order_id', 'user_id', 'amount',
         'status', 'due_date', 'paid_at', 'notes',
+        'payment_proof', 'proof_uploaded_at',
     ];
 
     protected $casts = [
-        'due_date' => 'date',
-        'paid_at' => 'datetime',
+        'due_date'           => 'date',
+        'paid_at'            => 'datetime',
+        'proof_uploaded_at'  => 'datetime',
     ];
 
     public function order()

@@ -150,6 +150,26 @@
         </form>
       </div>
 
+      @if($invoice->payment_proof)
+      <div class="dash-panel" style="margin-top:16px">
+        <div class="panel-header">
+          <div class="panel-title">Bukti Pembayaran</div>
+          <span style="font-size:0.75rem;background:#fef3c7;color:#92400e;padding:2px 10px;border-radius:20px;font-weight:600;">Perlu Verifikasi</span>
+        </div>
+        <div style="margin-top:12px;padding:12px 16px;background:rgba(0,0,0,0.02);border-radius:10px;border:1px solid var(--border);">
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;">Diupload {{ $invoice->proof_uploaded_at?->diffForHumans() }}</div>
+          <a href="/admin/invoices/{{ $invoice->id }}/proof" target="_blank" class="btn btn-outline btn-sm btn-full">Lihat Bukti Bayar →</a>
+        </div>
+        @if($invoice->status === 'unpaid')
+        <form action="/admin/invoices/{{ $invoice->id }}/status" method="POST" style="margin-top:10px;">
+          @csrf @method('PUT')
+          <input type="hidden" name="status" value="paid">
+          <button type="submit" class="btn btn-primary btn-full" onclick="return confirm('Tandai invoice ini sebagai LUNAS?')">✓ Verifikasi & Tandai Lunas</button>
+        </form>
+        @endif
+      </div>
+      @endif
+
       <div class="dash-panel" style="margin-top:16px">
         <div class="panel-title" style="margin-bottom:12px">Info Pesanan</div>
         <div class="detail-row"><span>No. Order</span><span class="code-text">{{ $invoice->order->order_number }}</span></div>
