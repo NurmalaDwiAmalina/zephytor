@@ -49,6 +49,15 @@
     </div>
   </div>
 
+  <!-- Info Pembayaran -->
+  <div style="background:linear-gradient(135deg,#f0fdf4,#eff6ff);border:1px solid #bbf7d0;border-radius:14px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+    <div style="font-size:1.5rem;">💳</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;font-size:0.95rem;color:#111;margin-bottom:2px;">Pembayaran Mudah & Fleksibel</div>
+      <div style="font-size:0.82rem;color:#555;">Kami menerima pembayaran via <strong>QRIS</strong>, <strong>GoPay</strong>, <strong>OVO</strong>, <strong>Dana</strong>, <strong>ShopeePay</strong>, <strong>m-Banking</strong>, dan <strong>Kartu Kredit/Debit</strong></div>
+    </div>
+  </div>
+
   <div class="dash-two-col">
     <!-- Recent Orders -->
     <div class="dash-panel">
