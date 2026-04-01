@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ZephyToolController;
 use App\Http\Controllers\PaymentProofController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\Admin;
 
 // ── Public routes ────────────────────────────────────────
@@ -25,6 +26,11 @@ Route::get('/syarat-ketentuan', function () {
     return view('syarat-ketentuan');
 });
 
+// ── Payment (DOKU) ───────────────────────────────────────
+Route::get('/payment/finish', [PaymentController::class, 'finish'])->name('payment.finish');
+Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
+Route::post('/payment/notification', [PaymentController::class, 'notification'])->name('payment.notification');
+
 // ── Auth routes ──────────────────────────────────────────
 Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
 Route::get('/auth/google', [AuthController::class, 'redirectToGoogle'])->name('auth.google');
@@ -41,6 +47,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('/invoices/{invoice}', [DashboardController::class, 'showInvoice']);
     Route::post('/invoices/{invoice}/upload-proof', [PaymentProofController::class, 'upload']);
     Route::get('/invoices/{invoice}/proof', [PaymentProofController::class, 'view']);
+    Route::post('/invoices/{invoice}/pay', [PaymentController::class, 'pay'])->name('payment.pay');
     Route::get('/zephytool', [ZephyToolController::class, 'index']);
     Route::post('/zephytool/generate', [ZephyToolController::class, 'generate']);
 });

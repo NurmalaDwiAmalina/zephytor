@@ -60,4 +60,10 @@ return [
         'service_key' => env('SUPABASE_SERVICE_KEY'),
     ],
 
+    'doku' => [
+        'client_id'  => env('DOKU_CLIENT_ID'),
+        'secret_key' => env('DOKU_SECRET_KEY'),
+        'sandbox'    => env('DOKU_SANDBOX', true),
+    ],
+
 ];

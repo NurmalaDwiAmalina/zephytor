@@ -28,6 +28,33 @@
   </div>
   @endif
 
+  @if(session('error'))
+  <div style="background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;padding:14px 20px;border-radius:12px;margin-bottom:20px;font-weight:600;">
+    {{ session('error') }}
+  </div>
+  @endif
+
+  <!-- Bayar via DOKU -->
+  @if($invoice->status !== 'paid' && $invoice->status !== 'cancelled')
+  <div class="dash-panel" style="margin-bottom:24px;border:2px solid var(--text-h);">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <div style="font-size:1.1rem;font-weight:800;color:var(--text-h);margin-bottom:4px;">Bayar Sekarang</div>
+        <div style="font-size:0.875rem;color:var(--text-muted);">QRIS · Virtual Account · Kartu Kredit · dan lainnya</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--text-h);margin-bottom:8px;">{{ $invoice->formatted_amount }}</div>
+        <form action="/dashboard/invoices/{{ $invoice->id }}/pay" method="POST">
+          @csrf
+          <button type="submit" class="btn btn-primary" style="padding:12px 32px;font-size:1rem;">
+            Bayar via DOKU →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  @endif
+
   <!-- Upload Bukti Bayar -->
   @if($invoice->status !== 'paid' && $invoice->status !== 'cancelled')
   <div class="dash-panel" style="margin-bottom:24px;">
