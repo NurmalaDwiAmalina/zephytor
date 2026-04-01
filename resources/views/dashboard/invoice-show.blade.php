@@ -50,7 +50,8 @@
     </div>
     <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
       <div style="text-align:center;">
-        <img src="{{ asset('images/qris.jpeg') }}" alt="QRIS Zephytor" style="width:200px;height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
+        <img src="{{ asset('images/qris.jpeg') }}" alt="QRIS Zephytor" onclick="document.getElementById('qris-modal').style.display='flex'" style="width:200px;height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--border);cursor:zoom-in;">
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:6px;">Klik untuk perbesar</div>
       </div>
       <div style="flex:1;min-width:200px;">
         <div style="font-weight:700;font-size:1rem;margin-bottom:4px;">ZEPHYTOR, DIGITAL &amp; KREATIF</div>
@@ -226,6 +227,12 @@
   </div><!-- #invoice-printable -->
 
 </div>
+
+<!-- QRIS Modal -->
+<div id="qris-modal" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <img src="{{ asset('images/qris.jpeg') }}" alt="QRIS Zephytor" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:16px;">
+</div>
+
 @endsection
 
 @push('scripts')
