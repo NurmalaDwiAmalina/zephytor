@@ -38,7 +38,16 @@
   @if($invoice->status !== 'paid' && $invoice->status !== 'cancelled')
   <div class="dash-panel" style="margin-bottom:24px;border:2px solid var(--text-h);">
     <div style="font-size:1.1rem;font-weight:800;color:var(--text-h);margin-bottom:4px;">Cara Pembayaran</div>
-    <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:20px;">Scan QRIS di bawah menggunakan GoPay, OVO, Dana, ShopeePay, atau aplikasi m-banking manapun</div>
+    <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:12px;">Pilih metode pembayaran yang paling mudah untuk kamu:</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+      <span style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">QRIS</span>
+      <span style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">GoPay</span>
+      <span style="background:#fdf4ff;color:#7e22ce;border:1px solid #e9d5ff;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">OVO</span>
+      <span style="background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">Dana</span>
+      <span style="background:#fefce8;color:#a16207;border:1px solid #fde68a;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">ShopeePay</span>
+      <span style="background:#f0f9ff;color:#0369a1;border:1px solid #bae6fd;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">m-Banking</span>
+      <span style="background:#fdf2f8;color:#9d174d;border:1px solid #fbcfe8;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">Kartu Kredit/Debit</span>
+    </div>
     <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
       <div style="text-align:center;">
         <img src="{{ asset('images/qris.jpeg') }}" alt="QRIS Zephytor" style="width:200px;height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
