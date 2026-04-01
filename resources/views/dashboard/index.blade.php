@@ -54,7 +54,7 @@
     <div style="font-size:1.5rem;">💳</div>
     <div style="flex:1;">
       <div style="font-weight:700;font-size:0.95rem;color:#111;margin-bottom:2px;">Pembayaran Mudah & Fleksibel</div>
-      <div style="font-size:0.82rem;color:#555;">Kami menerima pembayaran via <strong>QRIS</strong>, <strong>GoPay</strong>, <strong>OVO</strong>, <strong>Dana</strong>, <strong>ShopeePay</strong>, <strong>m-Banking</strong>, dan <strong>Kartu Kredit/Debit</strong></div>
+      <div style="font-size:0.82rem;color:#555;">Kami menerima pembayaran via <strong>QRIS</strong> — bisa digunakan dengan GoPay, OVO, Dana, ShopeePay, m-Banking, Kartu Kredit/Debit, dan semua dompet digital</div>
     </div>
   </div>
 
