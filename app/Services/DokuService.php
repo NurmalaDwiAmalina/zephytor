@@ -77,7 +77,7 @@ class DokuService
             throw new \Exception('DOKU error ' . $response->status() . ': ' . $response->body());
         }
 
-        $url = $response->json('payment.url');
+        $url = $response->json('response.payment.url');
 
         if (!$url) {
             throw new \Exception('DOKU response OK but no payment URL: ' . $response->body());
