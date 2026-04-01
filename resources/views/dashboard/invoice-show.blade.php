@@ -34,22 +34,26 @@
   </div>
   @endif
 
-  <!-- Bayar via DOKU -->
+  <!-- Cara Pembayaran QRIS -->
   @if($invoice->status !== 'paid' && $invoice->status !== 'cancelled')
   <div class="dash-panel" style="margin-bottom:24px;border:2px solid var(--text-h);">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-      <div>
-        <div style="font-size:1.1rem;font-weight:800;color:var(--text-h);margin-bottom:4px;">Bayar Sekarang</div>
-        <div style="font-size:0.875rem;color:var(--text-muted);">QRIS · Virtual Account · Kartu Kredit · dan lainnya</div>
+    <div style="font-size:1.1rem;font-weight:800;color:var(--text-h);margin-bottom:4px;">Cara Pembayaran</div>
+    <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:20px;">Scan QRIS di bawah menggunakan GoPay, OVO, Dana, ShopeePay, atau aplikasi m-banking manapun</div>
+    <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <img src="{{ asset('images/qris.png') }}" alt="QRIS Zephytor" style="width:200px;height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
       </div>
-      <div style="text-align:right;">
+      <div style="flex:1;min-width:200px;">
+        <div style="font-weight:700;font-size:1rem;margin-bottom:4px;">ZEPHYTOR, DIGITAL &amp; KREATIF</div>
+        <div style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px;">085892778882</div>
         <div style="font-size:1.5rem;font-weight:800;color:var(--text-h);margin-bottom:8px;">{{ $invoice->formatted_amount }}</div>
-        <form action="/dashboard/invoices/{{ $invoice->id }}/pay" method="POST">
-          @csrf
-          <button type="submit" class="btn btn-primary" style="padding:12px 32px;font-size:1rem;">
-            Bayar via DOKU →
-          </button>
-        </form>
+        <div style="font-size:0.8rem;color:var(--text-muted);background:rgba(0,0,0,0.03);padding:10px 14px;border-radius:8px;line-height:1.6;">
+          1. Buka aplikasi pembayaran<br>
+          2. Pilih <strong>Scan QR / QRIS</strong><br>
+          3. Scan kode di samping<br>
+          4. Masukkan nominal <strong>{{ $invoice->formatted_amount }}</strong><br>
+          5. Upload bukti bayar di bawah
+        </div>
       </div>
     </div>
   </div>
