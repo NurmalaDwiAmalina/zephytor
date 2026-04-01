@@ -41,7 +41,7 @@
     <div style="font-size:0.875rem;color:var(--text-muted);margin-bottom:20px;">Scan QRIS di bawah menggunakan GoPay, OVO, Dana, ShopeePay, atau aplikasi m-banking manapun</div>
     <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
       <div style="text-align:center;">
-        <img src="{{ asset('images/qris.png') }}" alt="QRIS Zephytor" style="width:200px;height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
+        <img src="{{ asset('images/qris.jpeg') }}" alt="QRIS Zephytor" style="width:200px;height:200px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
       </div>
       <div style="flex:1;min-width:200px;">
         <div style="font-weight:700;font-size:1rem;margin-bottom:4px;">ZEPHYTOR, DIGITAL &amp; KREATIF</div>
