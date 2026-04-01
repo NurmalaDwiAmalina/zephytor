@@ -21,7 +21,10 @@ class InvoiceController extends Controller
 
     public function create(Request $request)
     {
-        $orders = Order::with(['user', 'package'])->orderBy('created_at', 'desc')->get();
+        $orders = Order::with(['user', 'package'])
+            ->whereDoesntHave('invoices')
+            ->orderBy('created_at', 'desc')
+            ->get();
         $selectedOrder = $request->order_id ? Order::with(['user', 'package'])->find($request->order_id) : null;
         return view('admin.invoices.create', compact('orders', 'selectedOrder'));
     }

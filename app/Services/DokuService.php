@@ -27,11 +27,12 @@ class DokuService
 
         $body = [
             'order' => [
-                'amount'         => (int) $data['amount'],
-                'invoice_number' => $data['invoice_number'],
-                'currency'       => 'IDR',
-                'callback_url'   => route('payment.finish'),
+                'amount'              => (int) $data['amount'],
+                'invoice_number'      => $data['invoice_number'],
+                'currency'            => 'IDR',
+                'callback_url'        => route('payment.finish'),
                 'callback_url_cancel' => route('payment.cancel'),
+                'notification_url'    => route('payment.notification'),
             ],
             'payment' => [
                 'payment_due_date' => 60,
@@ -64,10 +65,16 @@ class DokuService
         ])->post("{$this->baseUrl}{$path}", $body);
 
         if ($response->failed()) {
-            throw new \Exception('DOKU error: ' . $response->body());
+            throw new \Exception('DOKU error ' . $response->status() . ': ' . $response->body());
         }
 
-        return $response->json('payment.url');
+        $url = $response->json('payment.url');
+
+        if (!$url) {
+            throw new \Exception('DOKU response OK but no payment URL: ' . $response->body());
+        }
+
+        return $url;
     }
 
     public function verifyNotification(array $headers, string $body): bool

@@ -40,7 +40,7 @@ class PaymentController extends Controller
             return redirect($paymentUrl);
         } catch (\Exception $e) {
             Log::error('DOKU payment error: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Gagal membuat link pembayaran. Silakan coba lagi atau hubungi admin.');
+            return redirect()->back()->with('error', 'Gagal membuat link pembayaran: ' . $e->getMessage());
         }
     }
 
