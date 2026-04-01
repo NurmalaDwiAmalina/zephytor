@@ -391,6 +391,18 @@
                 <h2 class="section-title" data-i18n="hargaTitle">Pilih Paket Investasi</h2>
                 <p data-i18n="hargaDesc">Sesuai dengan skala dan target gol bisnis Anda.</p>
             </div>
+            <!-- Metode Pembayaran -->
+            <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:32px;" class="reveal">
+                <span style="font-size:0.85rem;color:#888;font-weight:600;margin-right:4px;">Pembayaran via:</span>
+                <span style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">QRIS</span>
+                <span style="background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">GoPay</span>
+                <span style="background:#fdf4ff;color:#7e22ce;border:1px solid #e9d5ff;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">OVO</span>
+                <span style="background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">Dana</span>
+                <span style="background:#fefce8;color:#a16207;border:1px solid #fde68a;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">ShopeePay</span>
+                <span style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">m-Banking</span>
+                <span style="background:#fdf2f8;color:#9d174d;border:1px solid #fbcfe8;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">Kartu Kredit/Debit</span>
+            </div>
+
             <div class="pricing-grid">
                 @foreach($packages as $package)
                 <div class="price-card {{ $package->is_popular ? 'popular' : '' }} reveal">
