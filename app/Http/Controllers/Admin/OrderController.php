@@ -24,7 +24,7 @@ class OrderController extends Controller
 
     public function create()
     {
-        $packages = Package::where('is_active', true)->orderBy('sort_order')->get();
+        $packages = Package::whereRaw('"is_active" = true')->orderBy('sort_order')->get();
         $users = User::orderBy('name')->get();
         return view('admin.orders.create', compact('packages', 'users'));
     }

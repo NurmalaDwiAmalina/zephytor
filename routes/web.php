@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin;
 
 // ── Public routes ────────────────────────────────────────
 Route::get('/', function () {
-    $packages = \App\Models\Package::where('is_active', true)->orderBy('sort_order')->get();
+    $packages = \App\Models\Package::whereRaw('"is_active" = true')->orderBy('sort_order')->get();
     return view('welcome', compact('packages'));
 });
 

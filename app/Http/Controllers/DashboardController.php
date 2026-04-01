@@ -15,7 +15,7 @@ class DashboardController extends Controller
         $user = Auth::user();
         $recentOrders = $user->orders()->with('package')->latest()->take(5)->get();
         $invoices = $user->invoices()->with('order.package')->latest()->take(5)->get();
-        $packages = Package::where('is_active', true)->orderBy('sort_order')->get();
+        $packages = Package::whereRaw('"is_active" = true')->orderBy('sort_order')->get();
         $totalOrders = $user->orders()->count();
         $activeOrders = $user->orders()->whereIn('status', ['pending', 'in_progress'])->count();
         $unpaidInvoices = $user->invoices()->where('status', 'unpaid')->count();
@@ -30,7 +30,7 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $orders = $user->orders()->with('package')->latest()->paginate(10);
-        $packages = Package::where('is_active', true)->orderBy('sort_order')->get();
+        $packages = Package::whereRaw('"is_active" = true')->orderBy('sort_order')->get();
         return view('dashboard.orders', compact('orders', 'packages'));
     }
 
