@@ -12,11 +12,20 @@ class DokuService
 
     public function __construct()
     {
-        $this->clientId  = config('services.doku.client_id');
-        $this->secretKey = config('services.doku.secret_key');
-        $this->baseUrl   = config('services.doku.sandbox')
+        $this->clientId  = trim(config('services.doku.client_id'));
+        $this->secretKey = trim(config('services.doku.secret_key'));
+        $sandbox         = config('services.doku.sandbox');
+        // env() returns string "false" which is truthy — force cast
+        $isSandbox       = filter_var($sandbox, FILTER_VALIDATE_BOOLEAN);
+        $this->baseUrl   = $isSandbox
             ? 'https://api-sandbox.doku.com'
             : 'https://api.doku.com';
+
+        \Illuminate\Support\Facades\Log::info('DOKU init', [
+            'client_id' => $this->clientId,
+            'base_url'  => $this->baseUrl,
+            'sandbox_raw' => $sandbox,
+        ]);
     }
 
     public function createPaymentUrl(array $data): string
