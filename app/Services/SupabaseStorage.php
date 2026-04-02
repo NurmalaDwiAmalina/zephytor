@@ -44,7 +44,7 @@ class SupabaseStorage
         ]);
 
         if ($response->failed()) {
-            throw new \Exception('Gagal buat signed URL.');
+            throw new \Exception('Gagal buat signed URL: ' . $response->body());
         }
 
         $signedURL = $response->json('signedURL');
