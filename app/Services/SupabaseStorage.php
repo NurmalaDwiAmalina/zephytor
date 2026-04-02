@@ -64,6 +64,11 @@ class SupabaseStorage
             return $signedURL;
         }
 
+        // Pastikan path include /storage/v1
+        if (!str_starts_with($signedURL, '/storage/v1')) {
+            $signedURL = '/storage/v1' . $signedURL;
+        }
+
         return $this->url . $signedURL;
     }
 
