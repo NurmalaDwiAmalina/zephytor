@@ -27,7 +27,12 @@ class Order extends Model
 
     public function package()
     {
-        return $this->belongsTo(Package::class);
+        return $this->belongsTo(Package::class)->withDefault([
+            'name'        => 'Paket Tidak Ditemukan',
+            'description' => '-',
+            'features'    => [],
+            'guarantee'   => null,
+        ]);
     }
 
     public function invoices()
