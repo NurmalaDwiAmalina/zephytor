@@ -47,7 +47,12 @@ class SupabaseStorage
             throw new \Exception('Gagal buat signed URL.');
         }
 
-        return $this->url . $response->json('signedURL');
+        $signedURL = $response->json('signedURL');
+        // signedURL sudah berupa path lengkap seperti /storage/v1/object/sign/...
+        if (str_starts_with($signedURL, 'http')) {
+            return $signedURL;
+        }
+        return $this->url . $signedURL;
     }
 
     public function delete(string $path): void
