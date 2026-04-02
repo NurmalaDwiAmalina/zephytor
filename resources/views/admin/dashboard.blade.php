@@ -67,6 +67,25 @@
     </a>
   </div>
 
+  <!-- Bukti Bayar Menunggu Verifikasi -->
+  @if($pendingProofs->count() > 0)
+  <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:14px;padding:16px 20px;margin-bottom:24px;">
+    <div style="font-weight:700;font-size:0.95rem;color:#92400e;margin-bottom:12px;">
+      🔔 {{ $pendingProofs->count() }} Invoice Menunggu Verifikasi Bukti Bayar
+    </div>
+    @foreach($pendingProofs as $invoice)
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #fde68a;">
+      <div>
+        <span style="font-weight:600;font-size:0.875rem;">{{ $invoice->invoice_number }}</span>
+        <span style="color:#78716c;font-size:0.8rem;margin-left:8px;">{{ $invoice->order->customer_name ?? $invoice->user->name }}</span>
+        <span style="color:#78716c;font-size:0.8rem;margin-left:8px;">· {{ $invoice->formatted_amount }}</span>
+      </div>
+      <a href="/admin/invoices/{{ $invoice->id }}" class="btn btn-sm btn-primary">Verifikasi →</a>
+    </div>
+    @endforeach
+  </div>
+  @endif
+
   <div class="dash-two-col">
     <!-- Recent Orders -->
     <div class="dash-panel">

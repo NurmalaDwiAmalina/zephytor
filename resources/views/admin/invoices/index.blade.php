@@ -50,7 +50,12 @@
           </td>
           <td>{{ $invoice->order->package->name }}</td>
           <td><strong>{{ $invoice->formatted_amount }}</strong></td>
-          <td><span class="status-badge" style="--color: {{ $invoice->status_color }}">{{ $invoice->status_label }}</span></td>
+          <td>
+            <span class="status-badge" style="--color: {{ $invoice->status_color }}">{{ $invoice->status_label }}</span>
+            @if($invoice->payment_proof && $invoice->status !== 'paid')
+              <span style="margin-left:6px;background:#fef9c3;color:#854d0e;border:1px solid #fde047;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;">📎 Bukti Masuk</span>
+            @endif
+          </td>
           <td>
             @if($invoice->due_date)
               <span class="{{ $invoice->status == 'unpaid' && $invoice->due_date->isPast() ? 'text-danger' : '' }}">

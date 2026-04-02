@@ -20,11 +20,16 @@ class DashboardController extends Controller
         $totalUsers      = User::where('role', 'user')->count();
         $recentOrders    = Order::with(['user', 'package'])->latest()->take(8)->get();
         $recentInvoices  = Invoice::with(['user', 'order.package'])->latest()->take(5)->get();
+        $pendingProofs   = Invoice::with(['user', 'order'])
+            ->whereNotNull('payment_proof')
+            ->where('status', 'unpaid')
+            ->latest('proof_uploaded_at')
+            ->get();
 
         return view('admin.dashboard', compact(
             'totalOrders', 'pendingOrders', 'totalInvoices',
             'unpaidInvoices', 'totalRevenue', 'totalUsers',
-            'recentOrders', 'recentInvoices'
+            'recentOrders', 'recentInvoices', 'pendingProofs'
         ));
     }
 }
