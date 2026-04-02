@@ -43,11 +43,15 @@
 
       <form action="/dashboard/orders" method="POST">
         @csrf
-        <input type="hidden" name="package_id" value="{{ $package->id }}">
-
         <div class="form-group">
-          <label class="form-label">Paket Dipilih</label>
-          <div class="form-static">{{ $package->name }} — {{ $package->price_display }}</div>
+          <label class="form-label">Pilih Paket <span style="color:#ef4444">*</span></label>
+          <select name="package_id" class="form-control" required onchange="this.form.submit()">
+            @foreach($packages as $pkg)
+            <option value="{{ $pkg->id }}" {{ $package && $package->id == $pkg->id ? 'selected' : '' }}>
+              {{ $pkg->name }}
+            </option>
+            @endforeach
+          </select>
         </div>
 
         <div class="form-group">

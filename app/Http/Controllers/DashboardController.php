@@ -36,8 +36,9 @@ class DashboardController extends Controller
 
     public function createOrder(Request $request)
     {
-        $package = Package::findOrFail($request->package_id);
-        return view('dashboard.order-create', compact('package'));
+        $packages = Package::whereRaw('"is_active" = true')->orderBy('sort_order')->get();
+        $package  = $request->package_id ? Package::find($request->package_id) : $packages->first();
+        return view('dashboard.order-create', compact('package', 'packages'));
     }
 
     public function storeOrder(Request $request)
