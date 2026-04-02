@@ -22,7 +22,7 @@
         <div class="pkg-badge">{{ $package->badge }}</div>
       @endif
       <div class="pkg-name">{{ $package->name }}</div>
-      <div class="pkg-price">{{ $package->price_display }}</div>
+      <div class="pkg-price" style="color:#888;font-size:0.9rem;">Harga Menyesuaikan</div>
       <div class="pkg-desc">{{ $package->description }}</div>
       <ul class="pkg-features">
         @foreach($package->features as $feat)
