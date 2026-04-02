@@ -18,6 +18,12 @@ class Package extends Model
         'is_active' => 'boolean',
     ];
 
+    public function resolveRouteBinding($value, $field = null)
+    {
+        return $this->where($field ?? $this->getRouteKeyName(), $value)->first()
+            ?? $this->firstOrNew(['id' => 0]);
+    }
+
     public function orders()
     {
         return $this->hasMany(Order::class);
