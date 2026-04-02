@@ -405,13 +405,9 @@
                         <div class="popular-badge">{{ $package->badge }}</div>
                     @endif
                     <div class="plan-name">{{ $package->name }}</div>
-                    @if($package->price)
-                        <div class="price-val">{{ $package->price_display }}</div>
-                        @if($package->description)
-                            <div class="price-desc">{{ $package->description }}</div>
-                        @endif
-                    @else
-                        <div class="price-val price-custom-text" style="font-size: 1.8rem; font-weight: 800; margin: 30px 0; line-height: 1.2; letter-spacing: -1px; min-height: 110px; display: flex; align-items: center; justify-content: center;">{{ $package->description ?? $package->price_display }}</div>
+                    <div class="price-val" style="font-size:1.1rem;font-weight:700;color:#888;margin:16px 0 4px;">Harga Menyesuaikan</div>
+                    @if($package->description)
+                        <div class="price-desc">{{ $package->description }}</div>
                     @endif
                     <ul>
                         @foreach($package->features as $feature)
