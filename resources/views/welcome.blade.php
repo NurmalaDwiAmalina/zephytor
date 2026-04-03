@@ -384,55 +384,6 @@
             </div>
     </section>
     
-    <!-- HARGA -->
-    <section id="harga" class="section-alt">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title" data-i18n="hargaTitle">Pilih Paket Investasi</h2>
-                <p data-i18n="hargaDesc">Sesuai dengan skala dan target gol bisnis Anda.</p>
-            </div>
-            <!-- Metode Pembayaran -->
-            <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:32px;" class="reveal">
-                <span style="font-size:0.85rem;color:#888;font-weight:600;margin-right:4px;">Pembayaran via:</span>
-                <span style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;padding:5px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;">✅ QRIS</span>
-                <span style="font-size:0.82rem;color:#666;">(GoPay · OVO · Dana · ShopeePay · m-Banking · Kartu Kredit/Debit · dan semua dompet digital)</span>
-            </div>
-
-            <div class="pricing-grid">
-                @foreach($packages as $package)
-                <div class="price-card {{ $package->is_popular ? 'popular' : '' }} reveal">
-                    @if($package->badge)
-                        <div class="popular-badge">{{ $package->badge }}</div>
-                    @endif
-                    <div class="plan-name">{{ $package->name }}</div>
-                    <div class="price-val" style="font-size:1.1rem;font-weight:700;color:#888;margin:16px 0 4px;">Harga Menyesuaikan</div>
-                    @if($package->description)
-                        <div class="price-desc">{{ $package->description }}</div>
-                    @endif
-                    <ul>
-                        @foreach($package->features as $feature)
-                        <li>
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>{{ $feature }}</span>
-                        </li>
-                        @endforeach
-                        @if($package->guarantee)
-                        <li>
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>{{ $package->guarantee }}</span>
-                        </li>
-                        @endif
-                    </ul>
-                    <a href="/dashboard/orders/create?package_id={{ $package->id }}" class="btn {{ $package->is_popular ? 'btn-primary' : 'btn-outline' }}">Pesan Sekarang</a>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
 
 
 
